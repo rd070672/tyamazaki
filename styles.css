@@ -296,7 +296,6 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   height: 0.2em;
   position: absolute;
   bottom: 0;
-  background-color: var(--clr-primary);
 }
 
 .link2:hover::before,
