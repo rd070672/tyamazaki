@@ -243,7 +243,6 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   position: relative;
 }
 
-
 .link:hover {
   color: var(--clr-primary);
 }
@@ -276,6 +275,46 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 }
 
 .link--icon {
+  color: var(--clr-fg);
+  font-size: 1.2rem;
+}
+
+.link2 {
+  color: var(--clr-primary);
+  padding: 0 0 0.3em 0;
+  position: relative;
+}
+
+.link2:hover {
+  color: var(--clr-primary);
+}
+
+.link2::before {
+  content: "";
+  display: inline;
+  width: 0%;
+  height: 0.2em;
+  position: absolute;
+  bottom: 0;
+}
+
+.link2:hover::before,
+.link2:focus::before {
+  width: 100%;
+}
+
+.link2--nav {
+  color: var(--clr-fg);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.link2--nav2 {
+  color: var(--clr-fg);
+  font-weight: 400;
+}
+
+.link2--icon {
   color: var(--clr-fg);
   font-size: 1.2rem;
 }
