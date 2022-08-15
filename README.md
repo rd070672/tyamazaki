@@ -1,5 +1,10 @@
 Copyright (c) 2022 Takahiro Yamazaki
 
+About
+Welcome to my portfolio built with HTML, CSS and JS on GitHub pages.
+
+rd070672.github.io/tyamazaki/
+
 MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
