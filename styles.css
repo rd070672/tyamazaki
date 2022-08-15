@@ -479,10 +479,10 @@ main {
 
 .projects__grid {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0.2em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  grid-gap: 2em;
+  grid-gap: 1.2em;
 }
 
 .project {
