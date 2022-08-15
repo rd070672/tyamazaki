@@ -328,6 +328,15 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   transition: transform 0.2s ease-in-out;
 }
 
+.btn2 {
+  display: block;
+  padding: 0.8em 0.6em;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in-out;
+}
+
 .btn--outline {
   color: var(--clr-primary);
   border: 2px solid var(--clr-primary);
@@ -364,6 +373,14 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px;
   border: 0;
 }
+
+.btn2--plain {
+  text-transform: initial;
+  background-color: var(--clr-bg-alt);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px;
+  border: 0;
+}
+
 
 .btn--plain:hover {
   transform: translateY(-4px);
