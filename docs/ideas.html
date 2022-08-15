@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en ja">
   <head>
     <title>IDEAS: tyamazaki's portfolio website</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
     <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
-    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, scientist, researcher, professor, magnetism, machine learning, projects, publications, notes, blog" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, 山崎貴大, portfolio, homepage, website, materials, scientist, researcher, professor, magnetism, machine learning, projects, publications, notes, blog" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,10 +20,7 @@
 
     <!-- header -->
     <header class="header center">
-      <h4>
-        <a href="https://rd070672.github.io/tyamazaki/" class="link">tyamazaki</a>
-      </h4>
-
+      <h4><a href="https://rd070672.github.io/tyamazaki/" class="link">tyamazaki</a></h4>
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item">
@@ -45,16 +42,10 @@
             <a class="link link--nav" href="./blog.html">blog</a>
           </li>
         </ul>
-
         <button type="button" aria-label="toggle theme" class="btn btn--icon">
           <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
         </button>
-
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
           <i aria-hidden="true" class="fas fa-bars"></i>
         </button>
       </nav>
@@ -62,87 +53,15 @@
     <main>
       <!-- Main contents -->
       <div class="about center">
-        <h2 class="center">Notes</h2>
-        <h4 class="about__role">Here are some notes and tips that I've learned</h4>
+        <h2 class="center">Ideas</h2>
+        <h4 class="about__role">Introduce interesting papers or articles related to materials science & engineering, 山崎貴大</h4>
       </div><br><br>
 
-      <!-- Works -->
-      <section id="toc">
-        <h3 class="section__title3">Table of contents</h3>
-        <p class="bar-left">Basic theory of magnetism</p>
-        <ul class="list2">
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#solid-state" class="link2 link2--nav2">Solid-state physics</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#domain" class="link2 link2--nav2">Magnetic domain</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#coercivity" class="link2 link2--nav2">Coercivity</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#barkhausen" class="link2 link2--nav2">Bakhausen noise</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#structure" class="link2 link2--nav2">Nano/microstructure</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#statistic" class="link2 link2--nav2">Statictic theory of magnetism</a></li>
-        </ul>
-
-        <p class="bar-left">Materials modeling</p>
-        <ul class="list2">
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#ubermag" class="link2 link2--nav2">Ubermag</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#oommf" class="link2 link2--nav2">OOMMF</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#mumax" class="link2 link2--nav2">Mumax3</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#dft" class="link2 link2--nav2">DFT calculation</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#qs" class="link2 link2--nav2">Quantum espresso</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#kkr" class="link2 link2--nav2">AkaiKKR</a></li>
-        </ul>
-        <p class="bar-left">Experimental methods for material evaluation</p>
-        <ul class="list2">
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#sputter" class="link2 link2--nav2">Magnetron sputtering</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#measurement" class="link2 link2--nav2">Barkhausen noise measurement</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#mpms" class="link2 link2--nav2">MPMS (Magnetic Property Measurement System)</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#vsm" class="link2 link2--nav2">VSM (Vibrating-sample magnetometry)</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#kerr" class="link2 link2--nav2">Magneto-optical Kerr microscope</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#sem" class="link2 link2--nav2">SEM (Scanning electron microscope)</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#tem" class="link2 link2--nav2">TEM (Transmission electron microscopy)</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#xmcd" class="link2 link2--nav2">XMCD (X-Ray Magnetic Circular Dichroism)</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#peem" class="link2 link2--nav2">PEEM (Photoemission electron microscopy)</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#horography" class="link2 link2--nav2">Photoelectron holography</a></li>
-        </ul>
-        <p class="bar-left">Data analysis</p>
-        <ul class="list2">
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#spectrum" class="link2 link2--nav2">Spectrum analysis</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#time" class="link2 link2--nav2">Time-series analysis</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#lightbgm" class="link2 link2--nav2">LightBGM</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#interpretable" class="link2 link2--nav2">Interpretable Machine Learning</a></li>
-          <li class="left skills__list-item btn btn--plain">
-            <a href="#reduction" class="link2 link2--nav2">Dimensionality reduction</a></li>
-        </ul>
-      </section><br><br><br>
-
-      <!-- Basic theory of magnetism -->
-      <h3 class="section__title3">Basic theory of magnetism</h3>
+      <!-- Paper introduction -->
+      <h3 class="section__title3">Paper introduction</h3>
       <div class="projects__grid">
         <section id="solid-state" class="section project2">
-          <h4 class="bar-left">Solid-state physics</h4>
+          <h4 class="bar-left">Title-1</h4>
           <p class="description">
             The research goal is to determine the universality of magnetic functional materials, 
             experimentally & theoritically, such as soft/hard magnets, multi-ferroic materials, 
