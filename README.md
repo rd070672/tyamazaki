@@ -2,7 +2,9 @@ About
 Welcome to my portfolio built with HTML, CSS and JS on GitHub pages.
 
 https://rd070672.github.io/tyamazaki/
+
 Copyright (c) 2022 Takahiro Yamazaki
+
 
 MIT License
 
