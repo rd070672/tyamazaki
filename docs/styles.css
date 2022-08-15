@@ -332,7 +332,7 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   display: block;
   padding: 0.8em 0.6em;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   transition: transform 0.2s ease-in-out;
 }
