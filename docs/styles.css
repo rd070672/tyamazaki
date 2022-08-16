@@ -416,7 +416,7 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   justify-content: space-between;
 }
 .flex>p{
-  width: 49%;
+  width: auto;
 }
 
 .center {
