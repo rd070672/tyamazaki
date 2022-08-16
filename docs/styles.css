@@ -561,6 +561,7 @@ main {
 
 .project__description {
   margin-top: 0.6em;
+  margin-bottom: 0.3em;
 }
 
 .project__stack {
@@ -588,7 +589,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
 }
 .skills__list2 {
   max-width: 1100px;
