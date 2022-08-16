@@ -411,6 +411,14 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   layout
 ========*/
 
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.flex>p{
+  width: 49%;
+}
+
 .center {
   display: flex;
   align-items: center;
