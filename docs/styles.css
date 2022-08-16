@@ -129,8 +129,8 @@ button {
 }
 .under2 {
   border-bottom: solid 2px var(--clr-primary);
-  margin-left: 5em;
-  padding-left: 5em;
+  /*margin-left: 5em;*/
+  padding-left: 2em;
   margin-top: 0.1em;
   margin-bottom: 0.4em;
   padding-bottom: 0.1em;
