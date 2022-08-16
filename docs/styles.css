@@ -129,6 +129,7 @@ button {
 }
 .under2 {
   border-bottom: solid 2px var(--clr-primary);
+  margin-left: 1em;
 }
 
 .description {
