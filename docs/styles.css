@@ -143,8 +143,10 @@ button {
 }
 
 .img {
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
 }
 
 /* Timeline */
