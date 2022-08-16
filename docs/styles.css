@@ -411,8 +411,8 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 }
 
 .header {
-  height: 8em;
-  max-width: 1100px;
+  height: 7em;
+  max-width: 1000px;
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
