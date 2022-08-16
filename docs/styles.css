@@ -128,11 +128,10 @@ button {
   padding-bottom: 0.1em;
 }
 .under2 {
-  border-bottom: solid 2px var(--clr-primary);
-  margin-left: 1.8em;
+  border-bottom: solid 1px var(--clr-primary);
+  margin-left: 2em;
   margin-top: 0.1em;
-  margin-bottom: 0.1em;
-  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 .description {
