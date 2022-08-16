@@ -412,7 +412,7 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 
 .header {
   height: 7em;
-  max-width: 1000px;
+  max-width: 1100px;
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
@@ -500,7 +500,7 @@ main {
 }
 
 .projects__grid {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0.2em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
