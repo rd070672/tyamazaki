@@ -495,10 +495,10 @@ main {
 }
 
 .projects__grid {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0.2em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
   grid-gap: 1.2em;
 }
 
