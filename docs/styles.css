@@ -131,7 +131,7 @@ button {
   border-bottom: solid 1.5px var(--clr-primary);
   margin-left: 2.4em;
   margin-top: 0.1em;
-  margin-bottom: 0.3em;
+  /*margin-bottom: 0.4em;*/
   font-weight: bold;
 }
 
