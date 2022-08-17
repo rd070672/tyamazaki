@@ -434,6 +434,13 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
   text-align: center;
 }
 
+.center2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
 .header {
   height: 7em;
   max-width: 1100px;
