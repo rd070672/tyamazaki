@@ -468,13 +468,14 @@ main {
 }
 .section3 {
   margin-top: 1em;
-  text-align: left;
+  text-align: center;
   margin-bottom: 0.4em;
-  max-width: 90%;
+  max-width: 95%;
 }
 .section4 {
   margin-top: 5em;
-  max-width: 90%;
+  max-width: 95%;
+  text-align: center;
 }
 
 .section__title {
@@ -669,14 +670,6 @@ main {
 @media (max-width: 600px) {
   .header {
     height: 3em;
-  }
-
-  .section {
-    margin-top: 2em;
-  }
-
-  .section2 {
-    margin-top: 1em;
   }
 
   .nav__list {
