@@ -537,7 +537,7 @@ main {
   max-width: 900px;
   margin: 0.2em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 1.2em;
 }
 
