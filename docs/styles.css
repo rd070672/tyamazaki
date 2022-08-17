@@ -245,13 +245,13 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 }
 .arrow {
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	border: 2px solid #000;
+	width: 15px;
+	height: 15px;
+	border: 1.5px solid #000;
 	border-left-color: #fff;
 	border-top-color: #fff;
 	top: 20px;
-	left: 26px;
+	left: 20px;
 	transform: rotate(45deg);
 }
 #toggle, .sb-slidebar {
