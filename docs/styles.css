@@ -245,13 +245,13 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 }
 .arrow {
 	position: absolute;
-	width: 15px;
-	height: 15px;
-	border: 1px solid #000;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #000;
 	border-left-color: #fff;
 	border-top-color: #fff;
-	top: 15px;
-	left: 15px;
+	top: 20px;
+	left: 26px;
 	transform: rotate(45deg);
 }
 #toggle, .sb-slidebar {
@@ -259,7 +259,7 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 }
 
 i.fas.fa-external-link-alt{
-  font-size: .8em;
+  font-size: .7em;
   margin: 0 .3em;
 }
 
@@ -568,7 +568,7 @@ main {
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-gap: 1.2em;
+  grid-gap: 1.5em;
 }
 
 .project {
@@ -623,7 +623,7 @@ main {
 }
 
 .skills__list {
-  max-width: 1000px;
+  max-width: 600px;
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -689,6 +689,18 @@ main {
 @media (max-width: 600px) {
   .header {
     height: 3em;
+  }
+
+  .section {
+    margin-top: 2em;
+    text-align: center;
+    margin-bottom: 0.4em;
+  }
+
+  .section2 {
+    margin-top: 1em;
+    text-align: center;
+    margin-bottom: 0.4em;
   }
 
   .nav__list {
