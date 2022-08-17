@@ -423,9 +423,8 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 .flex{
   display: flex;
   justify-content: space-between;
-  gap: 0 20px; /* 余白 */
-	padding: 10px;
 }
+
 .flex>p{
   width: auto;
 }
