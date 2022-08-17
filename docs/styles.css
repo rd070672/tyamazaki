@@ -461,6 +461,9 @@ main {
 .section {
   margin-top: 5em;
 }
+.section1 {
+  margin-top: 3em;
+}
 .section2 {
   margin-top: 1em;
   text-align: left;
