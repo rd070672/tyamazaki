@@ -511,6 +511,10 @@ main {
   text-align: left;
   margin-bottom: 0.4em;
 }
+.section__title4 {
+  text-align: left;
+  margin-bottom: 1em;
+}
 
 .nav__list {
   margin-right: 1em;
