@@ -181,6 +181,7 @@ button {
   margin-top: 0.4em;
   margin-bottom: 0.4em;
   margin-left: 0.8em;
+  text-align: justify;
 }
 
 .description2 {
@@ -758,17 +759,8 @@ input[name="tab_item"] {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  text-align: justify;
   margin-bottom: 0.3em;
-}
-.skills__list2 {
-  max-width: 900px;
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 0.5em;
 }
 
 .list2 {
@@ -777,7 +769,7 @@ input[name="tab_item"] {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  text-align: left;
+  text-align: justify;
   margin-bottom: 0.5em;
   font-size: 1.2rem;
 }
