@@ -656,7 +656,7 @@ input[name="tab_item"] {
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-gap: 1.5em;
+  grid-gap: 1em;
 }
 
 .project {
@@ -794,7 +794,7 @@ input[name="tab_item"] {
   .nav {
     text-align: center;
   }
-  
+
   .nav__list {
     flex-direction: column;
     padding: 3em 0;
