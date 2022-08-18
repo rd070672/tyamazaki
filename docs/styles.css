@@ -843,21 +843,20 @@ input[name="tab_item"] {
     margin-top: 0.2em;
     padding-bottom: 0.2em;
     background-color: var(--clr-bg);
-    box-shadow: 0 0 10px var(--shadow);
+    box-shadow: 0 0 1em var(--shadow);
     max-width: 1000px;
     width: 95%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     height: 300px;
     margin: 0 auto;
   }
   
   .tab_item {
-    width: 120px;
-    height: 30px;
-    border-bottom: 3px solid var(--clr-primary);
+    width: 8rem;
+    height: 2rem;
+    border-bottom: 0.2em solid var(--clr-primary);
     background-color: var(--clr-bg);
-    line-height: 30px;
+    line-height: 2rem;
     font-size: 1.2rem;
     text-align: center;
     color: var(--clr-primary);
