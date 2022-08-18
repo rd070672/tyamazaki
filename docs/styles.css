@@ -483,6 +483,7 @@ main {
 
 /* tabs and tab_item */
 .tabs {
+  display: flex;
   margin-top: 0.2em;
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
