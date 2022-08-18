@@ -488,10 +488,9 @@ main {
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
   max-width: 1000px;
-  width: 95%;
+  margin: 0 auto;
   overflow: visible;
   height: 300px;
-  margin: 0 auto;
 }
 
 .tab_item {
@@ -505,7 +504,6 @@ main {
   color: var(--clr-primary);
   display: block;
   float: left;
-  text-align: center;
   font-weight: bold;
   transition: all 0.2s ease;
 }
