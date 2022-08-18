@@ -215,6 +215,7 @@ button {
 
 #sb-site {
 	width: 100% !important;
+  align-items: center;
 	text-align: center;
 }
 
@@ -606,6 +607,10 @@ input[name="tab_item"] {
 .about {
   flex-direction: column;
   margin-top: 1.5em;
+}
+.about2 {
+  flex-direction: column;
+  margin-top: 2em;
 }
 
 .about__name {
