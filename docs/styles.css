@@ -894,8 +894,6 @@ input[name="tab_item"] {
     clear: both;
     overflow: hidden;
   }
-  
-  
   /*選択されているタブのコンテンツのみを表示*/
   #current:checked ~ #current_content,
   #past:checked ~ #past_content {
@@ -907,4 +905,33 @@ input[name="tab_item"] {
     background-color: var(--clr-primary);
     color: #fff;
   }
+
+  .bar-left {
+    border-left: solid 5px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 1em;
+    text-align: left;
+  }
+  .bar-left2 {
+    border-left: solid 3px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 0.3em;
+    line-height: 1.4em;
+    text-align: left;
+  }
+  .bar-left3 {
+    border-left: solid 5px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 0.3em;
+    text-align: left;
+  }
+  .bar-left4 {
+    border-left: solid 3px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 0.3em;
+    margin-left: 0.5em;
+    line-height: 1.4em;
+    text-align: left;
+  }
+
 }
