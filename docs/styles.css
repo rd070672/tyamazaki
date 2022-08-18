@@ -476,11 +476,6 @@ main {
   margin: 0 auto;
 }
 
-.news {
-  overflow:auto; 
-  height: 300px
-}
-
 /* tabs and tab_item */
 .tabs {
   margin-top: 0.2em;
