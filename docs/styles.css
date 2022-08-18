@@ -885,14 +885,14 @@ input[name="tab_item"] {
     padding-bottom: 0.2em;
     background-color: var(--clr-bg);
     box-shadow: 0 0 10px var(--shadow);
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     overflow: auto;
-    height: 300px;
+    height: 250px;
   }
   
   .tab_item {
-    width: 120px;
+    width: 140px;
     height: 30px;
     border-bottom: 3px solid var(--clr-primary);
     background-color: var(--clr-bg);
