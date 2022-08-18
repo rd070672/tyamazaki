@@ -176,36 +176,36 @@ button {
 	margin: 5px auto 20px;
 }
 .timeline > li {
-    overflow: hidden;
-    margin: 0;
+  overflow: hidden;
+  margin: 0;
 	padding: 0;
-    position: relative;
+  position: relative;
 	background: none;
 }
 .timeline-date {
-    width: 18%;
-    float: left;
-    margin: 5px 6px 0 0;
-	text-indent: 0;
+  width: 18%;
+  float: left;
+  margin: 5px 6px 0 0;
+  text-indent: 0;
 }
 .timeline-content {
-    width: 80%;
-    float: left;
-    border-left: 2px var(--clr-fg-alt) solid;
+  width: 80%;
+  float: left;
+  border-left: 2px var(--clr-fg-alt) solid;
 }
 .timeline-content p {
 	margin: 5px 5px 5px 23px;
 	text-indent: 0;
 }
 .timeline-content:before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: var(--clr-primary);
-    position: absolute;
-    left: 18.3%;
-    top: 10px;
-    border-radius: 25px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--clr-primary);
+  position: absolute;
+  left: 18.3%;
+  top: 10px;
+  border-radius: 25px;
 }
 
 .sb-slidebar {
