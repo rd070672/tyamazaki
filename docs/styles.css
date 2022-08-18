@@ -115,6 +115,13 @@ button {
     font-size: 1.2rem;
     text-align: left;
   }
+  
+  a {
+    text-align: center;
+  }
+  span {
+    text-align: center;
+  }
 }
 
 /*===================
