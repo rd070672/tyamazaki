@@ -275,8 +275,8 @@ i.fas.fa-external-link-alt{
 .link {
   color: var(--clr-primary);
   padding: 0 0 0.3em 0;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 0;
 }
 
 .link:hover {
@@ -318,7 +318,7 @@ i.fas.fa-external-link-alt{
 .link2 {
   color: var(--clr-primary);
   padding: 0 0 0.3em 0;
-  position: relative;
+  position: absolute;
 }
 
 .link2:hover {
@@ -376,9 +376,9 @@ i.fas.fa-external-link-alt{
 .btn--outline {
   color: var(--clr-primary);
   border: 2px solid var(--clr-primary);
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
 .btn--outline:focus,
