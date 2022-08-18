@@ -91,10 +91,10 @@ ul {
 }
 
 ul, ol {
-  padding-left:1em;
+  padding-left:0.4em;
 }
 ol li{
-  padding-left:1em;
+  padding-left:0.4em;
 }
 
 a {
