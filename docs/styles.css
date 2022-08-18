@@ -486,12 +486,14 @@ main {
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
   width: 1000px;
+  overflow:auto; 
+  height: 100px;
   margin: 0 auto;
 }
 
 .tab_item {
   width: 100px;
-  height: 30px;
+  height: 50px;
   border-bottom: 3px solid var(--clr-primary);
   background-color: var(--clr-bg);
   line-height: 50px;
