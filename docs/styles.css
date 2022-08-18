@@ -458,6 +458,10 @@ i.fas.fa-external-link-alt{
   width: auto;
 }
 
+.flex2{
+  display: flex;
+}
+
 .center {
   display: flex;
   align-items: center;
