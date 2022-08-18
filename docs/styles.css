@@ -820,7 +820,7 @@ input[name="tab_item"] {
   .nav__hamburger {
     display: flex;
     margin-left: 0.8em;
-    z-index: 10;
+    z-index: 100;
   }
 
   .about {
@@ -835,5 +835,55 @@ input[name="tab_item"] {
 
   .scroll-container {
     display: none;
+  }
+  .tabs {
+    margin-top: 0.2em;
+    padding-bottom: 0.2em;
+    background-color: var(--clr-bg);
+    box-shadow: 0 0 0.1em var(--shadow);
+    width: 1000px;
+    overflow: auto; 
+    height: 300px;
+    margin: 0 auto;
+  }
+  .tab_item {
+    width: 20em;
+    height: 5em;
+    border-bottom: 0.1em solid var(--clr-primary);
+    background-color: var(--clr-bg);
+    line-height: 5em;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--clr-primary);
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+    display: none;
+  }  
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    display: none;
+    padding: 0.2em 0;
+    clear: both;
+    overflow: hidden;
+  }
+  /*選択されているタブのコンテンツのみを表示*/
+  #all:checked ~ #all_content,
+  #programming:checked ~ #programming_content,
+  #design:checked ~ #design_content {
+    display: block;
+  }
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    background-color: var(--clr-primary);
+    color: #fff;
   }
 }
