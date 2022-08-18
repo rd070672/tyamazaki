@@ -124,6 +124,11 @@ button {
   margin-top: 0.3em;
   line-height: 1.4em;
 }
+.bar-left3 {
+  border-left: solid 5px var(--clr-primary);
+  padding-left: 0.5em;
+  margin-top: 0.3em;
+}
 .under {
   border-bottom: solid 2px var(--clr-primary);
   padding-left: 0.2em;
