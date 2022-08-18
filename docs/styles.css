@@ -846,7 +846,7 @@ input[name="tab_item"] {
     box-shadow: 0 0 1em var(--shadow);
     max-width: 1000px;
     width: 95%;
-    overflow: hidden;
+    overflow: auto;
     height: 300px;
     margin: 0 auto;
   }
