@@ -694,7 +694,7 @@ input[name="tab_item"] {
 }
 
 .projects__grid {
-  max-width: 1000px;
+  max-width: 1020px;
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
