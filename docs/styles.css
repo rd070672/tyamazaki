@@ -481,11 +481,6 @@ main {
   margin: 0 auto;
 }
 
-.news {
-  overflow:auto; 
-  height: 300px
-}
-
 /* tabs and tab_item */
 .tabs {
   margin-top: 0.2em;
@@ -779,6 +774,7 @@ input[name="tab_item"] {
   transition: transform 0.2s ease-in-out;
 }
 
+/*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
   .header {
     height: 3em;
@@ -803,7 +799,7 @@ input[name="tab_item"] {
   .nav__list {
     flex-direction: column;
     padding: 3em 0;
-    position: fixed;
+    position: relative;
     right: 0;
     left: 0;
     top: 4em;
@@ -841,6 +837,7 @@ input[name="tab_item"] {
   .scroll-container {
     display: none;
   }
+
   .tabs {
     margin-top: 0.2em;
     padding-bottom: 0.2em;
@@ -852,11 +849,11 @@ input[name="tab_item"] {
     margin: 0 auto;
   }
   .tab_item {
-    width: 20em;
-    height: 5em;
-    border-bottom: 0.1em solid var(--clr-primary);
+    width: 6em;
+    height: 1.5em;
+    border-bottom: 0.2em solid var(--clr-primary);
     background-color: var(--clr-bg);
-    line-height: 5em;
+    line-height: 1.5em;
     font-size: 1.2rem;
     text-align: center;
     color: var(--clr-primary);
