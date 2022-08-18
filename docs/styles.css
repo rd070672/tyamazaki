@@ -530,9 +530,8 @@ input[name="tab_item"] {
 
 
 /*選択されているタブのコンテンツのみを表示*/
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+#current:checked ~ #current_content,
+#past:checked ~ #past_content {
   display: block;
 }
 
