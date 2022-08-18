@@ -591,6 +591,10 @@ input[name="tab_item"] {
   margin-bottom: 0.2em;
 }
 
+.nav {
+  text-align: center;
+}
+
 .nav__list {
   margin-right: 1em;
   display: flex;
@@ -603,6 +607,7 @@ input[name="tab_item"] {
 .nav__hamburger {
   display: none;
   width: 1em;
+  z-index: 10;
 }
 
 .about {
@@ -786,10 +791,14 @@ input[name="tab_item"] {
     margin-bottom: 0.4em;
   }
 
+  .nav {
+    text-align: center;
+  }
+  
   .nav__list {
     flex-direction: column;
     padding: 3em 0;
-    position: absolute;
+    position: fixed;
     right: 0;
     left: 0;
     top: 4em;
