@@ -182,7 +182,6 @@ button {
   margin-bottom: 0.4em;
   margin-left: 0.8em;
   margin-right: 0.8em;
-  text-align: justify;
 }
 
 .description2 {
@@ -191,7 +190,6 @@ button {
   margin-bottom: 0.4em;
   margin-left: 0.4em;
   margin-right: 0.4em;
-  text-align: justify;
 }
 
 .description3 {
@@ -200,7 +198,6 @@ button {
   margin-bottom: 0.4em;
   margin-left: 0.4em;
   margin-right: 0.4em;
-  text-align: justify;
 }
 .description4 {
   font-size: 1rem;
@@ -208,7 +205,6 @@ button {
   margin-bottom: 0.4em;
   margin-left: 1.2em;
   margin-right: 1.2em;
-  text-align: justify;
 }
 
 .img {
