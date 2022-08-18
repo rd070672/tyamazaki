@@ -581,7 +581,12 @@ input[name="tab_item"] {
 }
 .section__title4 {
   text-align: left;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
+}
+.section__title5 {
+  text-align: left;
+  margin-left: 1em;
+  margin-bottom: 0.8em;
 }
 
 .nav__list {
