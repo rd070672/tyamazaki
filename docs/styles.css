@@ -476,34 +476,35 @@ main {
 
 .news {
   overflow:auto; 
-  height:500px
+  height: 100px
 }
 
-/*タブ切り替え全体のスタイル*/
+/* tabs and tab_item */
 .tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 700px;
-  margin: 0 auto;}
+  margin-top: 0.2em;
+  padding-bottom: 0.2em;
+  background-color: var(--clr-bg);
+  box-shadow: 0 0 10px var(--shadow);
+  width: 1000px;
+  margin: 0 auto;
+}
 
-/*タブのスタイル*/
 .tab_item {
-  width: 80px;
-  height: 50px;
+  width: 100px;
+  height: 30px;
   border-bottom: 3px solid var(--clr-primary);
   background-color: var(--clr-bg);
   line-height: 50px;
-  font-size: 16px;
+  font-size: 1.2rem;
   text-align: center;
-  color: var(--clr-bg-alt);
+  color: var(--clr-primary);
   display: block;
   float: left;
   text-align: center;
   font-weight: bold;
   transition: all 0.2s ease;
 }
+
 .tab_item:hover {
   opacity: 0.75;
 }
@@ -516,7 +517,7 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
-  padding: 40px 40px 0;
+  padding: 0.2em 0;
   clear: both;
   overflow: hidden;
 }
