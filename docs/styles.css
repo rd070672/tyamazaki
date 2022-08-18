@@ -489,8 +489,7 @@ main {
   box-shadow: 0 0 10px var(--shadow);
   max-width: 1000px;
   width: 95%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: visible;
   height: 300px;
   margin: 0 auto;
 }
