@@ -892,7 +892,7 @@ input[name="tab_item"] {
   }
   
   .tab_item {
-    width: 90px;
+    width: 120px;
     height: 30px;
     border-bottom: 3px solid var(--clr-primary);
     background-color: var(--clr-bg);
