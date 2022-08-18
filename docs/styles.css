@@ -470,6 +470,67 @@ main {
   margin: 0 auto;
 }
 
+.news {
+  overflow:auto; 
+  height:500px
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.tab_item {
+  width: 80px;
+  height: 50px;
+  border-bottom: 3px solid var(--clr-primary);
+  background-color: var(--clr-bg);
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--clr-bg-alt);
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: var(--clr-primary);
+  color: #fff;
+}
+
 .section {
   margin-top: 5em;
 }
@@ -697,13 +758,13 @@ main {
 
   .section {
     margin-top: 2em;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0.4em;
   }
 
   .section2 {
     margin-top: 1em;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0.4em;
   }
 
