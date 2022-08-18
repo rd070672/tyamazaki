@@ -762,7 +762,7 @@ input[name="tab_item"] {
 
 .skills__list {
   max-width: 600px;
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -772,7 +772,7 @@ input[name="tab_item"] {
 
 .list2 {
   max-width: 900px;
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
