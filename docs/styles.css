@@ -513,7 +513,7 @@ main {
   border-bottom: 3px solid var(--clr-primary);
   background-color: var(--clr-bg);
   line-height: 30px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   color: var(--clr-primary);
   display: block;
