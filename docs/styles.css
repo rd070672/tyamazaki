@@ -483,12 +483,12 @@ main {
 
 /* tabs and tab_item */
 .tabs {
-  display: flex;
   margin-top: 0.2em;
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
-  width: 1000px;
+  max-width: 1000px;
+  width: 95%;
   overflow-x: hidden;
   overflow-y: auto;
   height: 300px;
