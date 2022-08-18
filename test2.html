@@ -1,26 +1,26 @@
 <div class="cp_tab">
-	<input type="radio" name="cp_tab" id="tab2_1" aria-controls="first_tab02" checked>
-	<label for="tab2_1">First Tab</label>
-	<input type="radio" name="cp_tab" id="tab2_2" aria-controls="second_tab02">
-	<label for="tab2_2">Second Tab</label>
-	<input type="radio" name="cp_tab" id="tab2_3" aria-controls="third_tab02">
-	<label for="tab2_3">Third Tab</label>
-	<input type="radio" name="cp_tab" id="tab2_4" aria-controls="force_tab02">
-	<label for="tab2_4">Force Tab</label>
+	<input type="radio" name="cp_tab" id="tab1_1" aria-controls="first_tab01" checked>
+	<label for="tab1_1">First Tab</label>
+	<input type="radio" name="cp_tab" id="tab1_2" aria-controls="second_tab01">
+	<label for="tab1_2">Second Tab</label>
+	<input type="radio" name="cp_tab" id="tab1_3" aria-controls="third_tab01">
+	<label for="tab1_3">Third Tab</label>
+	<input type="radio" name="cp_tab" id="tab1_4" aria-controls="force_tab01">
+	<label for="tab1_4">Force Tab</label>
 	<div class="cp_tabpanels">
-		<div class="cp_tabpanel">
+		<div id="first_tab01" class="cp_tabpanel">
 		<h2>First Tab</h2>
 		<p>First Tab text</p>
 		</div>
-		<div class="cp_tabpanel">
+		<div id="second_tab01" class="cp_tabpanel">
 		<h2>Second Tab</h2>
 		<p>Second Tab text</p>
 		</div>
-		<div class="cp_tabpanel">
+		<div id="third_tab01" class="cp_tabpanel">
 		<h2>Third Tab</h2>
 		<p>Third Tab text</p>
 		</div>
-		<div class="cp_tabpanel">
+		<div id="force_tab01" class="cp_tabpanel">
 		<h2>Force Tab</h2>
 		<p>Force Tab text</p>
 		</div>
@@ -33,7 +33,7 @@
 .cp_tab {
 	margin: 1em auto;
 }
-.cp_tab input[type='radio'] {
+.cp_tab > input[type='radio'] {
 	margin: 0;
 	padding: 0;
 	border: none;
@@ -55,52 +55,34 @@
 .cp_tab > input:nth-child(11):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(6) {
 	display: block;
 }
-.cp_tab .cp_tabpanels {
-	position: absolute;
-	top:0;
-	left: 10em;
-	display: block;
-	height: 320px;
-}
-.cp_tab > input + label {
+.cp_tab > label {
 	position: relative;
-	z-index: 100;
-	top: -15px;
-	left: 1px;
-	display: block;
-	width: 10em;
-	margin-bottom: -20px;
+	display: inline-block;
 	padding: 15px;
 	cursor: pointer;
-	border: 1px solid #cccccc;
-	border-right: 0;
-	border-radius: 6px 0 0 6px;
-}
-.cp_tab > input + label:last-of-type {
-	margin-bottom: 100px;
+	border: 1px solid transparent;
+	border-bottom: 0;
 }
 .cp_tab > label:hover,
 .cp_tab > input:focus + label {
 	color: #0066cc;
 }
 .cp_tab > input:checked + label {
+	margin-bottom: -1px;
 	border-color: #cccccc;
-	border-right: 1px solid #ffffff;/*背景色と同じ*/
+	border-bottom: 1px solid #ffffff;/*背景色と同じ*/
+	border-radius: 6px 6px 0 0;
 }
 .cp_tab .cp_tabpanel {
 	padding: 0.5em 1em;
-	border-left: 1px solid #cccccc;
-	min-height: 320px;
+	border-top: 1px solid #cccccc;
 }
 @media (max-width: 480px) {
 	.cp_tab {
 		width: 100%;
+		font-size: 0.8em;
 	}
-	.cp_tab > input + label {
-	font-size: 0.7em;
-	}
-	.cp_tab .cp_tabpanels {
-	left: 7em;
-	min-width: 7em;
+	.cp_tab label {
+		padding: 0.5em;
 	}
 }
