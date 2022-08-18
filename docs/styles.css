@@ -179,19 +179,21 @@ button {
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-top: 0.4em;
   margin-bottom: 0.4em;
   margin-left: 0.8em;
   margin-right: 0.8em;
+  text-align: left;
 }
 
 .description2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-top: 0.7em;
   margin-bottom: 0.4em;
   margin-left: 0.4em;
   margin-right: 0.4em;
+  text-align: left;
 }
 
 .description3 {
@@ -200,6 +202,7 @@ button {
   margin-bottom: 0.4em;
   margin-left: 0.4em;
   margin-right: 0.4em;
+  text-align: left;
 }
 .description4 {
   font-size: 1rem;
@@ -207,6 +210,7 @@ button {
   margin-bottom: 0.4em;
   margin-left: 1.2em;
   margin-right: 1.2em;
+  text-align: left;
 }
 
 .img {
