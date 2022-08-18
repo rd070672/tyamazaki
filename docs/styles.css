@@ -652,10 +652,15 @@ input[name="tab_item"] {
   flex-direction: column;
   margin-top: 1.5em;
 }
+.about1 {
+  flex-direction: row;
+  margin-top: 1.5em;
+}
 .about2 {
   flex-direction: column;
   margin-top: 2em;
 }
+
 
 .about__name {
   color: var(--clr-primary);
