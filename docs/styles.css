@@ -488,7 +488,8 @@ main {
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
   width: 1000px;
-  overflow: auto; 
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 300px;
   margin: 0 auto;
 }
