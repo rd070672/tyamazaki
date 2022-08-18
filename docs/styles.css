@@ -668,8 +668,8 @@ input[name="tab_item"] {
 }
 
 .project2 {
-  padding: 1em;
-  margin: 0.3em auto;
+  padding: 0.7em;
+  margin: 0.2em auto;
   text-align: left;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
