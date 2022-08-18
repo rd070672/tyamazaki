@@ -133,7 +133,7 @@ button {
   border-left: solid 3px var(--clr-primary);
   padding-left: 0.5em;
   margin-top: 0.3em;
-  margin-left: 0.5;
+  margin-left: 0.5em;
   line-height: 1.4em;
 }
 .under {
@@ -170,6 +170,12 @@ button {
   margin-top: 1em;
   margin-bottom: 0.4em;
   margin-left: 0.4em;
+}
+.description4 {
+  font-size: 1rem;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  margin-left: 1.2em;
 }
 
 .img {
