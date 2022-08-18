@@ -153,8 +153,9 @@ button {
 }
 .bar-left3 {
   border-left: solid 5px var(--clr-primary);
-  padding-left: 0.5em;
-  margin-top: 0.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  margin-top: 0.2em;
 }
 .bar-left4 {
   border-left: solid 3px var(--clr-primary);
@@ -600,7 +601,7 @@ input[name="tab_item"] {
 .section2 {
   margin-top: 1em;
   text-align: left;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
 }
 .section3 {
   margin-top: 1em;
@@ -720,8 +721,8 @@ input[name="tab_item"] {
 }
 
 .project2 {
-  padding: 0.7em;
-  margin: 0.2em auto;
+  padding: 0.5em;
+  margin: 0.1em auto;
   text-align: left;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
