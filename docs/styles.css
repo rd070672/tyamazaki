@@ -101,10 +101,10 @@ button {
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
   h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
   }
 }
@@ -145,21 +145,21 @@ button {
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-top: 0.4em;
   margin-bottom: 0.4em;
   margin-left: 1em;
 }
 
 .description2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-top: 0.7em;
   margin-bottom: 0.4em;
   margin-left: 0.4em;
 }
 
 .description3 {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin-top: 1em;
   margin-bottom: 0.4em;
   margin-left: 0.4em;
