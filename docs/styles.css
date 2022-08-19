@@ -178,6 +178,13 @@ button {
   margin-bottom: 0.4em;
   font-weight: bold;
 }
+.under3 {
+  border-bottom: solid 1px var(--clr-primary);
+  padding-left: 0.2em;
+  margin-top: 0.1em;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.1em;
+}
 
 .description {
   font-size: 0.9rem;
@@ -220,6 +227,15 @@ button {
   margin-left: 0.8em;
   margin-right: 0.8em;
   text-align: left;
+}
+.description6 {
+  font-size: 0.9rem;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  text-align: left;
+  font-weight: bold;
 }
 
 .img {
