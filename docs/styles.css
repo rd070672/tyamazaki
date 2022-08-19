@@ -762,6 +762,7 @@ input[name="tab_item"] {
 .project__description {
   margin-top: 0.6em;
   margin-bottom: 0.3em;
+  font-size: 0.9rem;
 }
 
 .project__stack {
