@@ -581,16 +581,13 @@ main {
   font-weight: bold;
   transition: all 0.2s ease;
 }
-
 .tab_item:hover {
   opacity: 0.75;
 }
-
 /*ラジオボタンを全て消す*/
 input[name="tab_item"] {
   display: none;
 }
-
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
@@ -598,14 +595,12 @@ input[name="tab_item"] {
   clear: both;
   overflow: hidden;
 }
-
-
 /*選択されているタブのコンテンツのみを表示*/
-#current:checked ~ #current_content,
+#y2022:checked ~ #y2022_content,
+#y2021:checked ~ #y2021_content,
 #past:checked ~ #past_content {
   display: block;
 }
-
 /*選択されているタブのスタイルを変える*/
 .tabs input:checked + .tab_item {
   background-color: var(--clr-primary);
