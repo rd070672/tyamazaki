@@ -215,7 +215,7 @@ button {
 }
 
 .img {
-  margin: 0.4em;
+  margin: 0.3em 0.4em;
   width: 120px;
   height: auto;
 }
@@ -408,7 +408,7 @@ i.fas.fa-external-link-alt{
 
 .btn {
   display: block;
-  padding: 0.8em 0.6em;
+  padding: 0.6em 0.6em;
   font-weight: 500;
   font-size: 0.8rem;
   text-transform: uppercase;
