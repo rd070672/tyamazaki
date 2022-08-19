@@ -539,12 +539,12 @@ main {
   box-shadow: 0 0 10px var(--shadow);
   max-width: 900px;
   margin: 0 auto;
-  overflow: hidden;
-  height: 250px;
+  overflow: auto;
+  height: 200px;
 }
 
 .tab_item {
-  width: 90px;
+  width: 120px;
   height: 30px;
   border-bottom: 3px solid var(--clr-primary);
   background-color: var(--clr-bg);
