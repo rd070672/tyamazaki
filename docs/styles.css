@@ -237,6 +237,15 @@ button {
   text-align: left;
   font-weight: bold;
 }
+.description7 {
+  font-size: 0.9rem;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
 
 .img {
   margin: 0.3em 0.6em;
