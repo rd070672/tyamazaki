@@ -252,8 +252,8 @@ button {
   margin-bottom: 0.4em;
   margin-left: 1.2em;
   margin-right: 1.2em;
-  text-align: justify;
-  text-justify: inter-ideograph;
+  text-align: left;
+  font-weight: bold;
 }
 
 
