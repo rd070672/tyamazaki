@@ -614,6 +614,7 @@ input[name="tab_item"] {
   overflow: hidden;
 }
 /*選択されているタブのコンテンツのみを表示*/
+#y2023:checked ~ #y2023_content,
 #y2022:checked ~ #y2022_content,
 #y2021:checked ~ #y2021_content,
 #past:checked ~ #past_content {
