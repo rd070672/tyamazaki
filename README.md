@@ -4,6 +4,6 @@ Please feel free to fork and use this website.
 If you have any questions, I am glad to answer them. 
 
 https://rd070672.github.io/tyamazaki/
-Copyright (c) 2022 tyamazaki
+Copyright (c) 2022-2023 tyamazaki
 
 
