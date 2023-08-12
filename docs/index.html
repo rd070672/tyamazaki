@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en jp">
   <head>
     <title>tyamazaki</title>
     <meta charset="UTF-8" />
@@ -23,11 +23,28 @@
       gtag('js', new Date());
       gtag('config', 'G-NYGV5L0T7N');
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('./header.html')
+              .then(response => response.text())
+              .then(content => {
+                  const header = document.querySelector('#header');
+                  header.innerHTML = content;
+              });
+      
+          fetch('./footer.html')
+              .then(response => response.text())
+              .then(content => {
+                  const footer = document.querySelector('#footer');
+                  footer.innerHTML = content;
+              });
+      });
+      </script>
   </head>
   <body class="light" id="top">
     <!-- header -->
     <header class="header center">
-      <h4><a href="https://rd070672.github.io/tyamazaki/" class="link">tyamazaki</a></h4>
+      <h4><a href="https://tyamazaki.com" class="link">tyamazaki</a></h4>
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item">
@@ -53,7 +70,7 @@
         </button>
       </nav>
     </header>
-
+    <div id="header"></div>
     <main>
       <!-- Portfolio -->
       <div id="Portfolio" class="about contact center">
@@ -536,6 +553,7 @@
         </a>
       </section>
     </main>
+    <div id="footer"></div>
 
     <!-- footer -->
     <footer class="footer">
