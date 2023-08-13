@@ -13,6 +13,24 @@
       rel="stylesheet">
     <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
     </script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('./header.html')
+              .then(response => response.text())
+              .then(content => {
+                  const header = document.querySelector('#header');
+                  header.innerHTML = content;
+              });
+      
+          fetch('./footer.html')
+              .then(response => response.text())
+              .then(content => {
+                  const footer = document.querySelector('#footer');
+                  footer.innerHTML = content;
+              });
+      });
+    </script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./img/favicon.png">
   </head>
