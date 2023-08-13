@@ -23,23 +23,23 @@
       gtag('js', new Date());
       gtag('config', 'G-NYGV5L0T7N');
     </script>
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function() {
-          fetch('./header.html')
+          fetch('./header.php')
               .then(response => response.text())
               .then(content => {
                   const header = document.querySelector('#header');
                   header.innerHTML = content;
               });
       
-          fetch('./footer.html')
+          fetch('./footer.php')
               .then(response => response.text())
               .then(content => {
                   const footer = document.querySelector('#footer');
                   footer.innerHTML = content;
               });
       });
-      </script>
+      </script> -->
   </head>
   <body class="light" id="top">
     <!-- header -->
