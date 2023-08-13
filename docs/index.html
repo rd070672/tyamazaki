@@ -23,29 +23,27 @@
       gtag('js', new Date());
       gtag('config', 'G-NYGV5L0T7N');
     </script>
-    <!-- <script>
+    <script>
       document.addEventListener("DOMContentLoaded", function() {
-          fetch('./header.php')
+          fetch('./header.html')
               .then(response => response.text())
               .then(content => {
                   const header = document.querySelector('#header');
                   header.innerHTML = content;
               });
       
-          fetch('./footer.php')
+          fetch('./footer.html')
               .then(response => response.text())
               .then(content => {
                   const footer = document.querySelector('#footer');
                   footer.innerHTML = content;
               });
       });
-      </script> -->
+      </script>
   </head>
   <body class="light" id="top">
     <!-- header -->
-    <div id="header">
-      <?php include 'header.php'; ?>
-    </div>
+    <div id="header"></div>
     <!-- <header class="header center">
       <h4><a href="https://tyamazaki.com" class="link">tyamazaki</a></h4>
       <nav class="nav center">
@@ -556,9 +554,7 @@
       </section>
     </main>
     <!-- footer -->
-    <div id="footer">
-      <?php include 'footer.php'; ?>
-    </div>
+    <div id="footer"></div>
     <!-- <footer class="footer">
       Copyright © 2023
       <a href="https://tyamazaki.com" class="link footer__link">
