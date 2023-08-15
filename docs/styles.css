@@ -696,11 +696,11 @@ input[name="tab_item"] {
   width: 1em;
   z-index: 10;
 }
-
 .about {
   flex-direction: column;
   margin-top: 1.5em;
 }
+
 .about1 {
   flex-direction: column;
 }
@@ -708,7 +708,12 @@ input[name="tab_item"] {
   flex-direction: column;
   margin-top: 2em;
 }
-
+.about3 {
+  flex-direction: column;
+  margin-top: 1.5em;
+  position: center;
+  text-align: center;
+}
 
 .about__name {
   color: var(--clr-primary);
@@ -732,6 +737,7 @@ input[name="tab_item"] {
 .about__contact {
   margin-top: 2em;
   margin-bottom: 2em;
+  text-align: center;
 }
 
 .about .link--icon {
@@ -866,7 +872,7 @@ input[name="tab_item"] {
 }
 
 /*スマートフォン用にカスタマイズ*/
-@media (max-width: 600px) {
+@media (max-width: auto) {
   .header {
     height: 3em;
   }
@@ -918,6 +924,7 @@ input[name="tab_item"] {
   .about {
     align-items: flex-start;
     margin-top: 1em;
+    text-align: center;
   }
 
   .footer {
