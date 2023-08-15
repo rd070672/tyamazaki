@@ -750,6 +750,14 @@ input[name="tab_item"] {
   grid-gap: 0.8em;
 }
 
+.projects__grid2 {
+  max-width: auto; /*900px;*/
+  margin: 0em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+  grid-gap: 0.8em;
+}
+
 .project {
   padding: 1em;
   margin: 0.3em auto;
