@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en ja">
+<html lang="en jp">
   <head>
-    <title>IDEAS: tyamazaki's portfolio website</title>
+    <title>tyamazaki.com</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
     <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
-    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, 山崎貴大, portfolio, homepage, website, materials, scientist, researcher, professor, magnetism, machine learning, projects, publications, notes, blog" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,30 +13,47 @@
       rel="stylesheet">
     <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          fetch('./header.html')
-              .then(response => response.text())
-              .then(content => {
-                  const header = document.querySelector('#header');
-                  header.innerHTML = content;
-              });
-      
-          fetch('./footer.html')
-              .then(response => response.text())
-              .then(content => {
-                  const footer = document.querySelector('#footer');
-                  footer.innerHTML = content;
-              });
-      });
-    </script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./img/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
   </head>
+  <!-- body -->
   <body class="light" id="top">
 
     <!-- header -->
-    <div id="header"></div>
+    <header class="header center">
+      <h4><a href="https://tyamazaki.com" class="link">tyamazaki</a></h4>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="./">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./notes">notes</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./blog">blog</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
         
     <main>
       <!-- Main contents -->

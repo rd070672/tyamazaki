@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en jp">
   <head>
-    <title>BLOG: tyamazaki's portfolio website</title>
+    <title>tyamazaki.com</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
     <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
-    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, scientist, researcher, professor, magnetism, machine learning, projects, publications, notes, blog" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,85 +13,47 @@
       rel="stylesheet">
     <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
     </script>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          fetch('./header.html')
-              .then(response => response.text())
-              .then(content => {
-                  const header = document.querySelector('#header');
-                  header.innerHTML = content;
-              });
-      
-          fetch('./footer.html')
-              .then(response => response.text())
-              .then(content => {
-                  const footer = document.querySelector('#footer');
-                  footer.innerHTML = content;
-              });
-      });
-    </script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./img/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
   </head>
+  <!-- body -->
   <body class="light" id="top">
 
     <!-- header -->
-    <div id="header"></div>
-
-    <main>
-      <!-- Main contents -->
-      <div class="about center">
-        <h2 class="center">Blog</h2>
-        <h4 class="about__role">Recent activities & updated portfolio contents</h4>
-      </div>
-      
-      <!-- Updated website -->
-      <section id="projects" class="section projects">
-        <h3 class="under3">2023.5.31</h3>
-        <p class="description6">Obtained original domain</p>
-        <p class="description4">
-          This URL is update. The domain was bought from Gmail domain and custum the domain name of Guthub page website.
-        </p
-      </section>
-      
-      <section id="projects" class="section projects">
-        <h3 class="under3">2023.4.1</h3>
-        <p class="description6">Updated résumé</p>
-        <p class="description4">
-          My résumé is update. Please download <a href="https://docs.google.com/document/d/1DJfrVVvGl8wiJjjEA-Xey73QRtwMzup4ji3j0gpnTNI" class="link2 link2--nav2">full one <i aria-hidden="true" class="fas fa-external-link-alt"></i></a> and <a href="https://docs.google.com/document/d/1sRNQsF9yezdYvAIab0GHzMkR7f5K7ZVwYegcWoJQSkM/" class="link2 link2--nav2">one-page one <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-        </p>
-      </section>
-
-      <section id="projects" class="section projects">
-        <h3 class="under3">2022.8.31</h3>
-        <p class="description6">Added contents</p>
-        <p class="description4">
-          Added <a href="https://rd070672.github.io/tyamazaki/ideas.html" class="link2 link2--nav2">IDEAS&nbsp;
-          <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-          , which introduce the latest journals related to solid-state physics and materials science
-        </p>
-        <p class="description4">
-          Added <a href="https://github.com/rd070672/tyamazaki/notes.html" class="link2 link2--nav2">NOTES&nbsp;
-          <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-          , which introduce some basic principles related to my projects<br>
-        </p>
-      </section>
-      
-      <section id="projects" class="section projects">
-        <h3 class="under3">2022.8.19</h3>
-        <p class="description6">Opened website</p>
-        <p class="description4">
-          Newly create & design my portfolio website.<br>
-          Licensed under the BSD 3-Clause “New” or “Revised” License. For details, please refer to the 
-          <a href="https://github.com/rd070672/tyamazaki" class="link2 link2--nav2">LICENSE file&nbsp;
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-        </p>
-      </section>
-    </main>
-
-    <!-- footer -->
-    <div id="footer"></div>
+    <header class="header center">
+      <h4><a href="https://tyamazaki.com" class="link">tyamazaki</a></h4>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="./">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./notes">notes</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./blog">blog</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
 
     <div class="scroll-container">
       <div class="scroll-top">
