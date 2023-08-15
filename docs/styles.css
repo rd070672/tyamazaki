@@ -561,14 +561,14 @@ i.fas.fa-external-link-alt{
 
 .header {
   height: 6em;
-  max-width: 900px;
+  max-width: auto; /*900px;*/
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
 }
 
 main {
-  max-width: 900px;
+  max-width: auto; /*900px;*/
   width: 95%;
   margin: 0 auto;
 }
@@ -579,7 +579,7 @@ main {
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
-  max-width: 900px;
+  max-width: auto; /*900px;*/
   margin: 0 auto;
   overflow: auto;
   height: 200px;
@@ -743,7 +743,7 @@ input[name="tab_item"] {
 }
 
 .projects__grid {
-  max-width: 900px;
+  max-width: auto; /*900px;*/
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
@@ -813,7 +813,7 @@ input[name="tab_item"] {
 }
 
 .list2 {
-  max-width: 900px;
+  max-width: auto; /*900px;*/
   width: 98%;
   margin: 0 auto;
   display: flex;
