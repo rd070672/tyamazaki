@@ -601,12 +601,12 @@ i.fas.fa-external-link-alt{
 }
 
 .header2 {
-  /* display: flex; */
+  display: flex;
   height: 6em;
   width: 95%;
   margin: 0 auto 70px;
   justify-content: space-between;
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -741,8 +741,9 @@ input[name="tab_item"] {
 .nav__hamburger {
   display: none;
   width: 1em;
-  z-index: 10;
+  z-index: 1100;
 }
+
 .about {
   flex-direction: column;
   margin-top: 1.5em;
