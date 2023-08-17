@@ -109,7 +109,39 @@ button {
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
-    .section {
+  /* h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  h4 {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  h5 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  a {
+    text-align: center;
+  }
+  span {
+    text-align: center;
+  } */
+  /* .header {
+    height: 3em;
+  }
+  .header2 {
+    height: 3em;
+  }
+  .section {
     margin-top: 2em;
     text-align: left;
     margin-bottom: 0.4em;
@@ -144,17 +176,8 @@ button {
   .nav__hamburger {
     display: flex;
     margin-left: 0.8em;
-    z-index: 100; 
+    z-index: 1100; 
   }
-  /* .nav__list {
-    display: none; 
-    flex-direction: column;
-    position: absolute;
-    /* z-index: 100; */
-  /* } 
-  .nav__hamburger {
-    display: block;
-  } */
   .about {
     align-items: flex-start;
     margin-top: 1em;
@@ -215,6 +238,42 @@ button {
     background-color: var(--clr-primary);
     color: #fff;
   }
+  /* .bar-left {
+    border-left: solid 5px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 1em;
+    text-align: left;
+  }
+  .bar-left2 {
+    border-left: solid 3px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 0.3em;
+    line-height: 1.4em;
+    text-align: left;
+  }
+  .bar-left3 {
+    border-left: solid 5px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 0.3em;
+    text-align: left;
+  }
+  .bar-left4 {
+    border-left: solid 3px var(--clr-primary);
+    padding-left: 0.5em;
+    margin-top: 0.3em;
+    margin-left: 0.5em;
+    line-height: 1.4em;
+    text-align: left; 
+  }*/
+  /* .nav__list {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    /* z-index: 100; */
+  /* } 
+  .nav__hamburger {
+    display: block;
+  } */
 }
 
 /*===================
@@ -682,12 +741,12 @@ i.fas.fa-external-link-alt{
 }
 
 .header2 {
-  /* display: flex; */
+  display: flex;
   height: 6em;
   width: 95%;
   margin: 0 auto 70px;
   /* justify-content: space-between; */
-  position: fixed;
+  /* position: fixed; */
   /* top: 0;
   left: 0;
   right: 0; */
