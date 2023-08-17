@@ -119,27 +119,27 @@ button {
   }
 
   h1 {
-    font-size: 1rem;
+    font-size: 1em;
   }
 
   h2 {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 
   h3 {
-    font-size: 0.7rem;
+    font-size: 0.7em;
   }
 
   h4 {
-    font-size: 0.6rem;
+    font-size: 0.6em;
   }
 
   h5 {
-    font-size: 0.6rem;
+    font-size: 0.6em;
     text-align: center;
   }
   p {
-    font-size: 0.5rem;
+    font-size: 0.5em;
   }
   
   ul {
@@ -147,17 +147,17 @@ button {
   }
   
   ul, ol {
-    font-size: 0.6rem;
+    font-size: 0.6em;
     padding-left:0.4em;
     padding-right:0.4em;
   }
   ol li{
-    font-size: 0.6rem;
+    font-size: 0.6em;
     padding-left:0.4em;
     padding-right:0.4em;
   }
   .description {
-    font-size: 0.6rem;
+    font-size: 0.6em;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
     margin-left: 0.6em;
@@ -165,7 +165,7 @@ button {
     text-align: left;
   }
   .description3 {
-    font-size: 0.6rem;
+    font-size: 0.6em;
     margin-top: 0.6em;
     margin-bottom: 0.3em;
     margin-left: 0.3em;
@@ -173,7 +173,7 @@ button {
     text-align: left;
   }
   .description9 {
-    font-size: 0.6rem;
+    font-size: 0.6em;
     margin-top: 0em;
     margin-bottom: 0em;
     margin-left: 0.6em;
@@ -183,7 +183,7 @@ button {
   }
 
   .section2 {
-    margin-top: 1em;
+    margin-top: 0.6em;
     text-align: left;
     margin-bottom: 0.4em;
   }
@@ -224,7 +224,7 @@ button {
     border-bottom: 3px solid var(--clr-primary);
     background-color: var(--clr-bg);
     line-height: 30px;
-    font-size: 1rem;
+    font-size: 0.6em;
     text-align: center;
     color: var(--clr-primary);
     display: block;
