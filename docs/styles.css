@@ -984,14 +984,13 @@ input[name="tab_item"] {
   } */
   .nav__list {
     flex-direction: column;
-    padding: 3em 0;
-    position: relative;
-    right: 0;
-    left: 0;
-    top: 4em;
-    background-color: var(--clr-bg);
+    padding: 6em 0;
+    position: absolute;
+    top: 3em;
+    right: 3em; 
+    background-color: var(--clr-bg-alt);
     width: 100%;
-    overflow: hidden;
+    overflow: auto; /*hidden */
     transition: width 0.2s ease-in-out;
   }
   .nav__hamburger {
