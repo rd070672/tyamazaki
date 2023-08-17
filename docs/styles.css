@@ -1001,9 +1001,9 @@ input[name="tab_item"] {
   }
   .header2 .nav__hamburger {
     position: absolute;
-    top: 5em; /* これは調整が必要な場合があります */
-    right: 5em; /* これも調整が必要な場合があります */
-    z-index: 1001; /* 必要に応じて調整 */
+    top: 15em;
+    right: 15em; 
+    z-index: 1001;
   }
 }
 
