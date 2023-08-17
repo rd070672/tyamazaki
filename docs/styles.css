@@ -380,10 +380,10 @@ button {
   height: 10px;
   background: var(--clr-primary);
   position: absolute;
-  left: 20.3%;
+  left: 20.2%;
   top: 10px;
   border-radius: 30px;
-  border: 1px solid var(--clr-fg-alt);
+  border: 2px solid var(--clr-fg-alt);
 }
 
 .sb-slidebar {
