@@ -582,6 +582,23 @@ i.fas.fa-external-link-alt{
   justify-content: space-between;
 }
 
+.header2 {
+  height: 6em;
+  width: 95%;
+  margin: 0 auto;
+  position: fixed;
+  top: -6em;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.header2.show {
+  top: 0;
+}
+
 main {
   max-width: auto; /*900px;*/
   width: 95%;
