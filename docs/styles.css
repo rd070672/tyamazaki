@@ -128,8 +128,7 @@ button {
     display: block;
   }
   .nav__list-item {
-    margin: 0.2em auto;
-    font-size: 0.8rem;
+    margin: 0.3em auto;
     text-transform: uppercase;
   }
   .about {
@@ -638,7 +637,7 @@ i.fas.fa-external-link-alt{
 }
 
 .center {
-  /* display: flex; */
+  display: flex;
   align-items: center;
   text-align: center;
 }
@@ -1007,8 +1006,19 @@ input[name="tab_item"] {
   }
   .header2 .nav__hamburger {
     position: absolute;
-    top: 3em;
-    right: 3em; 
-    z-index: 1003;
+    top: 1.3em;
+    right: 1.3em; 
+    z-index: 1001;
   }
 }
+
+/* .nav__list {
+  margin-right: 1em;
+  display: flex;
+} */
+
+/* .nav__hamburger {
+  display: none;
+  width: 1em;
+  z-index: 100;
+} */
