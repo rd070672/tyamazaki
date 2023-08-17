@@ -134,6 +134,17 @@ button {
   span {
     text-align: center;
   }
+
+  .nav__list {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+  } 
+
+.nav__hamburger {
+    display: block;
+  }
 }
 
 /*===================
@@ -741,7 +752,7 @@ input[name="tab_item"] {
 .nav__hamburger {
   display: none;
   width: 1em;
-  z-index: 1100;
+  z-index: 100;
 }
 
 .about {
@@ -921,7 +932,7 @@ input[name="tab_item"] {
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: auto) {
-  .header2 {
+  .header {
     height: 3em;
   }
 
