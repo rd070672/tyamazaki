@@ -142,7 +142,7 @@ button {
     z-index: 1000;
   } 
 
-.nav__hamburger {
+  .nav__hamburger {
     display: block;
   }
 }
