@@ -597,11 +597,11 @@ i.fas.fa-external-link-alt{
   max-width: 900px; /*900px;*/
   width: 95%;
   margin: 0 auto;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .header2 {
-  /* display: flex; */
+  display: flex;
   height: 4em;
   max-width: 900px; /*900px;*/
   width: 95%;
