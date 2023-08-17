@@ -110,7 +110,7 @@ button {
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
   a {
-    font-size: 0.6rem;
+    font-size: 1.1em;
     text-decoration: none;
   }
   .section2 {
