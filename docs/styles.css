@@ -395,13 +395,13 @@ button {
   font-weight: bold;
 }
 .description9 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-top: 0em;
   margin-bottom: 0em;
   margin-left: 0.8em;
   margin-right: 1em;
   text-align: right;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .img {
