@@ -881,7 +881,7 @@ input[name="tab_item"] {
 }
 
 .nav__hamburger {
-  /* display: none; */
+  display: none;
   width: 1em;
   z-index: 100;
 }
@@ -1084,7 +1084,7 @@ input[name="tab_item"] {
 
   .nav {
     text-align: center;
-  }
+  } */
 
   /* .nav__list {
     flex-direction: column;
@@ -1157,7 +1157,7 @@ input[name="tab_item"] {
   
   .tab_item:hover {
     opacity: 0.75;
-  }
+  } */
   
   /*ラジオボタンを全て消す*/
   /* input[name="tab_item"] {
@@ -1209,6 +1209,6 @@ input[name="tab_item"] {
     margin-left: 0.5em;
     line-height: 1.4em;
     text-align: left;
-  }
+  } 
 
 } */
