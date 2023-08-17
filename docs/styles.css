@@ -277,6 +277,17 @@ button {
   height: auto;
 }
 
+.leftImg {
+  float: left;
+  width: 400px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.rightText {
+  overflow: hidden;
+}
+
 /* Timeline */
 .timeline {
 	width: 98%;
