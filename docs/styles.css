@@ -108,7 +108,7 @@ button {
 }
 
 /*スマートフォン用にカスタマイズ*/
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
   h1 {
     font-size: 1.8em;
   }
@@ -135,7 +135,7 @@ button {
   span {
     text-align: center;
   }
-} */
+}
 
 /*===================
   customization
@@ -972,7 +972,8 @@ input[name="tab_item"] {
   }
 
   .scroll-container {
-    display: none;
+    /* display: none; */
+    display: block;
   }
 
   .tabs {
