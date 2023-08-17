@@ -279,9 +279,10 @@ button {
 
 .leftImg {
   float: left;
-  width: 400px;
+  width: 200px;
   height: auto;
   margin-right: 10px;
+  border: 2px solid white;
 }
 
 .rightText {
