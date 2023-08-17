@@ -924,7 +924,7 @@ input[name="tab_item"] {
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: auto) {
-  .header {
+  .header2 {
     height: 3em;
   }
 
