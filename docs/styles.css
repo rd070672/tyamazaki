@@ -690,9 +690,9 @@ i.fas.fa-external-link-alt{
   margin: 0 auto 70px;
   justify-content: space-between;
   position: fixed;
-  /* top: 0;
+  top: 0;
   left: 0;
-  right: 0; */
+  right: 0;
   transition: top 0.2s;
   z-index: 1000;
 }
