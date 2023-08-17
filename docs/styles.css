@@ -602,10 +602,10 @@ i.fas.fa-external-link-alt{
 
 .header2 {
   /* display: flex; */
-  height: 6em;
+  height: 4em;
   max-width: 900px; /*900px;*/
   width: 95%;
-  margin: 0 auto 70px;
+  margin: 0 auto 40px;
   /* justify-content: space-between; */
   position: fixed;
   top: 0;
