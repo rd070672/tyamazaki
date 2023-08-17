@@ -601,12 +601,12 @@ i.fas.fa-external-link-alt{
 }
 
 .header2 {
-  display: flex;
+  /* display: flex; */
   height: 6em;
   max-width: 900px; /*900px;*/
   width: 95%;
   margin: 0 auto 70px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: fixed;
   top: 0;
   left: 0;
@@ -935,11 +935,11 @@ input[name="tab_item"] {
 
   .nav__list {
     flex-direction: column;
-    padding: 3em 0;
+    padding: 5em 0;
     position: relative;
     right: 0;
     left: 0;
-    top: 4em;
+    top: 2em;
     background-color: var(--clr-bg);
     width: 0;
     overflow: hidden;
