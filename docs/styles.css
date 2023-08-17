@@ -452,7 +452,7 @@ i.fas.fa-external-link-alt{
 
 .link {
   color: var(--clr-primary);
-  padding: 0 0 0.3em 0;
+  padding: 0 0 0.2em 0;
   position: relative;
   z-index: 1002;
 }
@@ -957,7 +957,7 @@ input[name="tab_item"] {
   bottom: 1em;
   right: 2em;
   background-color: transparent;
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: transform 0.2s ease-in-out;
 }
 
