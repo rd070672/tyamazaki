@@ -227,9 +227,7 @@ button {
     z-index: 100;
   }
   .nav__hamburger {
-    background-color: red;
     display: block; /* ハンバーガーメニューボタンを表示 */
-    z-index: 1000;
   }
 }
 
