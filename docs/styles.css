@@ -1045,7 +1045,7 @@ input[name="tab_item"] {
 /* 600px以下の画面幅ではハンバーガーメニューを表示する */
 @media (max-width: 600px) {
   .nav__list {
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 2em 0;
     position: absolute;
