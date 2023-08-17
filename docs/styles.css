@@ -119,18 +119,6 @@ button {
     text-align: left;
     margin-bottom: 0.4em;
   }
-  /* .nav__list {
-    flex-direction: column;
-    padding: 3em 0;
-    position: relative;
-    right: 0;
-    left: 0;
-    top: 4em;
-    background-color: var(--clr-bg);
-    width: 0;
-    overflow: hidden;
-    transition: width 0.2s ease-in-out;
-  } */
   .display-nav-list {
     width: 100%;
     display: block;
@@ -139,12 +127,6 @@ button {
     margin: 0.5em auto;
     text-transform: uppercase;
   }
-  /* .nav__list {
-      display: none; 
-      flex-direction: column;
-      position: absolute;
-      z-index: 100;
-  }  */
   .about {
     align-items: flex-start;
     margin-top: 1em;
@@ -226,12 +208,35 @@ button {
     position: absolute;
     z-index: 100;
   }
+/*.nav__list {
+    flex-direction: column;
+    padding: 3em 0;
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 4em;
+    background-color: var(--clr-bg);
+    width: 0;
+    overflow: hidden;
+    transition: width 0.2s ease-in-out;
+  } */
   .nav__hamburger {
     background-color: red;
     display: block; /* ハンバーガーメニューボタンを表示 */
     z-index: 1000;
   }
 }
+
+/* .nav__list {
+  margin-right: 1em;
+  display: flex;
+} */
+
+/* .nav__hamburger {
+  display: none;
+  width: 1em;
+  z-index: 100;
+} */
 
 /*===================
   customization
@@ -360,19 +365,16 @@ button {
   text-align: right;
   /* font-weight: bold; */
 }
-
 .img {
   margin: 0.3em 0.6em;
   width: 120px;
   height: auto;
 }
-
 .img400 {
   margin: 0.3em 0.6em;
   width: 400px;
   height: auto;
 }
-
 .leftImg {
   float: left;
   width: 150px;
@@ -383,7 +385,6 @@ button {
   margin-right: 0.8em;
   border: 2px solid white;
 }
-
 .rightText {
   overflow: hidden;
   font-size: 0.8rem;
@@ -827,17 +828,6 @@ input[name="tab_item"] {
 
 .nav {
   text-align: center;
-}
-
-.nav__list {
-  margin-right: 1em;
-  display: flex;
-}
-
-.nav__hamburger {
-  display: none;
-  width: 1em;
-  z-index: 100;
 }
 
 .nav__list-item {
