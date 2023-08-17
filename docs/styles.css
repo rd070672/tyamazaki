@@ -109,7 +109,7 @@ button {
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
-    .section {
+  .section {
     margin-top: 2em;
     text-align: left;
     margin-bottom: 0.4em;
@@ -119,10 +119,7 @@ button {
     text-align: left;
     margin-bottom: 0.4em;
   }
-  .nav {
-    text-align: center;
-  }
-  .nav__list {
+  /* .nav__list {
     flex-direction: column;
     padding: 3em 0;
     position: relative;
@@ -133,26 +130,25 @@ button {
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
-  }
+  } */
   .display-nav-list {
     width: 100%;
   }
   .nav__list-item {
     margin: 0.5em auto;
     text-transform: uppercase;
-    font-size: 0.9rem;
   }
   .nav__hamburger {
-    display: flex;
-    margin-left: 0.8em;
-    z-index: 100; 
+    display: block;
+    /* margin-left: 0.8em;
+    z-index: 100;  */
   }
-  /* .nav__list {
-    display: none; 
-    flex-direction: column;
-    position: absolute;
-    /* z-index: 100; */
-  /* } 
+  .nav__list {
+      display: none; 
+      flex-direction: column;
+      position: absolute;
+      z-index: 100;
+  } 
   .nav__hamburger {
     display: block;
   } */
@@ -413,9 +409,10 @@ button {
   height: 10px;
   background: var(--clr-primary);
   position: absolute;
-  left: 20.2%;
+  left: 20.6%;
   top: 10px;
   border-radius: 35px;
+  border: 2px solid var(--clr-fg-alt);
 }
 
 .sb-slidebar {
@@ -1003,155 +1000,3 @@ input[name="tab_item"] {
   font-size: 2rem;
   transition: transform 0.2s ease-in-out;
 }
-
-/*スマートフォン用にカスタマイズ*/
-/* @media (max-width: auto) {
-  .header {
-    height: 3em;
-  }
-  .header2 {
-    height: 3em;
-  }
-
-  .section {
-    margin-top: 2em;
-    text-align: left;
-    margin-bottom: 0.4em;
-  }
-
-  .section2 {
-    margin-top: 1em;
-    text-align: left;
-    margin-bottom: 0.4em;
-  }
-
-  .nav {
-    text-align: center;
-  } */
-
-  /* .nav__list {
-    flex-direction: column;
-    padding: 3em 0;
-    position: relative;
-    right: 0;
-    left: 0;
-    top: 4em;
-    background-color: var(--clr-bg);
-    width: 0;
-    overflow: hidden;
-    transition: width 0.2s ease-in-out;
-  } */
-
-  /* .display-nav-list {
-    width: 100%;
-  }
-
-  .nav__list-item {
-    margin: 0.5em auto;
-    text-transform: uppercase;
-  }
-
-  .nav__hamburger {
-    display: flex;
-    margin-left: 0.8em;
-    z-index: 100;
-  }
-
-  .about {
-    align-items: flex-start;
-    margin-top: 1em;
-    text-align: center;
-  }
-
-  .footer {
-    padding: 2em;
-    margin-top: 3em;
-  }
-
-  .scroll-container {
-    display: none;
-  }
-
-  .tabs {
-    margin-top: 0.2em;
-    padding-bottom: 0.2em;
-    background-color: var(--clr-bg);
-    box-shadow: 0 0 10px var(--shadow);
-    max-width: 700px;
-    margin: 0 auto;
-    overflow: auto;
-    height: 250px;
-  }
-  
-  .tab_item {
-    width: 140px;
-    height: 30px;
-    border-bottom: 3px solid var(--clr-primary);
-    background-color: var(--clr-bg);
-    line-height: 30px;
-    font-size: 1rem;
-    text-align: center;
-    color: var(--clr-primary);
-    display: block;
-    float: left;
-    font-weight: bold;
-    transition: all 0.2s ease;
-  }
-  
-  .tab_item:hover {
-    opacity: 0.75;
-  } */
-  
-  /*ラジオボタンを全て消す*/
-  /* input[name="tab_item"] {
-    display: none;
-  } */
-  
-  /*タブ切り替えの中身のスタイル*/
-  /* .tab_content {
-    display: none;
-    padding: 0.2em 0;
-    clear: both;
-    overflow: hidden;
-  } */
-  /*選択されているタブのコンテンツのみを表示*/
-  /* #current:checked ~ #current_content,
-  #past:checked ~ #past_content {
-    display: block;
-  } */
-  
-  /*選択されているタブのスタイルを変える*/
-  /* .tabs input:checked + .tab_item {
-    background-color: var(--clr-primary);
-    color: #fff;
-  }
-
-  .bar-left {
-    border-left: solid 5px var(--clr-primary);
-    padding-left: 0.5em;
-    margin-top: 1em;
-    text-align: left;
-  }
-  .bar-left2 {
-    border-left: solid 3px var(--clr-primary);
-    padding-left: 0.5em;
-    margin-top: 0.3em;
-    line-height: 1.4em;
-    text-align: left;
-  }
-  .bar-left3 {
-    border-left: solid 5px var(--clr-primary);
-    padding-left: 0.5em;
-    margin-top: 0.3em;
-    text-align: left;
-  }
-  .bar-left4 {
-    border-left: solid 3px var(--clr-primary);
-    padding-left: 0.5em;
-    margin-top: 0.3em;
-    margin-left: 0.5em;
-    line-height: 1.4em;
-    text-align: left;
-  } 
-
-} */
