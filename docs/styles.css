@@ -138,11 +138,50 @@ button {
     font-size: 0.6rem;
     text-align: center;
   }
-  
-  a {
-    font-size: 1em;
-    text-decoration: none;
+  p {
+    font-size: 0.5rem;
   }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul, ol {
+    font-size: 0.6rem;
+    padding-left:0.4em;
+    padding-right:0.4em;
+  }
+  ol li{
+    font-size: 0.6rem;
+    padding-left:0.4em;
+    padding-right:0.4em;
+  }
+  .description {
+    font-size: 0.6rem;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    text-align: left;
+  }
+  .description3 {
+    font-size: 0.6rem;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    text-align: left;
+  }
+  .description9 {
+    font-size: 0.6rem;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0.6em;
+    margin-right: 0.7em;
+    text-align: right;
+    /* font-weight: bold; */
+  }
+
   .section2 {
     margin-top: 1em;
     text-align: left;
@@ -277,7 +316,7 @@ button {
   margin-right: 0.8em;
   text-align: left;
 }
-
+/* 
 .description2 {
   font-size: 0.9rem;
   margin-top: 0.7em;
@@ -285,7 +324,7 @@ button {
   margin-left: 0.4em;
   margin-right: 0.4em;
   text-align: left;
-}
+} */
 
 .description3 {
   font-size: 0.9rem;
@@ -295,7 +334,7 @@ button {
   margin-right: 0.4em;
   text-align: left;
 }
-.description4 {
+/*.description4 {
   font-size: 0.9rem;
   margin-top: 0.4em;
   margin-bottom: 0.4em;
@@ -335,8 +374,8 @@ button {
   margin-left: 1.2em;
   margin-right: 1.2em;
   text-align: left;
-  font-weight: bold;
-}
+  font-weight: bold; 
+}*/
 .description9 {
   font-size: 0.9rem;
   margin-top: 0em;
