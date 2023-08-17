@@ -174,9 +174,9 @@ button {
     text-transform: uppercase;
   }
   .nav__hamburger {
-    display: flex;
+    display: block;
     margin-left: 0.8em;
-    z-index: 100; 
+    z-index: 1100; 
   }
   .about {
     align-items: flex-start;
