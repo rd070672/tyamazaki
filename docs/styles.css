@@ -594,7 +594,7 @@ i.fas.fa-external-link-alt{
 
 .header {
   height: 6em;
-  max-width: auto; /*900px;*/
+  max-width: 900px; /*900px;*/
   width: 95%;
   margin: 0 auto;
   /* justify-content: space-between; */
@@ -603,6 +603,7 @@ i.fas.fa-external-link-alt{
 .header2 {
   display: flex;
   height: 6em;
+  max-width: 900px; /*900px;*/
   width: 95%;
   margin: 0 auto 70px;
   justify-content: space-between;
@@ -615,7 +616,7 @@ i.fas.fa-external-link-alt{
 }
 
 main {
-  max-width: auto; /*900px;*/
+  max-width: 900px; /*900px;*/
   width: 95%;
   margin: 0 auto;
 }
@@ -626,7 +627,7 @@ main {
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
-  max-width: auto; /*900px;*/
+  max-width: 900px; /*900px;*/
   margin: 0 auto;
   overflow: auto;
   height: 200px;
@@ -802,7 +803,7 @@ input[name="tab_item"] {
 }
 
 .projects__grid2 {
-  max-width: auto; /*900px;*/
+  max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
@@ -866,7 +867,7 @@ input[name="tab_item"] {
 }
 
 .list2 {
-  max-width: auto; /*900px;*/
+  max-width: 900px; /*900px;*/
   width: 98%;
   margin: 0 auto;
   display: flex;
