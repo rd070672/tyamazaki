@@ -140,6 +140,7 @@ button {
   .nav__list-item {
     margin: 0.5em auto;
     text-transform: uppercase;
+    font-size: 0.9rem;
   }
   .nav__hamburger {
     display: flex;
@@ -817,14 +818,15 @@ input[name="tab_item"] {
   display: flex;
 }
 
-.nav__list-item {
-  margin-left: 1.5em;
-}
-
 .nav__hamburger {
   display: none;
   width: 1em;
   z-index: 100;
+}
+
+.nav__list-item {
+  margin-left: 1.2em;
+  font-size: 0.9rem;
 }
 
 .about {
