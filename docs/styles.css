@@ -128,7 +128,8 @@ button {
     display: block;
   }
   .nav__list-item {
-    margin: 0.3em auto;
+    margin: 0.2em auto;
+    font-size: 0.8rem;
     text-transform: uppercase;
   }
   .about {
@@ -1011,14 +1012,3 @@ input[name="tab_item"] {
     z-index: 1003;
   }
 }
-
-/* .nav__list {
-  margin-right: 1em;
-  display: flex;
-} */
-
-/* .nav__hamburger {
-  display: none;
-  width: 1em;
-  z-index: 100;
-} */
