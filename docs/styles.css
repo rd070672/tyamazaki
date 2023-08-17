@@ -193,8 +193,8 @@ button {
 @media (min-width: 601px) {
   .nav__list {
     display: flex;
-    position: relative;  /* デスクトップビューでの通常のナビゲーション動作 */
-    /*position: static;  absolute位置指定を解除 */
+    /*position: relative;  /* デスクトップビューでの通常のナビゲーション動作 */
+    position: static;  /*absolute位置指定を解除 */
   }
   .nav__hamburger {
     display: none; /* ハンバーガーメニューボタンを非表示にする */
@@ -226,6 +226,12 @@ button {
     display: block;
     position: absolute;
     /* z-index: 1000; */
+  }
+  .header2 .nav__hamburger {
+    position: absolute;
+    top: 5em; /* これは調整が必要な場合があります */
+    right: 5em; /* これも調整が必要な場合があります */
+    z-index: 1001; /* 必要に応じて調整 */
   }
 }
 
