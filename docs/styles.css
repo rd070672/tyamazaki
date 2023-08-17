@@ -1006,9 +1006,9 @@ input[name="tab_item"] {
   }
   .header2 .nav__hamburger {
     position: absolute;
-    top: 1em;
-    right: 1em; 
-    z-index: 1001;
+    top: 3em;
+    right: 3em; 
+    z-index: 1003;
   }
 }
 
