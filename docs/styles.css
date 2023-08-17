@@ -611,12 +611,8 @@ i.fas.fa-external-link-alt{
   left: 0;
   right: 0;
   transition: top 0.2s;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
-
-/* .header2.show {
-  top: 0;
-} */
 
 main {
   max-width: auto; /*900px;*/
