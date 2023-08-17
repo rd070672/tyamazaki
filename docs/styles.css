@@ -881,7 +881,7 @@ input[name="tab_item"] {
 }
 
 .nav__hamburger {
-  display: none;
+  /* display: none; */
   width: 1em;
   z-index: 100;
 }
@@ -1062,7 +1062,7 @@ input[name="tab_item"] {
 }
 
 /*スマートフォン用にカスタマイズ*/
-@media (max-width: auto) {
+/* @media (max-width: auto) {
   .header {
     height: 3em;
   }
@@ -1099,7 +1099,7 @@ input[name="tab_item"] {
     transition: width 0.2s ease-in-out;
   } */
 
-  .display-nav-list {
+  /* .display-nav-list {
     width: 100%;
   }
 
@@ -1160,25 +1160,25 @@ input[name="tab_item"] {
   }
   
   /*ラジオボタンを全て消す*/
-  input[name="tab_item"] {
+  /* input[name="tab_item"] {
     display: none;
-  }
+  } */
   
   /*タブ切り替えの中身のスタイル*/
-  .tab_content {
+  /* .tab_content {
     display: none;
     padding: 0.2em 0;
     clear: both;
     overflow: hidden;
-  }
+  } */
   /*選択されているタブのコンテンツのみを表示*/
-  #current:checked ~ #current_content,
+  /* #current:checked ~ #current_content,
   #past:checked ~ #past_content {
     display: block;
-  }
+  } */
   
   /*選択されているタブのスタイルを変える*/
-  .tabs input:checked + .tab_item {
+  /* .tabs input:checked + .tab_item {
     background-color: var(--clr-primary);
     color: #fff;
   }
@@ -1211,4 +1211,4 @@ input[name="tab_item"] {
     text-align: left;
   }
 
-}
+} */
