@@ -574,5 +574,21 @@
       </div>
     </div>
     <script src="./script.js"></script>
+    <script>
+      let lastScrollTop = 0;
+      const header = document.querySelector('.header');
+  
+      window.addEventListener('scroll', function() {
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          if (scrollTop < lastScrollTop) {
+              // 上にスクロールした場合
+              header.classList.add('show');
+          } else {
+              // 下にスクロールした場合
+              header.classList.remove('show');
+          }
+          lastScrollTop = scrollTop;
+      });
+    </script>
   </body>
 </html>

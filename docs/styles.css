@@ -590,7 +590,7 @@ i.fas.fa-external-link-alt{
   top: -6em;
   left: 0;
   right: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
   transition: top 0.3s;
   z-index: 1000;
 }
