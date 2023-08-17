@@ -136,7 +136,7 @@ button {
     margin-top: 3em;
   }
   .scroll-container {
-    display: none;
+    display: block; /*none */
   }
   /* Hot news  */
   .tabs {
@@ -957,7 +957,7 @@ input[name="tab_item"] {
   bottom: 1em;
   right: 2em;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -969,20 +969,20 @@ input[name="tab_item"] {
     position: static;  /*absolute位置指定を解除 */
   }
   .nav__hamburger {
-    display: none; /* ハンバーガーメニューボタンを非表示にする */
+    display: block; /* ハンバーガーメニューボタンを非表示にする none*/
   }
 }
 
 /* 600px以下の画面幅ではハンバーガーメニューを表示する */
 @media (max-width: 600px) {
-  .nav__list {
-    display: none;
+  /* .nav__list {
+    display: block;
     width: 100%; 
-    /* flex-direction: column;
+    flex-direction: column;
     position: absolute;
-    z-index: 100; */
-  }
-/*.nav__list {
+    z-index: 100;
+  } */
+  .nav__list {
     flex-direction: column;
     padding: 3em 0;
     position: relative;
@@ -993,7 +993,7 @@ input[name="tab_item"] {
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
-  } */
+  }
   .nav__hamburger {
     display: block;
     position: absolute;
@@ -1006,14 +1006,3 @@ input[name="tab_item"] {
     z-index: 1001;
   }
 }
-
-/* .nav__list {
-  margin-right: 1em;
-  display: flex;
-} */
-
-/* .nav__hamburger {
-  display: none;
-  width: 1em;
-  z-index: 100;
-} */
