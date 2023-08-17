@@ -74,7 +74,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 h4 {
@@ -108,7 +108,11 @@ button {
 }
 
 /*スマートフォン用にカスタマイズ*/
-@media (max-width: 600px) {
+@media (max-width: 400px) {
+  a {
+    font-size: 0.6rem;
+    text-decoration: none;
+  }
   .section {
     margin-top: 2em;
     text-align: left;
