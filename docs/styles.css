@@ -980,9 +980,9 @@ input[name="tab_item"] {
     flex-direction: column;
     padding: 2em 0;
     position: absolute;
-    /* z-index: 100;
+    z-index: 100;
     top: 1em;
-    right: 1em;  */
+    right: 1em; 
     background-color: var(--clr-bg);
     width: 100%;
     overflow: hidden; /*hidden */
@@ -995,7 +995,7 @@ input[name="tab_item"] {
   }
   .header2 .nav__hamburger {
     position: absolute;
-    top: 1.4em;
+    top: 1.6em;
     right: 1.6em; 
     z-index: 1001;
   }
