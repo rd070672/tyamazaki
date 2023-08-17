@@ -192,8 +192,9 @@ button {
 /* 600px以上の画面幅ではハンバーガーメニューを非表示にする */
 @media (min-width: 601px) {
   .nav__list {
-    display: flex;  /* デスクトップビューでの通常のナビゲーション動作 */
-    position: static; /* absolute位置指定を解除 */
+    display: flex;
+    position: relative;  /* デスクトップビューでの通常のナビゲーション動作 */
+    /*position: static;  absolute位置指定を解除 */
   }
   .nav__hamburger {
     display: none; /* ハンバーガーメニューボタンを非表示にする */
@@ -223,6 +224,7 @@ button {
   } */
   .nav__hamburger {
     display: block;
+    position: absolute;
     /* z-index: 1000; */
   }
 }
