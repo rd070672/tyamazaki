@@ -139,12 +139,12 @@ button {
     margin: 0.5em auto;
     text-transform: uppercase;
   }
-  .nav__list {
+  /* .nav__list {
       display: none; 
       flex-direction: column;
       position: absolute;
       z-index: 100;
-  } 
+  }  */
   .about {
     align-items: flex-start;
     margin-top: 1em;
