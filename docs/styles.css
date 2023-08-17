@@ -203,10 +203,11 @@ button {
 /* 600px以下の画面幅ではハンバーガーメニューを表示する */
 @media (max-width: 600px) {
   .nav__list {
-    display: none; 
-    flex-direction: column;
+    display: none;
+    width: 100%; 
+    /* flex-direction: column;
     position: absolute;
-    z-index: 100;
+    z-index: 100; */
   }
 /*.nav__list {
     flex-direction: column;
@@ -221,9 +222,8 @@ button {
     transition: width 0.2s ease-in-out;
   } */
   .nav__hamburger {
-    background-color: red;
-    display: block; /* ハンバーガーメニューボタンを表示 */
-    z-index: 1000;
+    display: block;
+    /* z-index: 1000; */
   }
 }
 
