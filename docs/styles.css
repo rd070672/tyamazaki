@@ -589,17 +589,16 @@ i.fas.fa-external-link-alt{
   margin: 0 auto;
   justify-content: space-between;
   position: fixed;
-  top: -6em;
+  top: 0;
   left: 0;
   right: 0;
-  /* background-color: #fff; */
   transition: top 0.3s;
   z-index: 1000;
 }
 
-.header2.show {
+/* .header2.show {
   top: 0;
-}
+} */
 
 main {
   max-width: auto; /*900px;*/

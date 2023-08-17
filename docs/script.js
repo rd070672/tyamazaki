@@ -61,3 +61,18 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+let lastScrollTop = 0;
+const header = document.querySelector('.header2');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        // スクロールしている時にヘッダーを隠す
+        header.style.top = '-70px';  // ヘッダーの高さに合わせて調整
+    } else {
+        // スクロールアップしている時にヘッダーを表示
+        header.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+});
