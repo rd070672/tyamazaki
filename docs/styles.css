@@ -119,8 +119,8 @@ button {
     margin-bottom: 0.4em;
   }
   .display-nav-list {
+    display: flex;
     width: 100%;
-    display: block;
   }
   .nav__list-item {
     margin: 0.3em auto;
