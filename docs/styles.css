@@ -108,7 +108,7 @@ button {
 }
 
 /*スマートフォン用にカスタマイズ*/
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   a {
     font-size: 0.6rem;
     text-decoration: none;
@@ -119,7 +119,7 @@ button {
     margin-bottom: 0.4em;
   }
   .display-nav-list {
-    /* width: 100%; */
+    width: 100%;
     display: block;
   }
   .nav__list-item {
@@ -978,12 +978,12 @@ input[name="tab_item"] {
   .nav__list {
     display: none;
     flex-direction: column;
-    padding: 1em 0;
+    padding: 2em 0;
     position: absolute;
-    z-index: 100;
-    top: 3em;
-    right: 3em; 
-    background-color: var(--clr-bg-alt);
+    /* z-index: 100;
+    top: 1em;
+    right: 1em;  */
+    background-color: var(--clr-bg);
     width: 100%;
     overflow: hidden; /*hidden */
     transition: width 0.2s ease-in-out;
@@ -995,8 +995,8 @@ input[name="tab_item"] {
   }
   .header2 .nav__hamburger {
     position: absolute;
-    top: 3em;
-    right: 3em; 
+    top: 1.4em;
+    right: 1.6em; 
     z-index: 1001;
   }
 }
