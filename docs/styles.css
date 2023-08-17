@@ -1047,14 +1047,14 @@ input[name="tab_item"] {
   .nav__list {
     display: flex;
     flex-direction: column;
-    padding: 2em 0;
+    padding: 5em 0;
     position: absolute;
     z-index: 100;
-    top: 1em;
-    right: 1em; 
+    top: 3em;
+    right: 3em; 
     background-color: var(--clr-bg);
     width: 100%;
-    overflow: hidden; /*hidden */
+    overflow: auto; /*hidden */
     transition: width 0.2s ease-in-out;
   }
   .nav__hamburger {
@@ -1064,8 +1064,8 @@ input[name="tab_item"] {
   }
   .header2 .nav__hamburger {
     position: absolute;
-    top: 1.6em;
+    top: 2em;
     right: 1.6em; 
-    z-index: 1001;
+    z-index: 100;
   }
 }
