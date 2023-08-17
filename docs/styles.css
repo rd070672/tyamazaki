@@ -985,12 +985,12 @@ input[name="tab_item"] {
   .nav__list {
     flex-direction: column;
     padding: 3em 0;
-    position: relative;
+    /* position: relative;
     right: 0;
     left: 0;
-    top: 4em;
+    top: 4em; */
     background-color: var(--clr-bg);
-    width: 0;
+    width: 100%;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
   }
