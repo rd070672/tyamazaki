@@ -320,13 +320,13 @@ button {
 	background: none;
 }
 .timeline-date {
-  width: 22%;
+  width: 20%;
   float: left;
   margin: 5px 6px 0 0;
   text-indent: 0;
 }
 .timeline-content {
-  width: 76%;
+  width: 78%;
   float: left;
   border-left: 2px var(--clr-fg-alt) solid;
 }
@@ -340,7 +340,7 @@ button {
   height: 10px;
   background: var(--clr-primary);
   position: absolute;
-  left: 22.2%;
+  left: 20.2%;
   top: 10px;
   border-radius: 35px;
 }
