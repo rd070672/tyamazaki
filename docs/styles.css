@@ -579,7 +579,7 @@ i.fas.fa-external-link-alt{
   max-width: auto; /*900px;*/
   width: 95%;
   margin: 0 auto;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .header2 {
@@ -592,7 +592,7 @@ i.fas.fa-external-link-alt{
   top: 0;
   left: 0;
   right: 0;
-  transition: top 0.3s;
+  transition: top 0.2s;
   z-index: 1000;
 }
 
