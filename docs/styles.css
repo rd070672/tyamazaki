@@ -275,13 +275,16 @@ button {
   height: auto;
 }
 .img300 {
-  display: flex;
-  align-items: center; /* 垂直中央寄せ */
-  justify-content: center; /* 水平中央寄せ */
   width: 300px;
   height: auto;
   margin: 0.3em 0.6em;
   border: 2px solid var(--clr-fg);
+}
+.img_align {
+  display: flex;                /* 横並び */
+  justify-content: center;     /* 子要素（画像）を水平方向に中央寄せ */
+  align-items: center;         /* 子要素（画像）を垂直方向に中央寄せ */
+  flex-wrap: wrap;             /* 必要に応じて折り返し */
 }
 .leftImg {
   float: left;
