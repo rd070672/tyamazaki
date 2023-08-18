@@ -602,10 +602,10 @@ i.fas.fa-external-link-alt{
 
 .header2 {
   display: flex;
-  height: 4em;
+  height: 6em;
   max-width: 900px; /*900px;*/
   width: 95%;
-  margin: 0 auto 40px;
+  margin: 0 auto 70px;
   /* justify-content: space-between; */
   position: fixed;
   top: 0;
@@ -916,6 +916,9 @@ input[name="tab_item"] {
   .header {
     height: 3em;
   }
+  .header2 {
+    height: 3em;
+  }
 
   .section {
     margin-top: 2em;
@@ -940,7 +943,7 @@ input[name="tab_item"] {
     right: 0;
     left: 0;
     top: 2em;
-    background-color: var(--clr-bg);
+    background-color: var(--clr-bg-alt);
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
