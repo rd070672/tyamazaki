@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en jp">
   <head>
-    <title>tyamazaki.com</title>
+    <title>ty/review/202307</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
     <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
@@ -11,10 +11,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet">
-    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
-    </script>
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
     <script>
@@ -29,7 +29,7 @@
 
     <!-- header -->
     <header class="header center">
-      <h4><a href="https://tyamazaki.com" class="link">tyamazaki.com</a></h4>
+      <h4><a href="./" class="link">tyamazaki.com</a></h4>
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item">
@@ -39,18 +39,18 @@
           </li><li class="nav__list-item">
             <a class="link link--nav" href="../publications">publications</a>
           </li><li class="nav__list-item">
-            <a class="link link--nav" href="../notes">notes</a>
+            <a class="link link--nav" href="../blog">blog</a>
           </li><li class="nav__list-item">
             <a class="link link--nav" href="../review">review</a>
           </li><li class="nav__list-item">
-            <a class="link link--nav" href="../blog">blog</a>
+            <a class="link link--nav" href="../notes">notes</a>
           </li>
         </ul>
         <button type="button" aria-label="toggle theme" class="btn btn--icon">
           <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
         </button>
-        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
-          <i aria-hidden="true" class="fas fa-bars"></i>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
         </button>
       </nav>
     </header>
@@ -59,32 +59,41 @@
       <!-- Main contents -->
       <div class="about2 center">
         <h2 class="center">2023年7月</h2>
-        <!-- <h4 class="about__role">材料科学／物性物理に関する気になった論文を毎週紹介します。</h4> -->
       </div>
-      <!-- Magnetism -->
-      <h3 class="section12 section__title3">総評</h3>
-      <div class="projects__grid2">
-        <section id="ubermag" class="section2 project2">
-          <!-- <h4 class="bar-left2">Title</h4> -->
-          <p class="description5">
-            The research goal is to determine the universality of magnetic functional materials, experimentally & theoritically, such as soft/hard magnets, multi-ferroic materials
-          </p>
-        </section>
+
+      <h4 class="section12 section__title3">総評</h4>
+      <p class="description">
+        先月報告されたPb10-xCux(PO4)6Oに関する常温常圧超伝導に関する再試論文が多いが、日本からは1本も出ない。日本におけるアカデミアの余裕のなさが垣間見えるのか、ただ興味が薄いのか、それとも予め超伝導でないと見切りを着けていたのか。
+      </p>
+
+      <h4 class="section12 section__title3">ピックアップ論文</h4>
+      <p class="description">
+        1. Metallic states in Pb10(PO4)6O induced by the Cu/O-insertions and carrier doping (13 Aug 2023) by Liang Liu et al.
+      </p>
+      <p class="description5">
+        題目：Pb10(PO4)6OにおけるCu/O挿入とキャリアドーピングによる金属状態<br>
+        アブスト：CuドープされたPb-apatiteにおける室温超伝導の報告は、多くの興味と議論を引き起こしている。この研究では、Cu挿入がPb-apatiteで熱力学的に安定であり、さらなるキャリアドーピングがシステムを金属に変えることを示している<br>
+        新規性：Cu挿入によるPb10(PO4)6Oの金属化と、c軸に沿った電気伝導がトランスポートの振る舞いを支配する可能性を示唆。<br>
+        <a href="https://arxiv.org/abs/2308.07345" target="_blank" class="link2 link2--nav2">arXiv:2308.07345 [cond-mat.supr-con]</a><br>
+        <img src="../img/combi.png" class="img400">
+      </p>
       
-      <h3 class="section12 section__title3">気になった論文</h3>
-      <div class="projects__grid2">
-        <section id="ubermag" class="section2 project2">
-          <h4 class="bar-left2">Title</h4>
-          <p class="description5">
-            The research goal is to determine the universality of magnetic functional materials, experimentally & theoritically, such as soft/hard magnets, multi-ferroic materials
-          </p>
-        </section>
-        
+
+      <p class="description">
+        1. Metallic states in Pb10(PO4)6O induced by the Cu/O-insertions and carrier doping (Aug. 16 2023)<br>
+        題目：Pb10(PO4)6OにおけるCu/O挿入とキャリアドーピングによる金属状態<br>
+        アブスト：CuドープされたPb-apatiteにおける室温超伝導の報告は、多くの興味と議論を引き起こしている。この研究では、Cu挿入がPb-apatiteで熱力学的に安定であり、さらなるキャリアドーピングがシステムを金属に変えることを示している<br>
+        新規性：Cu挿入によるPb10(PO4)6Oの金属化と、c軸に沿った電気伝導がトランスポートの振る舞いを支配する可能性を示唆。<br>
+        <a href="https://arxiv.org/abs/2308.07345" target="_blank" class="link2 link2--nav2">arXiv:2308.07345 [cond-mat.supr-con]</a>
+        Liang Liu, Xue Ren, Jifan Hu
+      </p>
+
     </main>
 
     <!-- footer -->
     <footer class="footer">
-      Copyright © <a href="https://tyamazaki.com" class="link footer__link">tyamazaki</a>. All rights reserved.
+      © 2023 <a href="../" class="link footer__link">tyamazaki</a>. All rights reserved.<br><br>
+      <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Fnotes%2F202307&count_bg=%2318B41D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Counter&edge_flat=false"/></a>
     </footer>
 
     <div class="scroll-container">
