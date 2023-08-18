@@ -284,6 +284,16 @@ button {
   margin-right: 0.8em;
   border: 2px solid white;
 }
+.leftIm400 {
+  float: left;
+  width: 400px;
+  height: auto;
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  border: 2px solid white;
+}
 .rightText {
   overflow: hidden;
   font-size: 0.8rem;
