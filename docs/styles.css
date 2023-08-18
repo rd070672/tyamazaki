@@ -192,6 +192,12 @@ button {
   margin: 0.4em 0.8em;
   text-align: left;
 }
+.description2 {
+  font-size: 0.9rem;
+  margin: 0.4em 0.8em;
+  text-align: left;
+  padding-right: 1em;
+}
 
 .description3 {
   font-size: 0.9rem;
@@ -204,7 +210,6 @@ button {
   margin: 0.4em 1.2em;
   text-align: left;
 } */
-
 .description5 {
   font-size: 0.8rem;
   margin: 0.4em 0.8em;
