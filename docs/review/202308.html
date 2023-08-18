@@ -63,22 +63,33 @@
         <!-- 今月のまとめ -->
         <section>
           <h4 class="bar-left">今月のまとめ</h4>
-          <p class="description">
-            先月報告されたPb10-xCux(PO4)6Oに関する常温常圧超伝導に関する再試論文が多いが、日本からは1本も出ない。日本におけるアカデミアの余裕のなさが垣間見えるのか、ただ興味が薄いのか、それとも予め超伝導でないと見切りを着けていたのか。
+          <p class="description5">
+            先月報告されたPb10-xCux(PO4)6Oに関する常温常圧超伝導に関する再試論文が多いが、とうとうNatureからLK-99は超伝導ではないという結論が得られたようだ。日本勢からは1本も論文が出ないのは、日本におけるアカデミアの余裕のなさが垣間見えるのか、ただ興味が薄いのか、それとも予め超伝導でないと見切りをつけていたのか。
           </p>
         </section><br>
 
         <!-- ピックアップ論文 -->
         <section>     
+          <h4 class="under">ピックアップした論文リスト</h4>
+          <ol></ol>
+            <li class="description">
+              <a href="#1">Pb10(PO4)6OにおけるCu/O挿入とキャリアドーピングによる金属状態</a></li>
+            <li class="description">
+              <a href="#2">多元素合金の機械的性質予測のための原始的な機械学習ツール</a></li>
+            <li class="description">
+              <a href="#3">弾性カロリック効果によるフェロ四極子金属TmAg2のネマティック感受性の測定</a></li>
+          </ol>
+          
           <div><h4 class="bar-left">ピックアップ論文</h4></div>
           <!-- 論文1 -->
-          <div><p class="description6">
+          <div id="1"><p class="description6">
               1. Pb10(PO4)6OにおけるCu/O挿入とキャリアドーピングによる金属状態
           </p></div>
           <div><p class="description5">
-              ・超伝導体の探求：超伝導体は電気抵抗がなくなる物質で、電気や電子の分野に革命的な影響を与えると期待されています。しかし、現在知られている超伝導体は低温や高圧でしか発現しません。室温と常圧で超伝導性を示す物質を見つけることは物理学の長年の夢です。<br>
-              ・銅酸化物超伝導体の発見：1986年に銅酸化物超伝導体が発見され、高温超伝導体と呼ばれました。これらの物質は銅と酸素からなる層状構造を持ち、キャリアドーピングによって超伝導性が誘起されます。しかし、その超伝導機構は未だに解明されていません。<br>
-              ・LK-99の提案：この論文では、Pb-アパタイトにCuを挿入することで、室温で超伝導性を示す新しい物質LK-99を提案しています。LK-99は銅酸化物超伝導体と類似した特徴を持ち、一次元Cu-O鎖が重要な役割を果たすと考えられています。この論文はLK-99の合成方法、電気伝導と磁気特性の解析、および超伝導機構の提案を行っている。<br>
+              ・銅/酸素挿入はPb10(PO4)6Oの熱力学的安定性、電気伝導性、磁気特性に影響を与えることを第一原理計算で示した。<br>
+              ・銅挿入はPb10(PO4)6Oをモット半導体に変え、銅イオンは1μBの磁気モーメントを持ち、銅-酸素鎖沿いに反強磁性結合を示す。さらなるキャリアドープにより、反強磁性結合は抑制され、銅-酸素鎖は導電性となる。<br>
+              ・銅-酸素鎖は一次元的な導電特性を示し、c軸方向の直流伝導率は他の方向よりも2桁以上大きい。リラクゼーション時間が10 fsと仮定すると、c軸方向の直流伝導率は約10^5 S/mとなり、銅や鉛よりも小さい。<br>
+             ・酸素挿入とさらなる銅置換もPb10(PO4)6Oの金属化を引き起こし、c軸方向の伝導率が他の方向よりも6倍大きい。酸素挿入と銅置換による交換結合は複雑で弱く、長距離磁気秩序を形成しない。<br>
               コ）LK-99が常温超伝導じゃないのは残念だけど、盛り上がり自体は好き。<br>
             </p><p class="description10">
               Metallic states in Pb10(PO4)6O induced by the Cu/O-insertions and carrier doping<br>Liang Liu, Xue Ren, Jifan Hu, 13 Aug 2023<br>
@@ -90,7 +101,7 @@
           </div><br><br>
 
           <!-- 論文2 -->
-          <div><p class="description6">
+          <div id="2"><p class="description6">
             2. 多元素合金の機械的性質予測のための原始的な機械学習ツール
           </p></div>
           <div><p class="description5">
@@ -98,7 +109,7 @@
             ・MPEAの組成を機械学習モデルの入力ベクトルに変換するために、パーサーというツールを開発しました。<br>
             ・線形回帰、K近傍回帰、サポートベクター回帰、ランダムフォレスト回帰などのさまざまな機械学習モデルを適用して、MPEAの機械的性質を予測しました。<br>
             ・Gradioというライブラリを使って、機械学習モデルの予測結果を視覚化し、ユーザーと対話できるインターフェースを作成しました。<br>
-            コ）マテインフォ系のGUIの優れたソフトが最近色々な特性解析に拡張しているような気がする<br>
+            コ）マテインフォ系のGUIの優れたソフトが最近色々な特性解析に拡張しているような気がする。<br>
             </p><p class="description10">
               A primitive machine learning tool for the mechanical property prediction of multiple principal element alloys<br>R. Tan, Z. Li, S. Zhao, N. Birbilis, 15 Aug 2023<br>
             <a href="https://arxiv.org/abs/2308.07649v1" target="_blank" class="link2 link2--nav2">arXiv:2308.07649v1 (cond-mat)</a>
@@ -109,7 +120,7 @@
           </div><br><br>
 
           <!-- 論文3 -->
-          <div><p class="description6">
+          <div id="3"><p class="description6">
             3. 弾性カロリック効果による鉄四極子金属TmAg2のネマティック感受性の測定
           </p></div>
           <div><p class="description5">
@@ -127,8 +138,29 @@
             </p>
           </div><br><br>
 
+          <!-- 論文4 -->
+          <div id="4"><p class="description6">
+            4. 弾性カロリック効果によるフェロ四極子金属TmAg2のネマティック感受性の測定
+          </p></div>
+          <div><p class="description5">
+            ・TmAg2は、4f電子がフェロ四極子秩序を形成し、4回対称性を破る電子ネマティック相転移を5Kで起こす金属物質である。<br>
+            ・c軸に沿った磁場は、フェロ四極子秩序パラメータに対する有効な横場として機能し、相転移温度を3.2Tで完全に抑制する。<br>
+            ・弾性カロリック効果は、物質が経験するひずみによって誘起される温度変化を測定する技術であり、フェロ四極子-ひずみ感受性を直接探ることができる。<br>
+            ・弾性カロリック効果から得られたネマティック感受性は、弾性定数の測定と一致し、横場イジング模型によって定量的に説明される。<br>
+            コ）弾性カロリック効果が弾性定数のみに影響しているとは考えられないけども。<br>
+            </p><p class="description10">
+              The nematic susceptibility of the ferroquadrupolar metal TmAg2 measured via the elastocaloric effect<br>Elliott W. Rosenberg, Matthias Ikeda, Ian R. Fisher, 10 Aug 2023<br>
+            <a href="https://arxiv.org/abs/2308.05312v1" target="_blank" class="link2 link2--nav2">arXiv:2308.05312v1 (cond-mat)</a>
+            </p><p class="img_align">
+              <img src="../review/img/202308-3-1.png" class="img200">
+              <img src="../review/img/202308-3-2.png" class="img200">
+            </p>
+          </div><br><br>
 
 
+          <div><p class="description6">
+            更新予定
+          </p></div>
         </section>
       </section>
     </main>
