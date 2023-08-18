@@ -938,11 +938,11 @@ input[name="tab_item"] {
 
   .nav__list {
     flex-direction: column;
-    padding: 3em 0;
+    padding: 1em 0;
     position: relative;
     right: 0;
     left: 0;
-    top: 5em;
+    top: 6em;
     background-color: var(--clr-bg-alt); /*--clr-bg-altはナビゲーションの背景色 */
     width: 0;
     overflow: hidden;
