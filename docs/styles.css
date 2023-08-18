@@ -221,12 +221,24 @@ button {
   margin-right: 1.2em;
   text-align: left;
 } */
-.description5 {
+.description55 {
+  font-size: 0.8rem;
+  margin: 0.4em 0.8em;
+  text-align: left;
+}
+/* .description5 {
   font-size: 0.8rem;
   margin-top: 0.4em;
   margin-bottom: 0.8em;
   margin-left: 0.8em;
   margin-right: 0.8em;
+  text-align: left;
+} */
+.description5 { /* review用 */
+  font-size: 0.8rem;
+  margin: 0.4em 0.8em;
+  text-indent: -1em;
+  padding-left: 1em;
   text-align: left;
 }
 .description6 {
