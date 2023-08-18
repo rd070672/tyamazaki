@@ -964,10 +964,11 @@ input[name="tab_item"] {
     z-index: 100;
   }
 
-  .about {
+  /* .about {
     align-items: flex-start;
     margin-top: 1em;
-  }
+  } */
+  
 
   .footer {
     padding: 2em;
