@@ -1092,13 +1092,13 @@ input[name="tab_item"] {
   }
 }
 
-.bullet span {
+.bullet p {
   position: relative;
   padding-left: 20px;
   display: block; 
 }
 
-.bullet span::before {
+.bullet p::before {
   content: '•';
   position: absolute;
   left: 0;
@@ -1106,16 +1106,10 @@ input[name="tab_item"] {
   font-size: 20px;
 }
 
-.numList span {
-  position: relative;
-  padding-left: 30px;
-  display: block; 
-  counter-increment: lineNum;
+.custom-list {
+  color: var(--clr-primary);
 }
-
-.numList span::before {
-  content: counter(lineNum) ". ";
-  position: absolute;
-  left: 0;
-  font-size: 16px;
+.custom-list li {
+  padding: 5px 0;
+  list-style-type: circle; /* デフォルトの点を円に変更する場合 */
 }
