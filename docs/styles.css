@@ -274,6 +274,11 @@ button {
   width: 400px;
   height: auto;
 }
+.img300 {
+  margin: 0.3em 0.6em;
+  width: 300px;
+  height: auto;
+}
 .leftImg {
   float: left;
   width: 150px;
