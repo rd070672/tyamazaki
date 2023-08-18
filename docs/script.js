@@ -76,3 +76,28 @@ window.addEventListener('scroll', function() {
     }
     lastScrollTop = scrollTop;
 });
+
+// 箇条書きのための。で改行する
+// $(document).ready(function() {
+// 	$(".bullet").each(function() {
+// 	  var items = $(this).text().split('。');
+// 	  $(this).empty();
+// 	  items.forEach(function(item) {
+// 		if (item) {
+// 		  $('<span>').text(item).appendTo(".bullet");
+// 		}
+// 	  });
+// 	});
+// });
+
+$(document).ready(function() {
+	$(".bullet").each(function() {
+	  var items = $(this).text().split('\n'); // 改行で分割
+	  $(this).empty();
+	  items.forEach(function(item) {
+		if (item.trim()) { // 空の項目を無視
+		  $('<span>').text(item).appendTo(".bullet");
+		}
+	  });
+	});
+});

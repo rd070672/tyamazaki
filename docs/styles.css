@@ -1072,3 +1072,17 @@ input[name="tab_item"] {
     text-align: left;
   }
 }
+
+.bullet span {
+  position: relative;
+  padding-left: 20px;
+  display: block; 
+}
+
+.bullet span::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--clr-primary);
+  font-size: 20px;
+}
