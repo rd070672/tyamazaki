@@ -84,7 +84,7 @@ $(document).ready(function() {
 	  $(this).empty();
 	  items.forEach(function(item) {
 		if (item) {
-		  $('<span>').text(item).appendTo(".bullet");
+		  $('<p>').text(item).appendTo(".bullet");
 		}
 	  });
 	});
@@ -97,7 +97,7 @@ $(document).ready(function() {
 	  $(this).empty();
 	  items.forEach(function(item) {
 		if (item.trim()) { // 空の項目を無視
-		  $('<span>').text(item).appendTo(".bullet");
+		  $('<p>').text(item).appendTo(".bullet");
 		}
 	  });
 	});
@@ -111,7 +111,7 @@ $(document).ready(function() {
 	  $(this).css('counter-reset', 'lineNum'); // CSSカウンタの初期化
 	  items.forEach(function(item) {
 		if (item.trim()) { // 空の項目を無視
-		  $('<span>').text(item).appendTo(".numList");
+		  $('<p>').text(item).appendTo(".numList");
 		}
 	  });
 	});
