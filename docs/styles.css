@@ -189,90 +189,46 @@ button {
 
 .description {
   font-size: 0.9rem;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
+  margin: 0.4em 0.8em;
   text-align: left;
 }
-/* 
-.description2 {
-  font-size: 0.9rem;
-  margin-top: 0.7em;
-  margin-bottom: 0.4em;
-  margin-left: 0.4em;
-  margin-right: 0.4em;
-  text-align: left;
-} */
 
 .description3 {
   font-size: 0.9rem;
-  margin-top: 0.8em;
-  margin-bottom: 0.4em;
-  margin-left: 0.4em;
-  margin-right: 0.4em;
-  text-align: left;
-}
-/*.description4 {
-  font-size: 0.9rem;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-  margin-left: 1.2em;
-  margin-right: 1.2em;
-  text-align: left;
-} */
-.description55 {
-  font-size: 0.8rem;
   margin: 0.4em 0.8em;
-  text-align: left;
-}
-/* .description5 {
-  font-size: 0.8rem;
-  margin-top: 0.4em;
-  margin-bottom: 0.8em;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
-  text-align: left;
-} */
-.description5 { /* review用 */
-  font-size: 0.8rem;
-  margin: 0.4em 0.8em;
-  text-indent: -1em;
-  padding-left: 1em;
-  text-align: left;
-}
-.description6 {
-  font-size: 1rem;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
   text-align: left;
   font-weight: bold;
 }
+/*.description4 {
+  font-size: 0.9rem;
+  margin: 0.4em 1.2em;
+  text-align: left;
+} */
+
+.description5 {
+  font-size: 0.8rem;
+  margin: 0.4em 0.8em;
+  text-align: left;
+}
+/*.description6 {
+  font-size: 0.9rem;
+  margin: 0.4em 0.8em;
+  text-align: left;
+} */
 /* .description7 {
   font-size: 0.9rem;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
+  margin: 0.4em 0.8em;
   text-indent: 2em;
-}
-.description8 {
+} */
+/* .description8 {
   font-size: 1.2rem;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-  margin-left: 1.2em;
-  margin-right: 1.2em;
+  margin: 0.4em 1.2em;
   text-align: left;
   font-weight: bold; 
-}*/ 
+}*/
 .description9 {
   font-size: 0.9rem;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  margin-left: 0.8em;
-  margin-right: 1em;
+  margin: 0em 0.8em;
   text-align: right;
   /* font-weight: bold; */
 }
