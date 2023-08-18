@@ -1086,3 +1086,17 @@ input[name="tab_item"] {
   color: var(--clr-primary);
   font-size: 20px;
 }
+
+.numList span {
+  position: relative;
+  padding-left: 30px;
+  display: block; 
+  counter-increment: lineNum;
+}
+
+.numList span::before {
+  content: counter(lineNum) ". ";
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}

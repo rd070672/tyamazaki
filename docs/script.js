@@ -78,18 +78,19 @@ window.addEventListener('scroll', function() {
 });
 
 // 箇条書きのための。で改行する
-// $(document).ready(function() {
-// 	$(".bullet").each(function() {
-// 	  var items = $(this).text().split('。');
-// 	  $(this).empty();
-// 	  items.forEach(function(item) {
-// 		if (item) {
-// 		  $('<span>').text(item).appendTo(".bullet");
-// 		}
-// 	  });
-// 	});
-// });
+$(document).ready(function() {
+	$(".bulletdot").each(function() {
+	  var items = $(this).text().split('。');
+	  $(this).empty();
+	  items.forEach(function(item) {
+		if (item) {
+		  $('<span>').text(item).appendTo(".bullet");
+		}
+	  });
+	});
+});
 
+// 箇条書きのための\nで改行する
 $(document).ready(function() {
 	$(".bullet").each(function() {
 	  var items = $(this).text().split('\n'); // 改行で分割
@@ -97,6 +98,20 @@ $(document).ready(function() {
 	  items.forEach(function(item) {
 		if (item.trim()) { // 空の項目を無視
 		  $('<span>').text(item).appendTo(".bullet");
+		}
+	  });
+	});
+});
+
+// 番号リストのための\nで改行する
+$(document).ready(function() {
+	$(".numList").each(function() {
+	  var items = $(this).text().split('\n'); // 改行で分割
+	  $(this).empty();
+	  $(this).css('counter-reset', 'lineNum'); // CSSカウンタの初期化
+	  items.forEach(function(item) {
+		if (item.trim()) { // 空の項目を無視
+		  $('<span>').text(item).appendTo(".numList");
 		}
 	  });
 	});
