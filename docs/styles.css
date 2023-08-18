@@ -220,7 +220,7 @@ button {
   margin-left: 1.2em;
   margin-right: 1.2em;
   text-align: left;
-}
+} */
 .description5 {
   font-size: 0.8rem;
   margin-top: 0.4em;
@@ -228,7 +228,7 @@ button {
   margin-left: 0.8em;
   margin-right: 0.8em;
   text-align: left;
-}*/
+}
 .description6 {
   font-size: 1rem;
   margin-top: 0.4em;
@@ -943,11 +943,11 @@ input[name="tab_item"] {
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
   .header {
-    height: 3em;
+    height: 4em;
   }
-  .header2 {
-    height: 3em;
-  }
+  /* .header2 {
+    height: 4em;
+  } */
 
   .section {
     margin-top: 2em;
@@ -971,7 +971,7 @@ input[name="tab_item"] {
     position: relative;
     right: 0;
     left: 0;
-    top: 6em;
+    top: 7em;
     background-color: var(--clr-bg-alt); /*--clr-bg-altはナビゲーションの背景色 */
     width: 0;
     overflow: hidden;
@@ -1092,15 +1092,14 @@ input[name="tab_item"] {
   }
 }
 
+.custom-list {
+  font-size: 0.9rem;
+  margin: 5px 12px;
+}
 .custom-list li {
   padding: 3px 20px;
+  color: var(--clr-primary);
 }
-
-.custom-list {
-  font-size: 0.8rem;
-  margin: 5px 20px;
-}
-
 .custom-list li::marker {
   color: var(--clr-primary);
 }
