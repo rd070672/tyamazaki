@@ -606,7 +606,7 @@ i.fas.fa-external-link-alt{
   max-width: 900px; /*900px;*/
   width: 95%;
   margin: 0 auto 70px;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -905,20 +905,20 @@ input[name="tab_item"] {
   display: none;
   position: fixed;
   bottom: 1em;
-  right: 2em;
+  right: 1em;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
 }
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
-  .header {
+  /* .header {
     height: 3em;
   }
   .header2 {
     height: 3em;
-  }
+  } */
 
   .section {
     margin-top: 2em;
@@ -938,11 +938,11 @@ input[name="tab_item"] {
 
   .nav__list {
     flex-direction: column;
-    padding: 5em 0;
+    padding: 3em 0;
     position: relative;
     right: 0;
     left: 0;
-    top: 2em;
+    top: 4em;
     background-color: var(--clr-bg-alt); /*--clr-bg-altはナビゲーションの背景色 */
     width: 0;
     overflow: hidden;
