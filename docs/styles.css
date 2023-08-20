@@ -216,11 +216,11 @@ button {
   margin: 0.4em 0.8em;
   text-align: left;
 }
-/*.description6 {
-  font-size: 0.9rem;
+.description6 {
+  font-size: 0.7rem;
   margin: 0.4em 0.8em;
   text-align: left;
-} */
+}
 /* .description7 {
   font-size: 0.9rem;
   margin: 0.4em 0.8em;
@@ -275,7 +275,7 @@ button {
 }
 .leftImg {
   float: left;
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-top: 0.4em;
   margin-bottom: 0.8em;
