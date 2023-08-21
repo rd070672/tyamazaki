@@ -239,6 +239,7 @@ button {
   text-align: right;
 } */
 .description9 {
+  color: var(--clr-fg);
   font-size: 0.7rem;
   position: absolute; /* 絶対位置を指定 */
   right: 0.8rem;
