@@ -1104,8 +1104,8 @@ input[name="tab_item"] {
 
 .description9 {
   position: absolute; /* 絶対位置を指定 */
-  right: 0.2rem;
-  bottom: 0.2rem;
+  right: 0.3rem;
+  bottom: 0.5rem;
 }
 
 /* BODYの分割 */
