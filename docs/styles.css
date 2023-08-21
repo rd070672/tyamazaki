@@ -1116,13 +1116,13 @@ input[name="tab_item"] {
 
 .main-content {
   width: 80%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
-  padding: 0.8rem 0.2rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
+  padding: 0.2rem 0.8rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
 }
 
 .sidebar {
   width: 20%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
   background-color: var(--clr-bg-alt); /* サイドバーの背景色を設定。必要に応じて変更可能 */
-  padding: 0.8rem 0.2rem;     /* 必要に応じてサイドバーのパディングを追加 */
+  padding: 1rem 0.8rem;     /* 必要に応じてサイドバーのパディングを追加 */
 }
 
 /* サイドバー */
