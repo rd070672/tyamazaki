@@ -766,6 +766,10 @@ input[name="tab_item"] {
   position: center;
   text-align: center;
 }
+.about4 {
+  flex-direction: column;
+  margin: 2em;
+}
 
 .name {
   color: var(--clr-primary);
@@ -1101,13 +1105,13 @@ input[name="tab_item"] {
 
 .main-content {
   width: 75%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
-  padding: 1rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
+  padding: 0.5rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
 }
 
 .sidebar {
   width: 25%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
   background-color: var(--clr-bg-alt); /* サイドバーの背景色を設定。必要に応じて変更可能 */
-  padding: 1rem;     /* 必要に応じてサイドバーのパディングを追加 */
+  padding: 0.5rem;     /* 必要に応じてサイドバーのパディングを追加 */
 }
 
 /* サイドバー */
