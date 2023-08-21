@@ -1078,3 +1078,15 @@ input[name="tab_item"] {
 .custom-list li::marker {
   color: var(--clr-primary);
 }
+
+.titleWithDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  margin-left: 20px; /* 日付とタイトルとの間隔を調整 */
+  font-size: 0.9em;  /* 日付のフォントサイズを調整 */
+  color: var(--clr-fg-alt);       /* 日付の色を調整 */
+}
