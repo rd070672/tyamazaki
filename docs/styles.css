@@ -1086,7 +1086,7 @@ input[name="tab_item"] {
 }
 
 .date {
-  margin-left: 20px; /* 日付とタイトルとの間隔を調整 */
-  font-size: 0.9em;  /* 日付のフォントサイズを調整 */
+  margin-left: auto; /* 日付とタイトルとの間隔を調整 */
+  font-size: 0.8em;  /* 日付のフォントサイズを調整 */
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
