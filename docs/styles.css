@@ -336,7 +336,7 @@ button {
 .timeline-content {
   width: 78%;
   float: left;
-  border-left: 2px var(--clr-fg-alt) solid;
+  border-left: 2px var(--clr-primary) solid;
 }
 .timeline-content p {
 	margin: 5px 5px 5px 23px;
@@ -348,7 +348,7 @@ button {
   height: 10px;
   background: var(--clr-primary);
   position: absolute;
-  left: 19.9%;
+  left: 20.4%;
   top: 10px;
   border-radius: 30px;
   border: 2px solid var(--clr-fg-alt);
@@ -825,7 +825,7 @@ input[name="tab_item"] {
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
-  grid-gap: 0.5em;
+  grid-gap: 0.4em;
 }
 
 .projects__grid2 {
