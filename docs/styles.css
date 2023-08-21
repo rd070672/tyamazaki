@@ -735,8 +735,7 @@ input[name="tab_item"] {
 }
 .section__title3 {
   text-align: left;
-  margin-bottom: 0.4em;
-  margin-left: 0.2em;
+  margin: 0.4em;
 }
 .section__title4 {
   text-align: left;
@@ -853,7 +852,6 @@ input[name="tab_item"] {
 .section.project2 {
   position: relative; /* セクション要素を相対位置に設定 */
 }
-
 .project3 {
   padding: 1.5em;
   margin: 0.5em auto;
