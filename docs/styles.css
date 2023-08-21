@@ -276,13 +276,10 @@ button {
 }
 .leftImg {
   float: left;
-  width: 200px;
+  width: 150px;
   height: auto;
-  margin-top: 0.4em;
-  margin-bottom: 0.8em;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
-  border: 2px solid white;
+  margin: 0.4em;
+  border: 2px solid var(--clr-fg);
 }
 .leftImg400 {
   float: left;
@@ -297,10 +294,7 @@ button {
 .rightText {
   overflow: hidden;
   font-size: 0.8rem;
-  margin-top: 0.4em;
-  margin-bottom: 0.8em;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
+  margin: 0.4em;
   text-align: left;
 }
 
@@ -338,7 +332,7 @@ button {
   height: 10px;
   background: var(--clr-primary);
   position: absolute;
-  left: 20.2%;
+  left: 19.9%;
   top: 10px;
   border-radius: 30px;
   border: 2px solid var(--clr-fg-alt);
