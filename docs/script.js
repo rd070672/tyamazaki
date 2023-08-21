@@ -127,3 +127,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		});
 	});
 });
+
+// ページ内リンクのスムーズスクロール（サイドバー）
+document.addEventListener('DOMContentLoaded', function() {
+	const yearBoxes = document.querySelectorAll('.year-box');
+  
+	yearBoxes.forEach(yearBox => {
+	  yearBox.addEventListener('click', function() {
+		const year = this.getAttribute('data-year');
+		const relatedArticles = document.querySelector(`[data-year-articles="${year}"]`);
+		
+		if (relatedArticles.style.display === 'none') {
+		  relatedArticles.style.display = 'block';
+		} else {
+		  relatedArticles.style.display = 'none';
+		}
+	  });
+	});
+  });

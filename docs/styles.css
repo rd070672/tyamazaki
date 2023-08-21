@@ -1156,3 +1156,7 @@ input[name="tab_item"] {
 .sections > li {
   margin-bottom: 0.5rem; /* 各節の間隔 */
 }
+
+.articles {
+  display: none;
+}
