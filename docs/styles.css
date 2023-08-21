@@ -1097,6 +1097,17 @@ input[name="tab_item"] {
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
 
+#chatgpt {
+  position: relative; /* 相対位置を指定 */
+  /* その他のスタイリング（もしあれば） */
+}
+
+.description9 {
+  position: absolute; /* 絶対位置を指定 */
+  right: 0.2rem;
+  bottom: 0.2rem;
+}
+
 /* BODYの分割 */
 .container {
   display: flex;      /* Flexboxを使って子要素を横に並べる */
