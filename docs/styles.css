@@ -823,7 +823,7 @@ input[name="tab_item"] {
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); /*22em;*/
+  grid-template-columns: repeat(auto-fit, minmax(26em, 1fr)); /*22em;*/
   grid-gap: 0.4em;
 }
 
