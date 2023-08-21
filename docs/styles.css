@@ -239,10 +239,10 @@ button {
   text-align: right;
 } */
 .description9 {
-  color: var(--clr-fg);
-  font-size: 0.7rem;
+  color: var(--clr-fg-alt);
+  font-size: 0.8rem;
   position: absolute; /* 絶対位置を指定 */
-  right: 1.2rem;
+  right: 1.3rem;
   bottom: 0.8rem;
   font-weight: bold;
 }
@@ -952,7 +952,7 @@ input[name="tab_item"] {
 
 .date {
   margin-left: auto; /* 日付とタイトルとの間隔を調整 */
-  margin-right: 10px; 
+  margin-right: 15px; 
   font-size: 0.9em;  /* 日付のフォントサイズを調整 */
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
@@ -982,7 +982,7 @@ input[name="tab_item"] {
 .chapters {
   list-style-type: none; /* リストのマーカーを削除 */
   padding: 0;
-  margin: 0;
+  margin: 0.4em 0.4em;
 }
 
 .chapters > li {
@@ -992,8 +992,8 @@ input[name="tab_item"] {
 .sections {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  margin-left: 2rem;  /* 節を右に2回字下げするためのマージン */
+  margin: 0.4em 0.4em;
+  margin-left: 1rem;  /* 節を右に2回字下げするためのマージン */
 }
 
 .sections > li {
