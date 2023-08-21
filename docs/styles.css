@@ -975,16 +975,17 @@ input[name="tab_item"] {
 .container {
   max-width: 900px;
   width: 98%;
+  margin: 0 auto; /* これで中央寄せになります */
   display: flex;
 }
 
 .main-content {
-  width: 80%;
+  flex: 8;
   padding: 0.4rem;
 }
 
 .sidebar {
-  width: 20%;
+  flex: 2;
   background-color: var(--clr-bg-alt);
   padding: 0.4rem;
 }
