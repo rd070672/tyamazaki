@@ -57,109 +57,124 @@
     </header>
 
     <!-- Main contents -->
-    <main>
-      <div class="about center"><h2 class="center">ブログ</h2></div>
+    <div class="about center"><h2 class="center">ブログ</h2></div>
+    <div class="container">
+      <aside class="sidebar">
+        <ul class="chapters">
+          <li>第1章
+              <ul class="sections">
+                  <li>第1節</li>
+                  <li>第2節</li>
+              </ul>
+          </li>
+          <li>第2章
+              <ul class="sections">
+                  <li>第1節</li>
+                  <li>第2節</li>
+              </ul>
+          </li>
+          <!-- 以下、第3章、第4章、第5章についても同様に追加してください -->
+      </ul>
+      </aside>
 
-      <!-- 2023 -->
-      <section id="projects" class="section projects">
-        <h3 class="section12 section__title3">2023年</h3>
-        <div class="projects__grid">
+      <main class="main-content">
+    
+        <!-- 2023 -->
+        <section id="projects" class="section projects">
+          <h3 class="section12 section__title3">2023年</h3>
+          <div class="projects__grid">
 
-          <!-- 渡米研究での経験と学び -->
-          <section id="us" class="section project2"> 
-            <h4 class="bar-left2">渡米研究での経験と学び</h4>
-            <a href="./blog/usa-" class="link2 link2--nav2">
-              <img src="./blog/img/usa-1.png" class="leftImg">
-            </a>
-            <div class="rightText">
-              2020年3月から1年間、私は米国東海岸のメリーランド大学で在米研究に取り組みました。この期間、新型コロナウイルスが拡大し、その影響で起こったさまざまな社会的変化をアメリカで直接経験しました。異文化に触れる日々は新しい視点や挑戦をもたらし、日本とアメリカの研究文化の違いを深く理解することができました。
-              <p class="description9">
-                <a href="./blog/usa-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-              </p>
-            </div>
-          </section>
-          
-          <!-- 大学での仕事内容 -->
-          <section id="peer-review" class="section project2"> 
-            <h4 class="bar-left2">大学での仕事内容</h4>
-            <a href="./blog/working-" class="link2 link2--nav2">
-              <img src="./blog/img/working.png" class="leftImg">
-            </a>
-            <div class="rightText">
-              大学での仕事内容についてまとめたいと思う。嘱託助教（実態はプロジェクト研究員）として、どんな仕事内容に取り組んでいるか、どんな成果が求められているのか。大学雇用の助教でないため、大学や授業関係の仕事がほとんどないため、研究活動に全振りできる最高の期間である。
-              <p class="description9">
-                <a href="./blog/working-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-              </p>
-            </div>
-          </section>
-          
-          <!-- Web3時代のPeer reviewシステム -->
-          <section id="peer-review" class="section project2"> 
-            <h4 class="bar-left2">Web3時代のPeer reviewシステム</h4>
-            <a href="./blog/peer-review-" class="link2 link2--nav2">
-              <img src="./blog/img/peer-review.png" class="leftImg">
-            </a>
-            <div class="rightText">
-              ResearchHubが500万ドルの資金調達に成功し、researchcoinと呼ばれる研究コミュニティ向け仮想通貨を発行するとのこと。ただ働きでしかない現在のpeer reviewシステムや投稿論文のオープンソース問題等の課題を一掃する新しいWeb時代を作ってくれることを期待する。
-              <!-- eLifeが、来年7月から "publish, then review" という新しい論文査読の形式に移行。プレプリントと査読誌の良い所を合わせようという試みで、この流れは今後ひろがりそうな気がします。 Peer Review: Implementing a "publish, then review" model of publishing https://doi.org/10.7554/eLife.64910 -->
-              <p class="description9">
-                <a href="./blog/peer-review-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-              </p>
-              <!-- https://www.researchhub.com/post/979/researchhub-raises-5m-to-help-scientists-monetize-their-research -->
-            </div>
-          </section>
-          
-          <!-- 5分で作れるホームページ -->
-          <section id="github-pages" class="section project2"> 
-            <h4 class="bar-left2">5分で作れるホームページ</h4>
-            <a href="./blog/github-pages-" target="_blank" class="link2 link2--nav2">
-              <img src="./blog/img/github-pages.png" class="leftImg">
-            </a>
-            <div class="rightText">
-              GitHub pagesを利用して、サーバー費用無料でホームページがあっという間に作成できる。ドメイン名さえ、年3000円で取ってしまえば、完全オリジナルなウェブサイトが作成できる。しかも、GitHub pagesは、GitHubにアップロードしたファイルをそのままホームページとして公開できるので、とても便利である。
-              <p class="description9">
-                <a href="./blog/github-pages-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-              </p>
-            </div>
-          </section>
-          <!-- slack×ChatGPTでARXIVを読み込もう -->
-          <section id="slackgpt" class="section project2"> 
-            <h4 class="bar-left2">slack×ChatGPTでARXIVを読み込もう</h4>
-            <a href="./blog/slackgpt-" class="link2 link2--nav2">
-              <img src="./blog/img/slackgpt.png" class="leftImg">
-            </a>
-            <div class="rightText">
-              Slackのチャンネルを作成し、そこにChatGPTで翻訳・要約したARXIV論文を自動で送り続けることで、研究者の情報収集を効率化することができる。論文要約だけでなく、キーワード解説、この論文に記載のない発展課題まで説明してくれるプロンプトです。ArxivからでもNature論文からでもAPIで引っ張ってこればslackで解説させられます。
-              <p class="description9">
-                <a href="./blog/slackgpt-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-              </p>            
-            </div>
-          </section>
-          <!-- 私のChatGPTの使い方 -->
-          <section id="chatgpt" class="section project2"> 
-            <div class="titleWithDate">
-              <h4 class="bar-left2">私のChatGPTの使い方</h4>
-              <span class="date">2023-08-21</span>
-            </div>
-            <a href="./blog/chatgpt-" class="link2 link2--nav2">
-              <img src="./blog/img/chatgpt.png" class="leftImg">
-            </a>
-            <div class="rightText">
-              私のChatGPTの使い方について紹介する。具体的には、メールの作成・編集、アイディア出し、論文の要約、論文の仮清書、機械学習やデータ文責のコーディングを行う。これらの作業は、ChatGPTを使うことで、非常に効率的に行うことができる。
-              <p class="description9">
-                <a href="./blog/chatgpt-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-              </p>            
-            </div>
-          </section>
-        </div>
-      </section>
+            <!-- 渡米研究での経験と学び -->
+            <section id="us" class="section project2"> 
+              <h4 class="bar-left2">渡米研究での経験と学び</h4>
+              <a href="./blog/usa-" class="link2 link2--nav2">
+                <img src="./blog/img/usa-1.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                2020年3月から1年間、私は米国東海岸のメリーランド大学で在米研究に取り組みました。この期間、新型コロナウイルスが拡大し、その影響で起こったさまざまな社会的変化をアメリカで直接経験しました。異文化に触れる日々は新しい視点や挑戦をもたらし、日本とアメリカの研究文化の違いを深く理解することができました。
+                <p class="description9">
+                  <a href="./blog/usa-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+            
+            <!-- 大学での仕事内容 -->
+            <section id="peer-review" class="section project2"> 
+              <h4 class="bar-left2">大学での仕事内容</h4>
+              <a href="./blog/working-" class="link2 link2--nav2">
+                <img src="./blog/img/working.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                大学での仕事内容についてまとめたいと思う。嘱託助教（実態はプロジェクト研究員）として、どんな仕事内容に取り組んでいるか、どんな成果が求められているのか。大学雇用の助教でないため、大学や授業関係の仕事がほとんどないため、研究活動に全振りできる最高の期間である。
+                <p class="description9">
+                  <a href="./blog/working-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+            
+            <!-- Web3時代のPeer reviewシステム -->
+            <section id="peer-review" class="section project2"> 
+              <h4 class="bar-left2">Web3時代のPeer reviewシステム</h4>
+              <a href="./blog/peer-review-" class="link2 link2--nav2">
+                <img src="./blog/img/peer-review.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                ResearchHubが500万ドルの資金調達に成功し、researchcoinと呼ばれる研究コミュニティ向け仮想通貨を発行するとのこと。ただ働きでしかない現在のpeer reviewシステムや投稿論文のオープンソース問題等の課題を一掃する新しいWeb時代を作ってくれることを期待する。
+                <!-- eLifeが、来年7月から "publish, then review" という新しい論文査読の形式に移行。プレプリントと査読誌の良い所を合わせようという試みで、この流れは今後ひろがりそうな気がします。 Peer Review: Implementing a "publish, then review" model of publishing https://doi.org/10.7554/eLife.64910 -->
+                <p class="description9">
+                  <a href="./blog/peer-review-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+                <!-- https://www.researchhub.com/post/979/researchhub-raises-5m-to-help-scientists-monetize-their-research -->
+              </div>
+            </section>
+            
+            <!-- 5分で作れるホームページ -->
+            <section id="github-pages" class="section project2"> 
+              <h4 class="bar-left2">5分で作れるホームページ</h4>
+              <a href="./blog/github-pages-" target="_blank" class="link2 link2--nav2">
+                <img src="./blog/img/github-pages.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                GitHub pagesを利用して、サーバー費用無料でホームページがあっという間に作成できる。ドメイン名さえ、年3000円で取ってしまえば、完全オリジナルなウェブサイトが作成できる。しかも、GitHub pagesは、GitHubにアップロードしたファイルをそのままホームページとして公開できるので、とても便利である。
+                <p class="description9">
+                  <a href="./blog/github-pages-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+            <!-- slack×ChatGPTでARXIVを読み込もう -->
+            <section id="slackgpt" class="section project2"> 
+              <h4 class="bar-left2">slack×ChatGPTでARXIVを読み込もう</h4>
+              <a href="./blog/slackgpt-" class="link2 link2--nav2">
+                <img src="./blog/img/slackgpt.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                Slackのチャンネルを作成し、そこにChatGPTで翻訳・要約したARXIV論文を自動で送り続けることで、研究者の情報収集を効率化することができる。論文要約だけでなく、キーワード解説、この論文に記載のない発展課題まで説明してくれるプロンプトです。ArxivからでもNature論文からでもAPIで引っ張ってこればslackで解説させられます。
+                <p class="description9">
+                  <a href="./blog/slackgpt-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>            
+              </div>
+            </section>
+            <!-- 私のChatGPTの使い方 -->
+            <section id="chatgpt" class="section project2"> 
+              <div class="titleWithDate">
+                <h4 class="bar-left2">私のChatGPTの使い方</h4>
+                <span class="date">2023-08-21</span>
+              </div>
+              <a href="./blog/chatgpt-" class="link2 link2--nav2">
+                <img src="./blog/img/chatgpt.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                私のChatGPTの使い方について紹介する。具体的には、メールの作成・編集、アイディア出し、論文の要約、論文の仮清書、機械学習やデータ文責のコーディングを行う。これらの作業は、ChatGPTを使うことで、非常に効率的に行うことができる。
+                <p class="description9">
+                  <a href="./blog/chatgpt-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>            
+              </div>
+            </section>
+          </div>
+        </section>
 
-      <!-- contact -->
-      <!-- <section id="contact" class="section1 contact center" >
-        <h4 class="section__title">Contact</h4>
-        <a href="mailto:takahiro.yamazaki@rs.tus.ac.jp"><span class="btn btn--outline">Email me</span></a>
-      </section> -->
-    </main>
+      </main>
+    </div>
 
     <!-- footer -->
     <footer class="footer">

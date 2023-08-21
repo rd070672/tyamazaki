@@ -1079,6 +1079,7 @@ input[name="tab_item"] {
   color: var(--clr-primary);
 }
 
+/* ブログのタイトル横の日付 */
 .titleWithDate {
   display: flex;
   justify-content: space-between;
@@ -1090,4 +1091,43 @@ input[name="tab_item"] {
   margin-right: 20px; 
   font-size: 0.9em;  /* 日付のフォントサイズを調整 */
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
+}
+
+/* BODYの分割 */
+.container {
+  display: flex;      /* Flexboxを使って子要素を横に並べる */
+  width: 100%;        /* コンテナの幅を最大に設定 */
+}
+
+.main-content {
+  width: 75%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
+  padding: 1rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
+}
+
+.sidebar {
+  width: 25%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
+  background-color: var(--clr-bg-alt); /* サイドバーの背景色を設定。必要に応じて変更可能 */
+  padding: 1rem;     /* 必要に応じてサイドバーのパディングを追加 */
+}
+
+/* サイドバー */
+.chapters {
+  list-style-type: none; /* リストのマーカーを削除 */
+  padding: 0;
+  margin: 0;
+}
+
+.chapters > li {
+  margin-bottom: 1rem; /* 各章の間隔 */
+}
+
+.sections {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;  /* 節を右に2回字下げするためのマージン */
+}
+
+.sections > li {
+  margin-bottom: 0.5rem; /* 各節の間隔 */
 }
