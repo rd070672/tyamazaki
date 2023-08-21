@@ -187,6 +187,9 @@ button {
   padding-bottom: 0.1em;
 }
 
+.frame {
+  margin: 0.4em 0em;
+}
 .description {
   font-size: 0.9rem;
   margin: 0.4em 0.8em;
@@ -269,6 +272,9 @@ button {
   margin: 0.3em 0.6em;
   border: 2px solid var(--clr-fg);
 }
+.img300:hover {
+  opacity: 0.75;
+}
 .img200 {
   width: 200px;
   height: auto;
@@ -285,8 +291,11 @@ button {
   float: left;
   width: 150px;
   height: auto;
-  margin: 0.4em;
+  margin: 0.2em;
   border: 2px solid var(--clr-fg);
+}
+.leftImg:hover {
+  opacity: 0.75;
 }
 .leftImg400 {
   float: left;
@@ -301,7 +310,7 @@ button {
 .rightText {
   overflow: hidden;
   font-size: 0.8rem;
-  margin: 0.4em;
+  margin: 0.2em;
   text-align: left;
 }
 
@@ -605,7 +614,7 @@ i.fas.fa-external-link-alt{
 
 .header {
   height: 6em;
-  max-width: auto; /*900px;*/
+  max-width: 1000px; /*900px;*/
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
@@ -627,30 +636,30 @@ i.fas.fa-external-link-alt{
 } */
 
 main {
-  max-width: auto; /*900px;*/
-  width: 95%;
+  max-width: 1000px; /*900px;*/
+  width: 98%;
   margin: 0 auto;
 }
 
-/* tabs and tab_item */
+/* Recent news/updates */
 .tabs {
   margin-top: 0.2em;
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
-  max-width: auto; /*900px;*/
+  max-width: 1000px; /*900px;*/
   margin: 0 auto;
   overflow: auto;
   height: 200px;
 }
 
 .tab_item {
-  width: 120px;
-  height: 30px;
+  width: 100px;
+  height: 24px;
   border-bottom: 3px solid var(--clr-primary);
   background-color: var(--clr-bg);
-  line-height: 30px;
-  font-size: 1rem;
+  line-height: 24px;
+  font-size: 0.9rem;
   text-align: center;
   color: var(--clr-primary);
   display: block;
