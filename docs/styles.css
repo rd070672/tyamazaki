@@ -348,10 +348,10 @@ button {
   height: 10px;
   background: var(--clr-primary);
   position: absolute;
-  left: 20.4%;
+  left: 19.8%;
   top: 10px;
-  border-radius: 30px;
-  border: 2px solid var(--clr-fg-alt);
+  border-radius: 20px;
+  border: 1.5px solid var(--clr-fg-alt);
 }
 
 .sb-slidebar {
