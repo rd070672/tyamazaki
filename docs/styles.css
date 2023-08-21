@@ -242,7 +242,7 @@ button {
   color: var(--clr-fg);
   font-size: 0.7rem;
   position: absolute; /* 絶対位置を指定 */
-  right: 0.8rem;
+  right: 1rem;
   bottom: 0.8rem;
 }
 .description10 {
