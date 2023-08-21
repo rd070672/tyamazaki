@@ -71,7 +71,7 @@
           <h4 class="under">材料工学：気になった論文一覧（随時更新中）</h4>
           <ol>
             <li class="description2">
-              <a href="#1">室温常圧で超伝導を示す銅ドープ鉛アパタイト構造の合成と機構</a></li>
+              <a href="#1">多結晶材料の有効特性を予測するためのグラフニューラルネットワーク：包括的な分析</a></li>
             <!-- <li class="description2">
               <a href="#2">多元素合金の機械的性質予測のための原始的な機械学習ツール</a></li>
             <li class="description2">
@@ -104,20 +104,20 @@
           <!-- 論文1 -->
           <div id="1">
             <p class="description3">
-                1. 室温常圧で超伝導を示す銅ドープ鉛アパタイト構造の合成と機構
+                1. 多結晶材料の有効特性を予測するためのグラフニューラルネットワーク：包括的な分析
             </p><div><p class="description5">
-              ・固相法を用いて、鉛アパタイト(Pb10(PO4)6O)に銅を部分的に置換したLK-99®という物質を合成した。この物質は、室温常圧で電気抵抗がゼロになる超伝導体であることを示した。<br>
-              ・LK-99®の結晶構造は、X線回折(XRD)により修飾鉛アパタイト(MLA)構造であることが分かった。銅のドープにより、結晶格子の体積収縮が起こり、絶縁体から金属への相転移(IMT)が引き起こされた。<br>
-              ・LK-99®の超伝導性は、温度や磁場に依存する磁化率やI-V特性を測定することで確認した。特に、室温常圧で物質が磁石の上で部分的に浮上するメイスナー効果を観察した。<br>
-              ・LK-99®の超伝導機構は、1次元的なCu2+−O1/2−Cu2+チェーンにおける電荷密度波(CDW)とオンサイトクーロン反発エネルギー(Uc)によるバイポーラロン形成とトンネル効果に基づくと考えられる。これは、BR-BCS理論により説明できる。
+              ・LLZOセラミックを例にとって、有限幅の粒界を持つ三次元多結晶微細構造とその有効イオン伝導率および有効弾性剛性係数を大規模に生成し、物理ベースのシミュレーションで計算した。<br>
+              ・原子結晶構造の特性を予測するために開発された結晶グラフ畳み込みニューラルネットワークを基に、多結晶グラフニューラルネットワーク（PGNN）モデルを開発した。PGNNモデルは、粒子と粒界の物理的特徴をノードとエッジの特徴としてグラフに表現し、メッセージ伝達関数を用いて粒子間や粒界間の相互作用を考慮する。<br>
+              ・最適化されたPGNNモデルは、線形回帰モデルや二つの基準となる畳み込みニューラルネットワーク（CNN）モデルよりも低い誤差（1.4%未満）で有効イオン伝導率テンソルの全ての対角成分を予測することができた。また、EBSDデータから生成された統計的に異なる微細構造に対しても良好な外挿性能を示した。<br>
+              ・逐次的前方選択法を用いて、粒子や粒界の個々の物理的特徴が予測精度に及ぼす相対的な重要度を定量化した。その結果、粒子や粒界の導電率が最も重要であり、粒界の厚さや粒子の中心位置は不要な特徴であることがわかった。さらに、有効イオン伝導率を予測するために事前学習されたPGNNモデルは、同じ微細構造の有効弾性剛性係数を予測する際に優れた転移学習性能を示した。
               <p class="description6">
-                コメント：LK-99が常温常圧超伝導じゃないのは残念だけど、盛り上がり自体は好き。次に期待。
+                コメント：複雑になるにつれて物性・材料特性を予測する説明変数は膨大に増えていく。どういった特徴量エンジニアリングが必要になっていくか。また、複数の物性を同時に予測することは可能か、といったあたりが興味深い。
               </p><br><p class="description10">
-                DATE: 11 Aug 2023 (v3), 26 Jul 2023 (v1)<br>
-                Superconductor Pb10−xCux(PO4)6O showing levitation at room temperature and atmospheric pressure and mechanism<br>
-                Sukbae Lee et al. (1Quantum Energy Research Centre, South Korea)<br>
-                <a href="https://arxiv.org/abs/2307.12037" target="_blank" class="link2 link2--nav2">
-                  arXiv:2307.12037 (cond-mat.supr-con)</a>
+                DATE: 8 Jun 2023 (v2)<br>
+                Graph Neural Network for Predicting the Effective Properties of Polycrystalline Materials: A Comprehensive Analysis<br>
+                Minyi Dai et al. (University of Wisconsin-Madison, USA)<br>
+                <a href="https://arxiv.org/abs/2209.05583" target="_blank" class="link2 link2--nav2">
+                  arXiv:2209.05583 (cond-mat.mtrl-sci)</a>
               </p><p class="img_align">
                 <img src="../review/img/materials-1-1.png" class="img300">
                 <img src="../review/img/materials-1-2.png" class="img300">
