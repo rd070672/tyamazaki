@@ -57,20 +57,17 @@
        
     <!-- Main contents -->
     <main>
-      <div class="about center"><h2 class="center">slack×ChatGPTでARXIVを読み込もう</h2></div><br><br>
-      
-      <!-- <a href="../blog" class="link2 link2--nav2"><i>ブログTOP </i></a>
-      < <a href="../review/physics" class="link2 link2--nav2"><i>物性物理 </i></a>
-      | <a href="../review/materials" class="link2 link2--nav2"><i>材料工学 </i></a>
-      | <a href="../review/others" class="link2 link2--nav2"><i>その他</i></a> -->
-
+      <div class="about center">
+        <h2 class="center">slack×ChatGPTでARXIVを読み込もう</h2></div><br><br>
       <section id="others" class="section projects">
-
+        
         <!-- 概要 -->
         <section>
           <h4 class="bar-left">概要</h4>
           <p class="description5">
             Slackのチャンネルを作成し、そこにChatGPTで翻訳・要約したARXIV論文を自動で送り続けることで、研究者の情報収集を効率化することができる。論文要約だけでなく、キーワード解説、この論文に記載のない発展課題まで説明してくれるプロンプトです。ArxivからでもNature論文からでもAPIで引っ張ってこればslackで解説させられます。
+            元ネタはズシさん(@mechazushi)のこちらのエントリーです。感謝です。
+            https://zenn.dev/ozushi/articles/ebe3f47bf50a86
           </p>
         </section><br>
 
@@ -78,25 +75,24 @@
         <section>     
           <h4 class="under">目次</h4>
           <ol>
-            <li class="description2">
-              <a href="#1"></a>はじめに</li>
-              <a href="#2"></a>設定方法の流れ</li>
-              <a href="#3"></a>具体的な実装方法</li>
-              <a href="#4"></a>どんなことができるようになるか</li>
-              <a href="#5"></a>利点と限界</li>
-              <a href="#6"></a>まとめ</li>
-              <a href="#7"></a>付録</li>
+            <li class="description2"><a href="#1">はじめに</a></li>
+            <li class="description2"><a href="#2">設定方法の流れ</a></li>
+            <li class="description2"><a href="#3">具体的な実装方法</a></li>
+            <li class="description2"><a href="#4">どんなことができるようになるか</a></li>
+            <li class="description2"><a href="#5">利点と限界</a></li>
+            <li class="description2"><a href="#6">まとめ</a></li>
+            <li class="description2"><a href="#7">付録</a></li>
           </ol>
         </section><br>
 
         <section>
           <!-- 本文 -->
-          <h4 class="bar-left">本文</h4>
+          <h4 class="bar-left">本文（更新中）</h4>
 
           <!-- はじめに -->
           <div id="1"><p class="description3">1. はじめに</p>
             <div><p class="description5">
-              ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。
+              ・
               </p>
             </div>
           </div>
@@ -107,7 +103,7 @@
               ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。
               </p>
             </div>
-          </div>
+          </div><br>
 
           <!-- 具体的な実装方法 -->
           <div id="3"><p class="description3">3. 具体的な実装方法</p>
@@ -115,7 +111,7 @@
               ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。
               </p>
             </div>
-          </div>
+          </div><br>
 
           <!-- どんなことができるようになるか -->
           <div id="4"><p class="description3">4. どんなことができるようになるか</p>
@@ -123,7 +119,7 @@
               ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。
               </p>
             </div>
-          </div>
+          </div><br>
 
           <!-- 利点と限界 -->
           <div id="5"><p class="description3">5. 利点と限界</p>
@@ -131,21 +127,25 @@
               ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。
               </p>
             </div>
-          </div>
+          </div><br>
 
           <!-- まとめ -->
           <div id="6"><p class="description3">6. まとめ</p>
             <div><p class="description5">
               ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。
-              </p>
-            </div>
+            </p></div>
           </div>
-
         </section>
 
-        <section>
-          <p class="description3">随時更新中</p>
-        </section>
+        <section>     
+          <h4 class="under">リファレンス</h4>
+          <ol>
+            <li class="description2"><a href="https://platform.openai.com/account/api-keys">OpenAI APIs</a></li>
+            <!-- <li class="description2"><a href="#2">Slack APIs</a></li>
+            <li class="description2"><a href="#3">arXiv APIs</a></li>
+            <li class="description2"><a href="#4">Google cloud</a></li> -->
+          </ol>
+        </section><br>
 
       </section>
     </main>
