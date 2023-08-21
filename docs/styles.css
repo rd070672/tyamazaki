@@ -929,6 +929,81 @@ input[name="tab_item"] {
   transition: transform 0.2s ease-in-out;
 }
 
+.custom-list {
+  font-size: 0.9rem;
+  margin: 5px 12px;
+}
+.custom-list li {
+  padding: 3px 20px;
+  color: var(--clr-primary);
+}
+.custom-list li::marker {
+  color: var(--clr-primary);
+}
+
+/* ブログのタイトル横の日付 */
+.titleWithDate {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  align-items: flex-end; 
+}
+
+.date {
+  margin-left: auto; /* 日付とタイトルとの間隔を調整 */
+  margin-right: 20px; 
+  font-size: 0.9em;  /* 日付のフォントサイズを調整 */
+  color: var(--clr-fg-alt);       /* 日付の色を調整 */
+}
+
+/* #chatgpt {
+  position: relative;
+} */
+
+/* BODYの分割 */
+.container {
+  display: flex;      /* Flexboxを使って子要素を横に並べる */
+  width: 100%;        /* コンテナの幅を最大に設定 */
+}
+
+.main-content {
+  width: 75%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
+  padding: 0.2rem 0.8rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
+}
+
+.sidebar {
+  width: 25%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
+  background-color: var(--clr-bg-alt); /* サイドバーの背景色を設定。必要に応じて変更可能 */
+  padding: 1rem 0.8rem;     /* 必要に応じてサイドバーのパディングを追加 */
+}
+
+/* サイドバー */
+.chapters {
+  list-style-type: none; /* リストのマーカーを削除 */
+  padding: 0;
+  margin: 0;
+}
+
+.chapters > li {
+  margin-bottom: 1rem; /* 各章の間隔 */
+}
+
+.sections {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;  /* 節を右に2回字下げするためのマージン */
+}
+
+.sections > li {
+  margin-bottom: 0.5rem; /* 各節の間隔 */
+}
+
+.articles {
+  display: none;
+}
+
+
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
   .header {
@@ -1085,78 +1160,4 @@ input[name="tab_item"] {
   .sidebar {
     display: none;
   }
-}
-
-.custom-list {
-  font-size: 0.9rem;
-  margin: 5px 12px;
-}
-.custom-list li {
-  padding: 3px 20px;
-  color: var(--clr-primary);
-}
-.custom-list li::marker {
-  color: var(--clr-primary);
-}
-
-/* ブログのタイトル横の日付 */
-.titleWithDate {
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-  align-items: flex-end; 
-}
-
-.date {
-  margin-left: auto; /* 日付とタイトルとの間隔を調整 */
-  margin-right: 20px; 
-  font-size: 0.9em;  /* 日付のフォントサイズを調整 */
-  color: var(--clr-fg-alt);       /* 日付の色を調整 */
-}
-
-/* #chatgpt {
-  position: relative;
-} */
-
-/* BODYの分割 */
-.container {
-  display: flex;      /* Flexboxを使って子要素を横に並べる */
-  width: 100%;        /* コンテナの幅を最大に設定 */
-}
-
-.main-content {
-  width: 75%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
-  padding: 0.2rem 0.8rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
-}
-
-.sidebar {
-  width: 25%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
-  background-color: var(--clr-bg-alt); /* サイドバーの背景色を設定。必要に応じて変更可能 */
-  padding: 1rem 0.8rem;     /* 必要に応じてサイドバーのパディングを追加 */
-}
-
-/* サイドバー */
-.chapters {
-  list-style-type: none; /* リストのマーカーを削除 */
-  padding: 0;
-  margin: 0;
-}
-
-.chapters > li {
-  margin-bottom: 1rem; /* 各章の間隔 */
-}
-
-.sections {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-left: 2rem;  /* 節を右に2回字下げするためのマージン */
-}
-
-.sections > li {
-  margin-bottom: 0.5rem; /* 各節の間隔 */
-}
-
-.articles {
-  display: none;
 }
