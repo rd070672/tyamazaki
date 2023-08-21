@@ -239,10 +239,10 @@ button {
   text-align: right;
 } */
 .description9 {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   position: absolute; /* 絶対位置を指定 */
-  right: 0.3rem;
-  bottom: 0.5rem;
+  right: 0.8rem;
+  bottom: 0.8rem;
 }
 .description10 {
   font-size: 0.8rem;
@@ -1106,10 +1106,9 @@ input[name="tab_item"] {
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
 
-#chatgpt {
-  position: relative; /* 相対位置を指定 */
-  /* その他のスタイリング（もしあれば） */
-}
+/* #chatgpt {
+  position: relative;
+} */
 
 /* BODYの分割 */
 .container {
