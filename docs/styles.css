@@ -1103,7 +1103,8 @@ input[name="tab_item"] {
 .titleWithDate {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-end; 
 }
 
 .date {
