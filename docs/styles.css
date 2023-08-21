@@ -242,8 +242,9 @@ button {
   color: var(--clr-fg);
   font-size: 0.7rem;
   position: absolute; /* 絶対位置を指定 */
-  right: 1rem;
+  right: 1.2rem;
   bottom: 0.8rem;
+  font-weight: bold;
 }
 .description10 {
   font-size: 0.8rem;
@@ -951,7 +952,7 @@ input[name="tab_item"] {
 
 .date {
   margin-left: auto; /* 日付とタイトルとの間隔を調整 */
-  margin-right: 20px; 
+  margin-right: 10px; 
   font-size: 0.9em;  /* 日付のフォントサイズを調整 */
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
@@ -967,12 +968,12 @@ input[name="tab_item"] {
 }
 
 .main-content {
-  width: 75%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
+  width: 80%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
   padding: 0.2rem 0.8rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
 }
 
 .sidebar {
-  width: 25%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
+  width: 20%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
   background-color: var(--clr-bg-alt); /* サイドバーの背景色を設定。必要に応じて変更可能 */
   padding: 1rem 0.8rem;     /* 必要に応じてサイドバーのパディングを追加 */
 }
