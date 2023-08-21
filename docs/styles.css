@@ -824,7 +824,7 @@ input[name="tab_item"] {
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); /*22em;*/
   grid-gap: 0.4em;
 }
 
@@ -974,26 +974,27 @@ input[name="tab_item"] {
 
 /* BODYの分割 */
 .container {
-  display: flex;      /* Flexboxを使って子要素を横に並べる */
-  width: 100%;        /* コンテナの幅を最大に設定 */
+  max-width: 900px;
+  width: 98%;
+  display: flex;
 }
 
 .main-content {
-  width: 80%;         /* メインコンテンツの幅を設定。必要に応じて変更可能 */
-  padding: 0.2rem 0.8rem;     /* 必要に応じてメインコンテンツのパディングを追加 */
+  width: 80%;
+  padding: 0.4rem;
 }
 
 .sidebar {
-  width: 20%;         /* サイドバーの幅を設定。必要に応じて変更可能 */
-  background-color: var(--clr-bg-alt); /* サイドバーの背景色を設定。必要に応じて変更可能 */
-  padding: 1rem 0.8rem;     /* 必要に応じてサイドバーのパディングを追加 */
+  width: 20%;
+  background-color: var(--clr-bg-alt);
+  padding: 0.4rem;
 }
 
 /* サイドバー */
 .chapters {
   list-style-type: none; /* リストのマーカーを削除 */
   padding: 0;
-  margin: 0.4em 0.4em;
+  margin: 0.2em;
 }
 
 .chapters > li {
@@ -1003,7 +1004,7 @@ input[name="tab_item"] {
 .sections {
   list-style-type: none;
   padding: 0;
-  margin: 0.4em 0.4em;
+  margin: 0.4em;
   margin-left: 1rem;  /* 節を右に2回字下げするためのマージン */
 }
 
