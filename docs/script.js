@@ -63,6 +63,7 @@ const scrollUp = () => {
 document.addEventListener('scroll', scrollUp)
 
 let lastScrollTop = 0;
+
 const header2 = document.querySelector('.header2');
 
 window.addEventListener('scroll', function() {
@@ -77,70 +78,31 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop;
 });
 
-// 箇条書きのための。で改行する
-// $(document).ready(function() {
-$(".bulletdot").each(function() {
-	var items = $(this).text().split('。');
-	$(this).empty();
-	items.forEach(function(item) {
-	if (item) {
-		$('<p>').text(item).appendTo(".bullet");
-	}
-	});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // スムーズスクロールの実装 (オプション)
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // ページ内リンクのスムーズスクロール（サイドバー）
+    const yearBoxes = document.querySelectorAll('.year-box');
+    yearBoxes.forEach(yearBox => {
+        yearBox.addEventListener('click', function() {
+            const year = this.getAttribute('data-year');
+            const relatedArticles = document.querySelector(`[data-year-articles="${year}"]`);
+
+            if (relatedArticles.style.display === 'none' || !relatedArticles.style.display) {
+                relatedArticles.style.display = 'block';
+            } else {
+                relatedArticles.style.display = 'none';
+            }
+        });
+    });
 });
-// });
-
-// 箇条書きのための\nで改行する
-// $(document).ready(function() {
-$(".bullet").each(function() {
-	var items = $(this).text().split('<br>'); // 改行で分割
-	$(this).empty();
-	items.forEach(function(item) {
-	if (item.trim()) { // 空の項目を無視
-		$('<p>').text(item).appendTo(".bullet");
-	}
-	});
-});
-// });
-
-// 番号リストのための\nで改行する
-// $(document).ready(function() {
-$(".numList").each(function() {
-	var items = $(this).text().split('<br>'); // 改行で分割
-	$(this).empty();
-	$(this).css('counter-reset', 'lineNum'); // CSSカウンタの初期化
-	items.forEach(function(item) {
-	if (item.trim()) { // 空の項目を無視
-		$('<p>').text(item).appendTo(".numList");
-	}
-	});
-});
-// });
-
-// スムーズスクロールの実装 (オプション)
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-	e.preventDefault();
-
-	document.querySelector(this.getAttribute('href')).scrollIntoView({
-		behavior: 'smooth'
-	});
-});
-// });
-
-// ページ内リンクのスムーズスクロール（サイドバー）
-const yearBoxes = document.querySelectorAll('.year-box');
-
-yearBoxes.forEach(yearBox => {
-	yearBox.addEventListener('click', function() {
-	const year = this.getAttribute('data-year');
-	const relatedArticles = document.querySelector(`[data-year-articles="${year}"]`);
-	
-	if (relatedArticles.style.display === 'none') {
-		relatedArticles.style.display = 'block';
-	} else {
-		relatedArticles.style.display = 'none';
-	}
-	});
-});
-
