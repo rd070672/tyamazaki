@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en jp">
   <head>
-    <title>ty/review/others</title>
+    <title>ty/review/mat-info</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
     <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
@@ -57,7 +57,7 @@
        
     <!-- Main contents -->
     <main>
-      <div class="about center"><h2 class="center">過去の注目論文：その他</h2></div><br><br>
+      <div class="about center"><h2 class="center">過去の注目論文：マテインフォ</h2></div><br><br>
       
       <a href="../review" class="link2 link2--nav2"><i>論文紹介TOP </i></a>
       < <a href="../review/physics" class="link2 link2--nav2"><i>物性物理 </i></a>
@@ -65,14 +65,14 @@
       | <a href="../review/mat-info" class="link2 link2--nav2"><i>マテインフォ </i></a>
       | <a href="../review/others" class="link2 link2--nav2"><i>その他</i></a>
 
-      <section id="others" class="section projects">
+      <section id="mat-info" class="section projects">
 
         <!-- ピックアップ論文 -->
         <section>     
-          <h4 class="under">その他：気になった論文一覧（随時更新中）</h4>
+          <h4 class="under">マテインフォ：気になった論文一覧（随時更新中）</h4>
           <ol>
             <li class="description2">
-              <a href="#1">化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価</a></li>
+              <a href="#1">結晶合金の可調整な物性を計算的にスクリーニングする方法</a></li>
             <!-- <li class="description2">
               <a href="#2">多元素合金の機械的性質予測のための原始的な機械学習ツール</a></li>
             <li class="description2">
@@ -105,27 +105,23 @@
           <!-- 論文1 -->
           <div id="1">
             <p class="description3">
-                1. 化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価
+                1. 結晶合金の可調整な物性を計算的にスクリーニングする方法
             </p><div><p class="description5">
-              ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。<br>
-              ・ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。<br>
-              ・ChemCrowは、GPT-4という最新のLLMを用いて、さまざまな難易度の14個のタスクに対して評価された。専門家による評価では、ChemCrowはGPT-4よりも化学的な正確さ、推論の質、タスクの完了度において優れていることが示された。特に複雑なタスクでは、ChemCrowはGPT-4が苦手とする化学的な知識や理解をツールを通して補うことができた。<br>
-              ・ChemCrowの開発と利用には、二重使用や安全性や倫理性などの潜在的なリスクが伴うことを認識し、それらを軽減するための戦略を提案した。例えば、危険な物質や反応に対しては警告やエラーを出すツールを組み込んだり、人間のフィードバックやレビューを求めたりすることである。
+              ・既存の材料データベースから、結晶構造が類似している化合物の組み合わせを自動的に探索し、可能な合金や固溶体を提案するフレームワークとオープンソースコードを開発した。<br>
+              ・Materials Projectデータベースにこのフレームワークを適用し、60万以上のユニークな「合金ペア」や1万以上の「合金系」を作成し、公開した。これらのデータは、物性の可調整性を探索するために利用できる。<br>
+              ・合金ペアや合金系の可視化や分析のために、新しい手法を提案した。例えば、半空間ハル法を用いて、合金の熱力学的安定性や相変化を推定したり、格子定数やバンドギャップなどの物性をプロットしたりした。<br>
+              ・このフレームワークを応用して、p型透明導電体として有望な合金候補をスクリーニングした。その結果、従来の化合物スクリーニングでは見逃されていた可能性のある新しい候補を発見した。
               <p class="description6">
-                コメント：GPT-4を用いた最近注目される材料設計ツール。人間言語と機械言語を繋ぐ材料設計の実現に期待。マテリアルズインフォマティクスは有機よりも無機の方が進んでいる理解であったが、言語モデルを利用したツールは有機からスタートするのは少し驚き。
-              </p>
-              <p class="description6">
-                関連記事：<a href="https://github.com/ur-whitelab/chemcrow-public" target="_blank" class="link2 link2--nav2">ChemCrow (v0.3.0)</a>
-
+                コメント：学部生の時にp型透明超伝導体の探索研究をしていたが、このようなデータベースでの予測を基に、材料研究が出来ていたらもっと深く研究できたのではないかと思う。
               </p><br><p class="description10">
-                DATE: 21 Jun 2023 (v4), 11 Apr 2023 (v1)<br>
-                Augmenting large language models with chemistry tools<br>
-                Andres M. Bran et al. (Laboratory of Artificial Chemical Intelligence (LIAC), ISIC, EPFL, Switzerland)<br>
-                <a href="https://arxiv.org/abs/2304.05376" target="_blank" class="link2 link2--nav2">
-                  arXiv:2304.05376 (chem-ph)</a>
+                DATE: 10 Apr 2023 (v3), 21 Jun 2022 (v1)<br>
+                A method to computationally screen for tunable properties of crystalline alloys<br>
+                Rachel Woods-Robinson et al. (University of California at Berkeley, USA)<br>
+                <a href="https://arxiv.org/abs/2206.10715" target="_blank" class="link2 link2--nav2">
+                  arXiv:2206.10715 (cond-mat.mtrl-sci)</a>
               </p><p class="img_align">
-                <img src="../review/img/others-1-1.png" class="img300">
-                <img src="../review/img/others-1-2.png" class="img300">
+                <img src="../review/img/mat-info-1-1.png" class="img300">
+                <img src="../review/img/mat-info-1-2.png" class="img300">
               </p>
             </div><br><br>
           </div>
@@ -142,7 +138,7 @@
     <!-- footer -->
     <footer class="footer">
       © 2023 <a href="../" class="link footer__link">tyamazaki</a>. All rights reserved.<br><br>
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fothers&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fmat-info&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/>
     </footer>
 
     <div class="scroll-container">
