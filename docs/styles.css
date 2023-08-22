@@ -115,27 +115,28 @@ button {
   }
   h2 {
     font-size: 1.5em;
-    text-align: center;
+    margin-bottom: 1em;
+    /* text-align: center; */
   }
   h3 {
-    font-size: 1.3em;
-    text-align: left;
+    font-size: 1.2em;
+    /* text-align: left; */
   }
   h4 {
-    font-size: 1.2em;
-    text-align: left;
+    font-size: 1em;
+    /* text-align: left; */
   }
   h5 {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
   }
   
-  a {
+  /* a {
     text-align: center;
   }
   span {
     text-align: center;
-  }
+  } */
 }
 
 /*===================
@@ -972,13 +973,7 @@ input[name="tab_item"] {
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  align-items: flex-end; 
-}
-.titleWithDate2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-items: flex-end; 
+  align-items: flex-end; /* 右下に設置される */
 }
 
 .date {
