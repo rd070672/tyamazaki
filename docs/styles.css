@@ -847,8 +847,8 @@ input[name="tab_item"] {
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
-  grid-gap: 0.3em;
+  grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
+  grid-gap: 0.2em;
   max-width: 100%;
 }
 .project {
