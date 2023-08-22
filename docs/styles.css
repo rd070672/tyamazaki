@@ -1015,12 +1015,11 @@ input[name="tab_item"] {
 /* サイドバー */
 .chapters {
   list-style-type: none; /* リストのマーカーを削除 */
-  padding: 0;
   margin: 0.2em;
 }
 
 .chapters > li {
-  margin-bottom: 1rem; /* 各章の間隔 */
+  margin-bottom: 0.8rem; /* 各章の間隔 */
 }
 
 .sections {
