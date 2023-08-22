@@ -735,7 +735,7 @@ input[name="tab_item"] {
   text-align: center;
 }
 .section__title {
-  text-align: left;
+  text-align: center;
   margin-bottom: 0.4em;
   text-transform: uppercase;
 }
