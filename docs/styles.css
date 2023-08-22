@@ -819,6 +819,11 @@ input[name="tab_item"] {
   margin-bottom: 2em;
   text-align: center;
 }
+.about4__contact {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
 .about .link--icon {
   margin-right: 0.8em;
 }
