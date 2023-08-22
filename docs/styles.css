@@ -716,6 +716,7 @@ input[name="tab_item"] {
   margin-top: 1em;
   text-align: left;
   margin-bottom: 0.2em;
+  max-width: 95%;
 }
 .section3 {
   margin-top: 1em;
@@ -1182,5 +1183,17 @@ input[name="tab_item"] {
   }
   .sidebar {
     display: none;
+  }
+  .img {
+    margin: 0.3em;
+    width: 100px;
+    height: auto;
+  }
+  .leftImg {
+    float: left;
+    width: 100px;
+    height: auto;
+    margin: 0.3em;
+    border: 2px solid var(--clr-fg);
   }
 }
