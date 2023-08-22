@@ -774,7 +774,7 @@ input[name="tab_item"] {
 
 .about {
   flex-direction: column;
-  margin-top: 1.5em;
+  margin: 3em 0em; /* margin-top: 1.5em; */
 }
 .about1 {
   flex-direction: column;
