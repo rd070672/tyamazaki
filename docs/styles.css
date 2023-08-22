@@ -981,14 +981,14 @@ input[name="tab_item"] {
 }
 
 .main-content {
-  flex: 6;
-  margin: 0.2em;
+  width: 70%;
+  margin: 0.4em;
 }
 
 .sidebar {
-  flex: 4;
+  width: 30%;
   background-color: var(--clr-bg-alt);
-  margin: 0.2em;
+  margin: 0.4em;
 }
 
 /* サイドバー */
