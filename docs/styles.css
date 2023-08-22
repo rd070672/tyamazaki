@@ -248,13 +248,21 @@ button {
   font-size: 0.8rem;
   position: absolute; /* 絶対位置を指定 */
   right: 1.3rem;
-  bottom: 0.7rem;
+  bottom: 0.9rem;
   font-weight: bold;
 }
 .description10 {
   font-size: 0.8rem;
   margin: 0.5em 0.5em;
   text-align: center;
+  font-weight: bold;
+}
+.description11 {
+  color: var(--clr-fg-alt);
+  font-size: 0.8rem;
+  position: absolute; /* 絶対位置を指定 */
+  right: 1.3rem;
+  bottom: 0.7rem;
   font-weight: bold;
 }
 
