@@ -773,6 +773,10 @@ input[name="tab_item"] {
   flex-direction: column;
   margin: 4em;
 }
+.about5 {
+  flex-direction: column;
+  margin: 2em;
+}
 
 .name {
   color: var(--clr-primary);
