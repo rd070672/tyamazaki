@@ -986,7 +986,7 @@ input[name="tab_item"] {
   list-style-type: none;
   padding: 0;
   margin: 0.2em;
-  margin-left: 0.5rem;  /* 節を右に2回字下げするためのマージン */
+  margin-left: 1rem;  /* 節を右に2回字下げするためのマージン */
 }
 
 .sections > li {
