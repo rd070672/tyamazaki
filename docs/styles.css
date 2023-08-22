@@ -866,8 +866,14 @@ input[name="tab_item"] {
 .section2.project2 {
   position: relative; /* セクション要素を相対位置に設定 */
 }
+.section1.project2 {
+  position: relative;
+}
 .section1.project {
-  position: relative; /* セクション要素を相対位置に設定 */
+  position: relative;
+}
+.section.project {
+  position: relative
 }
 .project3 {
   padding: 1.5em;
@@ -1035,17 +1041,18 @@ input[name="tab_item"] {
     height: 4em;
   }
 
-  .section {
+  /* .section {
     margin-top: 2em;
-    text-align: left;
-    margin-bottom: 0.4em;
-  }
 
-  .section2 {
-    margin-top: 1em;
-    text-align: left;
-    margin-bottom: 0.4em;
-  }
+    /* text-align: left; */
+    /* margin-bottom: 0.4em; */
+  /* } */
+
+  /* .section2 {
+    margin-top: 1em; */
+    /* text-align: left; */
+    /* margin-bottom: 0.4em; */
+  /* }  */
 
   .nav {
     text-align: center;
