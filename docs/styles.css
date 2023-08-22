@@ -79,7 +79,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 h5 {
@@ -122,11 +122,11 @@ button {
     text-align: left;
   }
   h4 {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: left;
   }
   h5 {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
   }
   
@@ -703,7 +703,7 @@ input[name="tab_item"] {
 }
 .section1 {
   margin-top: 3em;
-  max-width: 98%;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
   /* text-align: center; */
