@@ -826,7 +826,7 @@ input[name="tab_item"] {
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26em, 1fr)); /*22em;*/
-  grid-gap: 0.4em;
+  grid-gap: 0.6em;
 }
 
 .projects__grid2 {
@@ -834,7 +834,7 @@ input[name="tab_item"] {
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
-  grid-gap: 0.4em;
+  grid-gap: 0.6em;
 }
 
 .project {
@@ -851,7 +851,7 @@ input[name="tab_item"] {
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
 }
-.section.project2 {
+.section2.project2 {
   position: relative; /* セクション要素を相対位置に設定 */
 }
 .project3 {
