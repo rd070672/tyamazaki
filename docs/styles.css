@@ -618,6 +618,9 @@ i.fas.fa-external-link-alt{
   display: flex;
 }
 
+.space {
+  margin: 2em;
+} 
 .center {
   display: flex;
   align-items: center;
