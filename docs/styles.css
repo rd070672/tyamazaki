@@ -965,6 +965,12 @@ input[name="tab_item"] {
   /* align-items: center; */
   align-items: flex-end; 
 }
+.titleWithDate2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-end; 
+}
 
 .date {
   margin-left: auto; /* 日付とタイトルとの間隔を調整 */
