@@ -189,7 +189,7 @@ button {
 
 .frame {
   padding: 0em 1em;
-  margin: 0em 1em;
+  /* margin: 0em 1em; */
   /* 上下、左右 */
 }
 .description {
