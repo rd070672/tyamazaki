@@ -705,6 +705,8 @@ input[name="tab_item"] {
 .section1 {
   margin-top: 3em;
   max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section12 {
   margin-top: 2em;
