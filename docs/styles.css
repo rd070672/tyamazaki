@@ -292,7 +292,7 @@ button {
   float: left;
   width: 150px;
   height: auto;
-  margin: 0.2em;
+  margin: 0.3em;
   border: 2px solid var(--clr-fg);
 }
 .leftImg:hover {
@@ -981,13 +981,11 @@ input[name="tab_item"] {
 
 .main-content {
   flex: 7;
-  padding: 0.2rem;
 }
 
 .sidebar {
   flex: 3;
   background-color: var(--clr-bg-alt);
-  padding: 0.2rem;
 }
 
 /* サイドバー */
