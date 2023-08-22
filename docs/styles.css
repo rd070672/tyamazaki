@@ -122,7 +122,7 @@ button {
     text-align: left;
   }
   h4 {
-    font-size:0.9em;
+    font-size:1.1em;
     text-align: left;
   }
   h5 {
@@ -791,7 +791,7 @@ input[name="tab_item"] {
 }
 .about4 {
   flex-direction: column;
-  margin: 4em;
+  margin: 4em 0em;
 }
 .about5 {
   flex-direction: column;
