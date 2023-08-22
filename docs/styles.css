@@ -130,13 +130,6 @@ button {
     font-size: 0.8em;
     text-align: center;
   }
-  
-  /* a {
-    text-align: center;
-  }
-  span {
-    text-align: center;
-  } */
 }
 
 /*===================
@@ -619,7 +612,7 @@ i.fas.fa-external-link-alt{
 }
 
 .space {
-  margin: 1em 0em;
+  margin: 0.6em 0em;
 } 
 .center {
   display: flex;
@@ -783,7 +776,7 @@ input[name="tab_item"] {
 
 .about {
   flex-direction: column;
-  margin-top: 1.2em;
+  margin-top: 1.4em;
 }
 .about1 {
   flex-direction: column;
@@ -1204,6 +1197,6 @@ input[name="tab_item"] {
     width: 100px;
     height: auto;
     margin: 0.3em;
-    border: 2px solid var(--clr-fg);
+    border: 1.5px solid var(--clr-fg);
   }
 }
