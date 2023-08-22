@@ -619,7 +619,7 @@ i.fas.fa-external-link-alt{
 }
 
 .space {
-  margin: 1.5em;
+  margin: 1em 0em;
 } 
 .center {
   display: flex;
@@ -783,7 +783,7 @@ input[name="tab_item"] {
 
 .about {
   flex-direction: column;
-  margin-top: 1.7em;
+  margin-top: 1.2em;
 }
 .about1 {
   flex-direction: column;
@@ -800,7 +800,7 @@ input[name="tab_item"] {
 }
 .about4 {
   flex-direction: column;
-  margin: 4em;
+  margin: 3em 0em;
 }
 .about5 {
   flex-direction: column;
