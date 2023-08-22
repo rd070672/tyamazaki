@@ -783,7 +783,7 @@ input[name="tab_item"] {
 
 .about {
   flex-direction: column;
-  margin-top: 1.5em;
+  margin-top: 1.7em;
 }
 .about1 {
   flex-direction: column;
@@ -816,7 +816,7 @@ input[name="tab_item"] {
 }
 
 .about__role {
-  margin-top: 1.2em;
+  margin-top: 0.4em;
   text-align: center;
 }
 
