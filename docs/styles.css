@@ -197,6 +197,12 @@ button {
   margin: 0.4em 0.8em;
   text-align: left;
 }
+.description1 {
+  font-size: 1rem;
+  margin: 0.2em;
+  text-align: left;
+  font-weight: bold;
+}
 .description2 {
   font-size: 0.8rem;
   margin: 0.4em 0.8em;
@@ -848,6 +854,9 @@ input[name="tab_item"] {
   transition: transform 0.2s linear;
 }
 .section2.project2 {
+  position: relative; /* セクション要素を相対位置に設定 */
+}
+.section1.project {
   position: relative; /* セクション要素を相対位置に設定 */
 }
 .project3 {
