@@ -189,8 +189,7 @@ button {
 }
 
 .frame {
-  padding: 0em 1em;
-  /* margin: 0em 1em; */
+  padding: 0em 0em;
   /* 上下、左右 */
 }
 .description {
@@ -704,10 +703,10 @@ input[name="tab_item"] {
 }
 .section1 {
   margin-top: 3em;
-  max-width: 95%;
+  max-width: 98%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  /* text-align: center; */
 }
 .section12 {
   margin-top: 2em;
@@ -811,6 +810,10 @@ input[name="tab_item"] {
   margin-top: 1.2em;
   text-align: center;
 }
+.about4__role {
+  margin-top: 1.2em;
+  text-align: center;
+}
 
 .about__desc {
   font-size: 1rem;
@@ -840,14 +843,6 @@ input[name="tab_item"] {
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26em, 1fr)); /*22em;*/
-  grid-gap: 0.6em;
-}
-
-.projects__grid2 {
-  max-width: 900px; /*900px;*/
-  margin: 0em auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
   grid-gap: 0.6em;
 }
 
