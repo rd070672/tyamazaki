@@ -349,7 +349,7 @@ button {
   height: 10px;
   background: var(--clr-primary);
   position: absolute;
-  left: 19.8%;
+  left: 20%;
   top: 10px;
   border-radius: 20px;
   border: 1.5px solid var(--clr-fg-alt);
@@ -736,7 +736,7 @@ input[name="tab_item"] {
 }
 .section__title3 {
   text-align: left;
-  margin: 0.4em;
+  margin: 0.2em;
 }
 .section__title4 {
   text-align: left;
@@ -980,14 +980,14 @@ input[name="tab_item"] {
 }
 
 .main-content {
-  flex: 8;
-  padding: 0.4rem;
+  flex: 7;
+  padding: 0.2rem;
 }
 
 .sidebar {
-  flex: 2;
+  flex: 3;
   background-color: var(--clr-bg-alt);
-  padding: 0.4rem;
+  padding: 0.2rem;
 }
 
 /* サイドバー */
