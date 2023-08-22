@@ -647,7 +647,7 @@ i.fas.fa-external-link-alt{
 
 main {
   max-width: 900px; /*900px;*/
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -911,7 +911,7 @@ input[name="tab_item"] {
 
 .skills__list {
   max-width: 600px;
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -921,7 +921,7 @@ input[name="tab_item"] {
 
 .list2 {
   max-width: 900px; /*900px;*/
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
