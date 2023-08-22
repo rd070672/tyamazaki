@@ -387,6 +387,7 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 	z-index: 0;
 	display: none;
 	background-color: var(--clr-bg);
+}
 
 .sb-left {
 	left: 0; /* Set Slidebar to the left. */
@@ -613,27 +614,12 @@ i.fas.fa-external-link-alt{
 }
 
 .header {
-  height: 6em;
+  height: 4em;
   max-width: 900px; /*900px;*/
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
 }
-
-/* .header2 {
-  display: flex;
-  height: 6em;
-  max-width: 900px;
-  width: 95%;
-  margin: 0 auto 70px;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: top 0.2s;
-  z-index: 1000;
-} */
 
 main {
   max-width: 900px; /*900px;*/
@@ -966,10 +952,6 @@ input[name="tab_item"] {
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
 
-/* #chatgpt {
-  position: relative;
-} */
-
 /* BODYの分割 */
 .container {
   max-width: 900px;
@@ -1021,9 +1003,6 @@ input[name="tab_item"] {
   .header {
     height: 4em;
   }
-  /* .header2 {
-    height: 4em;
-  } */
 
   .section {
     margin-top: 2em;
@@ -1068,12 +1047,6 @@ input[name="tab_item"] {
     margin-left: 0.8em;
     z-index: 100;
   }
-
-  /* .about {
-    align-items: flex-start;
-    margin-top: 1em;
-  } */
-  
 
   .footer {
     padding: 2em;
