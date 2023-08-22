@@ -79,11 +79,12 @@ h3 {
 }
 
 h4 {
-  font-size: 1.1em;
+  font-size: 1em;
+  /* text-align: center; */
 }
 
 h5 {
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -106,36 +107,6 @@ a {
 
 button {
   cursor: pointer;
-}
-
-/*スマートフォン用にカスタマイズ*/
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.8em;
-  }
-  h2 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-  h3 {
-    font-size: 1.3em;
-    text-align: left;
-  }
-  h4 {
-    font-size: 1.2em;
-    text-align: left;
-  }
-  h5 {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  
-  a {
-    text-align: center;
-  }
-  span {
-    text-align: center;
-  }
 }
 
 /*===================
@@ -190,7 +161,6 @@ button {
 
 .frame {
   padding: 0em 1em;
-  /* margin: 0em 1em; */
   /* 上下、左右 */
 }
 .description {
@@ -329,7 +299,7 @@ button {
 .rightText {
   overflow: hidden;
   font-size: 0.8rem;
-  margin: 0.4em;
+  margin: 0.8em;
   text-align: left;
 }
 
@@ -622,6 +592,7 @@ i.fas.fa-external-link-alt{
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 90%;
 }
 
 .center2 {
@@ -703,8 +674,11 @@ input[name="tab_item"] {
   max-width: 95%;
 }
 .section1 {
-  margin-top: 3em;
+  margin-top: 2em;
   max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  /* text-align: center; */
 }
 .section12 {
   margin-top: 2em;
@@ -772,7 +746,7 @@ input[name="tab_item"] {
 
 .about {
   flex-direction: column;
-  margin-top: 1.5em;
+  margin: 3em 0em; /* margin-top: 1.5em; */
 }
 .about1 {
   flex-direction: column;
@@ -789,7 +763,7 @@ input[name="tab_item"] {
 }
 .about4 {
   flex-direction: column;
-  margin: 4em;
+  margin: 4em 0em;
 }
 .about5 {
   flex-direction: column;
@@ -805,6 +779,10 @@ input[name="tab_item"] {
 }
 
 .about__role {
+  margin-top: 1.2em;
+  text-align: center;
+}
+.about4__role {
   margin-top: 1.2em;
   text-align: center;
 }
@@ -836,15 +814,7 @@ input[name="tab_item"] {
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(26em, 1fr)); /*22em;*/
-  grid-gap: 0.6em;
-}
-
-.projects__grid2 {
-  max-width: 900px; /*900px;*/
-  margin: 0em auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24em, 1fr)); /*22em;*/
   grid-gap: 0.6em;
 }
 
@@ -902,7 +872,7 @@ input[name="tab_item"] {
 
 .skills__list {
   max-width: 600px;
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -912,7 +882,7 @@ input[name="tab_item"] {
 
 .list2 {
   max-width: 900px; /*900px;*/
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -991,7 +961,7 @@ input[name="tab_item"] {
 /* BODYの分割 */
 .container {
   max-width: 900px;
-  width: 98%;
+  width: 95%;
   margin: 0 auto; /* これで中央寄せになります */
   display: flex;
 }
@@ -1033,8 +1003,36 @@ input[name="tab_item"] {
   display: none;
 }
 
-
 /*スマートフォン用にカスタマイズ*/
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.2em;
+    text-align: left;
+  }
+  h4 {
+    font-size:1.1em;
+    text-align: left;
+  }
+  h5 {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  a {
+    text-align: center;
+  }
+  span {
+    text-align: center;
+  }
+}
+
 @media (max-width: 600px) {
   .header {
     height: 4em;
@@ -1176,7 +1174,7 @@ input[name="tab_item"] {
     text-align: left;
   }
   .main-content {
-    width: 100%;
+    width: 95%;
   }
   .sidebar {
     display: none;
