@@ -604,7 +604,8 @@ i.fas.fa-external-link-alt{
 }
 
 .space {
-  margin: 0.3em 0em;
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
 } 
 .center {
   display: flex;
