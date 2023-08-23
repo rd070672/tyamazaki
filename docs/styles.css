@@ -240,10 +240,11 @@ button {
   color: var(--clr-fg-alt);
   background-color: var(--clr-bg);
   font-size: 0.8rem;
-  margin: 0.2em;
+  margin: 0em;
+  padding: 0.3em;
   position: absolute; /* 絶対位置を指定 */
-  right: 1.3rem;
-  bottom: 1rem;
+  right: 1.2rem;
+  bottom: 1.2rem;
   font-weight: bold;
 }
 .description10 {
@@ -296,7 +297,7 @@ button {
   float: left;
   width: 150px;
   height: auto;
-  margin: 0.3em;
+  margin: 0.4em;
   border: 2px solid var(--clr-fg);
 }
 .leftImg:hover {
@@ -315,7 +316,7 @@ button {
 .rightText {
   overflow: hidden;
   font-size: 0.8rem;
-  margin: 0.4em;
+  margin: 0.8em 0.3em;
   text-align: left;
 }
 
@@ -652,7 +653,7 @@ main {
 .tab_item {
   width: 100px;
   height: 24px;
-  border-bottom: 3px solid var(--clr-primary);
+  border-bottom: 2px solid var(--clr-primary);
   background-color: var(--clr-bg);
   line-height: 24px;
   font-size: 0.9rem;
@@ -1036,20 +1037,6 @@ input[name="tab_item"] {
   .header {
     height: 4em;
   }
-
-  /* .section {
-    margin-top: 2em;
-
-    /* text-align: left; */
-    /* margin-bottom: 0.4em; */
-  /* } */
-
-  /* .section2 {
-    margin-top: 1em; */
-    /* text-align: left; */
-    /* margin-bottom: 0.4em; */
-  /* }  */
-
   .nav {
     text-align: center;
   }
@@ -1096,7 +1083,7 @@ input[name="tab_item"] {
     margin-top: 0.2em;
     padding-bottom: 0.2em;
     background-color: var(--clr-bg);
-    box-shadow: 0 0 10px var(--shadow);
+    box-shadow: 0 0 5px var(--shadow);
     max-width: 700px;
     margin: 0 auto;
     overflow: auto;
@@ -1104,12 +1091,12 @@ input[name="tab_item"] {
   }
   
   .tab_item {
-    width: 140px;
-    height: 30px;
-    border-bottom: 3px solid var(--clr-primary);
+    width: 80px;
+    height: 20px;
+    border-bottom: 2px solid var(--clr-primary);
     background-color: var(--clr-bg);
-    line-height: 30px;
-    font-size: 1rem;
+    line-height: 20px;
+    font-size: 0.8rem;
     text-align: center;
     color: var(--clr-primary);
     display: block;
