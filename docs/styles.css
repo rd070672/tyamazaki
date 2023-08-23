@@ -338,6 +338,7 @@ button {
   float: left;
   margin: 5px 6px 0 0;
   text-indent: 0;
+  font-size: 0.9rem;
 }
 .timeline-content {
   width: 78%;
