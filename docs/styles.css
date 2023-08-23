@@ -1004,7 +1004,7 @@ input[name="tab_item"] {
 .sidebar {
   width: 25%;
   background-color: var(--clr-bg-alt);
-  margin: 2em 0.8em;
+  margin: 1.5em 0.8em;
 }
 
 /* サイドバー */
