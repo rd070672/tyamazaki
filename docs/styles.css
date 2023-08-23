@@ -66,31 +66,25 @@ h5 {
 }
 
 h1 {
-  font-size: 1.8em; /*1.8rem */
+  font-size: 1.8em;
 }
-
 h2 {
   font-size: 1.5em;
   margin-bottom: 1em;
 }
-
 h3 {
   font-size: 1.3em;
 }
-
 h4 {
   font-size: 1.1em;
 }
-
 h5 {
   font-size: 1.1em;
   text-align: center;
 }
-
 ul {
   list-style-type: none;
 }
-
 ul, ol {
   padding-left:0.2em;
   padding-right:0.2em;
@@ -99,11 +93,9 @@ ol li{
   padding-left:0.2em;
   padding-right:0.2em;  /* 0.2em */
 }
-
 a {
   text-decoration: none;
 }
-
 button {
   cursor: pointer;
 }
@@ -123,11 +115,11 @@ button {
     /* text-align: left; */
   }
   h4 {
-    font-size: 1em;
+    font-size: 0.9em;
     /* text-align: left; */
   }
   h5 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: center;
   }
 }
@@ -612,7 +604,7 @@ i.fas.fa-external-link-alt{
 }
 
 .space {
-  margin: 0.6em 0em;
+  margin: 0.3em 0em;
 } 
 .center {
   display: flex;
