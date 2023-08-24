@@ -938,6 +938,9 @@ input[name="tab_item"] {
 .contact {
   flex-direction: column;
 }
+.sns {
+  flex-direction: row;
+}
 
 .footer {
   padding: 2em 0;
