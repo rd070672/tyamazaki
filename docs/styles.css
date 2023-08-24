@@ -947,16 +947,11 @@ input[name="tab_item"] {
 
 .sns {
   margin: 5em auto 0 auto;
-  max-width: 80%;
+  max-width: 50%;
   flex-direction: row;
   display: flex;
   justify-content: space-between;
 }
-
-/* アイコン間のマージンを追加する場合 */
-/* .sns a {
-  margin: 0 10px;
-} */
 
 .footer {
   padding: 2em 0;
@@ -1227,5 +1222,13 @@ input[name="tab_item"] {
 
   .sections {
     margin-left: 0.5rem;
+  }
+
+  .sns {
+    margin: 5em auto 0 auto;
+    max-width: 80%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
   }
 }
