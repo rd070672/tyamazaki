@@ -185,7 +185,7 @@ button {
   text-align: left;
 }
 .description1 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0.2em;
   text-align: left;
   font-weight: bold;
@@ -199,7 +199,7 @@ button {
 }
 
 .description3 {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0.2em;
   text-align: left;
   font-weight: bold;
@@ -210,8 +210,8 @@ button {
   text-align: left;
 }
 .description5 {
-  font-size: 0.8rem;
-  margin: 0.2em;
+  font-size: 0.7rem;
+  margin: 0.1em;
   text-align: left;
 }
 .description6 {
