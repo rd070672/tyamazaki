@@ -1024,7 +1024,7 @@ input[name="tab_item"] {
   color: var(--clr-fg);
 }
 
-.scroll-top {
+/* .scroll-top {
   display: none;
   position: fixed;
   bottom: 1em;
@@ -1036,11 +1036,29 @@ input[name="tab_item"] {
 .scroll-down {
   display: none;
   position: fixed;
-  bottom: 3em; /* Adjust this value so it doesn't overlap with the scroll-up button */
+  bottom: 3em;
   right: 1em;
   background-color: transparent;
   font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
+} */
+
+.scroll-top,
+.scroll-down {
+  display: none;
+  position: fixed;
+  right: 1em;
+  background-color: transparent;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.scroll-top {
+  bottom: 3em;
+}
+
+.scroll-down {
+  bottom: 1em;
 }
 
 .custom-list {
