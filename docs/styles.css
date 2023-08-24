@@ -224,10 +224,10 @@ button {
   text-align: left;
 }
 .description6 {
-  font-size: 0.6rem;
-  margin: 0.4em 1.2em;
+  font-size: 0.7rem;
+  margin: 0.4em 1em;
   text-align: left;
-  padding-right: 2em;
+  /* padding-right: 2em; */
 }
 /* .description7 {
   font-size: 0.9rem;
