@@ -63,6 +63,7 @@ h4,
 h5 {
   line-height: 1.2;
   color: var(--clr-fg-alt); /*--clr-fg-alt */
+  background-color: transparent; /*--文字裏を透明にする */
 }
 
 h1 {
@@ -815,7 +816,7 @@ input[name="tab_item"] {
 }
 .about1 {
   flex-direction: column;
-  padding: 3em 0em;
+  padding: 5em 0em;
 }
 .about2 {
   flex-direction: column;
