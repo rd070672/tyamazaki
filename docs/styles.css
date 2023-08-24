@@ -945,13 +945,24 @@ input[name="tab_item"] {
 .contact {
   flex-direction: column;
 }
-.sns {
+/* .sns {
   margin-top: 5em;
   max-width: 50%;
   flex-direction: row;
   display: flex;
   justify-content: center;
+} */
+.sns {
+  margin-top: 5em;
+  max-width: 50%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
 
+/* アイコン間のマージンを追加する場合 */
+.sns a {
+  margin: 0 10px;
 }
 
 .footer {
