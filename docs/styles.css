@@ -318,7 +318,7 @@ button {
 .leftImgContainer2 { /* review */
   float: left;
   width: 150px;
-  height: 112.5px;
+  height: 150px;
   overflow: hidden; /* はみ出した部分を隠す */
   margin: 0.5em 0.2em;
   border: 2px solid var(--clr-fg);
@@ -1282,7 +1282,7 @@ input[name="tab_item"] {
   .leftImgContainer { /* blog */
     float: left;
     width: 100px;
-    height: 75px; /* 150 * 3/4 */
+    height: 100px;
     overflow: hidden; /* はみ出した部分を隠す */
     margin: 0.5em 0.2em;
     border: 2px solid var(--clr-fg);
@@ -1290,7 +1290,7 @@ input[name="tab_item"] {
   .leftImgContainer2 { /* review */
     float: left;
     width: 80px;
-    height: 60px;
+    height: 80px;
     overflow: hidden; /* はみ出した部分を隠す */
     margin: 0.5em 0.2em;
     border: 2px solid var(--clr-fg);
