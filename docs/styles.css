@@ -1033,7 +1033,7 @@ input[name="tab_item"] {
 }
 
 .chapters > li {
-  margin-bottom: 0.8rem; /* 各章の間隔 */
+  margin-bottom: 1.5rem; /* 各章の間隔 */
 }
 
 .sections {
