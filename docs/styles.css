@@ -1018,13 +1018,13 @@ input[name="tab_item"] {
 .sidebar {
   width: 25%;
   background-color: var(--clr-bg-alt);
-  margin: 1.5em 0.8em;
+  margin: 1em 0.4em;
 }
 
 /* サイドバー */
 .chapters {
   list-style-type: none; /* リストのマーカーを削除 */
-  margin: 0.2em;
+  margin: 0.5em 0.2em;
 }
 
 .chapters > li {
@@ -1039,7 +1039,7 @@ input[name="tab_item"] {
 }
 
 .sections > li {
-  margin-bottom: 0.5rem; /* 各節の間隔 */
+  margin-bottom: 0.2rem; /* 各節の間隔 */
 }
 
 .articles {
@@ -1210,14 +1210,14 @@ input[name="tab_item"] {
   }
 
   .chapters {
-    width: 33.33%;
+    width: 32%;
     box-sizing: border-box;
     padding: 0 6px;
     margin: 0.5em 0;
   }
  
   .chapters > li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;  /* 各章の間隔 */
   }
 
   .sections {
@@ -1225,7 +1225,7 @@ input[name="tab_item"] {
   }
   
   .sections > li {
-    margin-bottom: 0.8rem; /* 各節の間隔 */
+    margin-bottom: 0.4rem; /* 各節の間隔 */
   }
 
   .sns {
