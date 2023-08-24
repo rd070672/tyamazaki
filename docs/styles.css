@@ -312,7 +312,7 @@ button {
 
 .leftImg2 {
   width: 100%; /* 親の幅に合わせる */
-  height: auto;
+  height: 100%;
   display: block;
 
 }
