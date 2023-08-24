@@ -893,7 +893,7 @@ input[name="tab_item"] {
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
-  grid-gap: 2em;
+  grid-gap: 1em;
   max-width: 98%;
 }
 .projects__grid2 { /*プロジェクト;*/
