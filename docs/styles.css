@@ -265,6 +265,9 @@ button {
   bottom: 0.7rem;
   font-weight: bold;
 }
+.description12 {
+  font-size: 0.7rem;
+}
 
 .tag {
   color: var(--clr-fg-alt);
@@ -539,7 +542,7 @@ i.fas.fa-external-link-alt{
   display: block;
   padding: 0.3em 0.6em;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   transition: transform 0.2s ease-in-out;
 }
