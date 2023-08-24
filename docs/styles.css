@@ -321,8 +321,8 @@ button {
 
 .leftImgContainer { /* blog */
   float: left;
-  width: 200px;
-  height: 150px; /* 150 * 3/4 */
+  width: 240px;
+  height: 180px; /* 150 * 3/4 */
   overflow: hidden; /* はみ出した部分を隠す */
   margin: 0.5em 0.2em;
   border: 2px solid var(--clr-fg);
