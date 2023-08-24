@@ -269,6 +269,15 @@ button {
   font-size: 0.7rem;
 }
 
+.text-with-border {
+  text-shadow:
+  -2px -2px 0 var(--clr-bg),  
+  2px -2px 0 var(--clr-bg),
+  -2px 2px 0 var(--clr-bg),
+  2px 2px 0 var(--clr-bg);
+}
+
+
 .tag {
   color: var(--clr-fg-alt);
   font-size: 0.8rem;
