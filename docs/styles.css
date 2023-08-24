@@ -816,6 +816,7 @@ input[name="tab_item"] {
 }
 .about1 {
   flex-direction: column;
+  padding: 3em 0em;
 }
 .about2 {
   flex-direction: column;
