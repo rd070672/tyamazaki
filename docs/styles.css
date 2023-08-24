@@ -293,13 +293,30 @@ button {
   align-items: center;         /* 子要素（画像）を垂直方向に中央寄せ */
   flex-wrap: wrap;             /* 必要に応じて折り返し */
 }
+
+.leftImgContainer {
+  float: left;
+  width: 200px;
+  height: 150px; /* 150 * 3/4 */
+  overflow: hidden; /* はみ出した部分を隠す */
+  margin: 0.5em 0.2em;
+  border: 2px solid var(--clr-fg);
+}
+
 .leftImg {
+  width: 100%; /* 親の幅に合わせる */
+  height: auto;
+  display: block;
+  /* 必要に応じて画像の位置を調整するためのプロパティを追加することができます。
+     例えば、vertical-alignやmarginなど */
+}
+/* .leftImg {
   float: left;
   width: 150px;
   height: auto;
   margin: 0.5em 0.2em;
   border: 2px solid var(--clr-fg);
-}
+} */
 .leftImg:hover {
   opacity: 0.75;
 }
@@ -315,6 +332,7 @@ button {
 }
 .rightText {
   overflow: hidden;
+  height: 150px;
   font-size: 0.8rem;
   margin: 0.4em;
   padding: 0em 0.4em;
