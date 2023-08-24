@@ -247,6 +247,7 @@ button {
   bottom: 0.7rem;
   font-weight: bold;
 }
+
 .description10 {
   font-size: 0.8rem;
   margin: 0.5em;
@@ -258,6 +259,17 @@ button {
   font-size: 0.8rem;
   position: absolute; /* 絶対位置を指定 */
   right: 1.3rem;
+  bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.tag {
+  color: var(--clr-fg-alt);
+  font-size: 0.8rem;
+  margin: 0em;
+  padding: 0.3em;
+  position: absolute; /* 絶対位置を指定 */
+  right: 8rem;
   bottom: 0.7rem;
   font-weight: bold;
 }
