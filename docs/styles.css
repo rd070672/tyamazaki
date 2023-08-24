@@ -246,7 +246,7 @@ button {
   margin: 0em;
   padding: 0.3em;
   position: absolute; /* 絶対位置を指定 */
-  right: 1rem;
+  right: 0.9rem;
   bottom: 0.7rem;
   font-weight: bold;
 }
@@ -304,7 +304,7 @@ button {
   flex-wrap: wrap;             /* 必要に応じて折り返し */
 }
 
-.leftImgContainer {
+.leftImgContainer { /* blog */
   float: left;
   width: 200px;
   height: 150px; /* 150 * 3/4 */
@@ -313,6 +313,17 @@ button {
   border: 2px solid var(--clr-fg);
 }
 .leftImgContainer:hover {
+  opacity: 0.75;
+}
+.leftImgContainer2 { /* review */
+  float: left;
+  width: 150px;
+  height: 112.5px;
+  overflow: hidden; /* はみ出した部分を隠す */
+  margin: 0.5em 0.2em;
+  border: 2px solid var(--clr-fg);
+}
+.leftImgContainer2:hover {
   opacity: 0.75;
 }
 
