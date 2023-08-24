@@ -1176,12 +1176,7 @@ input[name="tab_item"] {
     line-height: 1.4em;
     text-align: left;
   }
-  /* .main-content {
-    width: 100%;
-  }
-  .sidebar {
-    display: none;
-  } */
+
   .img {
     margin: 0.3em;
     width: 100px;
@@ -1206,18 +1201,24 @@ input[name="tab_item"] {
   }
 
   /* メインコンテンツとサイドバーの幅を100%にして、全幅になるようにします。 */
-  .main-content,
-  .sidebar {
+  .main-content {
     width: 100%;
     /* margin: 1em 0; */
   }
 
-  /* サイドバーのマージンを調整して上下のスペースを減らします。 */
   .sidebar {
     order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  /* サイドバー内の要素の間隔を調整して読みやすくします。 */
+  ul.chapters {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  
   .chapters {
     margin: 0.5em;
   }
