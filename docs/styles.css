@@ -269,6 +269,7 @@ button {
   margin: 0em;
   padding: 0.3em;
   position: absolute; /* 絶対位置を指定 */
+  flex-direction: row;
   right: 8rem;
   bottom: 0.7rem;
   font-weight: bold;
@@ -279,11 +280,7 @@ button {
   width: 120px;
   height: auto;
 }
-.img400 {
-  margin: 0.3em 0.6em;
-  width: 400px;
-  height: auto;
-}
+
 .img300 {
   width: 300px;
   height: auto;
@@ -293,12 +290,7 @@ button {
 .img300:hover {
   opacity: 0.75;
 }
-.img200 {
-  width: 200px;
-  height: auto;
-  margin: 0.3em 0.6em;
-  border: 2px solid var(--clr-fg);
-}
+
 .img_align {
   display: flex;                /* 横並び */
   justify-content: center;     /* 子要素（画像）を水平方向に中央寄せ */
