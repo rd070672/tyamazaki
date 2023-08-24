@@ -1105,44 +1105,51 @@ input[name="tab_item"] {
   display: flex;
 }
 
+/* for blog article */
 .main-content {
   width: 75%;
   margin: 0.5em;
   /* margin: 1em 0.4em; */
 }
-
 .sidebar {
   width: 25%;
   background-color: var(--clr-bg-alt);
   margin: 0.4em;
   /* margin: 1em 0.4em; */
 }
-
 /* サイドバー */
 .chapters {
   list-style-type: none; /* リストのマーカーを削除 */
   margin: 0.5em 0.2em;
 }
-
 .chapters > li {
   margin-bottom: 1rem; /* 各章の間隔 */
 }
-
 .sections {
   list-style-type: none;
   padding: 0;
   margin: 0.2em;
   margin-left: 1rem;  /* 節を右に2回字下げするためのマージン */
 }
-
 .sections > li {
   margin-bottom: 0.2rem; /* 各節の間隔 */
 }
-
 .articles {
   display: none;
 }
 
+/* for review article */
+.main-content2 { 
+  width: 80%;
+  margin: 0.5em;
+  /* margin: 1em 0.4em; */
+}
+.sidebar2 {
+  width: 20%;
+  background-color: var(--clr-bg-alt);
+  margin: 0.4em;
+  /* margin: 1em 0.4em; */
+}
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
@@ -1298,16 +1305,20 @@ input[name="tab_item"] {
   .sidebar {
     width: 98%;
   }
-
   .sidebar {
     order: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
   .chapters {
     width: 32%;
+    box-sizing: border-box;
+    padding: 0 6px;
+    margin: 0.5em 0;
+  }
+  .chapters2 {
+    width: 48%;
     box-sizing: border-box;
     padding: 0 6px;
     margin: 0.5em 0;
@@ -1333,7 +1344,7 @@ input[name="tab_item"] {
     justify-content: space-between;
   }
   
-  .leftImgContainer { /* blog */
+  .leftImgContainer { /* for blog */
     float: left;
     width: 180px;
     height: 135px;
@@ -1341,7 +1352,7 @@ input[name="tab_item"] {
     margin: 0.5em 0.2em;
     border: 2px solid var(--clr-fg);
   }
-  .leftImgContainer2 { /* review */
+  .leftImgContainer2 { /* for review */
     float: left;
     width: 150px;
     height: 150px;
