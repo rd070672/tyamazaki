@@ -1071,13 +1071,15 @@ input[name="tab_item"] {
 
 .main-content {
   width: 75%;
-  margin: 1em 0.4em;
+  margin: 0.2em;
+  /* margin: 1em 0.4em; */
 }
 
 .sidebar {
   width: 25%;
   background-color: var(--clr-bg-alt);
-  margin: 1em 0.4em;
+  margin: 0.2em;
+  /* margin: 1em 0.4em; */
 }
 
 /* サイドバー */
@@ -1258,7 +1260,7 @@ input[name="tab_item"] {
 
   .main-content,
   .sidebar {
-    width: 100%;
+    width: 98%;
   }
 
   .sidebar {
