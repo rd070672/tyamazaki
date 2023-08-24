@@ -858,12 +858,20 @@ input[name="tab_item"] {
   margin-right: 1em;
 }
 
-.projects__grid {
+.projects__grid { /*ブログ*/
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
   grid-gap: 1em;
+  max-width: 98%;
+}
+.projects__gri2 { /*論文紹介;*/
+  max-width: 900px; /*900px;*/
+  margin: 0em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28em, 1fr));
+  grid-gap: 2em;
   max-width: 98%;
 }
 .project {
