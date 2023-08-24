@@ -940,7 +940,12 @@ input[name="tab_item"] {
   flex-direction: column;
 }
 .sns {
+  margin-top: 5em;
+  max-width: 50%;
   flex-direction: row;
+  display: flex;
+  justify-content: center;
+
 }
 
 .footer {
