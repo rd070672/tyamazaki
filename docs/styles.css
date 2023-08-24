@@ -130,7 +130,7 @@ button {
 ===================*/
 
 .bar-left {
-  border-left: solid 5px var(--clr-primary);
+  border-left: solid 3px var(--clr-primary);
   padding-left: 0.5em;
   margin-top: 1em;
 }
