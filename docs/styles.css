@@ -239,12 +239,12 @@ button {
 .description9 {
   color: var(--clr-fg-alt);
   background-color: var(--clr-bg);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0em;
   padding: 0.3em;
   position: absolute; /* 絶対位置を指定 */
-  right: 1.1rem;
-  bottom: 0.8rem;
+  right: 1rem;
+  bottom: 0.7rem;
   font-weight: bold;
 }
 /* .description10 {
