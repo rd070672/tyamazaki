@@ -1161,12 +1161,12 @@ input[name="tab_item"] {
     line-height: 1.4em;
     text-align: left;
   }
-  .main-content {
+  /* .main-content {
     width: 100%;
   }
   .sidebar {
     display: none;
-  }
+  } */
   .img {
     margin: 0.3em;
     width: 100px;
@@ -1178,5 +1178,38 @@ input[name="tab_item"] {
     height: auto;
     margin: 0.3em;
     border: 1.5px solid var(--clr-fg);
+  }
+}
+
+/*スマートフォン用にカスタマイズ*/
+@media (max-width: 600px) {
+  /* containerのflex-directionをcolumnに設定して、要素を縦に並べ替えます。 */
+  .container {
+    flex-direction: column;
+    align-items: center;  /* コンテンツを中央に寄せる */
+  }
+
+  /* メインコンテンツとサイドバーの幅を100%にして、全幅になるようにします。 */
+  .main-content,
+  .sidebar {
+    width: 100%;
+  }
+
+  /* サイドバーのマージンを調整して上下のスペースを減らします。 */
+  .sidebar {
+    margin: 1em 0;
+  }
+
+  /* サイドバー内の要素の間隔を調整して読みやすくします。 */
+  .chapters {
+    margin: 0.5em;
+  }
+
+  .chapters > li {
+    margin-bottom: 0.6rem;
+  }
+
+  .sections {
+    margin-left: 0.5rem; /* 節のインデントを少し減らします。 */
   }
 }
