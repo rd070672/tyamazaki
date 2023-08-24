@@ -270,8 +270,8 @@ button {
   padding: 0.3em;
   position: absolute; /* 絶対位置を指定 */
   flex-direction: row;
-  right: 8rem;
-  bottom: 0.7rem;
+  right: 13rem;
+  bottom: 0.5rem;
   font-weight: bold;
 }
 
