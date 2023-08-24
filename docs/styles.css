@@ -946,7 +946,7 @@ input[name="tab_item"] {
 }
 
 .sns {
-  margin-top: 5em;
+  margin: 5em auto 0 auto;
   max-width: 50%;
   flex-direction: row;
   display: flex;
