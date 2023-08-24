@@ -1202,7 +1202,8 @@ input[name="tab_item"] {
     order: 1;
   }
 
-  .main-content {
+  .main-content,
+  .sidebar {
     width: 100%;
   }
 
