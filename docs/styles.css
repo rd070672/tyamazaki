@@ -1201,18 +1201,20 @@ input[name="tab_item"] {
   /* containerのflex-directionをcolumnに設定して、要素を縦に並べ替えます。 */
   .container {
     flex-direction: column;
-    align-items: center;  /* コンテンツを中央に寄せる */
+    /* align-items: center; */
+    order: 1;
   }
 
   /* メインコンテンツとサイドバーの幅を100%にして、全幅になるようにします。 */
   .main-content,
   .sidebar {
     width: 100%;
+    /* margin: 1em 0; */
   }
 
   /* サイドバーのマージンを調整して上下のスペースを減らします。 */
   .sidebar {
-    margin: 1em 0;
+    order: 2;
   }
 
   /* サイドバー内の要素の間隔を調整して読みやすくします。 */
