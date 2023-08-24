@@ -1300,7 +1300,6 @@ input[name="tab_item"] {
     flex-direction: column;
     order: 1;
   }
-
   .main-content,
   .sidebar {
     width: 98%;
@@ -1311,13 +1310,13 @@ input[name="tab_item"] {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .chapters {
+  .chapters { /* for blog */
     width: 32%;
     box-sizing: border-box;
     padding: 0 6px;
     margin: 0.5em 0;
   }
-  .chapters2 {
+  .chapters2 { /* for review */
     width: 48%;
     box-sizing: border-box;
     padding: 0 6px;
