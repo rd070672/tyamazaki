@@ -1033,6 +1033,15 @@ input[name="tab_item"] {
   font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
 }
+.scroll-down {
+  display: none;
+  position: fixed;
+  bottom: 3em; /* Adjust this value so it doesn't overlap with the scroll-up button */
+  right: 1em;
+  background-color: transparent;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease-in-out;
+}
 
 .custom-list {
   font-size: 0.9rem;

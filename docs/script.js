@@ -47,18 +47,31 @@ const displayList = () => {
 
 btnHamburger.addEventListener('click', displayList)
 
-const scrollUp = () => {
-	const btnScrollTop = document.querySelector('.scroll-top')
+// const scrollUp = () => {
+// 	const btnScrollTop = document.querySelector('.scroll-top')
 
-	if (
-		body.scrollTop > 500 ||
-		document.documentElement.scrollTop > 500
-	) {
-		btnScrollTop.style.display = 'block'
-	} else {
-		btnScrollTop.style.display = 'none'
-	}
-}
+// 	if (
+// 		body.scrollTop > 500 ||
+// 		document.documentElement.scrollTop > 500
+// 	) {
+// 		btnScrollTop.style.display = 'block'
+// 	} else {
+// 		btnScrollTop.style.display = 'none'
+// 	}
+// }
+
+const btnScrollTop = document.querySelector('.scroll-top');
+const btnScrollDown = document.querySelector('.scroll-down');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        btnScrollTop.style.display = 'block';
+        btnScrollDown.style.display = 'none';
+    } else {
+        btnScrollTop.style.display = 'none';
+        btnScrollDown.style.display = 'block';
+    }
+});
 
 document.addEventListener('scroll', scrollUp)
 
