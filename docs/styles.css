@@ -1204,7 +1204,7 @@ input[name="tab_item"] {
 
   .main-content,
   .sidebar {
-    width: 98%;
+    width: 96%;
   }
 
   .sidebar {
@@ -1215,7 +1215,7 @@ input[name="tab_item"] {
   }
 
   .chapters {
-    width: 33.33%;
+    width: 32%;
     box-sizing: border-box;
     padding: 0 6px;
     margin: 0.5em 0;
