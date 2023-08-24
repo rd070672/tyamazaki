@@ -622,7 +622,6 @@ i.fas.fa-external-link-alt{
   justify-content: center;
   text-align: center;
   max-width: 100%;
-  /* flex-direction: column; */
 }
 
 .center2 {
@@ -945,13 +944,7 @@ input[name="tab_item"] {
 .contact {
   flex-direction: column;
 }
-/* .sns {
-  margin-top: 5em;
-  max-width: 50%;
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-} */
+
 .sns {
   margin-top: 5em;
   max-width: 50%;
@@ -961,9 +954,9 @@ input[name="tab_item"] {
 }
 
 /* アイコン間のマージンを追加する場合 */
-.sns a {
+/* .sns a {
   margin: 0 10px;
-}
+} */
 
 .footer {
   padding: 2em 0;
@@ -1204,17 +1197,13 @@ input[name="tab_item"] {
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
-  /* containerのflex-directionをcolumnに設定して、要素を縦に並べ替えます。 */
   .container {
     flex-direction: column;
-    /* align-items: center; */
     order: 1;
   }
 
-  /* メインコンテンツとサイドバーの幅を100%にして、全幅になるようにします。 */
   .main-content {
     width: 100%;
-    /* margin: 1em 0; */
   }
 
   .sidebar {
@@ -1224,21 +1213,18 @@ input[name="tab_item"] {
     justify-content: space-between;
   }
 
-  ul.chapters {
+  .chapters {
     width: 33.33%;
     box-sizing: border-box;
     padding: 0 10px;
+    margin: 0.5em 0;
   }
-  
-  .chapters {
-    margin: 0.5em;
-  }
-
+ 
   .chapters > li {
     margin-bottom: 0.6rem;
   }
 
   .sections {
-    margin-left: 0.5rem; /* 節のインデントを少し減らします。 */
+    margin-left: 0.5rem;
   }
 }
