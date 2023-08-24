@@ -302,9 +302,10 @@ button {
   height: auto;
 }
 
-.img300 {
+.img300 { /* ブログ記事の画像 */
   width: 300px;
-  height: auto;
+  height: 225px;
+  overflow: hidden;
   margin: 0.3em 0.6em;
   border: 2px solid var(--clr-fg);
 }
