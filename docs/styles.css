@@ -194,6 +194,12 @@ button {
   text-align: left;
   font-weight: bold;
 }
+.description22 { /* ブログの目次用 */
+  font-size: 0.9rem;
+  margin: 0.3em 0.2em 0.3em 0.6em;
+  text-align: left;
+  padding-left: 2em;
+}
 .description2 { /* ブログの本文用 */
   font-size: 0.9rem;
   margin: 0.3em 0.2em 0.3em 0.6em; /* 上右下左 */
