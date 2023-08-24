@@ -198,7 +198,7 @@ button {
   font-size: 0.9rem;
   margin: 0.3em 0.2em 0.3em 0.6em;
   text-align: left;
-  padding-left: 2em;
+  padding-left: 1em;
 }
 .description2 { /* ブログの本文用 */
   font-size: 0.9rem;
@@ -277,10 +277,10 @@ button {
 
 .text-with-border {
   text-shadow:
-  -2px -2px 0 var(--clr-bg),  
-  2px -2px 0 var(--clr-bg),
-  -2px 2px 0 var(--clr-bg),
-  2px 2px 0 var(--clr-bg);
+  -1px -1px 0 var(--clr-bg),  
+  1px -1px 0 var(--clr-bg),
+  -1px 1px 0 var(--clr-bg),
+  1px 1px 0 var(--clr-bg);
 }
 
 
