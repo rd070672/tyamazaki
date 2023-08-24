@@ -872,15 +872,15 @@ input[name="tab_item"] {
   margin-right: 1em;
 }
 
-.projects__grid { /*ブログ*/
+.projects__grid { /*ブログ、論文紹介*/
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
-  grid-gap: 1em;
+  grid-gap: 2em;
   max-width: 98%;
 }
-.projects__gri2 { /*論文紹介;*/
+.projects__grid2 { /*プロジェクト;*/
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
