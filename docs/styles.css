@@ -303,20 +303,19 @@ button {
   border: 2px solid var(--clr-fg);
 }
 
-.leftImg {
+.leftImg2 {
   width: 100%; /* 親の幅に合わせる */
   height: auto;
   display: block;
-  /* 必要に応じて画像の位置を調整するためのプロパティを追加することができます。
-     例えば、vertical-alignやmarginなど */
+
 }
-/* .leftImg {
+.leftImg {
   float: left;
   width: 150px;
   height: auto;
   margin: 0.5em 0.2em;
   border: 2px solid var(--clr-fg);
-} */
+}
 .leftImg:hover {
   opacity: 0.75;
 }
