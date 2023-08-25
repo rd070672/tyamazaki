@@ -150,7 +150,7 @@ button {
   border-left: solid 3px var(--clr-primary);
   padding-left: 0.5em;
   margin-top: 0.3em;
-  line-height: 1.4em;
+  line-height: 1em;
 }
 .bar-left4:hover {
   opacity: 0.75;
