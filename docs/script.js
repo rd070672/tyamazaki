@@ -119,3 +119,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+window.addEventListener("DOMContentLoaded", function() {
+    // loadComponent("header", "header.html");
+    loadComponent("sidebar", "sidebar.html");
+    // loadComponent("footer", "footer.html");
+});
+
+function loadComponent(elementId, url) {
+    fetch(url).then(function(response) {
+        return response.text();
+    }).then(function(data) {
+        document.getElementById(elementId).innerHTML = data;
+    });
+}
