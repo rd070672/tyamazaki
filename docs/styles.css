@@ -513,7 +513,7 @@ i.fas.fa-external-link-alt{
   content: "";
   display: inline;
   width: 0%;
-  height: 0.2em;
+  height: 0.1em; /*0.2em*/
   position: absolute;
   bottom: 0;
   background-color: var(--clr-primary);
