@@ -389,8 +389,8 @@ button {
   height: 150px;
   font-size: 0.8rem;
   margin: 0.2em;
-  padding: 0em 0.2em;
-  padding-left: 0.3em;
+  padding: 0em 0.3em;
+  /* padding-left: 0.3em; */
   text-align: left;
 }
 
@@ -1282,7 +1282,7 @@ input[name="tab_item"] {
   .bar-left4 {
     border-left: solid 3px var(--clr-primary);
     padding-left: 0.4em;
-    margin-top: 0.5em;
+    margin-top: 0.6em;
     margin-left: 0.4em;
     line-height: 1.2em;
     text-align: left;
