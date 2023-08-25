@@ -255,7 +255,7 @@ button {
 } */
 .description9 {
   color: var(--clr-fg-alt);
-  background-color: var(--clr-bg);
+  background-color: var(--clr-bg-alt);
   font-size: 0.8rem;
   margin: 0em;
   padding: 0.3em;
