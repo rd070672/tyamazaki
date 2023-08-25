@@ -1137,10 +1137,10 @@ input[name="tab_item"] {
   list-style-type: none;
   padding: 0;
   margin: 0.2em;
-  margin-left: 1rem;  /* 節を右に2回字下げするためのマージン */
+  margin-left: 1.5rem;  /* 節を右に2回字下げするためのマージン */
 }
 .sections > li {
-  margin-bottom: 0.2rem; /* 各節の間隔 */
+  margin-bottom: 0.1rem; /* 各節の間隔 */
 }
 .articles {
   display: none;
