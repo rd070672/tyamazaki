@@ -1131,7 +1131,7 @@ input[name="tab_item"] {
   margin: 0.5em 0.2em;
 }
 .chapters > li {
-  margin-bottom: 1rem; /* 各章の間隔 */
+  margin-bottom: 0.6rem; /* 各章の間隔 */
 }
 .sections {
   list-style-type: none;
