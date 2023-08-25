@@ -264,16 +264,12 @@ button {
   bottom: 0.7rem;
   font-weight: bold;
 }
-.description99 { /* カウンター用 */
-  color: var(--clr-fg-alt);
-  background-color: var(--clr-bg);
-  font-size: 0.8rem;
+.description99 { /* 訪問カウンター用 */
   margin: 0em;
   padding: 0.3em;
   position: absolute;
-  right: 4rem;
-  bottom: 0.7rem;
-  font-weight: bold;
+  right: 7rem;
+  bottom: 0.6rem;
 }
 
 .description10 {
