@@ -57,7 +57,7 @@
     
     <div class="about4 center">
       <h2>論文紹介</h2>
-      <h5>その他に関する注目論文（随時更新中）</h5>
+      <h5>その他に関する論文（随時更新中）</h5>
     </div>
     <div class="container">
        
@@ -65,9 +65,9 @@
       <main class="main-content">
         <!-- info -->
         <section id="info">
-          <section>
+          <!-- <section>
             <h3 class="section__title3">その他：注目論文と傾向のまとめ</h3>
-          </section><br>
+          </section><br> -->
 
           <!-- 論文タイトル一覧 -->
           <section>     
@@ -75,15 +75,13 @@
             <ol class="indent">
               <li class="description22"><a href="#1">
                 化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価</a></li>
-              <!-- <li class="description22"><a href="#2">
-                固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li> -->
+              <li class="description22"><a href="#2">
+                GPT-4を用いた化学研究の可能性と限界</a></li>
             </ol>
           </section><br>
 
           <section>
-            <!-- 論文1 -->
-            <div id="1">
-              <h4>1. 化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価</h4>
+            <div id="1"><h4>1. 化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価</h4>
               <div class="description2">
                 ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。<br>
                 ・ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。<br>
@@ -105,29 +103,49 @@
               </div>
             </div><br><br>
 
-            <!-- <div id="2">
-              <h4>2. 固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</h4>
+            <div id="2">
+              <h4>2. GPT-4を用いた化学研究の可能性と限界</h4>
               <div class="description2">
-                ・固体の物性を予測するために広く使われている密度汎関数理論（DFT）計算の精度を検証するために、960種類の結晶構造に対して全電子（AE）計算と擬ポテンシャル（PP）計算を比較した。<br>
-                ・AE計算はWIEN2kとFLEURという二つのコードを用いて行い、PP計算はABINIT, BigDFT, CASTEP, CP2K, GPAW, Quantum ESPRESSO, SIESTA, SIRIUS/CP2K, VASPという九つのコードを用いて行った。<br>
-                ・各コードで同じ結晶構造に対して等方的な圧縮・膨張をかけてエネルギーを計算し、平衡体積（V0）、体積変化率（B0）、体積変化率の圧力微分係数（B1）という三つの熱力学的パラメータをフィッティングで求めた。<br>
-                ・各コードの結果とAE計算の平均値との相対誤差（ε）と不均一度（ν）という二つの指標を定義し、各コードの精度と一貫性を定量的に評価した。また、PP計算の精度を向上させるために、いくつかの元素に対して新しいPPを生成した。<br>
-                ・この研究はDFT計算における数値的な不確実性を制御するために重要な貢献をしている。多くのコードとPPライブラリを比較し、再現可能で普遍的なワークフローを提供している。<br>
-                ・この研究はEOSだけでなく、他の物性や交換相関汎関数に対しても同様な検証を行うことを推奨している。また、最適な精度と計算コストのバランスを見極めるために、新しいプロトコルや指標を開発することも提案している。
+                ・この文書は、GPT-4という大規模な言語モデルが化学研究にどのように応用できるかを検証したものである。<br>
+                ・GPT-4は、有機化学、化学情報学、数学、物理化学などの分野において、一般的な教科書レベルの知識を持っていることが示された。<br>
+                ・GPT-4は、少量のデータから新しい知識を学習し、推論問題や説明変数の選択、沸点や多変数関数の探索などのタスクに対処できることが示された。<br>
+                ・GPT-4は、分子構造や実験データなどの非言語データの扱いに課題があり、専門的な内容や最新の情報に対応できない場合があることが示された。
               </div>
               <div class="description6">
-                コメント：DFT計算に用いられるツールも近似法も乱立して専門家でないと追いきれない。客観的にそれらを比較することができる点が素晴らしい。
+                コメント：GPTを用いた科学研究の有用性と限界の一例を見れて大変参考になった。
               </div><div class="description10">
-                DATE: 26 May 2023<br>
-                How to verify the precision of density-functional-theory implementations via reproducible and universal workflows<br>
-                Emanuele Bosoni et al. (Institut de Ciencia de Materials de Barcelona, Spain)<br>
-                <a href="https://arxiv.org/abs/2305.17274" target="_blank" class="link2 link2--nav2">
-                  arXiv:2305.17274 (cond-mat.mtrl-sci)</a>
+                DATE: 5 Jun 2023<br>
+                Prompt engineering of GPT-4 for chemical research: what can/cannot be done?<br>
+                Kan Hatakeyama-Sato et al. (Tokyo Institute of Technology, Japan)<br>
+                <a href="https://chemrxiv.org/engage/chemrxiv/article-details/647d305dbe16ad5c577b6627" target="_blank" class="link2 link2--nav2">
+                  10.26434/chemrxiv-2023-s1x5p</a>
               </div><div class="img_align">
-                <img src="../review/img/physics-2-1.png" class="img300">
-                <img src="../review/img/physics-2-2.png" class="img300">
+                <img src="../review/img/others-2-1.png" class="img300">
+                <img src="../review/img/others-2-2.png" class="img300">
               </div>
-            </div><br><br> -->
+            </div><br><br>
+
+            <div id="2">
+              <h4>2. GPT-4を用いた化学研究の可能性と限界</h4>
+              <div class="description2">
+                ・この文書は、GPT-4という大規模な言語モデルが化学研究にどのように応用できるかを検証したものである。<br>
+                ・GPT-4は、有機化学、化学情報学、数学、物理化学などの分野において、一般的な教科書レベルの知識を持っていることが示された。<br>
+                ・GPT-4は、少量のデータから新しい知識を学習し、推論問題や説明変数の選択、沸点や多変数関数の探索などのタスクに対処できることが示された。<br>
+                ・GPT-4は、分子構造や実験データなどの非言語データの扱いに課題があり、専門的な内容や最新の情報に対応できない場合があることが示された。
+              </div>
+              <div class="description6">
+                コメント：GPTを用いた科学研究の有用性と限界の一例を見れて大変参考になった。
+              </div><div class="description10">
+                DATE: 5 Jun 2023<br>
+                Prompt engineering of GPT-4 for chemical research: what can/cannot be done?<br>
+                Kan Hatakeyama-Sato et al. (Tokyo Institute of Technology, Japan)<br>
+                <a href="https://chemrxiv.org/engage/chemrxiv/article-details/647d305dbe16ad5c577b6627" target="_blank" class="link2 link2--nav2">
+                  10.26434/chemrxiv-2023-s1x5p</a>
+              </div><div class="img_align">
+                <img src="../review/img/others-2-1.png" class="img300">
+                <img src="../review/img/others-2-2.png" class="img300">
+              </div>
+            </div><br><br>
           </section>
 
           <section>
