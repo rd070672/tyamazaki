@@ -174,8 +174,8 @@ button {
   border-bottom: solid 1px var(--clr-primary);
   padding-left: 0.2em;
   margin-top: 0.1em;
-  margin-bottom: 0.2em; /* 0.4em; */
-  padding-bottom: 0.4em; /* 0.4em; */
+  margin-bottom: 0.1em; /* 0.4em; */
+  padding-bottom: 0.1em; /* 0.2em; */
 }
 
 .frame {
@@ -194,7 +194,7 @@ button {
 }
 .description1 {
   font-size: 0.9rem;
-  margin: 0.2em;
+  margin: 0.1em;
   text-align: left;
   font-weight: bold;
 }
