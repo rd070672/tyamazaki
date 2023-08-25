@@ -256,12 +256,12 @@ button {
 .description9 {
   color: var(--clr-fg-alt);
   background-color: var(--clr-bg);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0em;
   padding: 0.3em;
   position: absolute; /* 絶対位置を指定 */
   right: 0.8rem;
-  bottom: 0.5rem;
+  bottom: 0.4rem;
   font-weight: bold;
 }
 .description99 { /* 訪問カウンター用 */
