@@ -1308,11 +1308,11 @@ input[name="tab_item"] {
     flex-direction: column;
     order: 1;
   }
-  .main-content,
-  .sidebar {
+  .main-content {
     width: 98%;
   }
   .sidebar {
+    width: 92%;
     order: 2;
     display: flex;
     flex-wrap: wrap;
