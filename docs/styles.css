@@ -917,7 +917,7 @@ input[name="tab_item"] {
   max-width: 900px; /*900px;*/
   margin: 0em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
   grid-gap: 1em;
   max-width: 98%;
 }
