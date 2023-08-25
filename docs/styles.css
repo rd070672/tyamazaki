@@ -1280,10 +1280,10 @@ input[name="tab_item"] {
   }
   .bar-left4 {
     border-left: solid 3px var(--clr-primary);
-    padding-left: 0.5em;
+    padding-left: 0.4em;
     margin-top: 0.3em;
-    margin-left: 0.5em;
-    line-height: 1.4em;
+    margin-left: 0.4em;
+    line-height: 1.2em;
     text-align: left;
   }
 
