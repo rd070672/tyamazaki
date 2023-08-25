@@ -340,7 +340,7 @@ button {
   width: 240px;
   height: 180px; /* 150 * 3/4 */
   overflow: hidden; /* はみ出した部分を隠す */
-  margin: 0.5em 0.2em;
+  margin: 0.2em 0.2em;
   border: 2px solid var(--clr-fg);
 }
 .leftImgContainer:hover {
@@ -351,7 +351,7 @@ button {
   width: 150px;
   height: 150px;
   overflow: hidden; /* はみ出した部分を隠す */
-  margin: 0.5em 0.2em;
+  margin: 0.2em 0.2em;
   border: 2px solid var(--clr-fg);
 }
 .leftImgContainer2:hover {
@@ -388,8 +388,9 @@ button {
   overflow: hidden;
   height: 150px;
   font-size: 0.8rem;
-  margin: 0.4em;
-  padding: 0em 0.4em;
+  margin: 0.2em;
+  padding: 0em 0.2em;
+  padding-left: 0.5em;
   text-align: left;
 }
 
@@ -1355,7 +1356,7 @@ input[name="tab_item"] {
     width: 150px;
     height: 112.5px;
     overflow: hidden; /* はみ出した部分を隠す */
-    margin: 0.5em 0.2em;
+    margin: 0.2em 0.2em;
     border: 2px solid var(--clr-fg);
   }
   .leftImgContainer2 { /* for review */
@@ -1363,7 +1364,7 @@ input[name="tab_item"] {
     width: 150px;
     height: 150px;
     overflow: hidden; /* はみ出した部分を隠す */
-    margin: 0.5em 0.2em;
+    margin: 0.2em 0.2em;
     border: 2px solid var(--clr-fg);
   }
 }
