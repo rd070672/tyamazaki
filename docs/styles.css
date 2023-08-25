@@ -1312,7 +1312,7 @@ input[name="tab_item"] {
     width: 98%;
   }
   .sidebar {
-    width: 92%;
+    width: 95%;
     order: 2;
     display: flex;
     flex-wrap: wrap;
