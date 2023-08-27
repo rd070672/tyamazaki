@@ -1,3 +1,4 @@
+// テーマの切り替え
 const body = document.body
 
 const btnTheme = document.querySelector('.fa-moon')
@@ -31,6 +32,7 @@ const toggleTheme = () =>
 
 btnTheme.addEventListener('click', toggleTheme)
 
+// ナビゲーションの表示
 const displayList = () => {
 	const navUl = document.querySelector('.nav__list')
 
@@ -60,6 +62,7 @@ btnHamburger.addEventListener('click', displayList)
 // 	}
 // }
 
+// スクロールトップとダウンのボタンの表示
 const btnScrollTop = document.querySelector('.scroll-top');
 const btnScrollDown = document.querySelector('.scroll-down');
 
@@ -73,53 +76,53 @@ window.addEventListener('scroll', () => {
     }
 });
 
-document.addEventListener('scroll', scrollUp)
+// document.addEventListener('scroll', scrollUp)
 
-let lastScrollTop = 0;
+// let lastScrollTop = 0;
 
-const header2 = document.querySelector('.header2');
+// const header2 = document.querySelector('.header2');
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        // スクロールしている時にヘッダーを隠す
-        header2.style.top = '-70px';  // ヘッダーの高さに合わせて調整
-    } else {
-        // スクロールアップしている時にヘッダーを表示
-        header2.style.top = '0';
-    }
-    lastScrollTop = scrollTop;
-});
+// window.addEventListener('scroll', function() {
+//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//     if (scrollTop > lastScrollTop) {
+//         // スクロールしている時にヘッダーを隠す
+//         header2.style.top = '-70px';  // ヘッダーの高さに合わせて調整
+//     } else {
+//         // スクロールアップしている時にヘッダーを表示
+//         header2.style.top = '0';
+//     }
+//     lastScrollTop = scrollTop;
+// });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     // スムーズスクロールの実装 (オプション)
+//     const anchors = document.querySelectorAll('a[href^="#"]');
+//     anchors.forEach(anchor => {
+//         anchor.addEventListener('click', function (e) {
+//             e.preventDefault();
+//             document.querySelector(this.getAttribute('href')).scrollIntoView({
+//                 behavior: 'smooth'
+//             });
+//         });
+//     });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // スムーズスクロールの実装 (オプション)
-    const anchors = document.querySelectorAll('a[href^="#"]');
-    anchors.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+//     // ページ内リンクのスムーズスクロール（サイドバー）
+//     const yearBoxes = document.querySelectorAll('.year-box');
+//     yearBoxes.forEach(yearBox => {
+//         yearBox.addEventListener('click', function() {
+//             const year = this.getAttribute('data-year');
+//             const relatedArticles = document.querySelector(`[data-year-articles="${year}"]`);
 
-    // ページ内リンクのスムーズスクロール（サイドバー）
-    const yearBoxes = document.querySelectorAll('.year-box');
-    yearBoxes.forEach(yearBox => {
-        yearBox.addEventListener('click', function() {
-            const year = this.getAttribute('data-year');
-            const relatedArticles = document.querySelector(`[data-year-articles="${year}"]`);
+//             if (relatedArticles.style.display === 'none' || !relatedArticles.style.display) {
+//                 relatedArticles.style.display = 'block';
+//             } else {
+//                 relatedArticles.style.display = 'none';
+//             }
+//         });
+//     });
+// });
 
-            if (relatedArticles.style.display === 'none' || !relatedArticles.style.display) {
-                relatedArticles.style.display = 'block';
-            } else {
-                relatedArticles.style.display = 'none';
-            }
-        });
-    });
-});
-
+// ページ内リンクのサイドバーの挿入
 window.addEventListener("DOMContentLoaded", function() {
     // loadComponent("header", "header.html");
     loadComponent("sidebar", "sidebar.html");
@@ -134,6 +137,7 @@ function loadComponent(elementId, url) {
     });
 }
 
+// ページ内リンクのサイドバーの挿入
 $(function() {
     // load関数を使って、sidebar.htmlファイルの内容を取得する
     $("#sidebar").load("sidebar.html");
