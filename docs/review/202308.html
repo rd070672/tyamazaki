@@ -25,27 +25,40 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(document).ready(function() {
-        $("#header").load("../header.html", function() {
-          bindButtonActions();
-        });
-        $("#sidebar").load("../sidebar.html", function() {
-        });
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
       });
-      function bindButtonActions() {
-        $("#btn-theme").click(function() {
-          console.log("Theme button clicked.");
-        });
-  
-        $("#btn-navigation").click(function() {
-          console.log("Navigation button clicked.");
-        });
-      }
     </script>
   </head>
   <!-- body -->
   <body class="light" id="top">
-    <header class="header center" id="header"></header>
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
 
     <div class="about4 center">
       <h2>論文紹介</h2>

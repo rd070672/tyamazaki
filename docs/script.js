@@ -67,7 +67,7 @@ const btnScrollTop = document.querySelector('.scroll-top');
 const btnScrollDown = document.querySelector('.scroll-down');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 200) {
         btnScrollTop.style.display = 'block';
         btnScrollDown.style.display = 'none';
     } else {
@@ -143,24 +143,24 @@ window.addEventListener('scroll', () => {
 //     $("#sidebar").load("sidebar.html");
 //   });
 
-$(document).ready(function() {
-    $("#header").load("../header.html", function() {
-        // ヘッダーがロードされた後に実行されるコールバック
-        bindButtonActions();
-    });
-    $("#sidebar").load("../sidebar.html", function() {
-        // サイドバーがロードされた後に実行されるコールバック
-    });
-});
+// $(document).ready(function() {
+//     $("#header").load("../header.html", function() {
+//         // ヘッダーがロードされた後に実行されるコールバック
+//         bindButtonActions();
+//     });
+//     $("#sidebar").load("../sidebar.html", function() {
+//         // サイドバーがロードされた後に実行されるコールバック
+//     });
+// });
 
-function bindButtonActions() {
-    $("#btn-theme").click(function() {
-        // ここでテーマの切り替え処理
-        console.log("Theme button clicked.");
-    });
+// function bindButtonActions() {
+//     $("#btn-theme").click(function() {
+//         // ここでテーマの切り替え処理
+//         console.log("Theme button clicked.");
+//     });
     
-    $("#btn-navigation").click(function() {
-        // ここでナビゲーションの切り替え処理
-        console.log("Navigation button clicked.");
-    });
-}
+//     $("#btn-navigation").click(function() {
+//         // ここでナビゲーションの切り替え処理
+//         console.log("Navigation button clicked.");
+//     });
+// }
