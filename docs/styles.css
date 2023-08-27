@@ -267,17 +267,18 @@ button {
   margin: 0em;
   padding: 0.3em;
   position: absolute; /* 絶対位置を指定 */
-  right: 0.8rem;
+  right: 0.7rem;
   bottom: 0.4rem;
   font-weight: bold;
 }
-.description99 { /* 訪問カウンター用 */
+/* 訪問カウンター用 */
+/* .description99 { 
   margin: 0em;
   padding: 0.3em;
   position: absolute;
   right: 7.5rem;
   bottom: 0.4rem;
-}
+} */
 
 .description10 {
   font-size: 0.8rem;
