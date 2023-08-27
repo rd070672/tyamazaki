@@ -23,6 +23,12 @@
       gtag('js', new Date());
       gtag('config', 'G-NYGV5L0T7N');
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./blog/sidebar.html");
+      });
+    </script>
 
   </head>
   <!-- body -->
@@ -56,14 +62,12 @@
       </nav>
     </header>
 
-    
     <div class="about4 center">
       <h2>ブログ</h2>
       <h5>材料物理研究者のつぶやき</h5>
     </div>
     <div class="container">
-      <aside class="sidebar">
-        <!-- ブログ一覧 -->
+      <!-- <aside class="sidebar">
         <ul class="chapters"><p class="under3 description1">ブログ一覧</p>
           <li class="description3">&nbsp;2023年
             <ul class="sections description5">
@@ -81,9 +85,7 @@
           </li>
         </ul><br>
 
-        <!-- ノウハウ一覧 -->
         <ul class="chapters"><p class="under3 description1">ノウハウ一覧</p>
-          <!-- 材料創製 -->
           <li class="description3">&nbsp;材料創製
             <ul class="sections description5">
               <li><a class="link link--nav" href="#sputter">マグネトロンスパッタ装置</a></li>
@@ -92,9 +94,7 @@
               <li><a class="link link--nav" href="#tem">TEM観察</a></li>
               <li><a class="link link--nav" href="#synchrotron">大型放射光施設</a></li>
             </ul>
-            
           </li>
-          <!-- 数値計算 -->
           <li class="description3">&nbsp;数値計算
             <ul class="sections description5">
               <li><a class="link link--nav" href="#vasp">VASP v6.3.2</a></li>
@@ -104,7 +104,6 @@
               <li><a class="link link--nav" href="#oommf">OOMMG v2.0</a></li>
             </ul>
           </li>
-          <!-- 機械学習 -->
           <li class="description3">&nbsp;機械学習
             <ul class="sections description5">
               <li><a class="link link--nav" href="#chatgpt-p">ChatGPT prompt</a></li>
@@ -116,9 +115,7 @@
           </li>
         </ul><br>
 
-        <!-- 講義一覧 -->
         <ul class="chapters"><p class="under3 description1">講義一覧</p>
-          <!-- 物性物理 -->
           <li class="description3">&nbsp;物性物理
             <ul class="sections description5">
               <li><a class="link link--nav" href="#p1">物性物理の導入</a></li>
@@ -133,7 +130,6 @@
               <li><a class="link link--nav" href="#p10">最新の研究トピックと展望</a></li>
             </ul>
           </li>
-          <!-- 材料工学 -->
           <li class="description3">&nbsp;材料工学
             <ul class="sections description5">
               <li><a class="link link--nav" href="#m1">材料工学の導入</a></li>
@@ -148,8 +144,6 @@
               <li><a class="link link--nav" href="#m10">最新の研究トピックと展望</a></li>
             </ul>
           </li>
-
-          <!-- マテインフォ -->
           <li class="description3">&nbsp;マテインフォ
             <ul class="sections description5">
               <li><a class="link link--nav" href="#i1">マテインフォの導入</a></li>
@@ -164,8 +158,6 @@
               <li><a class="link link--nav" href="#i10">最新の研究トピックと展望</a></li>
             </ul>
           </li>
-
-          <!-- その他
           <li class="description3">&nbsp;その他
             <ul class="sections description5">
               <li><a class="link link--nav" href="#chatgpt-p">研究の基礎</a></li>
@@ -181,9 +173,11 @@
               <li><a class="link link--nav" href="#fft">論文投稿</a></li>
               <li><a class="link link--nav" href="#homology">論文査読</a></li>
             </ul>
-          </li> -->
+          </li>
         </ul>
-      </aside>
+      </aside> -->
+      <aside id="sidebar" class="sidebar"></aside>
+
       <main class="main-content">
         <!-- 2023 -->
         <section id="2023">
