@@ -1294,7 +1294,7 @@ input[name="tab_item"] {
     order: 1;
   }
   .main-content {
-    width: 98%;
+    width: 96%;
   }
   .sidebar {
     width: 96%;
@@ -1303,18 +1303,18 @@ input[name="tab_item"] {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .chapters { /* for blog */
-    width: 32%;
+  .chapters { /* for blog & review*/
+    width: 30%;
     box-sizing: border-box;
     padding: 0 6px;
     margin: 0.5em 0;
   }
-  .chapters2 { /* for review */
-    width: 48%;
+  /* .chapters2 { 
+    width: 47%;
     box-sizing: border-box;
     padding: 0 6px;
     margin: 0.5em 0;
-  }
+  } */
  
   .chapters > li {
     margin-bottom: 1.2rem;  /* 各章の間隔 */
