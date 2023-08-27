@@ -27,22 +27,17 @@
     <script>
       $(document).ready(function() {
         $("#header").load("../header.html", function() {
-          // ヘッダーがロードされた後に実行されるコールバック
           bindButtonActions();
         });
         $("#sidebar").load("../sidebar.html", function() {
-          // サイドバーがロードされた後に実行されるコールバック
         });
       });
-  
       function bindButtonActions() {
         $("#btn-theme").click(function() {
-          // ここでテーマの切り替え処理
           console.log("Theme button clicked.");
         });
   
         $("#btn-navigation").click(function() {
-          // ここでナビゲーションの切り替え処理
           console.log("Navigation button clicked.");
         });
       }
