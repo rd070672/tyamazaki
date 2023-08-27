@@ -67,7 +67,7 @@ const btnScrollTop = document.querySelector('.scroll-top');
 const btnScrollDown = document.querySelector('.scroll-down');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 800) {
         btnScrollTop.style.display = 'block';
         btnScrollDown.style.display = 'none';
     } else {
