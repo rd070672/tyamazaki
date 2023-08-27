@@ -122,20 +122,20 @@ window.addEventListener('scroll', () => {
 //     });
 // });
 
-// ページ内リンクのサイドバーの挿入
-// window.addEventListener("DOMContentLoaded", function() {
-//     // loadComponent("header", "header.html");
-//     loadComponent("sidebar", "sidebar.html");
-//     // loadComponent("footer", "footer.html");
-// });
+ページ内リンクのサイドバーの挿入
+window.addEventListener("DOMContentLoaded", function() {
+    // loadComponent("header", "header.html");
+    loadComponent("sidebar", "sidebar.html");
+    // loadComponent("footer", "footer.html");
+});
 
-// function loadComponent(elementId, url) {
-//     fetch(url).then(function(response) {
-//         return response.text();
-//     }).then(function(data) {
-//         document.getElementById(elementId).innerHTML = data;
-//     });
-// }
+function loadComponent(elementId, url) {
+    fetch(url).then(function(response) {
+        return response.text();
+    }).then(function(data) {
+        document.getElementById(elementId).innerHTML = data;
+    });
+}
 
 // ページ内リンクのサイドバーの挿入
 $(function() {
