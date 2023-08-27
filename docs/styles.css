@@ -343,8 +343,8 @@ button {
 
 .leftImgContainer { /* blog */
   float: left;
-  width: 240px;
-  height: 180px; /* 150 * 3/4 */
+  width: 280px;
+  height: 210px; /* 150 * 3/4 */
   overflow: hidden; /* はみ出した部分を隠す */
   margin: 0.2em 0.2em;
   border: 2px solid var(--clr-fg);
@@ -354,8 +354,8 @@ button {
 }
 .leftImgContainer2 { /* review */
   float: left;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   overflow: hidden; /* はみ出した部分を隠す */
   margin: 0.2em 0.2em;
   border: 2px solid var(--clr-fg);
@@ -364,8 +364,8 @@ button {
   opacity: 0.75;
 }
 
-.leftImg2 {
-  width: 100%; /* 親の幅に合わせる */
+.leftImg2 { /* review */
+  width: 100%; /* 親(leftImgContainer2)の幅に合わせる */
   height: 100%;
   display: block;
 
@@ -1297,7 +1297,7 @@ input[name="tab_item"] {
     width: 98%;
   }
   .sidebar {
-    width: 97%;
+    width: 96%;
     order: 2;
     display: flex;
     flex-wrap: wrap;
