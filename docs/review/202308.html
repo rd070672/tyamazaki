@@ -25,21 +25,27 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(function() {
-        // $("#header").load("header.html");
-        // $("#sidebar").load("sidebar.html");
-        $("#header").load("header.html", function() {
-            // ここでボタンに対する操作を定義
-            $("#btn-theme").click(function() {
-                // テーマ変更の処理
-            });
-            
-            $("#btn-navigation").click(function() {
-                // ナビゲーション切り替えの処理
-            });
+      $(document).ready(function() {
+        $("#header").load("../header.html", function() {
+          // ヘッダーがロードされた後に実行されるコールバック
+          bindButtonActions();
         });
-        $("#sidebar").load("sidebar.html");
+        $("#sidebar").load("../sidebar.html", function() {
+          // サイドバーがロードされた後に実行されるコールバック
+        });
       });
+  
+      function bindButtonActions() {
+        $("#btn-theme").click(function() {
+          // ここでテーマの切り替え処理
+          console.log("Theme button clicked.");
+        });
+  
+        $("#btn-navigation").click(function() {
+          // ここでナビゲーションの切り替え処理
+          console.log("Navigation button clicked.");
+        });
+      }
     </script>
   </head>
   <!-- body -->
