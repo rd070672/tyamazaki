@@ -197,6 +197,7 @@ button {
   margin: 0.2em;
   text-align: left;
   font-weight: bold;
+  padding-left: 0.4em;
 }
 .description1 {
   font-size: 0.9rem;
