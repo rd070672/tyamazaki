@@ -133,3 +133,8 @@ function loadComponent(elementId, url) {
         document.getElementById(elementId).innerHTML = data;
     });
 }
+
+$(function() {
+    // load関数を使って、sidebar.htmlファイルの内容を取得する
+    $("#sidebar").load("sidebar.html");
+  });
