@@ -122,23 +122,45 @@ window.addEventListener('scroll', () => {
 //     });
 // });
 
-ページ内リンクのサイドバーの挿入
-window.addEventListener("DOMContentLoaded", function() {
-    // loadComponent("header", "header.html");
-    loadComponent("sidebar", "sidebar.html");
-    // loadComponent("footer", "footer.html");
+// ページ内リンクのサイドバーの挿入
+// window.addEventListener("DOMContentLoaded", function() {
+//     // loadComponent("header", "header.html");
+//     loadComponent("sidebar", "sidebar.html");
+//     // loadComponent("footer", "footer.html");
+// });
+
+// function loadComponent(elementId, url) {
+//     fetch(url).then(function(response) {
+//         return response.text();
+//     }).then(function(data) {
+//         document.getElementById(elementId).innerHTML = data;
+//     });
+// }
+
+// // ページ内リンクのサイドバーの挿入
+// $(function() {
+//     // load関数を使って、sidebar.htmlファイルの内容を取得する
+//     $("#sidebar").load("sidebar.html");
+//   });
+
+$(document).ready(function() {
+    $("#header").load("../header.html", function() {
+        // ヘッダーがロードされた後に実行されるコールバック
+        bindButtonActions();
+    });
+    $("#sidebar").load("../sidebar.html", function() {
+        // サイドバーがロードされた後に実行されるコールバック
+    });
 });
 
-function loadComponent(elementId, url) {
-    fetch(url).then(function(response) {
-        return response.text();
-    }).then(function(data) {
-        document.getElementById(elementId).innerHTML = data;
+function bindButtonActions() {
+    $("#btn-theme").click(function() {
+        // ここでテーマの切り替え処理
+        console.log("Theme button clicked.");
+    });
+    
+    $("#btn-navigation").click(function() {
+        // ここでナビゲーションの切り替え処理
+        console.log("Navigation button clicked.");
     });
 }
-
-// ページ内リンクのサイドバーの挿入
-$(function() {
-    // load関数を使って、sidebar.htmlファイルの内容を取得する
-    $("#sidebar").load("sidebar.html");
-  });
