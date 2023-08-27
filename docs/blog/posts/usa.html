@@ -26,15 +26,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(function() {
-        $("#sidebar").load("../sidebar.html");
+        $("#header").load("header.html");
+        $("#sidebar").load("sidebar.html");
       });
     </script>
   </head>
   <!-- body -->
   <body class="light" id="top">
-
+    <header class="header center" id="header"></header>
     <!-- header -->
-    <header class="header center">
+    <!-- <header class="header center">
       <h3><a href="../../" class="link">tyamazaki.com</a></h3>
       <nav class="nav center">
         <ul class="nav__list center">
@@ -59,7 +60,7 @@
           <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
         </button>
       </nav>
-    </header>
+    </header> -->
     
     <div class="about4 center">
       <h2>ブログ</h2>
@@ -67,120 +68,13 @@
     </div>
     <div class="container">
       <!-- Sidebar -->
-      <!-- <aside class="sidebar">
-        <ul class="chapters"><p class="under3 description1">ブログ一覧</p>
-          <li class="description3">&nbsp;2023年
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#us">米メリーランド滞在記</a></li>
-              <li><a class="link link--nav" href="#working">大学での仕事内容</a></li>
-              <li><a class="link link--nav" href="#peer-review">Web3時代のPeer review</a></li>
-            </ul>
-          </li>
-          <li class="description3">&nbsp;2022年
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#github-pages">5分で作れるホームページ</a></li>
-              <li><a class="link link--nav" href="#slackgpt">ChatGPT要約botで論文読み</a></li>
-              <li><a class="link link--nav" href="#chatgpt">私のChatGPTの使い方</a></li>
-            </ul>
-          </li>
-        </ul><br>
-
-        <ul class="chapters"><p class="under3 description1">ノウハウ一覧</p>
-          <li class="description3">&nbsp;材料創製
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#sputter">マグネトロンスパッタ装置</a></li>
-              <li><a class="link link--nav" href="#sem">FE-SEM</a></li>
-              <li><a class="link link--nav" href="#tem-p">TEM用試料加工</a></li>
-              <li><a class="link link--nav" href="#tem">TEM観察</a></li>
-              <li><a class="link link--nav" href="#synchrotron">大型放射光施設</a></li>
-            </ul>
-          </li>
-          <li class="description3">&nbsp;数値計算
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#vasp">VASP v6.3.2</a></li>
-              <li><a class="link link--nav" href="#wien2k">Wien2k v23.2</a></li>
-              <li><a class="link link--nav" href="#comsol">COMSOL Multiphysics v6.1</a></li>
-              <li><a class="link link--nav" href="#mumax">mumax v3.10</a></li>
-              <li><a class="link link--nav" href="#oommf">OOMMG v2.0</a></li>
-            </ul>
-          </li>
-          <li class="description3">&nbsp;機械学習
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#chatgpt-p">ChatGPT prompt</a></li>
-              <li><a class="link link--nav" href="#vscode">VSCode</a></li>
-              <li><a class="link link--nav" href="#pca">PCA/MDS</a></li>
-              <li><a class="link link--nav" href="#som">SOM</a></li>
-              <li><a class="link link--nav" href="#homology">Persistent homology</a></li>
-            </ul>
-          </li>
-        </ul><br>
-
-        <ul class="chapters"><p class="under3 description1">講義一覧</p>
-          <li class="description3">&nbsp;物性物理
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#p1">物性物理の導入</a></li>
-              <li><a class="link link--nav" href="#p2">量子力学の復習</a></li>
-              <li><a class="link link--nav" href="#p3">固体の結晶構造</a></li>
-              <li><a class="link link--nav" href="#p4">電子のバンド構造</a></li>
-              <li><a class="link link--nav" href="#p5">電子の動的性質</a></li>
-              <li><a class="link link--nav" href="#p6">磁性</a></li>
-              <li><a class="link link--nav" href="#p7">超伝導性</a></li>
-              <li><a class="link link--nav" href="#p8">格子振動とフォノン</a></li>
-              <li><a class="link link--nav" href="#p9">強相関系</a></li>
-              <li><a class="link link--nav" href="#p10">最新の研究トピックと展望</a></li>
-            </ul>
-          </li>
-          <li class="description3">&nbsp;材料工学
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#m1">材料工学の導入</a></li>
-              <li><a class="link link--nav" href="#m2">金属と合金</a></li>
-              <li><a class="link link--nav" href="#m3">セラミックス</a></li>
-              <li><a class="link link--nav" href="#m4">ポリマー材料</a></li>
-              <li><a class="link link--nav" href="#m5">コンポジット材料</a></li>
-              <li><a class="link link--nav" href="#m6">ナノ材料</a></li>
-              <li><a class="link link--nav" href="#m7">電子・光学材料</a></li>
-              <li><a class="link link--nav" href="#m8">材料の機械的性質</a></li>
-              <li><a class="link link--nav" href="#m9">材料の持続可能性とリサイクル</a></li>
-              <li><a class="link link--nav" href="#m10">最新の研究トピックと展望</a></li>
-            </ul>
-          </li>
-          <li class="description3">&nbsp;マテインフォ
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#i1">マテインフォの導入</a></li>
-              <li><a class="link link--nav" href="#i2">データの取得と前処理</a></li>
-              <li><a class="link link--nav" href="#i3">特徴量エンジニアリング</a></li>
-              <li><a class="link link--nav" href="#i4">データ駆動のモデル構築</a></li>
-              <li><a class="link link--nav" href="#i5">深層学習と材料データ</a></li>
-              <li><a class="link link--nav" href="#i6">データの視覚化と解釈</a></li>
-              <li><a class="link link--nav" href="#i7">高スループット実験とデータ</a></li>
-              <li><a class="link link--nav" href="#i8">データベースとオープンソースツール</a></li>
-              <li><a class="link link--nav" href="#i9">実用的な問題への応用</a></li>
-              <li><a class="link link--nav" href="#i10">最新の研究トピックと展望</a></li>
-            </ul>
-          </li>
-          <li class="description3">&nbsp;その他
-            <ul class="sections description5">
-              <li><a class="link link--nav" href="#chatgpt-p">研究の基礎</a></li>
-              <li><a class="link link--nav" href="#vscode">物性計測技術</a></li>
-              <li><a class="link link--nav" href="#pca">材料の構造解析</a></li>
-              <li><a class="link link--nav" href="#som">表面・界面分析技術</a></li>
-              <li><a class="link link--nav" href="#fft">材料の機械的性質の評価</a></li>
-              <li><a class="link link--nav" href="#homology">シミュレーションとモデリング</a></li>
-              <li><a class="link link--nav" href="#chatgpt-p">熱解析技術</a></li>
-              <li><a class="link link--nav" href="#vscode">光学的性質の評価</a></li>
-              <li><a class="link link--nav" href="#pca">応用的評価技術</a></li>
-              <li><a class="link link--nav" href="#som">研究の報告と発表</a></li>
-              <li><a class="link link--nav" href="#fft">論文投稿</a></li>
-              <li><a class="link link--nav" href="#homology">論文査読</a></li>
-            </ul>
-          </li>
-        </ul>
-      </aside> -->
       <aside id="sidebar" class="sidebar"></aside>
       
       <!-- Main contents -->
       <main class="main-content">
-        <div class="about1 center" style="background-image: url('../img/usa.png'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <div class="about1 center" 
+          style="background-image: url('../img/usa.png'); 
+          background-repeat: no-repeat; background-position: center; background-size: cover;">
           <h1 class="text-with-border">米メリーランド滞在記</h1>
         </div><br>
         
