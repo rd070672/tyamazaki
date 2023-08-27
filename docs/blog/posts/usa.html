@@ -26,7 +26,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(function() {
-        $("#header").load("../header.html");
+        // $("#header").load("../header.html");
+        $("#header").load("../header.html", function() {
+            // ここでボタンに対する操作を定義
+            $("#btn-theme").click(function() {
+                // テーマ変更の処理
+            });
+            
+            $("#btn-navigation").click(function() {
+                // ナビゲーション切り替えの処理
+            });
+        });
         $("#sidebar").load("../sidebar.html");
       });
     </script>
