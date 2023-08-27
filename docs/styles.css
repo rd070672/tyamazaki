@@ -192,6 +192,12 @@ button {
   margin: 0.4em 0.8em;
   text-align: left;
 }
+.description0 {
+  font-size: 1rem;
+  margin: 0.2em;
+  text-align: left;
+  font-weight: bold;
+}
 .description1 {
   font-size: 0.9rem;
   margin: 0.2em;
