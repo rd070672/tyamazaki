@@ -424,7 +424,7 @@
       </main>
 
       <!-- Sidebar -->
-      <aside class="sidebar">
+      <!-- <aside class="sidebar">
         <ul class="chapters"><p class="under3 description1">年月一覧</p>
           <li class="description3">
             <ul class="sections description5">
@@ -454,7 +454,16 @@
             </ul>
           </li>
         </ul><br>
-      </aside>
+      </aside> -->
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(function() {
+          $("#sidebar").load("sidebar.html");
+        });
+      </script>
+      <aside id="sidebar"></aside>
+
     </div>
 
     <!-- footer -->
