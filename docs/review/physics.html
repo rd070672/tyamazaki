@@ -77,10 +77,16 @@
                 固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li>
               <li class="description22"><a href="#3">
                 パインズの悪魔の発見：Sr2RuO4における3次元音響プラズモンの観測</a></li>
-              <!-- <li class="description22"><a href="#2">
-                固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li>
               <li class="description22"><a href="#2">
-                固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li> -->
+                WIEN2k: 固体の物性を計算するためのAPW+loプログラム</a></li>
+              <li class="description22"><a href="#2">
+                室温常圧で超伝導を実現したCo2MnAl1−xSixウェイル半金属の電子構造と熱電特性の組み合わせ的調整</a></li>
+              <!-- <li class="description22"><a href="#2">
+                室温常圧で超伝導を実現したCo2MnAl1−xSixウェイル半金属の電子構造と熱電特性の組み合わせ的調整</a></li>
+              <li class="description22"><a href="#2">
+                室温常圧で超伝導を実現したCo2MnAl1−xSixウェイル半金属の電子構造と熱電特性の組み合わせ的調整</a></li>
+              <li class="description22"><a href="#2">
+                室温常圧で超伝導を実現したCo2MnAl1−xSixウェイル半金属の電子構造と熱電特性の組み合わせ的調整</a></li> -->
             </ol>
           </section><br>
 
@@ -152,6 +158,56 @@
                 <img src="../review/img/physics-3-2.png" class="img300">
               </div>
             </div><br><br>
+
+            <div id="4"><h4>4. WIEN2k: 固体の物性を計算するためのAPW+loプログラム</h4>
+              <div class="description2">
+                ・WIEN2kは、密度汎関数理論のコーン・シャム方程式を解くために、増強平面波プラス局所軌道（APW+lo）法を用いるプログラムである。APW+lo法は、全電子（コアと価電子）を全ポテンシャルで自己無撞着に扱う方法であり、WIEN2kでは、並列化や最適化された数値ライブラリを利用することで非常に効率的に実装されている。<br>
+                ・WIEN2kでは、基本的な物性（電子バンド構造や原子構造の最適化など）から、より専門的な物性（核磁気共鳴遮蔽テンソルや電気分極など）まで、多くの物性を計算することができる。APW+lo法の簡単な紹介の後、WIEN2k（バージョン19）の使用法、能力、特徴について詳しくレビューしている。<br>
+                ・WIEN2kでは、交換相関関数として様々なオプションや近似が利用できる。また、外部のライブラリやプログラムと連携することも可能である。関連する応用例やいくつかの例題も紹介している。<br>
+                ・WIEN2kは、3つのモード（バランス、クリエイティブ、プレシジョン）で利用できる。各モードでは、計算精度や速度、メモリ使用量などが異なる。ユーザーはトグルボタンでモードを切り替えることができる。新しいモードに切り替えると、新しい会話が始まる。<br>
+                ・WIEN2kは、マークダウンレンダリング要素を利用して、情報を視覚的に魅力的に提示することができる。例えば、見出しや表、箇条書きリストなどを使って文章を構成したり、コードブロックを使って詩やコード、歌詞などを整形したりすることができる。
+              </div><div class="description6">
+                コメント：DFT計算ソフト野中で最も計算精度が高いと言われているソフトウェア。アカデミック版が400ユーロなので、お金のない若手研究者でも購入できるコスパの高い代物だ。多数の機能が備わり、更新されているので、いじり倒せるくらい時間を取りたいものだ。<br>
+                関連記事：<a href="http://www.wien2k.at/" target="_blank" class="link2 link2--nav2">WIEN2k_23.2</a><br>
+                補足1：原子球と格子間領域に分割されたユニットセル内で、異なる基底関数を用いる。原子球内では、動径波動関数と球面調和関数の積の線形結合を用いる。格子間領域では、平面波基底を用いる。動径波動関数は、エネルギーと原子球内のポテンシャルの球対称部分をもつ動径シュレーディンガー方程式の正則解とそのエネルギー微分の線形結合で表す。これは、線形化補強平面波（LAPW）法と呼ばれる。LAPW法の柔軟性を高めるために、ローカルオービタル（LO）と呼ばれる基底関数を追加することができる。LOは、異なる2つのエネルギーによる2つの動径波動関数と1つの動径波動関数のエネルギー微分の線形結合で表される。さらに、原子球面上で平面波の値と傾きをそろえるという制約を取り除くことで、計算効率を改善することができる。これは、APW+lo法と呼ばれる。APW+lo法では、原子球内ではエネルギーが固定された動径波動関数を用いる。また、原子球の境界にキンクを持つ基底関数（lo）を追加する。<br>
+                補足2：ローカル密度近似（LDA）: 交換相関エネルギーを電子密度の局所的な値に依存させる最も単純な近似です。WIEN2kでは、Ceperley-Alder（CA）パラメータ化やPerdew-Zunger（PZ）パラメータ化などが選択できます。一般化勾配近似（GGA）: 交換相関エネルギーを電子密度の局所的な値とその勾配に依存させる近似です。WIEN2kでは、Perdew-Burke-Ernzerhof（PBE）やPerdew-Wang（PW91）などが選択できます。メタGGA: 交換相関エネルギーを電子密度の局所的な値とその勾配とキネティックエネルギー密度に依存させる近似です。WIEN2kでは、Tao-Perdew-Staroverov-Scuseria（TPSS）やTran-Blaha（TB09）などが選択できます。混合型汎関数: 交換相関エネルギーの一部を厳密なハートリーフォック交換エネルギーで置き換える方法です。WIEN2kでは、Becke-Lee-Yang-Parr（BLYP）、Becke-Perdew（BP86）、Becke-Half-and-Half（BHH）、Perdew-Burke-Ernzerhof0（PBE0）、Heyd-Scuseria-Ernzerhof（HSE）などが選択できます。ハイブリッド型汎関数: 交換相関エネルギーの一部をスクリーニングされたクーロンポテンシャルで重み付けしたハートリーフォック交換エネルギーで置き換える方法です。WIEN2kでは、Heyd-Scuseria-Ernzerhofスクリーニング付き（HSEsol）、Heyd-Scuseria-Ernzerhof長距離補正付き（HSELR）、eyd-Scuseria-Ernzerhof短距離補正付き（HSESR）などが選択できます。
+              </div><div class="description10">
+                DATE: 19 Feb 2020<br>
+                WIEN2k: An APW+lo program for calculating the properties of solids<br>
+                Peter Blaha et al. (Vienna University of Technology, Austria)<br>
+                <a href="https://pubs.aip.org/aip/jcp/article/152/7/074101/485553/WIEN2k-An-APW-lo-program-for-calculating-the" target="_blank" class="link2 link2--nav2">
+                  J. Chem. Phys. 152, 074101 (2020)</a>
+              </div><div class="img_align">
+                <img src="../review/img/physics-4-1.png" class="img300v">
+                <img src="../review/img/physics-4-2.png" class="img300c">
+              </div>
+            </div><br><br>
+
+            <div id="5"><h4>5. 室温常圧で超伝導を実現したCo2MnAl1−xSixウェイル半金属の電子構造と熱電特性の組み合わせ的調整</h4>
+              <div class="description2">
+                ・Co2MnAl1−xSix (CMAS)は、AlとSiの置換によってフェルミ準位を連続的に調整できるウェイル半金属である。<br>
+                CMASの組成勾配薄膜を層状に堆積することで、一枚の薄膜上でxが0から1まで変化する単結晶薄膜を作製した。
+                硬X線光電子分光法により、CMAからCMSへの組成変化に伴ってフェルミ準位が0.40 eVシフトすることを直接確認した。<br>
+                電気抵抗、異常ホール効果、異常ネルンスト効果、ゼーベック効果などの輸送特性と熱電特性を系統的に測定した。<br>
+                ロックインサーモグラフィー法を用いて、異常エッティングスハウゼン効果（異常ネルンスト効果の逆効果）の組成依存性を高速かつ正確に評価した。
+              </div><div class="description6">
+                コメント：XRD測定からホイスラー合金の超格子構造とその他輸送・熱電特性評価からAlとSiの置換効果を明らかにしている。ホイスラー合金はX2YZやXYZの多元系合金であり、その組成組み合わせをコンビ成膜とハイスループット評価を行うのは非常にコスパがいい。<br>
+                関連記事：<br>
+                補足1：ワイル半金属とは、場の量子論や標準模型において重要な役割を果たしている質量のないカイラルフェルミオンである。ワイル半金属は、その低エネルギー励起が室温であっても電荷を運ぶワイルフェルミオンである固体結晶であり2、トポロジカルな表面フェルミアークを示すことが期待される。ワイル半金属は、電子工学やコンピューティングにおいて高い移動度や光から電気への変換効率などの応用が見込まれる。<br>
+                補足2：組み合わせ的堆積法：異なる組成の薄膜を層状に堆積することで、一枚の薄膜上で組成が変化する単結晶薄膜を作製する方法である。CMASの組成勾配薄膜は、この方法を用いて作製された。ロックインサーモグラフィー法：交流磁場下で温度変化を高感度カメラで撮影することで、異常エッティングスハウゼン効果（異常ネルンスト効果の逆効果）の組成依存性を高速かつ正確に評価する方法である。CMASの熱電特性の測定に用いられた。
+              </div><div class="description10">
+                DATE: 9 Mar 2021<br>
+                Combinatorial tuning of electronic structure and thermoelectric properties in Co2MnAl1−xSix Weyl semimetals<br>
+                Peter Blaha et al. (Vienna University of Technology, Austria)<br>
+                <a href="https://pubs.aip.org/aip/apm/article/9/3/031105/892384/Combinatorial-tuning-of-electronic-structure-and" target="_blank" class="link2 link2--nav2">
+                  APL Mater 9, 031105 (2021)</a>
+              </div><div class="img_align">
+                <img src="../review/img/physics-5-1.png" class="img300">
+                <img src="../review/img/physics-5-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+
           </section>
         </section>
       </main>
