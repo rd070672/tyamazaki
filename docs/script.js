@@ -164,3 +164,8 @@ window.addEventListener('scroll', () => {
 //         console.log("Navigation button clicked.");
 //     });
 // }
+
+document.getElementById('pdfEmbed').addEventListener('click', function() {
+	this.style.width = '800px';
+	this.style.height = '600px';
+  });

@@ -1146,6 +1146,10 @@ input[name="tab_item"] {
   /* margin: 1em 0.4em; */
 }
 
+#pdfContainer {
+  transition: all 0.3s ease;
+}
+
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
   .header {
