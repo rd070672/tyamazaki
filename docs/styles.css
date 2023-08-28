@@ -1146,8 +1146,11 @@ input[name="tab_item"] {
   /* margin: 1em 0.4em; */
 }
 
-#pdfContainer {
-  transition: all 0.3s ease;
+#pdfIframe {
+  width: 600px;
+  height: 300px;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 /*スマートフォン用にカスタマイズ*/
