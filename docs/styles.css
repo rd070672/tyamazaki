@@ -335,6 +335,16 @@ button {
 .img300:hover {
   opacity: 0.75;
 }
+.img300v { /* ブログ記事の画像 */
+  width: 225px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0.3em 0.6em;
+  border: 2px solid var(--clr-fg);
+}
+.img300v:hover {
+  opacity: 0.75;
+}
 
 .img_align {
   display: flex;                /* 横並び */
