@@ -49,25 +49,13 @@ const displayList = () => {
 
 btnHamburger.addEventListener('click', displayList)
 
-// const scrollUp = () => {
-// 	const btnScrollTop = document.querySelector('.scroll-top')
-
-// 	if (
-// 		body.scrollTop > 500 ||
-// 		document.documentElement.scrollTop > 500
-// 	) {
-// 		btnScrollTop.style.display = 'block'
-// 	} else {
-// 		btnScrollTop.style.display = 'none'
-// 	}
-// }
 
 // スクロールトップとダウンのボタンの表示
 const btnScrollTop = document.querySelector('.scroll-top');
 const btnScrollDown = document.querySelector('.scroll-down');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 800) {
+    if (window.scrollY > 1200) {
         btnScrollTop.style.display = 'block';
         btnScrollDown.style.display = 'none';
     } else {
