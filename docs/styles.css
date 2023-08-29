@@ -1138,7 +1138,7 @@ input[name="tab_item"] {
   margin: 0.5em 0.2em;
 }
 .chapters > li {
-  margin-bottom: 0.6rem; /* 各章の間隔 */
+  margin-bottom: 1rem; /* 各章の間隔 */
 }
 .sections {
   list-style-type: none;
@@ -1147,7 +1147,8 @@ input[name="tab_item"] {
   margin-left: 1.1rem;  /* 節を右に2回字下げするためのマージン */
 }
 .sections > li {
-  margin-bottom: 0.1rem; /* 各節の間隔 */
+  margin-top: 0.1rem;
+  margin-bottom: 0.2rem; /* 各節の間隔 */
 }
 .articles {
   display: none;
@@ -1354,6 +1355,7 @@ input[name="tab_item"] {
   }
   
   .sections > li {
+    margin-top: 0.1rem;
     margin-bottom: 0.4rem; /* 各節の間隔 */
   }
 
