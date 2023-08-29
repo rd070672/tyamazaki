@@ -369,7 +369,7 @@ button {
   height: 210px; /* 150 * 3/4 */
   overflow: hidden; /* はみ出した部分を隠す */
   margin: 0.2em 0.2em;
-  border: 2px solid var(--clr-fg);
+  border: 2px solid var(--clr-bg-alt);
 }
 .leftImgContainer:hover {
   opacity: 0.75;
@@ -380,7 +380,7 @@ button {
   height: 180px;
   overflow: hidden; /* はみ出した部分を隠す */
   margin: 0.2em 0.2em;
-  border: 2px solid var(--clr-fg);
+  border: 2px solid var(--clr-bg-alt);
 }
 .leftImgContainer2:hover {
   opacity: 0.75;
@@ -397,7 +397,7 @@ button {
   width: 150px;
   height: auto;
   margin: 0.5em 0.2em;
-  border: 2px solid var(--clr-fg);
+  border: 2px solid var(--clr-bg-alt);
 }
 .leftImg:hover {
   opacity: 0.75;
@@ -410,7 +410,7 @@ button {
   margin-bottom: 0.8em;
   margin-left: 0.8em;
   margin-right: 0.8em;
-  border: 2px solid white;
+  border: 2px solid var(--clr-bg-alt);
 }
 .rightText {
   overflow: hidden;
@@ -728,14 +728,14 @@ i.fas.fa-external-link-alt{
 
 .header {
   height: 4em;
-  max-width: 900px; /*900px;*/
+  max-width: 960px; /*900px;*/
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
 }
 
 main {
-  max-width: 900px; /*900px;*/
+  max-width: 960px; /*900px;*/
   width: 95%;
   margin: 0 auto;
 }
@@ -746,7 +746,7 @@ main {
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
   box-shadow: 0 0 10px var(--shadow);
-  max-width: 900px; /*900px;*/
+  max-width: 960px; /*900px;*/
   margin: 0 auto;
   overflow: auto;
   height: 200px;
@@ -758,7 +758,7 @@ main {
   border-bottom: 2px solid var(--clr-primary);
   background-color: var(--clr-bg);
   line-height: 24px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   color: var(--clr-primary);
   display: block;
@@ -934,7 +934,7 @@ input[name="tab_item"] {
 }
 
 .projects__grid { /*ブログ、論文紹介*/
-  max-width: 900px; /*900px;*/
+  max-width: 960px; /*900px;*/
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
@@ -942,7 +942,7 @@ input[name="tab_item"] {
   max-width: 98%;
 }
 .projects__grid2 { /*プロジェクト;*/
-  max-width: 900px; /*900px;*/
+  max-width: 960px; /*900px;*/
   margin: 0em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
@@ -1027,7 +1027,7 @@ input[name="tab_item"] {
 }
 
 .list2 {
-  max-width: 900px; /*900px;*/
+  max-width: 960px; /*900px;*/
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -1114,7 +1114,7 @@ input[name="tab_item"] {
 
 /* BODYの分割 */
 .container {
-  max-width: 900px;
+  max-width: 960px;
   width: 98%;
   margin: 0 auto; /* これで中央寄せになります */
   display: flex;
@@ -1237,7 +1237,7 @@ input[name="tab_item"] {
     border-bottom: 2px solid var(--clr-primary);
     background-color: var(--clr-bg);
     line-height: 20px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: center;
     color: var(--clr-primary);
     display: block;
@@ -1371,7 +1371,7 @@ input[name="tab_item"] {
     height: 150px;
     overflow: hidden; /* はみ出した部分を隠す */
     margin: 0.2em 0.3em;
-    border: 2px solid var(--clr-fg);
+    /* border: 2px solid var(--clr-fg); */
   }
   .leftImgContainer2 { /* for review */
     float: left;
@@ -1379,7 +1379,7 @@ input[name="tab_item"] {
     height: 150px;
     overflow: hidden; /* はみ出した部分を隠す */
     margin: 0.2em 0.3em;
-    border: 2px solid var(--clr-fg);
+    /* border: 2px solid var(--clr-fg); */
   }
   .rightText {
     overflow: hidden;
