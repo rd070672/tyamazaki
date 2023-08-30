@@ -1139,6 +1139,12 @@ input[name="tab_item"] {
   /* margin: 1em 0.4em; */
 }
 .sidebar {
+  width: 98%;
+  background-color: var(--clr-bg-alt);
+  margin: 0.4em;
+  /* margin: 1em 0.4em; */
+}
+.sidebar {
   width: 25%;
   background-color: var(--clr-bg-alt);
   margin: 0.4em;
@@ -1185,6 +1191,24 @@ input[name="tab_item"] {
   max-width: 100%;
   max-height: 100vh;
 }
+
+.breadcrumb {
+  background-color: var(--clr-bg-alt);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.breadcrumb li {
+  margin-right: 10px;
+}
+
+.breadcrumb li + li:before {
+  content: "<<";
+  margin-right: 10px;
+}
+
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
