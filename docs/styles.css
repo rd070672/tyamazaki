@@ -1381,8 +1381,8 @@ input[name="tab_item"] {
   
   .leftImgContainer { /* for blog */
     float: left;
-    width: 200px;
-    height: 150px;
+    width: 180px;
+    height: 135px;
     overflow: hidden; /* はみ出した部分を隠す */
     margin: 0.2em 0.3em;
     /* border: 2px solid var(--clr-fg); */
