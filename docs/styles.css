@@ -153,9 +153,9 @@ button {
   margin-top: 0.3em;
   line-height: 1.2em; /* 1.4em; */
 }
-/* .bar-left4:hover {
-  opacity: 0.75;
-} */
+.bar-left4:hover {
+  opacity: 0.9;
+}
 
 .under {
   border-bottom: solid 2px var(--clr-primary);
@@ -338,7 +338,7 @@ button {
   border: 2px solid rgb(200, 200, 200);
 }
 /* .img300:hover {
-  opacity: 0.75;
+  opacity: 0.9;
 } */
 .img300v { /* ブログ記事の画像 */
   width: 225px;
@@ -376,9 +376,9 @@ button {
   margin: 0.2em 0.2em;
   border: 2px solid rgb(200, 200, 200);
 }
-/* .leftImgContainer:hover {
+.leftImgContainer:hover {
   opacity: 0.75;
-} */
+}
 .leftImgContainer2 { /* review & projects */
   float: left;
   width: 180px;
@@ -387,9 +387,9 @@ button {
   margin: 0.2em 0.2em;
   border: 2px solid rgb(200, 200, 200);
 }
-/* .leftImgContainer2:hover {
+.leftImgContainer2:hover {
   opacity: 0.75;
-} */
+}
 
 .leftImg2 { /* review */
   width: 100%; /* 親(leftImgContainer2)の幅に合わせる */
@@ -974,9 +974,9 @@ input[name="tab_item"] {
 .section2.project2 {
   position: relative; /* セクション要素を相対位置に設定 */
 }
-.section2.project2:hover {
+/* .section2.project2:hover {
   opacity: 0.9;
-}
+} */
 
 .section1.project2 {
   position: relative;
