@@ -974,6 +974,10 @@ input[name="tab_item"] {
 .section2.project2 {
   position: relative; /* セクション要素を相対位置に設定 */
 }
+.section2.project2:hover {
+  opacity: 0.75;
+}
+
 .section1.project2 {
   position: relative;
 }
