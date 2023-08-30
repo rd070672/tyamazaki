@@ -905,6 +905,9 @@ input[name="tab_item"] {
 .name {
   color: var(--clr-primary);
 }
+.name:hover {
+  opacity: 0.75;
+}
 
 .about__name {
   color: var(--clr-primary);
