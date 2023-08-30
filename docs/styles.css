@@ -189,8 +189,8 @@ button {
   padding-left: 1em;
 }
 .indent2 { /* 本文の題目 */
-  padding-left: 0.3em;
-  padding-bottom: 0.2em;
+  padding: 0.2em 0.3em;
+  /* padding-bottom: 0.2em; */
 }
 
 .description {
