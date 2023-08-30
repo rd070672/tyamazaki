@@ -1193,15 +1193,19 @@ input[name="tab_item"] {
 }
 
 .breadcrumb {
-  background-color: var(--clr-bg-alt);
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   display: flex;
+  background-color: var(--clr-bg-alt);
+  border-radius: 10px; /* 角を丸くする */
 }
 
 .breadcrumb li {
   margin-right: 10px;
+  padding: 5px 10px; /* ここでも余白を追加 */
+  background-color: var(--clr-bg-alt);
+  border-radius: 5px; /* 角を丸くする */
 }
 
 .breadcrumb li + li:before {
