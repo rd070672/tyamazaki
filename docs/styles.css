@@ -185,9 +185,13 @@ button {
   /* 上下、左右 */
 }
 
-.indent {
+.indent { /* 目次 */
   padding-left: 1em;
 }
+.indent2 { /* 本文の題目 */
+  padding-left: 0.5em;
+}
+
 .description {
   font-size: 0.9rem;
   margin: 0.4em 0.8em;
