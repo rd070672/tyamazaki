@@ -1269,6 +1269,7 @@ input[name="tab_item"] {
   .footer {
     padding: 2em;
     margin-top: 3em;
+    font-size: 0.6em;
   }
 
   .scroll-container {
