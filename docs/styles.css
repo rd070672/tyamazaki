@@ -337,7 +337,7 @@ button {
   height: 225px;
   overflow: hidden;
   margin: 0.3em 0.6em;
-  border: 2px solid rgb(200, 200, 200);
+  /* border: 2px solid rgb(200, 200, 200); */
 }
 /* .img300:hover {
   opacity: 0.9;
@@ -347,7 +347,7 @@ button {
   height: 300px;
   overflow: hidden;
   margin: 0.3em 0.6em;
-  border: 2px solid rgb(200, 200, 200);
+  /* border: 2px solid rgb(200, 200, 200); */
 }
 /* .img300v:hover {
   opacity: 0.75;
@@ -357,7 +357,7 @@ button {
   height: 300px;
   overflow: hidden;
   margin: 0.3em 0.6em;
-  border: 2px solid rgb(200, 200, 200);
+  /* border: 2px solid rgb(200, 200, 200); */
 }
 /* .img300c:hover {
   opacity: 0.75;
