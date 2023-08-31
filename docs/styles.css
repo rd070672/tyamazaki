@@ -1153,6 +1153,7 @@ input[name="tab_item"] {
   margin: 0.4em;
   position: sticky;
   top: 0; /* ウィンドウの上端からの距離 */
+  align-self: flex-start;
 }
 
 .chapters {
