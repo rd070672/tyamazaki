@@ -1148,14 +1148,13 @@ input[name="tab_item"] {
   margin: 0.4em;
 } */
 
-.sidebar-wrapper {
-  width: 25%;
-  position: sticky;
-  top: 0;
-}
 .sidebar {
+  width: 25%;
   background-color: var(--clr-bg-alt);
   margin: 0.4em;
+  position: fixed;
+  top: 0; /* ウィンドウの上端からの距離 */
+  right: 0; /* ウィンドウの右端からの距離 */
 }
 
 .chapters {
