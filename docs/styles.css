@@ -1236,7 +1236,7 @@ input[name="tab_item"] {
     left: 0;
     top: 7em;
     background-color: var(--clr-bg-alt);
-    border-radius: 5px; /* 角を丸くする */
+    border-radius: 1px; /* 角を丸くする */
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
@@ -1272,7 +1272,7 @@ input[name="tab_item"] {
     margin-top: 0.2em;
     padding-bottom: 0.2em;
     background-color: var(--clr-bg);
-    border-radius: 5px; /* 角を丸くする */
+    border-radius: 1px; /* 角を丸くする */
     box-shadow: 0 0 5px var(--shadow);
     max-width: 700px;
     margin: 0 auto;
@@ -1285,7 +1285,7 @@ input[name="tab_item"] {
     height: 20px;
     border-bottom: 2px solid var(--clr-primary);
     background-color: var(--clr-bg);
-    border-radius: 5px; /* 角を丸くする */
+    border-radius: 1px; /* 角を丸くする */
     line-height: 20px;
     font-size: 0.9rem;
     text-align: center;
