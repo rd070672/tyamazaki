@@ -4,10 +4,17 @@ const body = document.body
 const btnTheme = document.querySelector('.fa-moon')
 const btnHamburger = document.querySelector('.fa-bars')
 
+// const addThemeClass = (bodyClass, btnClass) => {
+//   body.classList.add(bodyClass)
+//   btnTheme.classList.add(btnClass)
+// }
+
 const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass)
-  btnTheme.classList.add(btnClass)
-}
+	if (bodyClass && btnClass) {
+	  body.classList.add(bodyClass);
+	  btnTheme.classList.add(btnClass);
+	}
+  };  
 
 const getBodyTheme = localStorage.getItem('portfolio-theme')
 const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
