@@ -1220,7 +1220,7 @@ input[name="tab_item"] {
 }
 
 .breadcrumb li + li:before {
-  content: "<<";
+  content: "<";
   margin: 2px 10px;
 }
 
