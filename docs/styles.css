@@ -1129,6 +1129,7 @@ input[name="tab_item"] {
 /* BODYの分割 */
 .container {
   max-width: 960px;
+  min-height: 100vh;  /* 画面の高さに合わせる */
   width: 98%;
   margin: 0 auto; /* これで中央寄せになります */
   display: flex;
