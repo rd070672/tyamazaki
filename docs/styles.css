@@ -1203,15 +1203,15 @@ input[name="tab_item"] {
 }
 
 .breadcrumb li {
-  margin: 2px 10px;
+  /* margin: 2px 10px; */
   /* padding: 2px 5px; */
   background-color: var(--clr-bg-alt);
-  border-radius: 5px; /* 角を丸くする */
+  /* border-radius: 5px; */
 }
 
 .breadcrumb li + li:before {
   content: "<<";
-  margin: 2px 10px;
+  /* margin: 2px 10px; */
 }
 
 
