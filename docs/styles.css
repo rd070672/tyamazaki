@@ -1191,8 +1191,9 @@ input[name="tab_item"] {
   width: 20%;
   background-color: var(--clr-bg-alt);
   margin: 0.4em;
-  position: sticky;
+  position: fixed;
   top: 0; /* ウィンドウの上端からの距離 */
+  right: 0; /* ウィンドウの右端からの距離 */
 }
 
 #pdfIframe {
