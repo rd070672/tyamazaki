@@ -1145,7 +1145,6 @@ input[name="tab_item"] {
 .main-content {
   width: 75%;
   margin: 0.5em;
-  background-color: var(--clr-bg-alt);
   /* margin: 1em 0.4em; */
 }
 
@@ -1180,7 +1179,6 @@ input[name="tab_item"] {
 .main-content2 { 
   width: 80%;
   margin: 0.5em;
-  background-color: var(--clr-bg-alt);
   /* margin: 1em 0.4em; */
 }
 /* .sidebar2 {
