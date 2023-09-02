@@ -1250,14 +1250,14 @@ input[name="tab_item"] {
   margin: 0.2em;
 }
 .image-container img {
-  height: 140px;
+  height: 100%;
   width: auto;
   border: 1px solid var(--clr-fg-alt);
 }
 
 .image-container:hover .overlay {
   opacity: 1;
-  height: 30%;
+  height: 20%;
 }
 
 /* 一般的な本文での画像にキャプションを付ける */
@@ -1268,7 +1268,7 @@ input[name="tab_item"] {
   margin: 0.4em;
 }
 .image-container2 img {
-  height: 300px;
+  height: 100%;
   width: auto;
   border: 1px solid var(--clr-fg-alt);
 }
@@ -1286,6 +1286,7 @@ input[name="tab_item"] {
   height: 0; /* 初期状態では高さを0に */
   display: flex;
   justify-content: space-between;
+  align-items: center; 
   transition: .5s ease;
   opacity: 0;
   padding: 10px;
