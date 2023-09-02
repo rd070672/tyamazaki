@@ -1247,19 +1247,19 @@ input[name="tab_item"] {
 /* 作品集での画像にキャプションと日付を付ける */
 .image-container {
   position: relative;
-  height: 140px;
+  height: 180px;
   width: auto;
   margin: 0.2em;
 }
 .image-container img {
-  height: 140px;
+  height: 180px;
   width: auto;
   border: 1px solid var(--clr-fg-alt);
 }
 
 .image-container:hover .overlay {
   opacity: 1;
-  height: 20%;
+  height: 30%;
 }
 
 /* 一般的な本文での画像にキャプションを付ける */
@@ -1276,7 +1276,7 @@ input[name="tab_item"] {
 }
 .image-container2:hover .overlay {
   opacity: 1;
-  height: 15%;
+  height: 20%;
 }
 
 .overlay {
