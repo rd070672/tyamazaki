@@ -379,6 +379,12 @@ button {
   align-items: center;         /* 子要素（画像）を垂直方向に中央寄せ */
   flex-wrap: wrap;             /* 必要に応じて折り返し */
 }
+.img_align-left {
+  display: flex;
+  justify-content: flex-start;  /* 子要素（画像）を水平方向に左寄せ */
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .leftImgContainer { /* blog */
   float: left;
@@ -1240,7 +1246,7 @@ input[name="tab_item"] {
   position: relative;
   height: 140px;
   width: auto;
-  margin: 0.1em;
+  margin: 0.2em;
 }
 .image-container img {
   height: 140px;
@@ -1265,25 +1271,17 @@ input[name="tab_item"] {
   transition: .5s ease;
   opacity: 0;
   padding: 10px;
-  /* align-items: center; */
 }
-
-/* .imgwk {
-  width: 100%;
-  height: auto;
-} */
 
 .caption, .date_works {
   display: block;
   background: transparent;  /* 背景を透明に */
 }
-
 .caption {
   color: white; /* 黒文字 */
   font-size: 0.7em; /* 0.7emのフォントサイズ */
   font-weight: bold;
 }
-
 .date_works {
   color: rgb(210, 210, 210); /* グレー */
   font-size: 0.6em; /* 0.6emのフォントサイズ */
