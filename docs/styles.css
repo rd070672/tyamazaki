@@ -1254,19 +1254,21 @@ input[name="tab_item"] {
 
 .image-container:hover .overlay {
   opacity: 1;
+  bottom: 0;
 }
 
 .overlay {
   position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  bottom: -33.33%;  /* 初期状態で下に隠れている */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));  /* 下が濃く、上が薄い */
   color: #f1f1f1;
-  font-size: 0.6em;
   width: 100%;
-  transition: .5s ease;
+  height: 33.33%;  /* 画像の下から3分の1の高さ */
+  display: flex;
+  justify-content: space-between;
+  transition: bottom .5s ease, opacity .5s ease;
   opacity: 0;
   padding: 10px;
-  text-align: left;  
 }
 
 /* .imgwk {
@@ -1274,16 +1276,20 @@ input[name="tab_item"] {
   height: auto;
 } */
 
+.caption, .date_works {
+  display: block;
+  background: transparent;  /* 背景を透明に */
+}
+
 .caption {
   color: white; /* 黒文字 */
   font-size: 0.7em; /* 0.7emのフォントサイズ */
-  display: block;
+  font-weight: bold;
 }
 
 .date_works {
   color: gray; /* グレー */
   font-size: 0.6em; /* 0.6emのフォントサイズ */
-  display: block;
 }
 
 /*スマートフォン用にカスタマイズ*/
