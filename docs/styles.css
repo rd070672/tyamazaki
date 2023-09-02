@@ -384,7 +384,7 @@ button {
   justify-content: flex-start;  /* 子要素（画像）を水平方向に左寄せ */
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 1.2em;
+  margin: 0.6em;
 }
 
 .leftImgContainer { /* blog */
@@ -1266,7 +1266,7 @@ input[name="tab_item"] {
   position: relative;
   height: 200px;
   width: auto;
-  margin: 0em;
+  margin: 0.2em 0.4em;
 }
 .image-container2 img {
   height: 200px;
