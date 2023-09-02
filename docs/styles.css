@@ -1484,12 +1484,12 @@ input[name="tab_item"] {
     padding: 0 6px;
     margin: 0.5em 0;
   }
-  /* .chapters2 { 
-    width: 47%;
+  .chapters2 { 
+    width: 96%;
     box-sizing: border-box;
     padding: 0 6px;
     margin: 0.5em 0;
-  } */
+  }
  
   .chapters > li {
     margin-bottom: 1.2rem;  /* 各章の間隔 */
