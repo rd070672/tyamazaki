@@ -1147,6 +1147,16 @@ input[name="tab_item"] {
   font-size: 0.9em;  /* 日付のフォントサイズを調整 */
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
+.date_works {
+  margin: 0.2em; /* 日付とタイトルとの間隔を調整 */
+  font-size: 0.9em;  /* 日付のフォントサイズを調整 */
+  color: var(--clr-fg-alt);       /* 日付の色を調整 */
+}
+.both {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* BODYの分割 */
 .container {
@@ -1259,19 +1269,15 @@ input[name="tab_item"] {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   transition: .5s ease;
-  /* opacity:0; */
-  font-size: 0.8em;
-  padding: 5px;
-  text-align: right;
+  opacity: 0;
+  padding: 10px;
+  align-items: center;
 }
 
-.image-container:hover .overlay {
-  /* opacity: 1; */
-  height: 50%;
-}
-
-.imgtext {
+/* .imgtext {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -1279,6 +1285,14 @@ input[name="tab_item"] {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+} */
+.caption {
+  margin: 0;
+  font-size: 0.9em;
+}
+.image-container:hover .overlay {
+  /* opacity: 1; */
+  height: 50%;
 }
 
 
