@@ -1206,11 +1206,6 @@ input[name="tab_item"] {
   margin: 0.5em;
   /* margin: 1em 0.4em; */
 }
-/* .sidebar2 {
-  width: 20%;
-  background-color: var(--clr-bg-alt);
-  margin: 0.4em;
-} */
 .sidebar2 {
   width: 20%;
   background-color: var(--clr-bg-alt);
@@ -1236,14 +1231,12 @@ input[name="tab_item"] {
   background-color: var(--clr-bg-alt);
   border-radius: 5px; /* 角を丸くする */
 }
-
 .breadcrumb li {
   /* margin: 2px 10px; */
   /* padding: 2px 5px; */
   background-color: var(--clr-bg-alt);
   /* border-radius: 5px; */
 }
-
 .breadcrumb li + li:before {
   content: "<";
   margin: 2px 10px;
