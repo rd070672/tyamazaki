@@ -1288,7 +1288,7 @@ input[name="tab_item"] {
 }
 
 .date_works {
-  color: gray; /* グレー */
+  color: rgb(230, 230, 230); /* グレー */
   font-size: 0.6em; /* 0.6emのフォントサイズ */
 }
 
