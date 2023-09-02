@@ -336,9 +336,9 @@ button {
   height: auto;
 }
 
-.imgwk {
-  width: 100%;
-  height: auto;
+.img-100 {
+  width: auto;
+  height: 100%;
 }
 .img-h140 {
   width: auto;
