@@ -376,6 +376,13 @@ button {
   flex-wrap: wrap;             /* 必要に応じて折り返し */
 }
 
+.img_align2 {
+  display: flex;                /* 横並び */
+  justify-content: left;     /* 子要素（画像）を水平方向に中央寄せ */
+  align-items: center;         /* 子要素（画像）を垂直方向に中央寄せ */
+  flex-wrap: wrap;             /* 必要に応じて折り返し */
+}
+
 .leftImgContainer { /* blog */
   float: left;
   width: 280px;
