@@ -1580,12 +1580,12 @@ input[name="tab_item"] {
 /* 一般的な本文での画像にキャプションを付ける */
 .image-container2 {
   position: relative;
-  height: 120px;
+  height: 100px;
   width: auto;
   margin: 0.1em 0.2em;
 }
 .image-container2 img {
-  height: 120px;
+  height: 100px;
   width: auto;
   border: 0.5px solid var(--clr-fg-alt);
 }
