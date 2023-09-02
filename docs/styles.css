@@ -1283,7 +1283,7 @@ input[name="tab_item"] {
 }
 .image-container2:hover .overlay {
   opacity: 1;
-  height: 150%;
+  height: 15%;
 }
 
 .overlay {
