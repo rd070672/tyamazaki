@@ -1269,14 +1269,22 @@ input[name="tab_item"] {
   text-align: left;  
 }
 
-.imgwk {
+/* .imgwk {
   width: 100%;
   height: auto;
-}
-.caption, .date_works {
-  display: block;               /* 各要素をブロックレベル要素として表示 */
+} */
+
+.caption {
+  color: white; /* 黒文字 */
+  font-size: 0.7em; /* 0.7emのフォントサイズ */
+  display: block;
 }
 
+.date_works {
+  color: gray; /* グレー */
+  font-size: 0.6em; /* 0.6emのフォントサイズ */
+  display: block;
+}
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
