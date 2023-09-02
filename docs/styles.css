@@ -1261,19 +1261,21 @@ input[name="tab_item"] {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
+  font-size: 0.6em;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   transition: .5s ease;
   opacity: 0;
   padding: 10px;
+  text-align: left;  
 }
 
 .imgwk {
   width: 100%;
   height: auto;
 }
-
+.caption, .date_works {
+  display: block;               /* 各要素をブロックレベル要素として表示 */
+}
 
 
 /*スマートフォン用にカスタマイズ*/
