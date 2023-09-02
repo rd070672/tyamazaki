@@ -374,17 +374,18 @@ button {
 }
 
 .img_align2 {
-  display: flex;                /* 横並び */
-  justify-content: left;     /* 子要素（画像）を水平方向に中央寄せ */
-  align-items: center;         /* 子要素（画像）を垂直方向に中央寄せ */
-  flex-wrap: wrap;             /* 必要に応じて折り返し */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .img_align-left { /* works and profile */
   display: flex;
   justify-content: flex-start;  /* 子要素（画像）を水平方向に左寄せ */
   align-items: center;
   flex-wrap: wrap;
-  margin: 0.6em;
+  margin: 0.5em; 
+  margin-bottom: 0.8em;
 }
 
 .leftImgContainer { /* blog */
