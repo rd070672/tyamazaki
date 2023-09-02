@@ -1149,7 +1149,6 @@ input[name="tab_item"] {
 .date_works {
   margin: 0.2em; /* 日付とタイトルとの間隔を調整 */
   font-size: 0.9em;  /* 日付のフォントサイズを調整 */
-  color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
 .both {
   display: flex;
@@ -1244,9 +1243,8 @@ input[name="tab_item"] {
 
 .image-container {
   position: relative;
-  width: 150px;
-  height: 100px;
-  margin: 0.3em 0.6em;
+  width: 200px;
+  height: 150px;
 }
 
 .image-container img {
@@ -1256,11 +1254,6 @@ input[name="tab_item"] {
 
 .image-container:hover .overlay {
   opacity: 1;
-}
-
-.caption, .date_works {
-  margin: 0;
-  font-size: 0.9em;
 }
 
 .overlay {
@@ -1280,6 +1273,7 @@ input[name="tab_item"] {
   width: 100%;
   height: auto;
 }
+
 
 
 /*スマートフォン用にカスタマイズ*/
