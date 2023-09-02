@@ -1538,22 +1538,43 @@ input[name="tab_item"] {
     text-align: left;
   }
 
+  .caption {
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    display: block;
+    background: transparent;
+  }
+  .caption2 {
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    display: block;
+    background: transparent;
+  }
+  .date_works {
+    color: rgb(210, 210, 210); /* グレー */
+    font-size: 0.5em; /* 0.6emのフォントサイズ */
+    display: block;
+    background: transparent;
+  }
+
   /* 作品集での画像にキャプションと日付を付ける */
 .image-container {
   position: relative;
   height: 120px;
   width: auto;
-  margin: 0.2em;
+  margin: 0.1em;
 }
 .image-container img {
   height: 120px;
   width: auto;
-  border: 1px solid var(--clr-fg-alt);
+  border: 0.5px solid var(--clr-fg-alt);
 }
 
 .image-container:hover .overlay {
   opacity: 1;
-  height: 20%;
+  height: 30%;
 }
 
 /* 一般的な本文での画像にキャプションを付ける */
@@ -1561,15 +1582,15 @@ input[name="tab_item"] {
   position: relative;
   height: 120px;
   width: auto;
-  margin: 0.2em 0.4em;
+  margin: 0.1em 0.2em;
 }
 .image-container2 img {
   height: 120px;
   width: auto;
-  border: 1px solid var(--clr-fg-alt);
+  border: 0.5px solid var(--clr-fg-alt);
 }
 .image-container2:hover .overlay {
   opacity: 1;
-  height: 15%;
+  height: 30%;
 }
 }
