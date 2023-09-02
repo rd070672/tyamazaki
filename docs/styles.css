@@ -340,16 +340,17 @@ button {
   width: 100%;
   height: auto;
 }
-
+.img-h140 {
+  width: auto;
+  height: 140px;
+  border: 1px solid var(--clr-fg-alt);
+}
 .img300 { /* ブログ記事の画像 */
   width: 300px;
   height: 225px;
   overflow: hidden;
   margin: 0.3em 0.6em;
 }
-/* .img300:hover {
-  opacity: 0.9;
-} */
 .img300v { /* ブログ記事の画像 */
   width: 225px;
   height: 300px;
@@ -357,9 +358,6 @@ button {
   margin: 0.3em 0.6em;
   /* border: 2px solid rgb(200, 200, 200); */
 }
-/* .img300v:hover {
-  opacity: 0.75;
-} */
 .img300c { /* ブログ記事の画像 */
   width: 300px;
   height: 300px;
@@ -367,9 +365,6 @@ button {
   margin: 0.3em 0.6em;
   /* border: 2px solid rgb(200, 200, 200); */
 }
-/* .img300c:hover {
-  opacity: 0.75;
-} */
 
 .img_align {
   display: flex;                /* 横並び */
@@ -1243,14 +1238,14 @@ input[name="tab_item"] {
 
 .image-container {
   position: relative;
-  height: 150px;
+  height: 140px;
   width: auto;
-  margin: 0.3em;
+  margin: 0.1em;
 }
 .image-container img {
-  height: 150px;  /* 高さを150pxに設定 */
-  width: auto;  /* 横幅を自動に設定 */
-  border: 1px solid var(--clr-fg-alt);  /* ボーダーをグレーに設定 */
+  height: 140px;
+  width: auto;
+  border: 1px solid var(--clr-fg-alt);
 }
 
 .image-container:hover .overlay {
@@ -1290,7 +1285,7 @@ input[name="tab_item"] {
 }
 
 .date_works {
-  color: rgb(230, 230, 230); /* グレー */
+  color: rgb(210, 210, 210); /* グレー */
   font-size: 0.6em; /* 0.6emのフォントサイズ */
 }
 
