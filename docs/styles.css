@@ -1327,13 +1327,10 @@ input[name="tab_item"] {
   --clr-fg-alt: #f5f5f5;
 }
 /* pythonの埋め込み */
-.python {
-  font-size: 0.8em;
-}
-.hljs.language-python,
-.language-python .hljs {
+.custom-bg {
   max-height: 400px;
   overflow-y: auto;
+  font-size: 0.8em;
   background-color: var(--clr-fg-alt);
 }
 
