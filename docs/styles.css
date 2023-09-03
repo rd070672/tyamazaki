@@ -1321,6 +1321,9 @@ input[name="tab_item"] {
   display: block;
   background: transparent;
 }
+.python {
+  font-size: 0.8em;
+}
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
