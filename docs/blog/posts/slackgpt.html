@@ -29,6 +29,10 @@
         $("#sidebar").load("../sidebar.html");
       });
     </script>
+    <!-- highlight.js のCSSとJavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <!-- body -->
   <body class="light" id="top">
@@ -62,7 +66,7 @@
 
     <div class="about4 center">
       <h5>オブザーブ：材料物理研究者の視点</h5><br>
-      <h1>ChatGPT要約botで論文さく読み</h1>
+      <h1>ChatGPTでNature論文を要約し、Slackに自動投稿する</h1>
     </div>
     <div class="container">
       <!-- Sidebar -->
@@ -70,17 +74,11 @@
       
       <!-- Main contents -->
       <main class="main-content">
-        <!-- <nav aria-label="breadcrumb">
-          <ul class="breadcrumb">
-            <li><a href="../../" class="link2 link2--nav2">Home</a></li>
-            <li><a href="../../blog" class="link2 link2--nav2">Blog</a></li>
-            <li>ChatGPT要約botで論文さく読み</li>
-          </ul>
-        </nav> -->
+        
         <div>
           <span class="date_blog">
             <i aria-hidden="true" class="far fa-clock"></i> 2023-08-21　
-            <i aria-hidden="true" class="far fa-edit"></i> 2023-09-02
+            <i aria-hidden="true" class="far fa-edit"></i> 2023-09-03
           </span>
         </div>
 
@@ -88,11 +86,12 @@
           <h1 class="text-with-border">　</h1>
         </div><br>
         
-        <!-- 概要 -->
         <section>
           <!-- <h4 class="under">概要</h4> -->
-          <div class="description2">
-            　Slackのチャンネルを作成し、そこにChatGPTで翻訳・要約したARXIV論文を自動で送り続けることで、研究者の情報収集を効率化することができる。論文要約だけでなく、キーワード解説、この論文に記載のない発展課題まで説明してくれるプロンプトです。ArxivからでもNature論文からでもAPIで引っ張ってこればslackで解説させられます。元ネタはズシさん(@mechazushi)の<a href="https://zenn.dev/ozushi/articles/ebe3f47bf50a86">こちら</a>のエントリーです。感謝です。
+          <div id="1" class="description2">
+            　いつの時代も研究者は「情報過多」と呼ばれる問題に直面している。ArXivのようなプレプリント誌を含めると、毎日数十数百もの論文が投稿され、それらの新しい先端研究に追いつくための情報収集は、しばしば重荷となり得る。重荷どころか絶叫したいくらいに不安な気持ちだ。「情報過多」は、研究者の生産性や創造性を低下させ、ストレスや不安を引き起こす可能性があるNature誌も引用している。このような情報収集による疲弊が現代研究者の一番の悩みであることは間違いない。<br>
+            　この問題に対する解決策として、各種プラットフォームがAI活用の下で連携した自動選定・自動要約システムが注目されている。以前ズシさんらが報告したエントリーでは、ArXivからの論文情報とアブストを取得し、決まった時間にその要約内容をSlackへ送信する方法を示してくれた。これらのシステムは、研究者が情報を効率的に消化できるようになることからも、研究者の負担の大幅な軽減に貢献すると思われる。<br>
+            　このポストでは、これらの自動投稿システムのワークフローを私なりにまとめ直した点と、Slackだけでなく、Springer Natureからの論文取得とAPI連携について紹介したいと思う。Springer Natureからの要約は自身で試行錯誤して修正・構築した。具体的なコードを修正しつつも大方は、ズシさん(@mechazushi)の<a href="https://zenn.dev/ozushi/articles/ebe3f47bf50a86">こちらのエントリー</a>を参考にした。このような論文選定・要約の自動化は、研究者にとって貴重なリソース節約に大きく貢献するくらいの価値があるだろうと思う。ぜひ皆さんも試してみてほしい。
           </div>
         </section><br>
 
@@ -101,51 +100,94 @@
           <h4 class="under3">目次</h4>
           <ol class="indent">
             <li class="description22"><a href="#1">はじめに</a></li>
-            <li class="description22"><a href="#2">設定方法の流れ</a></li>
-            <li class="description22"><a href="#3">具体的な実装方法</a></li>
-            <li class="description22"><a href="#4">どんなことができるようになるか</a></li>
-            <li class="description22"><a href="#5">利点と限界</a></li>
-            <li class="description22 under3"><a href="#6">まとめ</a></li>
+            <li class="description22"><a href="#2">自動投稿システムのワークフロー</a></li>
+            <li class="description22"><a href="#3">Google Cloud Platformでの環境設定</a></li>
+            <li class="description22"><a href="#4">Pythonコードの設定</a></li>
+            <li class="description22"><a href="#5">自動要約botの使い方</a></li>
+            <li class="description22"><a href="#6">おわりに</a></li>
           </ol>
         </section><br><br>
 
         <section>
-          <!-- はじめに -->
-          <div id="1"><h4>1. はじめに</h4>
+          <div id="2"><h4>2. 自動投稿システムのワークフロー</h4>
             <div class="description2">
-            　
+              　論文要約の自動化システムの実装には2つステップがある。APIの取得、Google Cloud Platformの環境構築である。最初に、Slack、OpenAI、arXiv、およびSpringer NatureのAPIキーを取得する。SlackのAPIはチャットツールとして機能し、論文の要約を送る専用のチャンネルを作成する。OpenAIのAPIはAIモデルChatGPTの利用を可能にする。arXivとSpringer NatureのAPIは科学論文のデータベースへのアクセスを提供する。Springer Natureの取得方法に関しては、Springer Keyのページでサインアップが必要になり、少々手間がかかるかもしれない。他のAPIに関しては特に難しくないので、他のブログや各種ホームページを参考にしてほしい。<br>
+              次に、Google Cloud Platform（GCP）で自動投稿システムを構築するために、Cloud Functionsを設定する。これにより、異なるAPIをミスなく連携させることができる。Cloud Functionsはサーバーレスの実行環境であり、APIの相互作用やデータ処理を自動化する。また、Pythonスクリプトとしてmain.pyコードを作成・編集する必要がある。3章に実例を記載するのでそれを参考にしてほしい。各APIと連携する仕組みと実際に取得したいプロンプトを所望の目的に合わせて実装するだけである。これらのプラットフォームを組み合わせることで、ChatGPTベースの論文要約システムが構築される。<br>
+              このシステムの利点は数多く存在する。第一に、論文要約が自動で送信されるため、研究者の選択の手間が省かれる。第二に、要約は短くてわかりやすいため、研究者は理解の時間を節約できる。第三に、このシステムは研究の背景や関連性を迅速に把握する手段として有用である。また、Slackを用いることで、研究者同士のコミュニケーションも促進されることも期待される。一方で、このシステムには生成AIの黎明期であるが故の欠点もある。要約はAIによって生成されるため、必ずしも100%信頼できるわけではない。しかし、このあたりは時間が解決してくれると思っている。また、論文精読するためには、本文や図表の理解が必須であるため、要約だけで完全な理解をするのは難しい。
             </div>
           </div><br>
-          
-          <!-- 渡航までの道のり -->
-          <div id="2"><h4>2. 渡航までの道のり</h4>
+          <div id="3"><h4>3. Google Cloud Platformでの環境設定</h4>
             <div class="description2">
-              　
-            </div>
-          </div><br>
-
-          <!-- メリーランド大学での研究生活 -->
-          <div id="3"><h4>3. メリーランド大学での研究生活</h4>
-            <div class="description2">
-              　
-              </p><p class="img_align">
+              　ここでは、Google Cloud Platform（GCP）について述べたい。GCPの使い方に関しては以下のとおりである。<br>
+              1. GCPアカウントを作成する：Google Cloud Platformにアクセスして、アカウントを作成する。<br>
+              2. プロジェクトを作成する：GCPコンソールにログインし、新しいプロジェクトを作成する。<br>
+              3. Cloud Functions APIを有効化する：ナビゲーションメニューから「API & Services」へ移動し、Cloud Functions APIを有効化する。<br>
+              4. 課金設定を行う：課金設定を完了し、必要な支払い情報を登録する。<br>
+              5. Cloud Functionsへ移動する：ナビゲーションメニューから「Cloud Functions」を選択する。<br>
+              6. 新しい関数を作成する：「Create Function」ボタンをクリックして新しい関数を作成する。<br>
+              7. 関数設定を行う：関数名、メモリ割り当て、トリガー設定など、必要な設定を行う。<br>
+              8. コードをアップロードする：ローカルマシンからソースコードをアップロードするか、GCP内のリポジトリからソースコードを選択する。<br>
+              9. 関数をデプロイする：すべての設定が完了したら、「Deploy」ボタンをクリックして関数をデプロイする。<br>
+              10. 関数をテストする：関数がデプロイされたら、GCPコンソールのテスト機能を使用して動作を確認する。<br>
+              
+              　必要に応じて、環境変数の設定、ネットワーク設定、タイムアウト設定など、より詳細なオプションを調整することが可能である。
+              <!-- </p><p class="img_align">
                 <img src="../img/usa-1.png" class="img300">
                 <img src="../img/usa-2.png" class="img300">
-              </p>
+              </p> -->
             </div>
-          </div><br><br>
-
-          <!-- メリーランドでの生活 -->
-          <div id="4"><h4 class="bar-left2">4. メリーランドでの生活</h4>
+          </div><br>
+          <div id="4"><h4 class="bar-left2">4. Pythonコードの設定</h4>
             <div class="description2">
-              　
+              　Pythonスクリプトについて、具体的なmain.pyの一例を以下に示す。ここでは、Springer Natureから論文情報を取得するコードと、Arxivから論文情報を取得するためのコードを参考に見てほしい。Cloud Functionsはサーバーレスの実行環境であり、基本的なPythonコードがそのまま動くため、環境構築が短時間で完了する。さらに、Cloud Schedulerを用いて定期的な作業を自動化することができる。これにより、特定の時間にSlackに論文の要約を投稿するなどの予約投稿が可能になる。
+            </div>
+            <section>     
+              <h4 class="bar-left2">arXive用のmain.py</h4>
+              <pre><code class="python">
+                import os
+                from slack_sdk import WebClient
+                from slack_sdk.errors import SlackApiError
+                import arxiv
+                import openai
+                import random
+                </code></pre>
+              
+              <h4 class="bar-left2">Springer Nature用のmain.py</h4>
+              <pre><code class="python">
+                import os
+                from slack_sdk import WebClient
+                from slack_sdk.errors import SlackApiError
+                import arxiv
+                import openai
+                import random
+                </code></pre>
+            </section><br>
+            <div class="img_align-left">
+              <div class="image-container2">
+                <img src="../img/slackgpt-a.png" class="img-100" alt="Output-for-arxiv">
+                <div class="overlay"><div class="caption2">Output for arxiv</div></div>
+              </div>
+              <div class="image-container2">
+                <img src="../img/slackgpt-n.png" class="img-100" alt="Output-for-Springer-Nature">
+                <div class="overlay"><div class="caption2">Output for Springer Nature</div></div>
+              </div>
+            </div>
+            <div class="description2">
+              　GCPの利点は、サーバーのメンテナンスやスケーリングを気にする必要がない点である。Compute Engineを使用する場合、これらの要素も手動で管理する必要が出てくる。しかしCloud Functionsは自動でスケーリングし、リクエストに応じてリソースを割り当てる。このため、初めてクラウド環境を使う人でも手軽に始められる。ただし、Cloud Functionsは短時間の処理に適しているため、長時間にわたる処理を必要とする場合はCompute Engineの方が適している可能性がある。この辺のトレードオフは、利用目的に応じて検討するべきだ。Cloud Schedulerについても触れておくと、これは単なるタイマーではなく、HTTPリクエストやPub/Subメッセージなどもスケジュールできる強力なツールである。例えば、毎朝9時に論文の新着情報をSlackに送るよう設定可能で、これにより研究者は新しい知識を日々効率よく取り入れられる。
             </div>
           </div><br>
 
-          <!-- おわりに -->
-          <div id="5"><h4 class="bar-left2">5. おわりに</h4>
+          <div id="5"><h4 class="bar-left2">5. 自動要約botの使い方</h4>
             <div class="description2">
-              　
+              　一度GCPでのトリガーが正確に動作すると、Slackでの通知は選択したチャンネルや定時で届く。通知は論文のタイトル、その要約、そして関連するキーワードと共に送られる。これにより、ユーザーはリアルタイムで最新の研究を追跡できる。要約メッセージ内に設置したキーワード解説も非常に有用である。特に、新しい研究領域に挑戦するケースや複数の分野にまたがる研究を行っている人にとって大事である。例えば、物性物理の研究者が突然「データサイエンス」に興味を持った場合、要約やキーワード解説で速やかに基本概念を掴むことができる。更に、今後の展望や関連研究の表示等を表示することで、その分野への理解も深化させることができる。このような特長により、このSlackベースのシステムは、情報過多の時代において、効率的かつ直感的に最新の研究にアクセスできる方法を提供する。つまり、このシステムはただの情報通知ツール以上の価値がある。<br>
+              　このシステムの最大の利点は時間の節約にある。手動で論文を探し、読んで要約するプロセスが自動化されることで、研究者は他の重要な作業に集中できる。具体的には、週に5本の論文を読むと仮定して、各論文に平均3時間かかる場合、週に15時間もの時間を節約できる。この時間は新しい研究に投資できる貴重なリソースとなる。さらに、キーワード解説機能によって研究の幅も広がる。特定の分野に狭く固執することなく、多様なテーマに対する洞察も可能になり、研究者特有の視野の狭さ問題も緩和される。<br>
+              　一方で、このシステムも完璧ではない。自動生成される要約は、研究の複雑性や新規性によっては不完全または誤解を招く場合がある。特に数式や専門的な実験手法が多用された論文に対しては、自動要約の品質が低下する可能性がある。さらに、APIの使用料やSlackの通知制限も考慮すべき課題だ。ただし、現状毎日3本送るように設定しており、100本弱の要約生成に先月は36円という破格である。個人利用では全く問題がないといえる。途中から学習モデルをGPT-3.5-turboからGPT-4に変更したが、金額はほとんど同じであった。もちろん、大規模な研究チームでの利用や大量のデータ取得には、予想以上のコストがかかる可能性もある。私も設定をいじりすぎたために、2000円程度まで到達した月もあった。また、APIの利用には規約があり、それに違反すると問題が発生する可能性があるという注意が必要である。<br>
+              　このように総合的に見れば、このシステムは時間とリソースを効率的に使う強力なツールであるが、その制限とコストも理解して活用する必要がある。特に研究の深掘りが必要な場合や、コスト面での制約がある場合は、システムの活用方法を工夫するか、補完的な手段を考慮する必要がある。
+            </div>
+          </div><br>
+          <div id="6"><h4 class="bar-left2">6. おわりに</h4>
+            <div class="description2">
+              　AIと自然言語処理技術は進化しており、ChatGPTを用いた多方面での応用が可能となっている。本システムも今後、データベース連携や多言語対応を進め、研究者の多様なニーズに応える方向に進化することが期待される。特に、物性物理や材料科学のような専門領域では、新しい材料や性質の探索が重要な研究課題であり、このシステムの応用はそのような領域でも高い潜在能力を持っている。本ブログで紹介したようなシステムの更なる発展と適用は、情報過多という課題に対処し、高効率な論文選別や研究提案を実現する手段として、今後ますます重要になると考えられる。
             </div>
           </div>
         </section><br><br>
@@ -153,8 +195,11 @@
         <section>     
           <h4 class="under3">参考リンク</h4>
           <ol class="indent">
-            <li><a href="https://mse.umd.edu/">メリーランド大学材料工学部</a></li>
-            <li><a href="https://platform.openai.com/account/api-keys">OpenAI APIs</a></li>
+            <li>ズシさん(@mechazushi)のエントリー：<a href="https://zenn.dev/ozushi/articles/ebe3f47bf50a86">https://zenn.dev/ozushi/articles/ebe3f47bf50a86</a></li>
+            <li>Slack api:<a href="https://api.slack.com/apps">https://api.slack.com/apps</a></li>
+            <li>OpenAI APIs:<a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></li>
+            <li>Springer Nature API portal:<a href="https://dev.springernature.com/">https://dev.springernature.com/</a></li>
+            <li>OpenAI APIs:<a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></li>
           </ol>
         </section><br><br>
 
