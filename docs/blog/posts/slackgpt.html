@@ -142,8 +142,8 @@
             <div class="description2">
               　Pythonスクリプトについて、具体的なmain.pyの一例を以下に示す。ここでは、Springer Natureから論文情報を取得するコードと、Arxivから論文情報を取得するためのコードを参考に見てほしい。Cloud Functionsはサーバーレスの実行環境であり、基本的なPythonコードがそのまま動くため、環境構築が短時間で完了する。さらに、Cloud Schedulerを用いて定期的な作業を自動化することができる。これにより、特定の時間にSlackに論文の要約を投稿するなどの予約投稿が可能になる。
             </div>
-            <section>     
-              <h4 class="under3">arXive用のmain.py</h4>
+            <section><br>
+              <h4 class="under3">arXive用のmain.py</h4><br>
               <pre><code class="python">
                 import os
                 from slack_sdk import WebClient
@@ -226,9 +226,9 @@
                         except SlackApiError as e:
                             print(f"Error posting message: {e}")
 
-              </code></pre>
+              </code></pre><br><br>
               
-              <h4 class="under3">Springer Nature用のmain.py</h4>
+              <h4 class="under3">Springer Nature用のmain.py</h4><br>
               <pre><code class="python">
                 import os
                 import json
