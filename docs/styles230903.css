@@ -1582,7 +1582,7 @@ input[name="tab_item"] {
     background: transparent;
   }
 
-  /* 作品集（works）での画像にキャプションと日付を付ける */
+  /* 作品集での画像にキャプションと日付を付ける */
 .image-container {
   position: relative;
   height: 120px;
@@ -1600,15 +1600,15 @@ input[name="tab_item"] {
   height: 30%;
 }
 
-/* 一般的な本文(Profileなど)での画像にキャプションを付ける */
+/* 一般的な本文での画像にキャプションを付ける */
 .image-container2 {
   position: relative;
-  height: 120px;
+  height: 100px;
   width: auto;
   margin: 0.1em 0.2em;
 }
 .image-container2 img {
-  height: 120px;
+  height: 100px;
   width: auto;
   border: 0.5px solid var(--clr-fg-alt);
 }
