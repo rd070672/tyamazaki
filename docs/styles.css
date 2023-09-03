@@ -1331,7 +1331,7 @@ input[name="tab_item"] {
   max-height: 400px;
   overflow-y: auto;
   font-size: 0.8em;
-  background-color: var(--clr-fg-alt);
+  background-color: var(--clr-bg-alt);
 }
 
 
@@ -1582,12 +1582,12 @@ input[name="tab_item"] {
   /* 作品集（works）での画像にキャプションと日付を付ける */
 .image-container {
   position: relative;
-  height: 120px;
+  height: 150px;
   width: auto;
   margin: 0.1em;
 }
 .image-container img {
-  height: 120px;
+  height: 150px;
   width: auto;
   border: 0.5px solid var(--clr-fg-alt);
 }
@@ -1600,12 +1600,12 @@ input[name="tab_item"] {
 /* 一般的な本文(Profileなど)での画像にキャプションを付ける */
 .image-container2 {
   position: relative;
-  height: 120px;
+  height: 150px;
   width: auto;
   margin: 0.1em 0.2em;
 }
 .image-container2 img {
-  height: 120px;
+  height: 150px;
   width: auto;
   border: 0.5px solid var(--clr-fg-alt);
 }
