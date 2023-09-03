@@ -1329,7 +1329,8 @@ input[name="tab_item"] {
 .hljs.language-python,
 .language-python .hljs {
   max-height: 400px;
-  overflow-y: auto; 
+  overflow-y: auto;
+  background-color: var(--clr-fg-alt)
 }
 
 /*スマートフォン用にカスタマイズ*/
