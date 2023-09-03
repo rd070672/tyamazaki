@@ -1324,6 +1324,11 @@ input[name="tab_item"] {
 .python {
   font-size: 0.8em;
 }
+.hljs.language-python,
+.language-python .hljs {
+  max-height: 400px;  /* お好きな高さに変更してください */
+  overflow-y: auto;  /* 垂直方向にスクロール可能に設定 */
+}
 
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
