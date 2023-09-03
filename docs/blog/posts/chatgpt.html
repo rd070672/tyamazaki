@@ -74,17 +74,24 @@
           <ul class="breadcrumb">
             <li><a href="../../" class="link2 link2--nav2">Home</a></li>
             <li><a href="../../blog" class="link2 link2--nav2">Blog</a></li>
-            <li>Septemper</li>
+            <li>September</li>
           </ul>
         </nav>
 
+        <div>
+          <span class="date_blog">
+            <i aria-hidden="true" class="far fa-clock"></i> 2023-08-21　
+            <i aria-hidden="true" class="far fa-edit"></i> 2023-09-02
+          </span>
+        </div>
+
         <div class="about1 center" style="background-image: url('../img/chatgpt.png'); background-repeat: no-repeat; background-position: center; background-size: cover;">
-          <h1 class="text-with-border">私のCHATGPTの使い方</h1>
+          <h1 class="text-with-border">　</h1>
         </div><br>
         
         <section>
-          <div id="1"><h4>1. はじめに</h4>
-            <div class="description2">
+          <!-- <div id="1"><h4>1. はじめに</h4> -->
+            <div id="1" class="description2">
               　AIの進化は、少なくとも私の生活に革命を起こしている。ChatGPT 3.0が2022年12月にリリースされてから半年が過ぎ、GPT-4、遂には大企業向けChatGPTエンタープライズも登場した。このブログでは、研究者である私がどのようにChatGPTを使っているかを紹介したいと思う。サービス開始の初期からの課金ユーザーであり、ブラウザのウインドウには常にGPTが待機している状態である。私の用途としては、主にプログラミングと論文要約である。特に、プログラミングにはChatGPTのプラグイン機能を、論文要約にはブラウザのbing-Chatを利用している。特に、私がどんな作業にGPTを利用しているのか、具体的にどんなプロンプトを入力しているのかなど、私のGPTの活用方法をここに記しておきたいと思う。基本的に私のブログは私のための議事録のようなものなので、読んでいて不親切で不便で不快な場面もあるかもしれないが、ご了承していただきたい。
             </div>
           </div>
@@ -122,7 +129,7 @@
 
           <div id="4"><h4 class="bar-left2">4. GPTとの共同作業</h4>
             <div class="description2">
-              　具体的には、HTMLによるホームページ作成、PythonやC++を用いた数値シミュレーション、Linuxのシステム環境構築などを目的に日々GPTと向き合っている。このブログ自体もGithub Pagesを使って立ち上げたが、今では完全に独自のものと化している。静的なページ作成の限界をGPTのお陰で破ったといっても過言ではない。一か月ほど触り続けた結果、自分自身でも驚くほどに成長した。<br>
+              　プログラミングにおいても、GPTの力を借りることで新たな地平が広がる。具体的には、HTMLによるホームページ作成、PythonやC++を用いた数値シミュレーション、Linuxのシステム環境構築などを目的に日々GPTと向き合っている。このブログ自体もGithub Pagesを使って立ち上げたが、今では完全に独自のものと化している。静的なページ作成の限界をGPTのお陰で破ったといっても過言ではない。一か月ほど触り続けた結果、自分自身でも驚くほどに成長した。<br>
               　数学的な計算やアルゴリズムについても、GPTは頼りになる相棒だ。物性物理や材料工学などの分野で数式やモデルをGPTに投げつければ、見事に数値やグラフを吐き出してくれる。また、逆に数値やグラフから数式やモデルを推定することもできる。これにより、コーディングの学習やデバッグが効率的になります。このあたりのモデル構築などは、指示する側のドメイン知識が必要になるが、今後ある程度はこのあたりもテンプレート化していくことが予想される。<br>
               　プログラミングのコードについてもGPTは見事に解釈してくれる。PythonやRのコードを解析したり、新たに生成したり。まさにコーディングのプロフェッショナルトレーナーのような存在だ。例として、Pythonでガウス分布を用いてナノ粒子の分布モデルを生成した経験がある。これは本当に教科書を開く暇もなく、GPTと一緒に手を動かして実現した。また、Linux環境の整備についても、GPTと何度も質問攻めにして、DFT計算などの商用ソフトウェア環境を整えた。これはもう、GPTがいなければ手が出せなかったレベルの難易度だ。特にプロンプトを用いる必要はなく、細かい疑問点をその都度解決している。<br>
               　このように、GPTを通じて多くのスキルを身に着け、研究や開発の質を飛躍的に向上させた。最初はただの実験マンだった自分が、今や計算も機械学習も手がけるマルチな研究者に成長した。これほどまでに技術の進化が楽しいと感じたのは、GPTがあったからこそだ。
@@ -131,23 +138,23 @@
 
           <div id="5"><h4 class="bar-left2">5. 論文要約と論文整理の仕方</h4>
             <div class="description2">
-              　論文を読むとき、私がよく使うのはbing-chatである。このMicrosoft のbing-chatはブラウザに埋め込まれており、ウェブ情報のリアルタイム取得が可能であるからである。この生成AIはPDF読み込みやウェブページにもデフォルトで対応していて、論文要約や背景調査によく利用する。論文読みの一番の課題は、その研究の手法や成果を一時的にその論文に記載していることのみの情報となってしまうことである。そこで、bing-chatを用いることで、リアルタイルのウェブ上の情報と論文内の情報を組み合わせて回答しているため、比較的中立的で批判的な論文読みを行うことができる。具体的には、論文を開いて「この論文の要点は？」と聞くと、要約から研究方法、結果、考察までざっくりと教えてくれる。また、「この論文で使われている○○って何？」と質問すると、その用語の定義や、関連するウェブサイト、論文も教えてくれる。bing-chatは一瞬でこれらを行ってくれるし、その回答の精度もGPT-4と変わらない、むしろ良いものが多い。<br>
-              　話をGPT-4に戻すと、最新情報をリアルタイムで取得する機能もあるけど、逐次検索方式なので時間がかかる。それに、普通のモードでは2021年秋までの情報しかないため、論文調査に向いていない点も現行のChatGPTの課題であるといえる。Bing-chatはそれを比較的一瞬で実施してくれるだけでなく、その精度もchantGPTに何ら見劣りすることなく、むしろいい回答をくれることがしばしばである。
+              　論文を読むとき、私がよく使うのはbing-chatである。下の画像に示す右上の青色のbのボタンを押すとbing-chatが起動する。このMicrosoft のbing-chatはブラウザに埋め込まれており、ウェブ情報のリアルタイム取得が可能であるからである。この生成AIはPDF読み込みやウェブページにもデフォルトで対応していて、論文要約や背景調査によく利用する。論文読みの一番の課題は、その研究の手法や成果を一時的にその論文に記載していることのみの情報となってしまうことである。そこで、bing-chatを用いることで、リアルタイルのウェブ上の情報と論文内の情報を組み合わせて回答しているため、比較的中立的で批判的な論文読みを行うことができる。具体的には、論文を開いて「この論文の要点は？」と聞くと、要約から研究方法、結果、考察までざっくりと教えてくれる。また、「この論文で使われている○○って何？」と質問すると、その用語の定義や、関連するウェブサイト、論文も教えてくれる。bing-chatは一瞬でこれらを行ってくれるし、その回答の精度もGPT-4と変わらない、むしろ良いものが多い。
               <div class="img_align-left"><div class="image-container2">
                 <img src="../img/bing.png" class="img-100">
                 <div class="overlay"><div class="caption2">bing window</div></div></div>
               </div>
+              　話をGPT-4に戻すと、最新情報をリアルタイムで取得する機能もあるけど、逐次検索方式なので時間がかかる。それに、普通のモードでは2021年秋までの情報しかないため、論文調査に向いていない点も現行のChatGPTの課題であるといえる。Bing-chatはそれを比較的一瞬で実施してくれるだけでなく、その精度もchantGPTに何ら見劣りすることなく、むしろいい回答をくれることがしばしばである。
               　また、ここで私の利用する定型文のプロンプトを以下に示す。
             </div>
             <div class="description2">
               　Please provide a detailed and specific explanation in English as a peer reviewer based on the context of this webpage and the results obtained from other sources through web searches: You are a science writer. Your task is to provide a title in both English and Japanese, and publication date, first author and the University, country in English.<br>
               　And also, please provide five achievements/findings in Japanese. After that, please identify three specialized terms relevant to the core concept of this paper and provide a detailed explanation of each term, supported by scientific articles, reviews, and technical reports in Japanese.<br>
-              　Finally, please describe the detail methodology step-by-step to get the results concretely and deeply in Japanese. Note: from here, the below three information should be written in English. Lang=En
-            </div>
+              　Finally, please describe the detail methodology step-by-step to get the results concretely and deeply in Japanese. Note: from here, the below three information should be written in English.
+            </div><br>
             <div class="description2">
               　任意の論文のPDFを開いた状態で、このテンプレートをchatに打ち込むことで、英文での論文情報、日本語での題名・成果・用語解説・方法を本当に丁寧に説明してくれる。このようにして得られた論文要約とそのまとめノートの記録は日課になってきている。従来までは論文を毎日読むにしてもしっかり読み込もうとすると1本の論文で1時間前後はかかってしまう。一方、bing-GPTの利用で、論文をそのまま分かり易く精読し、わからないキーワードや背景についても一瞬で出力してくれるので、時間だけでなく論文を読む技術も大幅に向上していく。これを一度読み込んでから図面や結果を見ると、しみ込むように論文が理解できるようになる。<br>
               　以上の理由から論文要約にはbing-chatの利用をお勧めしている。Bing-chatは皆無料である！自分のPCを規定のブラウザやPDFのデフォの閲覧ソフトをMicrosoft Edgeに設定しているとこれらが連動して一瞬で、論文要旨などをまとめてくれる。一度使ってみるとこの感動は伝わると思う。最近の私の論文の読み方は、ArXivで最新未査読論文を片っ端から探して読んでいくか、Phys.orgやScicenAlert、日本の研究.comのような論文紹介サイトで探すか、グーグルスカラーのおすすめで出てきたやつを読み込み精読するようにしている。<br>
-              　また、詳細は<a href="https://tyamazaki.com/blog/posts/slackgpt" class="link2 link2--nav2">こちらのポスト</a><br>を見てほしいが、プレプリントarXivやNature Springureなどの論文をchatGPTで要約して、要旨、用語解説、展望、関連研究でまとめたものを、slackに毎日送り続けるbotも作成しており、これも非常に便利である。これにより、毎日の論文要約が自動化され、論文の理解が深まると同時に、論文の読み方も学ぶことができる。ただし、このbotは最新のものをランダムで自動選択して送ってくるものなので特定の論文読解するためには向いていない。その場合は、bing-chatを使うといいだろう。
+              　また、プレプリントarXivやNature Springureなどの論文をchatGPTで要約して、要旨、用語解説、展望、関連研究でまとめたものを、slackに毎日送り続けるbotも作成しており、これも非常に便利である。詳細は<a href="https://tyamazaki.com/blog/posts/slackgpt" class="link2 link2--nav2">こちらのポスト</a>を見てほしい。これにより、毎日の論文要約が自動化され、論文の理解が深まると同時に、論文の読み方も学ぶことができる。ただし、このbotは最新のものをランダムで自動選択して送ってくるものなので特定の論文読解するためには向いていない。その場合は、bing-chatを使うといいだろう。
             </div>
           </div><br>
 
