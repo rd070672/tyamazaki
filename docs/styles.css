@@ -57,14 +57,14 @@ body {
 }
 
 canvas#ballCanvas {
-  z-index: 1;  /* ボール（canvas）は最も低い層 */
+  z-index: 0;  /* ボール（canvas）は最も低い層 */
   position: fixed;  /* fixedやabsoluteを使用している場合、z-indexが有効になります */
   top: 0;
   left: 0;
 }
 
 header, nav, section, article, aside, footer {
-  z-index: 0;  /* これらの要素はボールの上に表示されます */
+  z-index: 1;  /* これらの要素はボールの上に表示されます */
   position: relative;  /* relativeやabsoluteを使うことで、z-indexが有効になります */
 }
 
@@ -1679,7 +1679,7 @@ input[name="tab_item"] {
     border: 0.5px solid var(--clr-fg-alt);
   } */
   .image-container {
-    height: 10px;
+    height: 100px;
     width: 100px;
   }
   .fullscreen-overlay img {
