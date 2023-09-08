@@ -72,28 +72,28 @@ window.addEventListener('scroll', () => {
 });
 
 // アルバム用に調整
-const imgElements = document.querySelectorAll('.gallery-img');
+// const imgElements = document.querySelectorAll('.gallery-img');
 
-function showImage(index) {
-    for (let i = 0; i < imgElements.length; i++) {
-        if (i === index) {
-            imgElements[i].style.display = 'block';
-        } else {
-            imgElements[i].style.display = 'none';
-        }
-    }
-}
+// function showImage(index) {
+//     for (let i = 0; i < imgElements.length; i++) {
+//         if (i === index) {
+//             imgElements[i].style.display = 'block';
+//         } else {
+//             imgElements[i].style.display = 'none';
+//         }
+//     }
+// }
 
-document.getElementById('next').addEventListener('click', function() {
-    currentImageIndex = (currentImageIndex + 1) % imgElements.length;
-    showImage(currentImageIndex);
-});
+// document.getElementById('next').addEventListener('click', function() {
+//     currentImageIndex = (currentImageIndex + 1) % imgElements.length;
+//     showImage(currentImageIndex);
+// });
 
-document.getElementById('prev').addEventListener('click', function() {
-    currentImageIndex = (currentImageIndex - 1 + imgElements.length) % imgElements.length;
-    showImage(currentImageIndex);
-});
+// document.getElementById('prev').addEventListener('click', function() {
+//     currentImageIndex = (currentImageIndex - 1 + imgElements.length) % imgElements.length;
+//     showImage(currentImageIndex);
+// });
 
-// 初期表示として最初の画像のみを表示
-showImage(0);
+// // 初期表示として最初の画像のみを表示
+// showImage(0);
 
