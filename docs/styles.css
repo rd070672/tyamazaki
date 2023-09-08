@@ -1350,7 +1350,7 @@ input[name="tab_item"] {
   cursor: pointer;
 }
 
-button {
+button-a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
