@@ -1270,8 +1270,10 @@ input[name="tab_item"] {
 }
 
 .image-container img {
-  height: 100%; /* 画像の高さをコンテナの高さに合わせる */
-  width: auto;  /* 幅は自動的に調整（アスペクト比を維持） */
+  height: 100%; 
+  width: 100%; 
+  object-fit: cover; /* アスペクト比を保ったまま、コンテナに合わせて画像をクロップ */
+  object-position: center; /* 画像を中央に配置 */
   border: 1px solid var(--clr-fg-alt);
 }
 
