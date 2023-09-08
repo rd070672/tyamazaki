@@ -1259,33 +1259,18 @@ input[name="tab_item"] {
   margin: 0.2em; 
 }
 
-/* 作品集での画像にキャプションと日付を付ける */
-/* .image-container {
-  position: relative;
-  height: 160px;
-  width: 160px;
-  overflow: hidden;
-} */
-
 .image-container {
   position: relative;
   height: 200px;
-  width: 200px;
+  width: calc(100% - 0.4em); /* マージンを考慮 */
+  max-width: 200px;
+  min-width: 120px; /* 最小の幅 */
   margin: 0.2em;
   overflow: hidden;
-  /* flex-basis: calc(33.33% - 0.2em); */
-  flex-grow: 1; /* 利用可能なスペースに応じて伸縮 */
-  flex-shrink: 1; /* 必要に応じて縮小 */
+  flex-grow: 1;
+  flex-shrink: 1;
+  transition: width 0.3s ease; /* アニメーションの追加 */
 }
-
-/* .image-container.zoomed img {
-  height: 400px;
-  width: auto;
-  object-fit: cover;
-  object-position: center;
-  transition: all 0.3s ease;
-} */
-
 
 .image-container img {
   max-width: 100%;
@@ -1295,14 +1280,15 @@ input[name="tab_item"] {
   border: 1px solid var(--clr-fg-alt);
 }
 .image-container.expanded {
-  height: 400px;
-  transition: height 0.3s ease; /* アニメーションの追加 */
+  width: 400px;
+  /* transition: height 0.3s ease;  */
 }
 
 .image-container:hover .overlay {
   opacity: 1;
   height: 20%;
 }
+
 
 /* 一般的な本文での画像にキャプションを付ける */
 .image-container2 {
