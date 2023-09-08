@@ -1262,23 +1262,24 @@ input[name="tab_item"] {
 .image-container {
   position: relative;
   height: 200px;
-  width: calc(100% - 0.4em); /* マージンを考慮 */
-  max-width: 200px;
-  min-width: 120px; /* 最小の幅 */
+  width: 200px;
   margin: 0.2em;
   overflow: hidden;
   flex-grow: 1;
   flex-shrink: 1;
-  transition: width 0.3s ease; /* アニメーションの追加 */
 }
 
 .image-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;  /* 縦中央揃えのため */
-  margin: auto;    /* 縦中央揃えのため */
+  height: 300px;
+  width: auto;
+  display: block;  
+  margin: auto;    
   border: 1px solid var(--clr-fg-alt);
+  position: relative; /* 上端をコンテナの上端と合わせるため */
+  top: 50%; 
+  transform: translateY(-50%); /* 上端をコンテナの上端と合わせるため */
 }
+
 .image-container.expanded {
   width: 400px;
   /* transition: height 0.3s ease;  */
