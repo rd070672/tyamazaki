@@ -72,45 +72,28 @@ window.addEventListener('scroll', () => {
 });
 
 // アルバム用に調整
-let currentImageIndex = 0;
-const images = [
-    'path/to/your/image1.jpg',
-    'path/to/your/image2.jpg',
-    // 他の画像のパスも追加
-];
+const imgElements = document.querySelectorAll('.gallery-img');
 
-const imgElement = document.getElementById('currentImage');
-
-function enlargeImage(element) {
-    if (element.style.height !== '600px') {
-        element.style.height = '600px';
-        element.style.width = 'auto';
-        element.style.objectFit = 'contain';
-    } else {
-        resetImageSize(element);
+function showImage(index) {
+    for (let i = 0; i < imgElements.length; i++) {
+        if (i === index) {
+            imgElements[i].style.display = 'block';
+        } else {
+            imgElements[i].style.display = 'none';
+        }
     }
 }
-
-function resetImageSize(element) {
-    if (Array.from(element.parentElement.children).indexOf(element) % 5 === 4) {
-        element.style.height = '400px';
-        element.style.width = '400px';
-    } else {
-        element.style.height = '300px';
-        element.style.width = '300px';
-    }
-    element.style.objectFit = 'cover';
-}
-
 
 document.getElementById('next').addEventListener('click', function() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    imgElement.src = images[currentImageIndex];
-    resetImageSize();
+    currentImageIndex = (currentImageIndex + 1) % imgElements.length;
+    showImage(currentImageIndex);
 });
 
 document.getElementById('prev').addEventListener('click', function() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    imgElement.src = images[currentImageIndex];
-    resetImageSize();
+    currentImageIndex = (currentImageIndex - 1 + imgElements.length) % imgElements.length;
+    showImage(currentImageIndex);
 });
+
+// 初期表示として最初の画像のみを表示
+showImage(0);
+
