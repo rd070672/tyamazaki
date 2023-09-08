@@ -537,7 +537,7 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 	overflow-y: auto;
 	position: fixed;
 	top: 0;
-	/* z-index: 0; */
+	z-index: 0;
 	display: none;
 	background-color: var(--clr-bg);
 }
