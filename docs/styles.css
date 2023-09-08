@@ -1256,18 +1256,28 @@ input[name="tab_item"] {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0.5em; 
-  margin-bottom: 0.8em;
+  margin: 0.2em; 
 }
 
 /* 作品集での画像にキャプションと日付を付ける */
+/* .image-container {
+  position: relative;
+  height: 160px;
+  width: 160px;
+  overflow: hidden;
+} */
+
 .image-container {
   position: relative;
   height: 160px;
-  width: 160px; /* widthを200pxに固定 */
-  margin: 0.3em;
-  overflow: hidden; /* はみ出た部分を非表示にする */
+  width: 160px;
+  overflow: hidden;
+  /* フレックスアイテムに関する設定 */
+  flex-basis: calc(25% - 0.2em);  /* 基本の幅を1/4（25%）に設定し、マージンを考慮 */
+  flex-grow: 1; /* 利用可能なスペースに応じて伸縮 */
+  flex-shrink: 1; /* 必要に応じて縮小 */
 }
+
 .image-container.zoomed img {
   height: 400px;
   width: auto;
