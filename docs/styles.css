@@ -1450,6 +1450,7 @@ input[name="tab_item"] {
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
+    z-index: 2;
   }
 
   .display-nav-list {
@@ -1464,7 +1465,7 @@ input[name="tab_item"] {
   .nav__hamburger {
     display: flex;
     margin-left: 0.8em;
-    z-index: 100;
+    z-index: 2;
   }
 
   .footer {
