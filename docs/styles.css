@@ -1271,6 +1271,23 @@ input[name="tab_item"] {
   margin: 0.2em; 
 }
 
+/* 一般的な本文での画像にキャプションを付ける */
+.image-container2 {
+  position: relative;
+  height: 240px;
+  width: auto;
+  margin: 0.2em 0.4em;
+}
+.image-container2 img {
+  height: 240px;
+  width: auto;
+  border: 1px solid var(--clr-fg-alt);
+}
+.image-container2:hover .overlay {
+  opacity: 1;
+  height: 15%;
+}
+
 .image-container {
   position: relative;
   height: 200px;
@@ -1305,23 +1322,6 @@ input[name="tab_item"] {
 } */
 
 .image-container:hover .overlay {
-  opacity: 1;
-  height: 15%;
-}
-
-/* 一般的な本文での画像にキャプションを付ける */
-.image-container2 {
-  position: relative;
-  height: 240px;
-  width: auto;
-  margin: 0.2em 0.4em;
-}
-.image-container2 img {
-  height: 240px;
-  width: auto;
-  border: 1px solid var(--clr-fg-alt);
-}
-.image-container2:hover .overlay {
   opacity: 1;
   height: 15%;
 }
@@ -1411,12 +1411,12 @@ input[name="tab_item"] {
   background-color: var(--clr-bg-alt);
 }
 
-canvas {
+/* canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1; /* これによりcanvasは他の要素の下に表示されます */
-}
+  z-index: 1;
+} */
 
 /* ############################################################# */
 /* ############################################################# */
@@ -1667,37 +1667,39 @@ canvas {
   }
 
   /* 作品集（album）での画像にキャプションと日付を付ける */
-.image-container {
-  position: relative;
-  height: 150px;
-  width: auto;
-  margin: 0.1em;
-}
-.image-container img {
-  height: 150px;
-  width: auto;
-  border: 0.5px solid var(--clr-fg-alt);
-}
+  /* .image-container {
+    position: relative;
+    height: 150px;
+    width: auto;
+    margin: 0.1em;
+  }
+  .image-container img {
+    height: 150px;
+    width: auto;
+    border: 0.5px solid var(--clr-fg-alt);
+  } */
+  .image-container {
+    height: 10px;
+    width: 100px;
+  }
+  .fullscreen-overlay img {
+    height: 300px;
+  }
 
-.image-container:hover .overlay {
-  opacity: 1;
-  height: 30%;
-}
-
-/* 一般的な本文(Profileなど)での画像にキャプションを付ける */
-.image-container2 {
-  position: relative;
-  height: 150px;
-  width: auto;
-  margin: 0.1em 0.2em;
-}
-.image-container2 img {
-  height: 150px;
-  width: auto;
-  border: 0.5px solid var(--clr-fg-alt);
-}
-.image-container2:hover .overlay {
-  opacity: 1;
-  height: 30%;
-}
+  /* 一般的な本文(Profileなど)での画像にキャプションを付ける */
+  .image-container2 {
+    position: relative;
+    height: 150px;
+    width: auto;
+    margin: 0.1em 0.2em;
+  }
+  .image-container2 img {
+    height: 150px;
+    width: auto;
+    border: 0.5px solid var(--clr-fg-alt);
+  }
+  .image-container2:hover .overlay {
+    opacity: 1;
+    height: 30%;
+  }
 }

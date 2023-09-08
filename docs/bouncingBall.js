@@ -6,30 +6,68 @@ let mouseX = -100, mouseY = -100;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const balls = [];
+// const balls = [];
 
-function createBall(x, y, color) {
+// function createBall(x, y, color) {
+//     return {
+//         x: x,
+//         y: y,
+//         radius: 30,
+//         color: color,
+//         velocityX: 4 * (Math.random() < 0.5 ? 1 : -1),
+//         velocityY: 4 * (Math.random() < 0.5 ? 1 : -1)
+//     };
+// }
+
+// // --clr-primary の値を取得
+// const clrPrimary = getComputedStyle(document.body).getPropertyValue('--clr-primary').trim();
+// const clrfg = getComputedStyle(document.body).getPropertyValue('--clr-fg').trim();
+
+// // 5つの白いボールを追加
+// for (let i = 0; i < 5; i++) {
+//     balls.push(createBall(canvas.width / 2, canvas.height / 2, clrfg));
+// }
+
+// // 1つの緑のボールを追加
+// balls.push(createBall(canvas.width / 2, canvas.height / 2, clrPrimary));
+
+const colors = [
+    getComputedStyle(document.body).getPropertyValue('--clr-bg').trim(),
+    getComputedStyle(document.body).getPropertyValue('--clr-bg-alt').trim(),
+    getComputedStyle(document.body).getPropertyValue('--clr-fg').trim(),
+    getComputedStyle(document.body).getPropertyValue('--clr-fg-alt').trim(),
+    getComputedStyle(document.body).getPropertyValue('--clr-primary').trim()
+];
+
+function getRandomValue(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function createBall(x, y) {
+    const size = getRandomValue(10, 30); // サイズは10から30の間でランダムに決定
+    const color = getRandomColor(); // ランダムにカラーを取得
+    const speedFactor = getRandomValue(0.5, 1.5); // 速度の変動範囲を設定（0.5xから1.5xの速度）
+
     return {
         x: x,
         y: y,
-        radius: 30,
+        radius: size,
         color: color,
-        velocityX: 4 * (Math.random() < 0.5 ? 1 : -1),
-        velocityY: 4 * (Math.random() < 0.5 ? 1 : -1)
+        velocityX: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1), // ランダムに左右の方向を選択
+        velocityY: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1)  // ランダムに上下の方向を選択
     };
 }
 
-// --clr-primary の値を取得
-const clrPrimary = getComputedStyle(document.body).getPropertyValue('--clr-primary').trim();
-const clrfg = getComputedStyle(document.body).getPropertyValue('--clr-fg').trim();
+const balls = [];
 
-// 5つの白いボールを追加
-for (let i = 0; i < 5; i++) {
-    balls.push(createBall(canvas.width / 2, canvas.height / 2, clrfg));
+// 6つのボールを追加
+for (let i = 0; i < 6; i++) {
+    balls.push(createBall(canvas.width / 2, canvas.height / 2));
 }
-
-// 1つの緑のボールを追加
-balls.push(createBall(canvas.width / 2, canvas.height / 2, clrPrimary));
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
