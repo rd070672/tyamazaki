@@ -70,3 +70,41 @@ window.addEventListener('scroll', () => {
         btnScrollDown.style.display = 'block';
     }
 });
+
+// アルバム用に調整
+let currentImageIndex = 0;
+const images = [
+    'path/to/your/image1.jpg',
+    'path/to/your/image2.jpg',
+    // 他の画像のパスも追加
+];
+
+const imgElement = document.getElementById('currentImage');
+
+function enlargeImage() {
+    if (imgElement.style.height !== '600px') {
+        imgElement.style.height = '600px';
+        imgElement.style.width = 'auto';
+        imgElement.style.objectFit = 'contain';
+    } else {
+        resetImageSize();
+    }
+}
+
+function resetImageSize() {
+    imgElement.style.height = '100%';
+    imgElement.style.width = '100%';
+    imgElement.style.objectFit = 'cover';
+}
+
+document.getElementById('next').addEventListener('click', function() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    imgElement.src = images[currentImageIndex];
+    resetImageSize();
+});
+
+document.getElementById('prev').addEventListener('click', function() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    imgElement.src = images[currentImageIndex];
+    resetImageSize();
+});
