@@ -78,60 +78,36 @@ function checkCollisionBetweenBalls(ballA, ballB) {
 }
 
 function resolveCollision(ballA, ballB) {
+    const xVelocityDiff = ballA.velocityX - ballB.velocityX;
+    const yVelocityDiff = ballA.velocityY - ballB.velocityY;
+
     const xDist = ballB.x - ballA.x;
     const yDist = ballB.y - ballA.y;
-    const distance = Math.sqrt(xDist * xDist + yDist * yDist);
-    const overlap = (ballA.radius + ballB.radius) - distance;
 
-    // 角度と衝突後の速度の変更
-    const angle = Math.atan2(yDist, xDist);
-    const sin = Math.sin(angle);
-    const cos = Math.cos(angle);
+    if (xVelocityDiff * xDist + yVelocityDiff * yDist >= 0) {
+        const angle = -Math.atan2(ballB.y - ballA.y, ballB.x - ballA.x);
 
-    // ballA の位置を回転
-    const pos0 = { x: 0, y: 0 };
+        const u1 = rotate({ x: ballA.velocityX, y: ballA.velocityY }, angle);
+        const u2 = rotate({ x: ballB.velocityX, y: ballB.velocityY }, angle);
 
-    // ballB の相対的な位置を回転
-    const pos1 = rotate(xDist, yDist, sin, cos, true);
+        const v1 = { x: u1.x, y: u2.y };
+        const v2 = { x: u2.x, y: u1.y };
 
-    // ballA の速度を回転
-    const vel0 = rotate(ballA.velocityX, ballA.velocityY, sin, cos, true);
+        const vFinal1 = rotate(v1, -angle);
+        const vFinal2 = rotate(v2, -angle);
 
-    // ballB の速度を回転
-    const vel1 = rotate(ballB.velocityX, ballB.velocityY, sin, cos, true);
+        ballA.velocityX = vFinal1.x;
+        ballA.velocityY = vFinal1.y;
 
-    // 衝突の解決
-    const vxTotal = vel0.x - vel1.x;
-    vel0.x = ((ballA.radius - ballB.radius) * vel0.x + 2 * ballB.radius * vel1.x) / (ballA.radius + ballB.radius);
-    vel1.x = vxTotal + vel0.x;
-
-    // 位置を更新して衝突を避ける
-    pos0.x += vel0.x;
-    pos1.x += vel1.x;
-
-    // 位置を元に戻す
-    const pos0F = rotate(pos0.x, pos0.y, sin, cos, false);
-    const pos1F = rotate(pos1.x, pos1.y, sin, cos, false);
-
-    ballA.x = ballA.x + pos0F.x;
-    ballA.y = ballA.y + pos0F.y;
-    ballB.x = ballA.x + pos1F.x;
-    ballB.y = ballA.y + pos1F.y;
-
-    // 速度を元に戻す
-    const vel0F = rotate(vel0.x, vel0.y, sin, cos, false);
-    const vel1F = rotate(vel1.x, vel1.y, sin, cos, false);
-
-    ballA.velocityX = vel0F.x;
-    ballA.velocityY = vel0F.y;
-    ballB.velocityX = vel1F.x;
-    ballB.velocityY = vel1F.y;
+        ballB.velocityX = vFinal2.x;
+        ballB.velocityY = vFinal2.y;
+    }
 }
 
-function rotate(x, y, sin, cos, reverse) {
+function rotate(velocity, angle) {
     return {
-        x: (reverse) ? (x * cos + y * sin) : (x * cos - y * sin),
-        y: (reverse) ? (y * cos - x * sin) : (y * cos + x * sin)
+        x: velocity.x * Math.cos(angle) - velocity.y * Math.sin(angle),
+        y: velocity.x * Math.sin(angle) + velocity.y * Math.cos(angle)
     };
 }
 
