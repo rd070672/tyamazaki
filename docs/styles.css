@@ -562,7 +562,7 @@ i.fas.fa-external-link-alt{
   color: var(--clr-primary);
   padding: 0 0 0.3em 0;
   position: relative;
-  z-index: 100; /* 1002 */
+  /* z-index: 100; */
 }
 
 .link:hover {
