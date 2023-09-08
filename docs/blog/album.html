@@ -65,18 +65,13 @@
       <h1>アルバム</h1>
     </div>
     <div class="container">
-      <!-- Sidebar -->
       <aside id="sidebar" class="sidebar"></aside>
-      
-      <!-- Main contents -->
+
       <main class="main-content">
-        <!-- <div class="about1 center" style="background-image: url('./img/album.png'); 
-          background-repeat: no-repeat; background-position: center; background-size: cover;">
-          <h1 class="text-with-border">　</h1>
-        </div><br> -->
 
         <div class="description2 img_align-center">
-          <div class="image-container"><img src="./album/sub.png">
+          <div class="image-container" onclick="showFullscreenImage('./album/sub.png')">
+            <img src="./album/sub.png">
             <div class="overlay"><span class="caption">substrate</span>
             <span class="date_album"><i class="far fa-clock"></i> 2023-06-01</span></div>
           </div>
@@ -108,11 +103,6 @@
             <div class="overlay"><span class="caption">study</span>
             <span class="date_album"><i class="far fa-clock"></i> 2022-08-01</span></div>
           </div>
-
-        <!-- </div><br><br>
-
-        <h4>日常風景</h4>
-        <div class="description2 img_align-center"> -->
           <div class="image-container"><img src="./album/yokohama.png">
             <div class="overlay"><span class="caption">yokohama</span>
             <span class="date_album"><i class="far fa-clock"></i> 2022-08-01</span></div>
@@ -131,6 +121,20 @@
           </div>
 
         </div>
+        <div class="fullscreen-overlay" onclick="hideFullscreenImage()">
+          <img id="fullscreenImage" src="" alt="Fullscreen Image">
+        </div>
+        <script>
+          function showFullscreenImage(imgSrc) {
+              const fullscreenImage = document.getElementById("fullscreenImage");
+              fullscreenImage.src = imgSrc;
+              document.querySelector(".fullscreen-overlay").style.display = "flex";
+          }
+      
+          function hideFullscreenImage() {
+              document.querySelector(".fullscreen-overlay").style.display = "none";
+          }
+        </script>
       </main>
     </div>
 
