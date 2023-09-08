@@ -792,6 +792,7 @@ main {
   margin-top: 0.2em;
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
+  opacity: 0.5;
   box-shadow: 0 0 10px var(--shadow);
   max-width: 960px; /*900px;*/
   margin: 0 auto;

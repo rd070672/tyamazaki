@@ -6,30 +6,7 @@ let mouseX = -100, mouseY = -100;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// const balls = [];
-
-// function createBall(x, y, color) {
-//     return {
-//         x: x,
-//         y: y,
-//         radius: 30,
-//         color: color,
-//         velocityX: 4 * (Math.random() < 0.5 ? 1 : -1),
-//         velocityY: 4 * (Math.random() < 0.5 ? 1 : -1)
-//     };
-// }
-
-// // --clr-primary の値を取得
-// const clrPrimary = getComputedStyle(document.body).getPropertyValue('--clr-primary').trim();
-// const clrfg = getComputedStyle(document.body).getPropertyValue('--clr-fg').trim();
-
-// // 5つの白いボールを追加
-// for (let i = 0; i < 5; i++) {
-//     balls.push(createBall(canvas.width / 2, canvas.height / 2, clrfg));
-// }
-
-// // 1つの緑のボールを追加
-// balls.push(createBall(canvas.width / 2, canvas.height / 2, clrPrimary));
+const BOND_THRESHOLD = 50;
 
 const colors = [
     getComputedStyle(document.body).getPropertyValue('--clr-bg').trim(),
@@ -48,25 +25,42 @@ function getRandomColor() {
 }
 
 function createBall(x, y) {
-    const size = getRandomValue(10, 30); // サイズは10から30の間でランダムに決定
-    const color = getRandomColor(); // ランダムにカラーを取得
-    const speedFactor = getRandomValue(0.5, 1.5); // 速度の変動範囲を設定（0.5xから1.5xの速度）
+    const size = getRandomValue(10, 30);
+    const color = getRandomColor();
+    const speedFactor = getRandomValue(0.5, 1.5);
 
     return {
         x: x,
         y: y,
         radius: size,
         color: color,
-        velocityX: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1), // ランダムに左右の方向を選択
-        velocityY: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1)  // ランダムに上下の方向を選択
+        velocityX: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1),
+        velocityY: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1)
     };
 }
 
 const balls = [];
-
-// 6つのボールを追加
 for (let i = 0; i < 6; i++) {
     balls.push(createBall(canvas.width / 2, canvas.height / 2));
+}
+
+function bondBalls(ballA, ballB) {
+    const bondedBall = {
+        x: (ballA.x + ballB.x) / 2,
+        y: (ballA.y + ballB.y) / 2,
+        radius: ballA.radius + ballB.radius,
+        color: '#FF0000',
+        velocityX: (ballA.velocityX + ballB.velocityX) / 2,
+        velocityY: (ballA.velocityY + ballB.velocityY) / 2
+    };
+
+    balls.push(bondedBall);
+
+    const indexA = balls.indexOf(ballA);
+    if (indexA !== -1) balls.splice(indexA, 1);
+    
+    const indexB = balls.indexOf(ballB);
+    if (indexB !== -1) balls.splice(indexB, 1);
 }
 
 function checkCollisionBetweenBalls(ballA, ballB) {
@@ -74,7 +68,11 @@ function checkCollisionBetweenBalls(ballA, ballB) {
     const dy = ballA.y - ballB.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    return distance < (ballA.radius + ballB.radius);
+    if (distance < (ballA.radius + ballB.radius)) {
+        resolveCollision(ballA, ballB);
+    } else if (distance < BOND_THRESHOLD) {
+        bondBalls(ballA, ballB);
+    }
 }
 
 function resolveCollision(ballA, ballB) {
@@ -86,19 +84,15 @@ function resolveCollision(ballA, ballB) {
 
     if (xVelocityDiff * xDist + yVelocityDiff * yDist >= 0) {
         const angle = -Math.atan2(ballB.y - ballA.y, ballB.x - ballA.x);
-
         const u1 = rotate({ x: ballA.velocityX, y: ballA.velocityY }, angle);
         const u2 = rotate({ x: ballB.velocityX, y: ballB.velocityY }, angle);
-
         const v1 = { x: u1.x, y: u2.y };
         const v2 = { x: u2.x, y: u1.y };
-
         const vFinal1 = rotate(v1, -angle);
         const vFinal2 = rotate(v2, -angle);
 
         ballA.velocityX = vFinal1.x;
         ballA.velocityY = vFinal1.y;
-
         ballB.velocityX = vFinal2.x;
         ballB.velocityY = vFinal2.y;
     }
@@ -114,12 +108,9 @@ function rotate(velocity, angle) {
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Check for ball collisions
     for (let i = 0; i < balls.length; i++) {
         for (let j = i + 1; j < balls.length; j++) {
-            if (checkCollisionBetweenBalls(balls[i], balls[j])) {
-                resolveCollision(balls[i], balls[j]);
-            }
+            checkCollisionBetweenBalls(balls[i], balls[j]);
         }
     }
 
@@ -127,7 +118,6 @@ function animate() {
         ball.x += ball.velocityX;
         ball.y += ball.velocityY;
 
-        // Bounce off the walls
         if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
             ball.velocityX = -ball.velocityX;
         }
@@ -136,7 +126,6 @@ function animate() {
             ball.velocityY = -ball.velocityY;
         }
 
-        // Bounce off the mouse cursor
         const distance = Math.sqrt((ball.x - mouseX) ** 2 + (ball.y - mouseY) ** 2);
         if (distance < ball.radius) {
             const angle = Math.atan2(ball.y - mouseY, ball.x - mouseX);
