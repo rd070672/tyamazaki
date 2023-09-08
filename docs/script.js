@@ -82,8 +82,8 @@ const images = [
 const imgElement = document.getElementById('currentImage');
 
 function enlargeImage() {
-    if (imgElement.style.height !== '600px') {
-        imgElement.style.height = '600px';
+    if (imgElement.style.height !== '200px') {
+        imgElement.style.height = '200px';
         imgElement.style.width = 'auto';
         imgElement.style.objectFit = 'contain';
     } else {
