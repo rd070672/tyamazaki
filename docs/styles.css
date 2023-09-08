@@ -1269,15 +1269,21 @@ input[name="tab_item"] {
   flex-shrink: 1;
 }
 
-.image-container img {
+/* .image-container img {
   height: 300px;
   width: auto;
   display: block;  
   margin: auto;    
   border: 1px solid var(--clr-fg-alt);
-  position: relative; /* 上端をコンテナの上端と合わせるため */
+  position: relative; 
   top: 50%; 
-  transform: translateY(-50%); /* 上端をコンテナの上端と合わせるため */
+  transform: translateY(-50%);
+} */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 
 .image-container.expanded {
