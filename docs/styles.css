@@ -1270,28 +1270,33 @@ input[name="tab_item"] {
 .image-container {
   position: relative;
   height: 160px;
-  width: auto;
+  width: 160;
   margin: 0.2em;
   overflow: hidden;
-  flex-basis: calc(25% - 0.2em);  /* 基本の幅を1/4（25%）に設定し、マージンを考慮 */
+  flex-basis: calc(33.33% - 0.2em);  /* 基本の幅を1/4（25%）に設定し、マージンを考慮 */
   flex-grow: 1; /* 利用可能なスペースに応じて伸縮 */
   flex-shrink: 1; /* 必要に応じて縮小 */
 }
 
-.image-container.zoomed img {
+/* .image-container.zoomed img {
   height: 400px;
   width: auto;
   object-fit: cover;
   object-position: center;
-  transition: all 0.3s ease; /* アニメーション効果 */
-}
+  transition: all 0.3s ease;
+} */
+
 
 .image-container img {
-  height: 100%; 
-  width: 100%; 
-  /* object-fit: cover;
-  object-position: center; */
+  max-width: 100%;
+  height: auto;
+  display: block;  /* 縦中央揃えのため */
+  margin: auto;    /* 縦中央揃えのため */
   border: 1px solid var(--clr-fg-alt);
+}
+.image-container.expanded {
+  height: 400px;
+  transition: height 0.3s ease; /* アニメーションの追加 */
 }
 
 .image-container:hover .overlay {

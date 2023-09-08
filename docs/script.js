@@ -79,6 +79,24 @@ function toggleZoom(element) {
 	  element.classList.add('zoomed');
 	}
   }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const imageContainers = document.querySelectorAll('.image-container');
+
+  imageContainers.forEach(container => {
+    container.addEventListener('click', function() {
+      if (this.classList.contains('expanded')) {
+        this.classList.remove('expanded');
+      } else {
+        // 他のコンテナのexpandedクラスを削除
+        imageContainers.forEach(c => c.classList.remove('expanded'));
+        // 現在のコンテナにexpandedクラスを追加
+        this.classList.add('expanded');
+      }
+    });
+  });
+});
+
   
 
 // アルバム用に調整
