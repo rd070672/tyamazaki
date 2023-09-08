@@ -1270,9 +1270,9 @@ input[name="tab_item"] {
 .image-container {
   position: relative;
   height: 160px;
-  width: 160px;
+  width: auto;
+  margin: 0.2em;
   overflow: hidden;
-  /* フレックスアイテムに関する設定 */
   flex-basis: calc(25% - 0.2em);  /* 基本の幅を1/4（25%）に設定し、マージンを考慮 */
   flex-grow: 1; /* 利用可能なスペースに応じて伸縮 */
   flex-shrink: 1; /* 必要に応じて縮小 */
