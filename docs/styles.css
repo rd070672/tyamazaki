@@ -1361,6 +1361,10 @@ input[name="tab_item"] {
   width: auto;
 }
 
+.fullscreen-overlay, .fullscreen-overlay img {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
 .caption {
   color: white;
   font-size: 0.8em;
