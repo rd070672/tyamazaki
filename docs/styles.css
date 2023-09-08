@@ -61,11 +61,13 @@ canvas#ballCanvas {
   position: fixed;  /* fixedやabsoluteを使用している場合、z-indexが有効になります */
   top: 0;
   left: 0;
+  opacity: 0.5;  /* 0（完全に透明）から1（完全に不透明）の間の値を設定 */
 }
 
 header, nav, section, article, aside, footer {
   z-index: 1;  /* これらの要素はボールの上に表示されます */
   position: relative;  /* relativeやabsoluteを使うことで、z-indexが有効になります */
+  background-color: transparent; /* 背景色を透明に設定 */
 }
 
 h1,
@@ -535,7 +537,7 @@ html, body, #sb-site, .sb-site-container, .sb-slidebar {
 	overflow-y: auto;
 	position: fixed;
 	top: 0;
-	z-index: 0;
+	/* z-index: 0; */
 	display: none;
 	background-color: var(--clr-bg);
 }
@@ -676,7 +678,7 @@ i.fas.fa-external-link-alt{
   border: 2px solid var(--clr-primary);
   position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
 .btn--outline:focus,

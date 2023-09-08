@@ -69,9 +69,60 @@ for (let i = 0; i < 6; i++) {
     balls.push(createBall(canvas.width / 2, canvas.height / 2));
 }
 
+function checkCollisionBetweenBalls(ballA, ballB) {
+    const dx = ballA.x - ballB.x;
+    const dy = ballA.y - ballB.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    return distance < (ballA.radius + ballB.radius);
+}
+
+function resolveCollision(ballA, ballB) {
+    const xVelocityDiff = ballA.velocityX - ballB.velocityX;
+    const yVelocityDiff = ballA.velocityY - ballB.velocityY;
+
+    const xDist = ballB.x - ballA.x;
+    const yDist = ballB.y - ballA.y;
+
+    if (xVelocityDiff * xDist + yVelocityDiff * yDist >= 0) {
+        const angle = -Math.atan2(ballB.y - ballA.y, ballB.x - ballA.x);
+
+        const u1 = rotate({ x: ballA.velocityX, y: ballA.velocityY }, angle);
+        const u2 = rotate({ x: ballB.velocityX, y: ballB.velocityY }, angle);
+
+        const v1 = { x: u1.x, y: u2.y };
+        const v2 = { x: u2.x, y: u1.y };
+
+        const vFinal1 = rotate(v1, -angle);
+        const vFinal2 = rotate(v2, -angle);
+
+        ballA.velocityX = vFinal1.x;
+        ballA.velocityY = vFinal1.y;
+
+        ballB.velocityX = vFinal2.x;
+        ballB.velocityY = vFinal2.y;
+    }
+}
+
+function rotate(velocity, angle) {
+    return {
+        x: velocity.x * Math.cos(angle) - velocity.y * Math.sin(angle),
+        y: velocity.x * Math.sin(angle) + velocity.y * Math.cos(angle)
+    };
+}
+
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
+    // Check for ball collisions
+    for (let i = 0; i < balls.length; i++) {
+        for (let j = i + 1; j < balls.length; j++) {
+            if (checkCollisionBetweenBalls(balls[i], balls[j])) {
+                resolveCollision(balls[i], balls[j]);
+            }
+        }
+    }
+
     for (let ball of balls) {
         ball.x += ball.velocityX;
         ball.y += ball.velocityY;
