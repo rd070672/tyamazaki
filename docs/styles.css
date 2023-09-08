@@ -1136,6 +1136,7 @@ input[name="tab_item"] {
   background-color: transparent;
   font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
+  z-index: 2;
 }
 .scroll-top {
   bottom: 3em;
@@ -1280,12 +1281,12 @@ input[name="tab_item"] {
 /* 一般的な本文での画像にキャプションを付ける */
 .image-container2 {
   position: relative;
-  height: 240px;
+  height: 200px;
   width: auto;
   margin: 0.2em 0.4em;
 }
 .image-container2 img {
-  height: 240px;
+  height: 200px;
   width: auto;
   border: 1px solid var(--clr-fg-alt);
 }
