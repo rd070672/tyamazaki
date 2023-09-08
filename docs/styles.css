@@ -386,7 +386,7 @@ button {
   align-items: center;
   flex-wrap: wrap;
 }
-.img_align-left { /* works and profile */
+.img_align-left { /* album and profile */
   display: flex;
   justify-content: flex-start;  /* 子要素（画像）を水平方向に左寄せ */
   align-items: center;
@@ -1156,10 +1156,10 @@ input[name="tab_item"] {
   font-size: 0.9em;  /* 日付のフォントサイズを調整 */
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
-.date_works {
-  margin: 0.2em; /* 日付とタイトルとの間隔を調整 */
-  font-size: 0.9em;  /* 日付のフォントサイズを調整 */
-}
+/* .date_album {
+  margin: 0.2em;
+  font-size: 0.9em;
+} */
 .both {
   display: flex;
   justify-content: space-between;
@@ -1315,7 +1315,7 @@ input[name="tab_item"] {
   display: block;
   background: transparent;
 }
-.date_works {
+.date_album {
   color: rgb(210, 210, 210); /* グレー */
   font-size: 0.6em; /* 0.6emのフォントサイズ */
   display: block;
@@ -1572,14 +1572,14 @@ input[name="tab_item"] {
     display: block;
     background: transparent;
   }
-  .date_works {
+  .date_album {
     color: rgb(210, 210, 210); /* グレー */
     font-size: 0.5em; /* 0.6emのフォントサイズ */
     display: block;
     background: transparent;
   }
 
-  /* 作品集（works）での画像にキャプションと日付を付ける */
+  /* 作品集（album）での画像にキャプションと日付を付ける */
 .image-container {
   position: relative;
   height: 150px;
