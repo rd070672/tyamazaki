@@ -1276,7 +1276,7 @@ input[name="tab_item"] {
 
 .image-container:hover .overlay {
   opacity: 1;
-  height: 20%;
+  height: 15%;
 }
 
 /* 一般的な本文での画像にキャプションを付ける */
