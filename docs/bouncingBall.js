@@ -6,31 +6,6 @@ let mouseX = -100, mouseY = -100;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// const balls = [];
-
-// function createBall(x, y, color) {
-//     return {
-//         x: x,
-//         y: y,
-//         radius: 30,
-//         color: color,
-//         velocityX: 4 * (Math.random() < 0.5 ? 1 : -1),
-//         velocityY: 4 * (Math.random() < 0.5 ? 1 : -1)
-//     };
-// }
-
-// // --clr-primary の値を取得
-// const clrPrimary = getComputedStyle(document.body).getPropertyValue('--clr-primary').trim();
-// const clrfg = getComputedStyle(document.body).getPropertyValue('--clr-fg').trim();
-
-// // 5つの白いボールを追加
-// for (let i = 0; i < 5; i++) {
-//     balls.push(createBall(canvas.width / 2, canvas.height / 2, clrfg));
-// }
-
-// // 1つの緑のボールを追加
-// balls.push(createBall(canvas.width / 2, canvas.height / 2, clrPrimary));
-
 const colors = [
     getComputedStyle(document.body).getPropertyValue('--clr-bg').trim(),
     getComputedStyle(document.body).getPropertyValue('--clr-bg-alt').trim(),
@@ -57,8 +32,8 @@ function createBall(x, y) {
         y: y,
         radius: size,
         color: color,
-        velocityX: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1), // ランダムに左右の方向を選択
-        velocityY: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1)  // ランダムに上下の方向を選択
+        velocityX: speedFactor * (Math.random() < 0.5 ? 1 : -1), // ランダムに左右の方向を選択
+        velocityY: speedFactor * (Math.random() < 0.5 ? 1 : -1)  // ランダムに上下の方向を選択
     };
 }
 

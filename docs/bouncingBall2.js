@@ -25,7 +25,7 @@ function getRandomColor() {
 }
 
 function createBall(x, y) {
-    const size = getRandomValue(10, 30);
+    const size = getRandomValue(20, 60);
     const color = getRandomColor();
     const speedFactor = getRandomValue(0.5, 1.5);
 
@@ -34,13 +34,13 @@ function createBall(x, y) {
         y: y,
         radius: size,
         color: color,
-        velocityX: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1),
-        velocityY: 4 * speedFactor * (Math.random() < 0.5 ? 1 : -1)
+        velocityX: speedFactor * (Math.random() < 0.5 ? 1 : -1),
+        velocityY: speedFactor * (Math.random() < 0.5 ? 1 : -1)
     };
 }
 
 const balls = [];
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 10; i++) {
     balls.push(createBall(canvas.width / 2, canvas.height / 2));
 }
 
