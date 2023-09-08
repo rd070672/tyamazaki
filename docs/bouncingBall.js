@@ -19,13 +19,17 @@ function createBall(x, y, color) {
     };
 }
 
+// --clr-primary の値を取得
+const clrPrimary = getComputedStyle(document.body).getPropertyValue('--clr-primary').trim();
+const clrfg = getComputedStyle(document.body).getPropertyValue('--clr-fg').trim();
+
 // 5つの白いボールを追加
 for (let i = 0; i < 5; i++) {
-    balls.push(createBall(canvas.width / 2, canvas.height / 2, 'white'));
+    balls.push(createBall(canvas.width / 2, canvas.height / 2, clrfg));
 }
 
 // 1つの緑のボールを追加
-balls.push(createBall(canvas.width / 2, canvas.height / 2, 'green'));
+balls.push(createBall(canvas.width / 2, canvas.height / 2, clrPrimary));
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
