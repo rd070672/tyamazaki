@@ -1264,13 +1264,14 @@ input[name="tab_item"] {
 .image-container {
   position: relative;
   height: 200px;
-  width: auto;
+  width: 200px; /* widthを200pxに固定 */
   margin: 0.2em;
+  overflow: hidden; /* はみ出た部分を非表示にする */
 }
 
 .image-container img {
-  height: 200px;
-  width: auto;
+  height: 100%; /* 画像の高さをコンテナの高さに合わせる */
+  width: auto;  /* 幅は自動的に調整（アスペクト比を維持） */
   border: 1px solid var(--clr-fg-alt);
 }
 
