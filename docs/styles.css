@@ -1263,9 +1263,9 @@ input[name="tab_item"] {
 /* 作品集での画像にキャプションと日付を付ける */
 .image-container {
   position: relative;
-  height: 200px;
-  width: 200px; /* widthを200pxに固定 */
-  margin: 0.2em;
+  height: 160px;
+  width: 160px; /* widthを200pxに固定 */
+  margin: 0.3em;
   overflow: hidden; /* はみ出た部分を非表示にする */
 }
 .image-container.zoomed img {
@@ -1286,7 +1286,7 @@ input[name="tab_item"] {
 
 .image-container:hover .overlay {
   opacity: 1;
-  height: 15%;
+  height: 20%;
 }
 
 /* 一般的な本文での画像にキャプションを付ける */
