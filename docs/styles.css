@@ -1268,6 +1268,13 @@ input[name="tab_item"] {
   margin: 0.2em;
   overflow: hidden; /* はみ出た部分を非表示にする */
 }
+.image-container.zoomed img {
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease; /* アニメーション効果 */
+}
 
 .image-container img {
   height: 100%; 

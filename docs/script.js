@@ -71,6 +71,16 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// 写真のズーム
+function toggleZoom(element) {
+	if (element.classList.contains('zoomed')) {
+	  element.classList.remove('zoomed');
+	} else {
+	  element.classList.add('zoomed');
+	}
+  }
+  
+
 // アルバム用に調整
 // const imgElements = document.querySelectorAll('.gallery-img');
 
