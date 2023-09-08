@@ -1289,8 +1289,8 @@ input[name="tab_item"] {
 
 /* .image-container.expanded {
   width: 400px;
-  /* transition: height 0.3s ease;  */
-} */
+  transition: height 0.3s ease;
+}
 
 .image-container:hover .overlay {
   opacity: 1;
