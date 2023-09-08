@@ -97,7 +97,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-  
+
+function showFullscreenImage(imgSrc) {
+	const fullscreenImage = document.getElementById("fullscreenImage");
+	fullscreenImage.src = imgSrc;
+	document.querySelector(".fullscreen-overlay").style.display = "flex";
+}
+
+function hideFullscreenImage() {
+	document.querySelector(".fullscreen-overlay").style.display = "none";
+}
+        
 
 // アルバム用に調整
 // const imgElements = document.querySelectorAll('.gallery-img');
