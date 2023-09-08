@@ -1492,6 +1492,7 @@ input[name="tab_item"] {
     margin: 0 auto;
     overflow: auto;
     height: 250px;
+    z-index: 2;
   }
   
   .tab_item {
@@ -1677,18 +1678,6 @@ input[name="tab_item"] {
     background: transparent;
   }
 
-  /* 作品集（album）での画像にキャプションと日付を付ける */
-  /* .image-container {
-    position: relative;
-    height: 150px;
-    width: auto;
-    margin: 0.1em;
-  }
-  .image-container img {
-    height: 150px;
-    width: auto;
-    border: 0.5px solid var(--clr-fg-alt);
-  } */
   .image-container {
     height: 100px;
     width: 100px;
