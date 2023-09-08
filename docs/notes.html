@@ -27,6 +27,8 @@
   </head>
   <!-- body -->
   <body class="light" id="top">
+    <canvas id="ballCanvas"></canvas>
+    <script src="bouncingBall1.js"></script>
 
     <!-- header -->
     <header class="header center">
@@ -58,10 +60,12 @@
 
     <!-- Main contents -->
     <main>
-      <div class="about4 center">
-        <h2 class="center">Notes</h2>
-        <h5>Change-logs of this website</h5>
-      </div>
+      <section class="section0">
+        <div id="Portfolio" class="about4 center">
+          <h2 class="center">Notes</h2> 
+          <h5>Changing-logs of this website</h5>
+        </div>
+      </section>
 
       <!-- Updated website -->
       <section class="section1">
@@ -170,6 +174,28 @@
         <a href="mailto:takahiro.yamazaki@rs.tus.ac.jp"><span class="btn btn--outline">Email me</span>
         </a>
       </section>
+      <section class="sns center">
+        <a href="https://docs.google.com/document/d/1DJfrVVvGl8wiJjjEA-Xey73QRtwMzup4ji3j0gpnTNI/edit" target="_blank"><span class="btn btn--outline">Resume</span>
+        </a>
+        <a href="https://scholar.google.co.jp/citations?user=3K8KqdcAAAAJ&hl=en" target="_blank" aria-label="google" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-google"></i>
+        </a>
+        <a href="https://orcid.org/0000-0003-0738-9373" target="_blank" aria-label="orcid" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-orcid"></i>
+        </a>
+        </a>
+        <a href="https://github.com/rd070672" target="_blank" aria-label="github" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/tyamazakicom" target="_blank" aria-label="twitter" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tyamazakicom/" target="_blank" aria-label="linkedin" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:takahiro.yamazaki@rs.tus.ac.jp"><span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
     </main>
 
     <!-- footer -->
@@ -177,18 +203,20 @@
       <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Fnotes&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="./">tyamazaki.com</a> | All rights reserved.
     </footer>
 
-    <div class="scroll-container">
-      <div class="scroll-top">
-        <a aria-label="Scroll up" href="#top">
-          <i aria-hidden="true" class="fas fa-arrow-up"></i>
-        </a>
+    <section>
+      <div class="scroll-container">
+        <div class="scroll-top">
+          <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+        <div class="scroll-down">
+          <a aria-label="Scroll down" href="#bottom">
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+          </a>
+        </div>
       </div>
-      <div class="scroll-down">
-        <a aria-label="Scroll down" href="#bottom">
-            <i aria-hidden="true" class="fas fa-arrow-down"></i>
-        </a>
-    </div>
-    </div>
+    </section>
     <script src="./script.js"></script>
     <div id="bottom"></div>
   </body>
