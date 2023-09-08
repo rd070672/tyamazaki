@@ -1334,13 +1334,18 @@ input[name="tab_item"] {
   background-color: var(--clr-bg-alt);
 }
 
-アルバム用に調整
+/* アルバム用に調整 */
 .gallery {
   position: relative;
   width: 300px;
   height: 300px;
   margin: 50px auto;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
 }
 
 #currentImage {
@@ -1349,8 +1354,20 @@ input[name="tab_item"] {
   object-fit: cover;
   cursor: pointer;
 }
+.gallery-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-button-a {
+/* 5枚ごとにサイズが大きくなる */
+.gallery-img:nth-child(5n) {
+  width: 400px;
+  height: 400px;
+}
+.button-a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

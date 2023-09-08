@@ -81,21 +81,27 @@ const images = [
 
 const imgElement = document.getElementById('currentImage');
 
-function enlargeImage() {
-    if (imgElement.style.height !== '200px') {
-        imgElement.style.height = '200px';
-        imgElement.style.width = 'auto';
-        imgElement.style.objectFit = 'contain';
+function enlargeImage(element) {
+    if (element.style.height !== '600px') {
+        element.style.height = '600px';
+        element.style.width = 'auto';
+        element.style.objectFit = 'contain';
     } else {
-        resetImageSize();
+        resetImageSize(element);
     }
 }
 
-function resetImageSize() {
-    imgElement.style.height = '100%';
-    imgElement.style.width = '100%';
-    imgElement.style.objectFit = 'cover';
+function resetImageSize(element) {
+    if (Array.from(element.parentElement.children).indexOf(element) % 5 === 4) {
+        element.style.height = '400px';
+        element.style.width = '400px';
+    } else {
+        element.style.height = '300px';
+        element.style.width = '300px';
+    }
+    element.style.objectFit = 'cover';
 }
+
 
 document.getElementById('next').addEventListener('click', function() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
