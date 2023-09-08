@@ -394,14 +394,6 @@ button {
   margin: 0.5em; 
   margin-bottom: 0.8em;
 }
-.img_align-center { /* album  */
-  display: flex;
-  justify-content: flex-start;  /* 子要素（画像）を水平方向に左寄せ */
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0.5em; 
-  margin-bottom: 0.8em;
-}
 
 .leftImgContainer { /* blog */
   float: left;
@@ -1259,16 +1251,25 @@ input[name="tab_item"] {
   margin: 2px 10px;
 }
 
+.img_align-center { /* album  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0.5em; 
+  margin-bottom: 0.8em;
+}
+
 /* 作品集での画像にキャプションと日付を付ける */
 .image-container {
   position: relative;
-  height: 240px;
+  height: 200px;
   width: auto;
   margin: 0.2em;
 }
 
 .image-container img {
-  height: 240px;
+  height: 200px;
   width: auto;
   border: 1px solid var(--clr-fg-alt);
 }
