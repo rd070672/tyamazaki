@@ -1269,11 +1269,11 @@ input[name="tab_item"] {
 
 .image-container {
   position: relative;
-  height: 160px;
-  width: 160;
+  height: 200px;
+  width: 200px;
   margin: 0.2em;
   overflow: hidden;
-  flex-basis: calc(33.33% - 0.2em);  /* 基本の幅を1/4（25%）に設定し、マージンを考慮 */
+  /* flex-basis: calc(33.33% - 0.2em); */
   flex-grow: 1; /* 利用可能なスペースに応じて伸縮 */
   flex-shrink: 1; /* 必要に応じて縮小 */
 }
