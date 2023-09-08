@@ -1289,8 +1289,8 @@ input[name="tab_item"] {
 .image-container img {
   height: 100%; 
   width: 100%; 
-  object-fit: cover; /* アスペクト比を保ったまま、コンテナに合わせて画像をクロップ */
-  object-position: center; /* 画像を中央に配置 */
+  /* object-fit: cover;
+  object-position: center; */
   border: 1px solid var(--clr-fg-alt);
 }
 
