@@ -386,7 +386,15 @@ button {
   align-items: center;
   flex-wrap: wrap;
 }
-.img_align-left { /* album and profile */
+.img_align-left { /* profile */
+  display: flex;
+  justify-content: flex-start;  /* 子要素（画像）を水平方向に左寄せ */
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0.5em; 
+  margin-bottom: 0.8em;
+}
+.img_align-center { /* album  */
   display: flex;
   justify-content: flex-start;  /* 子要素（画像）を水平方向に左寄せ */
   align-items: center;
@@ -1257,9 +1265,6 @@ input[name="tab_item"] {
   height: 240px;
   width: auto;
   margin: 0.2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .image-container img {
