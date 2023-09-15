@@ -1439,6 +1439,7 @@ input[name="tab_item"] {
   }
   .nav {
     text-align: center;
+    z-index: 10;
   }
 
   .nav__list {
@@ -1453,11 +1454,12 @@ input[name="tab_item"] {
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
-    z-index: 2;
+    z-index: 10;
   }
 
   .display-nav-list {
     width: 100%;
+    z-index: 10;
   }
 
   .nav__list-item {
@@ -1468,7 +1470,7 @@ input[name="tab_item"] {
   .nav__hamburger {
     display: flex;
     margin-left: 0.8em;
-    z-index: 2;
+    z-index: 10;
   }
 
   .footer {
