@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en jp">
   <head>
-    <title>ty/review/ferroic</title>
+    <title>ty/review/mech</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher including paper review 'MatFine' and blog 'Matserve'" />
@@ -62,7 +62,7 @@
        
     <div class="about4 center">
       <h1>論文紹介</h1>
-      <h5>機能特集：微視弾性論の基礎と応用</h5>
+      <h5>機能特集：力学機能の基礎と応用</h5>
     </div>
     <div class="container">
       <!-- Main contents -->
@@ -71,7 +71,7 @@
           <ul class="breadcrumb">
             <li><a href="../" class="link2 link2--nav2">Home</a></li>
             <li><a href="../review" class="link2 link2--nav2">Review</a></li>
-            <li>微視弾性論</li>
+            <li>力学機能</li>
           </ul>
         </nav>
 
@@ -79,96 +79,60 @@
           <section>
             <h3 class="section__title3">狙い</h3>
             <div class="description2">
-              微視弾性は、マテリアルの微小なスケールでの弾性挙動を研究する分野です。このスケールでの理解は、材料のマクロスケールでの性質に影響を与え、新しい種類の弾性体やコンポジット材料の設計に役立ちます。微視弾性は、素材の微小構造（例：結晶粒、繊維、空孔など）とその弾性性質との相互作用に焦点を当てます。この分野では、有限要素法（FEM）、分子動力学シミュレーション、実験的手法などが用いられることが多いです。
+              力学機能は、マテリアルの微小なスケールでの弾性挙動や強弾性、強磁性、強誘電などのマルチフェロイックを指す分野です。このスケールでの理解は、材料のマクロスケールでの性質に影響を与え、新しい種類の弾性体やコンポジット材料の設計に役立ちます。微視弾性は、素材の微小構造（例：結晶粒、繊維、空孔など）とその弾性性質との相互作用に焦点を当てます。この分野では、有限要素法（FEM）、分子動力学シミュレーション、実験的手法などが用いられることが多いです。
             </div>
           </section><br>
           
           <section>     
             <h4 class="under3">論文タイトル一覧</h4>
             <ol class="indent">
-              <li class="description22"><a href="#1">
-                高圧下でのNd2CoFeO6二重ペロブスカイトの構造相転移と磁気弾性結合</a></li>
-              <!-- <li class="description22"><a href="#2">
-                書き換え可能な光メモリの相変化メカニズムの解明</a></li>
-              <li class="description22"><a href="#3">
-                室温・常圧での相変化材料のフェムト秒構造変化をコヒーレントフォノンでモニターする</a></li> -->
-              <!-- <li class="description22"><a href="#2">
-                固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li>
               <li class="description22"><a href="#2">
-                固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li> -->
+                交換磁歪の自動計算二重</a></li>
+              <li class="description22"><a href="#1">
+                ペロブスカイトの構造相転移と磁気弾性結合</a></li>
             </ol>
           </section><br>
 
           <section>
-            <div id="1"><h4 class="indent2">1. 高圧下でのNd2CoFeO6二重ペロブスカイトの構造相転移と磁気弾性結合</h4>
+            <div id="2"><h4 class="indent2">交換磁歪の自動計算</h4>
               <div class="description2">
-                ・高圧XRD測定：Nd2CoFeO6 (NCFO)は、高圧下で正方晶から単斜晶への構造相転移を約13.8 GPaで起こすことがXRD測定によって明らかになった。相転移は、(Fe/Co)O6八面体の歪みが圧力によって増加し、格子ひずみを緩和するために起こる。また、約1.1 GPaで体積圧縮率と体積弾性率に異常が見られたが、これは電子的な異常によるものと考えられる。<br>
-                ・低温ラマン分析：NCFOのラマンスペクトルは、温度が低下すると青方偏移するが、約47 Kで急激に赤方偏移することが低温ラマン分析によって示された。この赤方偏移は、スピン再配向転移に関連していると考えられる。また、約240 Kでラマンモード周波数に突然の飛びが見られたが、これは反強磁性転移温度TNと一致する。<br>
-                ・高圧ラマン分析：高圧下でのラマンスペクトルは、約27.4 GPaまで大きな変化は見られなかった。しかし、AgとBgモードのピーク位置は、約1 GPaと約13.1 GPaで傾きの変化を示した。13.1 GPa以上では、正方晶から単斜晶への構造相転移に関連して傾きが減少した。1 GPa以下では、圧力に対する傾きが半分以下に減少したが、これは新しいスピン配列によるものと推測される。<br>
-                ・磁場下での高圧ラマン分析：外部磁場を印加すると、Bgモードは圧力に伴って硬化した。この硬化は、スピンと磁場との強い相互作用によってスピンフォノン相互作用が影響を受けるためだと考えられる。また、磁場を切った後もラマンスペクトルは元の振る舞いに戻らなかった。この現象は詳細な理論的研究が必要である。
+                本研究では、単位胞の変形によって等方的な磁弾性定数、等方的な磁歪係数、および交換磁歪に関連する自発的な体積磁歪を計算する方法を提案している。この方法は、pythonパッケージ<a href="https://linkinghub.elsevier.com/retrieve/pii/S0927025623001520" target="_blank" class="link2 link2--nav2">MAELAS（v3.0）</a>に実装されており、第一原理計算や古典的なスピン格子モデルを用いて、これらの量を自動的に求めることができる。また、自発的な体積磁歪を得るために必要な基準状態についても議論しており、パラ磁性状態の平衡体積と基底状態の磁気秩序を組み合わせたものであることを示している。さらに、一軸性結晶における等方的な磁歪係数λ α1,0 の理論式に誤りがあることを指摘し、修正している。この計算ツールは、交換相互作用と磁弾性との関係をより良く理解し、特性評価するのに役立つと期待される。特に、交換相互作用と磁弾性との関係をより良く理解し、特性評価するのに役立つ計算ツールを開発した。等方的な磁弾性定数や自発的な体積磁歪は、インバー合金などの温度膨張係数やレーザー誘起超高速磁化などの新奇な現象に重要な役割を果たす物理量である。第一原理計算や古典的なスピン格子モデルと連携して、高い精度と安定性でこれらの量を自動的に求めることができる。
+              </div><div class="description10">2023-04-12<br>
+                Automated calculations of exchange magnetostriction<br>
+                P. Nieves, et al. (Technical University of Ostrava, Czech Republic)<br>
+                <a href="https://linkinghub.elsevier.com/retrieve/pii/S0927025623001520" target="_blank" class="link2 link2--nav2">Computational Materials Science 224(1):112158 (2023)</a></div><div class="img_align">
+                <img src="../review/img/mech-2-1.png" class="img300">
+                <img src="../review/img/mech-2-2.png" class="img300">
+                <img src="../review/img/mech-2-3.png" class="img300c">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                電子的な相転移や構造的な相転移を評価するのに歪み印加は有効のようだ。<br>
+                <span class="name">【用語】</span>
+                等方的な磁弾性定数（b iso）：ひずみに依存するが、飽和状態での磁化方向には依存しない磁弾性エネルギーの寄与を与える定数である。主に原子磁気モーメントと交換相互作用の体積依存性に起因する。等方的な磁歪係数（λ iso）：ひずみと等方的な磁弾性定数から導かれる量である。これらの量は、長さの自発的な変化率（[l −l0]/l0）を特徴付ける。ここで、l0とlはそれぞれパラ磁性状態と飽和状態での材料の長さである。自発的な体積磁歪（ωs）：パラ磁性状態と飽和状態での体積変化率（ωs = [VFM −VPM]/VPM）で定義される物理量である。この物理量は、例えばインバー合金（Fe65Ni35）のように、通常の熱膨張を打ち消す非常に大きなωs (∼ 10−2 )を持つ材料において、温度膨張係数に異常を引き起こす。MAELAS：第一原理計算や古典的なスピン格子モデルと連携して、磁弾性定数や磁歪係数を自動的に計算することができるpythonパッケージである。このパッケージは、単位胞の変形に基づくエネルギー-ひずみ法を用いており、高い精度と安定性を持つ。<br>
+                <span class="name">【提案手法】</span>
+                まず、基準状態として、パラ磁性状態の平衡体積と基底状態の磁気秩序を組み合わせた単位胞を用意する。この単位胞の原子位置は、一定の体積での平衡位置に緩和させる。次に、MAELASを用いて、基準状態から変形した単位胞を生成する。変形した単位胞は、等方的な磁弾性定数b iso i を求めるために必要なひずみテンソルεi (s)に対応する。ここで、sはひずみをパラメータ化する変数である。次に、第一原理計算や古典的なスピン格子モデルを用いて、変形した単位胞のエネルギーを計算する。このとき、基底状態と同じ磁気秩序（強磁性または反強磁性）を用いる。次に、MAELASを用いて、エネルギーとひずみのデータに対して3次多項式（Eq.3）をフィッティングする。このフィッティングから、等方的な磁弾性定数b iso i は式（4）で与えられる。最後に、弾性定数も計算されていれば、MAELASは等方的な磁歪係数（λ iso）と自発的な体積磁歪（ωs）も計算する。これらの量は、付録Aに示す理論式（λ iso(b iso k ,Ci j)とωs(λ iso)）から求められる。<br>
+                <span class="name">【学術的新規性】</span>
+                交換磁歪に関連する等方的な磁弾性定数、磁歪係数、自発的な体積磁歪を単位胞の変形に基づいて計算する方法を提案し、pythonパッケージMAELASに実装した。また、自発的な体積磁歪を得るために必要な基準状態を明確にし、パラ磁性状態の平衡体積と基底状態の磁気秩序を組み合わせたものであることを示した。更に、一軸性結晶における等方的な磁歪係数の理論式に誤りがあることを指摘し、修正した。
               </div>
-              <div class="description6">
-                コメント：電子的な相転移や構造的な相転移を評価するのに歪み印加は有効のようだ。
+            </div><br><br>
+            <div id="1"><h4 class="indent2">二重ペロブスカイトの構造相転移と磁気弾性結合</h4>
+              <div class="description2">
+                高圧XRD測定：Nd2CoFeO6 (NCFO)は、高圧下で正方晶から単斜晶への構造相転移を約13.8 GPaで起こすことがXRD測定によって明らかになった。相転移は、(Fe/Co)O6八面体の歪みが圧力によって増加し、格子ひずみを緩和するために起こる。また、約1.1 GPaで体積圧縮率と体積弾性率に異常が見られたが、これは電子的な異常によるものと考えられる。低温ラマン分析：NCFOのラマンスペクトルは、温度が低下すると青方偏移するが、約47 Kで急激に赤方偏移することが低温ラマン分析によって示された。この赤方偏移は、スピン再配向転移に関連していると考えられる。また、約240 Kでラマンモード周波数に突然の飛びが見られたが、これは反強磁性転移温度TNと一致する。高圧ラマン分析：高圧下でのラマンスペクトルは、約27.4 GPaまで大きな変化は見られなかった。しかし、AgとBgモードのピーク位置は、約1 GPaと約13.1 GPaで傾きの変化を示した。13.1 GPa以上では、正方晶から単斜晶への構造相転移に関連して傾きが減少した。1 GPa以下では、圧力に対する傾きが半分以下に減少したが、これは新しいスピン配列によるものと推測される。磁場下での高圧ラマン分析：外部磁場を印加すると、Bgモードは圧力に伴って硬化した。この硬化は、スピンと磁場との強い相互作用によってスピンフォノン相互作用が影響を受けるためだと考えられる。また、磁場を切った後もラマンスペクトルは元の振る舞いに戻らなかった。この現象は詳細な理論的研究が必要である。
               </div>
               <div class="description10">
-                  18 Aug 2023<br>
-                  Pressure-induced softening in bulk modulus due to magneto-elastic coupling in Nd2CoFeO6 double Perovskite<br>
-                  Bidisha Mukherjee et al. (Indian Institute of Science Education and Research Kolkata, India)<br>
-                <a href="https://arxiv.org/abs/2308.09651" target="_blank" class="link2 link2--nav2">
-                  arXiv:2308.09651 (cond-mat)</a>
+                Published 2023-08-18<br>
+                Pressure-induced softening in bulk modulus due to magneto-elastic coupling in Nd2CoFeO6 double Perovskite<br>
+                Bidisha Mukherjee et al. (Indian Institute of Science Education and Research Kolkata, India)<br>
+                  <a href="https://arxiv.org/abs/2308.09651" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.09651 (cond-mat)</a>
               </div><div class="img_align">
                   <img src="../review/img/202308-6-1.png" class="img300">
                   <img src="../review/img/202308-6-2.png" class="img300">
               </div>
-            </div><br><br>
-
-            <!-- <div id="2"><h4 class="indent2">2. 書き換え可能な光メモリの相変化メカニズムの解明</h4>
-              <div class="description2">
-                ・光メモリに用いられる相変化材料の代表的なものであるGe2Sb2Te5（GST）の結晶構造と非晶構造をX線吸収分光法（XAFS）やX線回折法（XRD）などで調べた。<br>
-                ・結晶GSTは、Te原子が面心立方格子を形成し、GeとSb原子がランダムにもう一方の面心立方格子を形成するロックソルト構造に似ているが、実際にはGe2Sb2Te5という剛体的なビルディングブロックからなる歪んだ構造であることを明らかにした。<br>
-                ・非晶GSTは、レーザーパルスによってビルディングブロック間の結合が切断され、Ge原子が八面体対称から四面体対称に移動することで形成されることを示した。この移動は強い共有結合を保ったまま行われるため、高速かつ安定な相変化が可能であることを説明した。<br>
-                ・非晶GSTは、結晶GSTよりも結合長が短くなり、局所的な秩序が高まることを見出した。これは一般的な共有結合性固体では起こらない珍しい現象である。また、非晶GSTの体積は結晶GSTよりも大きくなることも報告した。<br>
-                ・GSTの相変化は、電子励起によって弱い結合が破壊され、電気的・光学的特性が大きく変化する電子的・構造的秩序・無秩序遷移であることを提案した。この遷移の性質は他の相変化材料にも共通している可能性があると述べた。
-              </div>
               <div class="description6">
-                コメント：構造変化の元素ごとの配位数に着目してそれを実証できるのは放射光技術のおかげである。一連の彼らの研究は、相変化材料の構造変化を理解する上で重要な貢献をしている。<br>
-                補足：GSTは、DVD-RAMやオボニックメモリなどの書き換え可能な光メモリに使われている材料である。光メモリは、レーザー光を当てて材料を結晶状態と非晶状態に切り替えることでデータを記録・再生することができる。この切り替えは非常に高速で何度も繰り返せるが、そのメカニズムは長年不明であった。この研究では、GSTの結晶構造と非晶構造の詳細な原子配置を初めて明らかにした。GSTの相変化は、一般的な固体では起こらない特殊な現象である。通常、固体が溶けたり固まったりするときには、原子間の距離が長くなったり短くなったりするが、GSTでは逆に溶けた方が距離が短くなる。これは、GSTが分子のように振る舞うからである。
-              </div><div class="description10">
-                DATE: 12 Sep 2004<br>
-                Understanding the phase-change mechanism of rewritable optical media<br>
-                Alexander V. Kolobov et al. (National Institute of Applied Industrial Science and Technology, Japan)<br>
-                <a href="https://www.nature.com/articles/nmat1215" target="_blank" class="link2 link2--nav2">
-                  Nature Materials volume 3, pages703–708 (2004)</a>
-              </div><div class="img_align">
-                <img src="../review/img/ferroic-2-1.png" class="img300v">
-                <img src="../review/img/ferroic-2-2.png" class="img300">
+                コメント：電子的な相転移や構造的な相転移を評価するのに歪み印加は有効のようだ。
               </div>
             </div><br><br>
-
-            <div id="3"><h4>3. 室温・常圧での相変化材料のフェムト秒構造変化をコヒーレントフォノンでモニターする</h4>
-              <div class="description2">
-                ・相変化メモリに用いられるGeTe-Sb2Te3系の超格子構造（iPCM）において、フェムト秒レーザーパルスによる光励起で非平衡状態に移行させたとき、コヒーレントフォノン分光法で構造ダイナミクスを観測した。<br>
-                ・光励起後のiPCMの結晶相（SET相）では、単一パルスではフォノンの赤方偏移（軟化）が見られたが、二重パルスではフォノンの青方偏移（硬化）と追加ピークが現れた。これはGe原子周りの配位数が混在することを示唆する。<br>
-                ・光励起後のiPCMの非晶相（RESET相）では、構造変化は不可逆であった。また、多結晶GST合金では、二重パルスでもフォノンの青方偏移は見られなかった。<br>
-                ・二重パルス励起では、パルス間隔やパルス強度によってフォノン分光が変化し、非熱的な前相転移状態へのアクセスが可能であることが分かった。<br>
-                ・iPCMでは、非熱的な前相転移状態は数ピコ秒以内に元のSET相に戻る可逆的な過程であった。これは、光励起による電子的な寄与が主要な役割を果たしていることを示している。<br>
-                
-              </div><div class="description6">
-                コメント：相変化材料であるGSTに対して超格子構造を作りこむことで、アモルファスを介さず、高速な固相ー固相相転移を実現している。発想も技術も素晴らしすぎる。<br>
-                関連記事：<a href="https://www.tsukuba.ac.jp/journal/images/pdf/150925hase3.pdf" target="_blank" class="link2 link2--nav2">産総研プレスリリース（25 Sep 2015）</a>相変化光メモリーの動作を超高速化するメカニズムを解明、<a href="https://www.ulvac.co.jp/wiki/pcram_tominaga/" target="_blank" class="link2 link2--nav2">富永博士のインタビュー（20 May 2020）</a>到達点が新たな出発点の相変化メモリ研究<br>
-                補足：iPCMでは、Ge原子の反転移動によって固体-固体相転移が起こるという新しいメカニズムが提案されており、本研究ではそのメカニズムを超高速時間分解で直接観測したことが注目される。さらに、iPCMでは、二重パルス励起によって非平衡状態で隠れた相を発見し、その特徴的なコヒーレントフォノン分光を報告したことが画期的である。これは、フェムト秒レーザーパルスを用いて相変化材料の構造制御や相変化速度やエネルギー消費量の低減につながる可能性がある。
-              </div><div class="description10">
-                DATE: 25 Sep 2015<br>
-                Femtosecond structural transformation of phase-change materials far from equilibrium monitored by coherent phonons<br>
-                Muneaki Hase et al. (National Institute of Applied Industrial Science and Technology, Japan)<br>
-                <a href="https://www.nature.com/articles/ncomms9367" target="_blank" class="link2 link2--nav2">
-                  Nature Communications volume 6, Article number: 8367 (2015)</a>
-              </div><div class="img_align">
-                <img src="../review/img/ferroic-3-1.png" class="img300v">
-                <img src="../review/img/ferroic-3-2.png" class="img300">
-              </div>
-            </div><br><br> -->
-
           </section>
         </section>
       </main>
@@ -179,7 +143,7 @@
 
     <!-- footer -->
     <footer class="footer">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fferroic&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fmech&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
     </footer>
 
     <div class="scroll-container">
