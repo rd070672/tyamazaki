@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/202311</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+       
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>最新研究の動向と注目論文：2023年11月</h5>
+    </div>
+    <div class="container">
+      <main class="main-content">
+
+        <section id="202311">
+          <section>
+            <h3 class="section__title3"></h3>
+            <div class="description2">
+              11月に掲載された論文やプレプリントをピックアップして紹介していきます。説明を多めにしています。定期的に更新したいと思います。
+            </div>
+          </section><br>
+
+          <!-- ピックアップ論文 -->
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                データ駆動型結晶構造予測のための潜在的保守的目的モデル</a></li>
+            </ol>
+          </section><br><br>
+
+          <section>
+            <div id="1"><h4 class="indent2">データ駆動型結晶構造予測のための潜在的保守的目的モデル</h4>
+              <div class="description2">
+                結晶構造予測（CSP）という難問に対して、既存の結晶構造とエネルギーのデータセットから学習した潜在的保守的目的モデル（LCOMs）という新しい手法を提案した。LCOMsは、結晶構造を潜在空間に変換するために、周期性を持つ固体材料に対する生成モデルである結晶拡散変分オートエンコーダー（CD-VAE）を利用した。潜在空間での最適化において、学習したエネルギー予測モデルが誤った低エネルギーを出力することを防ぐために、保守的目的モデル（COMs）というロバスト化手法を適用した。また、26種類の化合物に対して、最も安定な結晶構造を発見する成功率が高く、既存の手法と同等かそれ以上の性能を示した。その結果、LCOMsの計算コストを大幅に削減し、一つの結晶構造を最適化するのに平均2秒しかかからなかった。
+              </div><div class="description10">2023-10-16<br>
+                Latent Conservative Objective Models for Data-Driven Crystal Structure Prediction<br>
+                Ming Jin, et al. (Monash University, Australia)<br>
+                <a href="https://arxiv.org/abs/2310.10056" target="_blank" class="link2 link2--nav2">https://arxiv.org/abs/2310.10056 </a></div><div class="img_align">
+                <img src="../review/img/202310-5-1.png" class="img300">
+                <img src="../review/img/202310-5-2.png" class="img300c">
+              </div><br><div class="description6">
+                【コメント】最安定構造を見つけ出すというもの。計算がものすごく早いみたいなので、準安定構造探索への拡張も期待。<br>
+                【用語】結晶構造予測（CSP）：与えられた化学式に対して、最も安定な結晶構造（すなわち最低エネルギーを持つ構造）を見つける問題。この問題は、可能な結晶構造の探索空間が非常に複雑で非ユークリッド的であり、安定な結晶構造はごくわずかであることから、困難である。従来の手法は、密度汎関数理論（DFT）に基づくシミュレータを用いてエネルギーを評価するが、これらは非常に時間と計算資源がかかる。最近では、既存の結晶構造とエネルギーのデータセットから学習したモデルを用いてCSPを解く機械学習アプローチが提案されている。
+                潜在空間：高次元で複雑なデータ（例えばグラフや画像）を低次元で連続的なベクトルに変換することで、データの特徴や構造を抽象化した空間。潜在空間では、データの類似性や多様性がベクトルの距離や方向によって表現される。潜在空間を学習するためには、生成モデル（例えば変分オートエンコーダーや生成敵対的ネットワーク）を用いることが一般的である。潜在空間では、単純な最適化手法（例えば勾配降下法）を用いて、データの生成や操作が可能である。                
+                保守的目的モデル（COMs）：オフラインで学習した目的関数の予測モデルを最適化する際に、モデルの誤差を利用して最適化手法が不正確な解を見つけることを防ぐためのロバスト化手法。COMsは、予測モデルの学習時に、故意に低い目的関数値を出力するような入力に対しては、予測値を上方修正するような正則化項を加える。これにより、予測モデルは分布外の入力に対して保守的な値を出力し、最適化手法が誤った解に収束することを防ぐ。 <br>
+                【提案手法】データ駆動型結晶構造予測（CSP）のための潜在的保守的目的モデル（LCOMs）という手法を提案した。この手法は、既存の結晶構造とエネルギーのデータセットから学習したモデルを最適化することで、最も安定な結晶構造を見つけることを目指す。結晶構造の複雑さや非ユークリッド性を回避するために、結晶拡散変分オートエンコーダー（CD-VAE）という生成モデルを用いて、結晶構造を潜在空間に変換した。この潜在空間では、単純な勾配降下法などの最適化手法が可能になります。最適化手法が学習したエネルギー予測モデルの誤差を利用して誤った低エネルギーの結晶構造を見つけることを防ぐために、保守的目的モデル（COMs）というロバスト化手法を適用した。COMsは、予測モデルの学習時に、故意に低いエネルギー値を出力するような入力に対しては、予測値を上方修正するような正則化項を加えることで、分布外の入力に対して保守的な値を出力する。<br>
+                【学術的新規性】結晶構造を潜在空間に変換するために、周期性を持つ固体材料に対する生成モデルである結晶拡散変分オートエンコーダー（CD-VAE）を利用しました。これにより、結晶構造の複雑さや非ユークリッド性を回避し、連続的なベクトル空間での最適化が可能になりました。潜在空間での最適化において、学習したエネルギー予測モデルが誤った低エネルギーを出力することを防ぐために、保守的目的モデル（COMs）というロバスト化手法を適用しました。COMsは、予測モデルの学習時に、故意に低い目的関数値を出力するような入力に対しては、予測値を上方修正するような正則化項を加えることで、分布外の入力に対して保守的な値を出力するようにします。26種類の化合物に対して、最も安定な結晶構造を発見する成功率が高く、既存の手法と同等かそれ以上の性能を示しました。また、計算コストを大幅に削減し、一つの結晶構造を最適化するのに平均2秒しかかかりませんでした。
+              </div>
+            </div><br><br>
+          </section>
+
+        </section>
+      </main>
+      
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2F202311&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>
