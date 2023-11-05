@@ -62,7 +62,7 @@
        
     <div class="about4 center">
       <h2>論文紹介</h2>
-      <h5>著者論文：要約とポイント</h5>
+      <h5>著者論文：要約とポイント | under renewal</h5>
     </div>
     <div class="container">
       
@@ -73,59 +73,50 @@
             <h4 class="under3">論文タイトル一覧</h4>
             <ol class="indent">
               <li class="description22"><a href="#1">
-                多結晶材料の有効特性を予測するためのグラフニューラルネットワーク：包括的な分析</a></li>
+                次元削減技術を用いたFe-Ga合金単結晶の磁歪メカニズムの可視化(2023.09.06)</a></li>
               <li class="description22"><a href="#2">
-                トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現</a></li>
+                Ir添加によるFe0.75Co0.25単結晶薄膜の負の異方性磁気抵抗効果の起源</a></li>
             </ol>
           </section><br>
 
           <section>
-            <!-- <div id="1">
-              <h4>1. 多結晶材料の有効特性を予測するためのグラフニューラルネットワーク：包括的な分析</h4>
+            <div id="1"><h4 class="indent2">次元削減技術を用いたFe-Ga合金単結晶の磁歪メカニズムの可視化</h4>
               <div class="description2">
-                ・LLZOセラミックを例にとって、有限幅の粒界を持つ三次元多結晶微細構造とその有効イオン伝導率および有効弾性剛性係数を大規模に生成し、物理ベースのシミュレーションで計算した。<br>
-                ・原子結晶構造の特性を予測するために開発された結晶グラフ畳み込みニューラルネットワークを基に、多結晶グラフニューラルネットワーク（PGNN）モデルを開発した。PGNNモデルは、粒子と粒界の物理的特徴をノードとエッジの特徴としてグラフに表現し、メッセージ伝達関数を用いて粒子間や粒界間の相互作用を考慮する。<br>
-                ・最適化されたPGNNモデルは、線形回帰モデルや二つの基準となる畳み込みニューラルネットワーク（CNN）モデルよりも低い誤差（1.4%未満）で有効イオン伝導率テンソルの全ての対角成分を予測することができた。また、EBSDデータから生成された統計的に異なる微細構造に対しても良好な外挿性能を示した。<br>
-                ・逐次的前方選択法を用いて、粒子や粒界の個々の物理的特徴が予測精度に及ぼす相対的な重要度を定量化した。その結果、粒子や粒界の導電率が最も重要であり、粒界の厚さや粒子の中心位置は不要な特徴であることがわかった。さらに、有効イオン伝導率を予測するために事前学習されたPGNNモデルは、同じ微細構造の有効弾性剛性係数を予測する際に優れた転移学習性能を示した。
+                高速フーリエ変換（FFT）と教師なし機械学習技術を組み合わせて、磁気光学カー効果（MOKE）顕微鏡で撮影したFe-Ga合金単結晶の磁気ドメイン構造を分析した。主成分分析（PCA）により、磁歪と磁気ドメイン構造の相関を抽出し、180度と90度のドメイン壁運動に関与する異なるメカニズムを識別した。磁歪の最適化に向けて、材料情報学的手法の有効性と可能性を示した。
+              </div><div class="description10">2023-09-06<br>
+                Visualization of the Magnetostriction Mechanism in Fe-Ga Alloy Single Crystal Using Dimensionality Reduction Techniques<br>
+                <a href="https://ieeexplore.ieee.org/document/10242127" target="_blank" class="link2 link2--nav2">IEEE Transactions on Magnetics, 59, 11 (2023)</a></div><div class="img_align">
+                <img src="../review/img/mine-1-1.png" class="img300">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                磁区画像とミクロ磁歪の関係を機械学習で接続したもの<br>
+                <span class="name">【用語】</span>
+                磁歪：磁性材料の形状や寸法が、外部磁場の影響で磁化方向に沿って変化する現象。磁歪係数は、磁場によるひずみの大きさを表す指標である。磁歪は、センサーやアクチュエーターなどの応用に利用される。磁気光学カー効果：磁化された表面から反射した光の偏光状態が変化する磁気光学効果の一種。偏光状態の変化は、カー角やカー楕円率として定量化される。磁気光学カー効果は、磁気ドメイン構造の観察に用いられる装置として、カー顕微鏡の原理となっている。主成分分析：多変量データを、データの分散を最大限に説明するように直交する成分に線形変換する統計的手法。主成分分析は、データの次元数を削減するために用いられる。主成分分析は、データの特徴を抽出するために、機械学習やデータ分析において広く利用される。<br>
+                <span class="name">【提案手法】</span>
+                MOKE顕微鏡を用いて、様々な外部磁場下でFe-Ga合金単結晶の磁気ドメイン構造の画像を撮影した。画像に対して、SVDとRPCAというノイズ除去技術を適用して、磨き傷などの影響を除去した。画像に対して、FFTを用いて、磁気ドメインの周期性に関する情報を抽出した。FFT画像をベクトル化して積み重ねた後、PCAを用いて、次元数を削減した。PCAの成分と磁化や磁歪との関係をプロットして、磁気ドメイン構造と磁歪メカニズムとの相関を分析した。<br>
+                <span class="name">【学術的新規性】</span>
+                本研究は、Fe-Ga合金単結晶の磁歪メカニズムを可視化するために、FFTとPCAという次元削減技術を組み合わせて用いた点で、先行研究とは異なる。本研究は、PCAの成分と物理的性質との間に強い相関があることを示し、磁歪の大きさや方向性に影響を与える要因を明らかにした点で、磁歪メカニズムの理解に貢献した。<br>
               </div>
-              <div class="description6">
-                今後の展望展望：複雑になるにつれて物性・材料特性を予測する説明変数は膨大に増えていく。どういった特徴量エンジニアリングが必要になっていくか。また、グラフ理論を機械学習に組み込んだ予測モデルも興味深い。
-              </div>
-              <div class="description10">
-                DATE: 8 Jun 2023 (v2)<br>
-                Graph Neural Network for Predicting the Effective Properties of Polycrystalline Materials: A Comprehensive Analysis<br>
-                Minyi Dai et al. (University of Wisconsin-Madison, USA)<br>
-                <a href="https://arxiv.org/abs/2209.05583" target="_blank" class="link2 link2--nav2">
-                  arXiv:2209.05583 (cond-mat.mtrl-sci)</a>
-              </div><div class="img_align">
-                <img src="../review/img/materials-1-1.png" class="img300">
-                <img src="../review/img/materials-1-2.png" class="img300">
-              </div>
-            </div><br><br> -->
-
-            <!-- <div id="2">
-              <h4>2. トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現</h4>
+            </div><br><br>
+            <div id="2"><h4 class="indent2">Ir添加によるFe0.75Co0.25単結晶薄膜の負の異方性磁気抵抗効果の起源</h4>
               <div class="description2">
-                ・トポロジカル電磁気学：絶縁体中の電子の運動が非自明な運動量空間トポロジーを持つとき、通常のマクスウェル方程式では記述できない異常な磁気電気応答が現れる。これをトポロジカル電磁気学と呼ぶ。<br>
-                ・インダクタンスとキャパシタンス：電流と電圧の関係を表す複素インピーダンスには、インダクタンスとキャパシタンスという二つの要素が含まれる。インダクタンスは電流に対する遅れを、キャパシタンスは電圧に対する遅れを表す。<br>
-                ・トポロジカル材料と磁性材料のヘテロ構造：トポロジカル絶縁体や量子スピンホール絶縁体などのトポロジカル材料と、強磁性体や反強磁性体などの磁性材料を接合したヘテロ構造では、トポロジカル電磁気学と磁化ダイナミクスが相互作用する。<br>
-                ・トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現：トポロジカル材料と磁性材料のヘテロ構造に交流電圧を印加すると、トポロジカル電子系が磁化ダイナミクスを駆動し、その結果としてインダクタンスやキャパシタンスが発現する。このインダクタンスやキャパシタンスは、従来の金属回路や最近提案された金属磁性体によるものと比べて、高い周波数帯域、低い消費電力、高い品質因子を実現できる。
+                Ir添加によりFe3CoのB2規則相が生成することをX線回折や電子顕微鏡で明らかにした。このB2規則相はFe-Co-Ir三元系の平衡相図には現れない準安定相である。Ir添加によりFe3Coの異方性磁気抵抗（AMR）比が正から負に変化し、最大で-4.7%（10 K）と-3.6%（300 K）に達することを測定した。これらの負のAMR比は重金属添加した3d遷移金属合金の中で最大の値である。電子散乱理論を用いて、B2規則相における負のAMR比の起源を説明した。B2規則相では、Feのdε軌道とdγ軌道の間のエネルギー差が小さく、dγ軌道の状態密度がdε軌道よりも大きいことが、s-d散乱におけるAMR比の符号を決める重要な要因であることを示した。
+              </div><div class="description10">2023-08-07<br>
+                Origin of negative anisotropic magnetoresistance effect in Fe0.75Co0.25 single-crystal thin films upon Ir addition<br>
+                <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.7.084401" target="_blank" class="link2 link2--nav2">Phys. Rev. Materials 7, 084401 (2023)</a></div><div class="img_align">
+                <img src="../review/img/mine-2-1.png" class="img300">
+                <img src="../review/img/mine-2-2.png" class="img300ｃ">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                FeCoIrコンビ膜で磁気抵抗効果の起源を探究したもの<br>
+                <span class="name">【用語】</span>
+                異方性磁気抵抗（AMR）効果：強磁性体において、電流方向と磁化方向の相対角度によって電気抵抗が変化する現象。スピン軌道相互作用によって起こるスピン依存的な輸送現象の一つである。B2規則相：立方晶系の格子構造の一種で、1aサイト（0,0,0）と1bサイト（1/2,1/2,1/2）に異なる原子が交互に配置される。Fe3Co–Irでは、1aサイトにFe原子が、1bサイトにFe、Co、Ir原子が混在する。電子散乱理論：電子が物質中を移動する際に、他の電子や原子核と衝突することで散乱される現象を記述する理論。散乱の強さや角度分布は、散乱体の種類やエネルギーに依存する。電子散乱は、物質の電気伝導や磁気特性に影響を与える。[D(d)γ− − D(d)ε−]/D(d)ε−とは、d軌道のεとγの部分状態密度の差をεの部分状態密度で規格化した値である。この値は、異方性磁気抵抗（AMR）比の符号や大きさを決める重要な要因の一つ。dγ軌道の部分状態密度がdε軌道よりも大きいと、AMR比は負になり、逆に、dε軌道の部分状態密度がdγ軌道よりも大きいと、AMR比は正になる。<br>
+                <span class="name">【提案手法】</span>
+                Ir添加によるFe0.75Co0.25単結晶薄膜の作製：コンビネータリー溶射法を用いて、MgO(100)基板上にIr濃度が連続的に変化するFe0.75Co0.25単結晶薄膜を作製した。Ir濃度は0から11%まで変化し、膜厚は30 nmであった。作製後、真空中で約380℃で30分間アニール処理を行った。X線回折による結晶構造の解析：室温で、Ir濃度に応じてX線回折パターンを測定した。χ=0°と54.7°の測定配置を用いた。平面内と垂直方向の格子定数やB2規則度を求めた。また、シンクロトロン放射光を用いて、低Ir濃度領域やFe-K吸収端付近のX線回折パターンを測定した。電子顕微鏡による結晶構造の観察：Ir濃度が11%の領域の断面を電子顕微鏡で観察した。高分解能HAADF-STEM像、EDS元素マップ、ナノビーム電子回折パターンを取得し、B2規則相の存在と原子配置を確認した。AMR効果の測定：薄膜を多端子デバイスにパターニングし、10から300 Kまでの温度でAMR効果を測定した。電流は[110]方向に100 μAを印加し、磁場は1 Tで膜面内に回転させた。電流方向と磁化方向の相対角度をϕとし、AMR比を(ρ∥−ρ⊥)/ρ⊥と定義した。電子散乱理論によるAMR比の計算：密度汎関数理論とKKR法を用いて、A2無秩序Fe3Co、A2無秩序(Fe3Co)89Ir11、B2規則(Fe3Co)89Ir11の部分状態密度を計算した。電子散乱理論に基づくモデルを用いて、s-d散乱とd軌道の結晶場を考慮して、AMR比を求めた。<br>
+                <span class="name">【学術的新規性】</span>
+                本研究は、Ir添加によりFe3CoにB2規則相が生成することを初めて報告した。このB2規則相は、Fe-Co-Ir三元系の平衡相図には現れない準安定相であり、その形成機構や安定性は今後の課題である。 また、Ir添加によりFe3CoのAMR比が正から負に変化し、重金属添加した3d遷移金属合金の中で最大の負のAMR比を示すことを明らかにした。これは、B2規則相におけるdε軌道とdγ軌道のエネルギー差の小ささとdγ軌道の状態密度の大きさが、s-d散乱におけるAMR比の符号を決めることを理論的に説明した。 最後に、電子散乱理論を用いて、B2規則相における負のAMR比の起源を定量的に解析した。この理論は、s-d散乱とd軌道の結晶場を考慮することで、AMR比の符号や大きさを予測することができる。この理論は、他の重金属添加した3d遷移金属合金にも適用可能である。<br>
               </div>
-              <div class="description6">
-                コメント：創発インダクタよりすごい絶縁体インダクタとのこと。トポロジカル磁性体なので高品質な合成や今回はヘテロ構造の高精度な界面制御が求められると思うが、これをベースに派生技術が展開したら面白そう。<br>
-                関連記事：<a href="https://www.jaea.go.jp/02/press2023/p23061602/" target="_blank" class="link2 link2--nav2">日本原子力研究開発機構プレスリリース（16 Jun 2023）</a>「インダクタ」のサイズを10000分の1に！超小型化できる新原理を考案<br>
-                補足：この論文はトポロジカル材料と磁性材料のヘテロ構造という特殊な系を考えているが、その理論的枠組みは一般的であり、他の種類の秩序変数や物質系にも適用できる可能性があることを指摘している。例えば、超伝導体や強相関電子系などのトポロジカル材料と、多極子秩序やスカイルミオンなどの磁性材料とのヘテロ構造では、どのようなトポロジカル電磁気学が現れるか興味深い問題である。
-              </div><div class="description10">
-                DATE: 26 May 2023<br>
-                Emergence of Inductance and Capacitance from Topological Electromagnetism<br>
-                Yasufumi Araki et al. (Japan Atomic Energy Agency, Japan)<br>
-                <a href="https://journals.jps.jp/doi/epdf/10.7566/JPSJ.92.074705" target="_blank" class="link2 link2--nav2">
-                  journals.jps.jp:doi/epdf/10.7566/JPSJ.92.074705</a>
-              </div><div class="img_align">
-                <img src="../review/img/materials-2-1.png" class="img300">
-                <img src="../review/img/materials-2-2.png" class="img300">
-              </div>
-            </div><br><br> -->
+            </div><br><br>
 
           </section>
         </section>
@@ -137,7 +128,7 @@
 
     <!-- footer -->
     <footer class="footer">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fmaterials&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fmine&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
     </footer>
 
     <div class="scroll-container">
