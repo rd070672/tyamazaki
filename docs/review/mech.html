@@ -86,6 +86,8 @@
           <section>     
             <h4 class="under3">論文タイトル一覧</h4>
             <ol class="indent">
+              <li class="description22"><a href="#5">
+                無機結晶化合物の完全な弾性特性のチャート作成</a></li>
               <li class="description22"><a href="#4">
                 グリーン関数法を用いたDMI相互作用の第一原理計算</a></li>
               <li class="description22"><a href="#3">
@@ -98,6 +100,26 @@
           </section><br>
 
           <section>
+            <div id="5"><h4 class="indent2">無機結晶化合物の完全な弾性特性のチャート作成</h4>
+              <div class="description2">
+                無機結晶化合物の弾性定数テンソルを高スループット計算により求め、これまでで最大のデータベースを作成した。計算には密度汎関数理論と応力-ひずみ法を用いた。計算結果は実験値と一致する範囲内にあり、多様な化合物の弾性特性を予測するのに有用である。データベースはMaterials Projectと連携して公開されており、材料の発見や設計に役立てることができる。
+              </div><div class="description10">2015-03-17<br>
+                Charting the complete elastic properties of inorganic crystalline compounds<br>
+                Maarten de Jong, et al. (University of California, Berkeley, 94720, California, USA)<br>
+                <a href="https://www.nature.com/articles/sdata20159" target="_blank" class="link2 link2--nav2">Scientific Data 2, 150009 (2015) </a></div><div class="img_align">
+                <img src="../review/img/mech-5-1.png" class="img300v">
+                <img src="../review/img/mech-5-2.png" class="img300">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                Materials Prijectではこの論文にあるような第一原理計算で弾性定数の算出をしている。<br>
+                <span class="name">【用語】</span>
+                弾性定数テンソル：結晶の弾性応答を記述する6×6の行列で、応力とひずみの関係を表す。結晶の対称性によって独立な成分の数が異なる。高スループット計算：多数の計算資源を長時間にわたって利用して、大規模な計算タスクを遂行する手法。材料の特性を系統的にスクリーニングするのに適している。密度汎関数理論：量子力学に基づいて原子系の電子構造や物性を計算する手法。交換相関汎関数の選択によって精度や効率が異なる。応力-ひずみ法：結晶に一定のひずみを与えて、それに対応する応力を計算することで、弾性定数テンソルを求める手法。線形弾性領域内であれば、応力とひずみの関係は直線的である。<br>
+                <span class="name">【提案手法】</span>
+                Materials Projectのデータベースから、金属や金属化合物、酸化物や半導体などの無機結晶化合物の構造を選択する。VASPというソフトウェアを用いて、密度汎関数理論の計算を行う。計算にはPAW法とPBE汎関数を採用する。各化合物に対して、6種類の独立なひずみをそれぞれ4段階の大きさでかけて、24種類の変形構造を作る。変形構造において、原子位置を緩和させて、応力テンソルを計算する。応力とひずみの関係を線形にフィッティングして、弾性定数テンソルを求める。弾性定数テンソルから、バルク率やせん断率などの弾性特性を計算する。計算結果を検証やフィルタリングを行って、データベースに格納する。<br>
+                <span class="name">【学術的新規性】</span>
+                これまでで最大の無機結晶化合物の弾性定数テンソルのデータベースを作成したことで、多様な材料の弾性特性を一括して比較・分析することができるようになった。高スループット計算により、実験では測定が困難な化合物や、安定性や希少性に問題のある化合物の弾性特性を予測することができた。密度汎関数理論と応力-ひずみ法を組み合わせることで、高精度かつ効率的に弾性定数テンソルを計算することができた。Materials Projectと連携して、データベースを公開し、材料の発見や設計に役立てることができるようにした。<br>
+              </div>
+            </div><br><br>
             <div id="4"><h4 class="indent2">グリーン関数法を用いたDMI相互作用の第一原理計算</h4>
               <div class="description2">
                 Dzyaloshinskii-Moriya interaction (DMI)**は、磁性材料における非対称的なスピン交換相互作用であり、スピン軌道相互作用に起因する。本研究では、Green’s function (GF)法を用いて、DMIの一般的な公式を導出した。GF法は、電子構造と磁気ダイナミクスを統一的に扱うことができる。第一原理計算を用いて、様々な結晶構造と化学組成を持つ磁性材料のDMIを計算した。計算結果は、実験値や他の理論値とよく一致した。DMIの大きさと方向が、結晶対称性や原子配置に依存することを明らかにした。また、DMIの温度依存性や磁場依存性についても議論した。本研究では、DMIがスカイルミオンや多強誘電体などのトポロジカル磁気相の形成に重要な役割を果たすことを示した。これらの相は、スピントロニクスやマルチフェロニクスの応用に有望である。
