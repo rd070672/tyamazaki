@@ -1493,7 +1493,7 @@ input[name="tab_item"] {
     max-width: 700px;
     margin: 0 auto;
     overflow: auto;
-    height: 250px;
+    height: 400px;
     z-index: 2;
   }
   
