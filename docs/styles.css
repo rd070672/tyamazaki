@@ -831,6 +831,7 @@ input[name="tab_item"] {
   overflow: hidden;
 }
 /*選択されているタブのコンテンツのみを表示*/
+#y2024:checked ~ #y2024_content,
 #y2023:checked ~ #y2023_content,
 #y2022:checked ~ #y2022_content,
 #y2021:checked ~ #y2021_content,
@@ -1493,7 +1494,7 @@ input[name="tab_item"] {
     max-width: 700px;
     margin: 0 auto;
     overflow: auto;
-    height: 400px;
+    height: 500px;
     z-index: 2;
   }
   
