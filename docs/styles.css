@@ -1588,6 +1588,7 @@ input[name="tab_item"] {
     font-size: 16px;
     font-weight: bold;
     text-decoration: underline;
+    margin-left: -10px; /* 10px左に移動 */
 }
 
 /*///////////////////////スマートフォン用にカスタマイズ////////////////////////////*/
