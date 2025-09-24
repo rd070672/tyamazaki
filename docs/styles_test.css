@@ -1879,7 +1879,7 @@ input[name="tab_item"] {
   background: #999;          /* デフォルト色 */
   white-space: nowrap;
   opacity: .9;               /* ちょい半透明 */
-  margin-right:12px;        /* ← タグ↔本文の距離を広げる */
+  margin-right:16px;        /* ← タグ↔本文の距離を広げる */
 }
 
 /* .topic__body a { text-decoration: underline; } */
