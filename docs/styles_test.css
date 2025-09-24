@@ -1818,7 +1818,7 @@ input[name="tab_item"] {
   gap: 12px;
   z-index: 3;
   /* 白背景を半透明にする */
-  background: rgba(255, 255, 255, 0.2); /* 20%の白透明 */
+  /* background: rgba(255, 255, 255, 0.2); 20%の白透明 */
 }
 
 .hero__dots button {
@@ -1827,27 +1827,20 @@ input[name="tab_item"] {
   border-radius: 50%;
   /* background: rgba(255,255,255,0.5); */
   background: rgba(128,128,128,0.4); /* ← グレー */
-  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+  border: 2px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: transform 0.3s ease, background 0.3s ease;
 }
-/* .hero__dots button:hover {
+
+.hero__dots button:hover {
   transform: scale(1.2);
   background: rgba(255,255,255,0.3);
 }
 .hero__dots button[aria-current="true"] {
   background: #2978b5;
   border-color: #2978b5;
-} */
+}
 
-.hero__dots button:hover {
-  transform: scale(1.2);
-  background: rgba(200,200,200,0.6); /* ホバー時も半透明 */
-}
-.hero__dots button[aria-current="true"] {
-  background: rgba(41,120,181,0.7);   /* ブルー半透明 */
-  border-color: rgba(41,120,181,0.9); /* 枠も濃いブルー半透明 */
-}
 
 
 /* ===== Topics (Recent activities) ===== */
@@ -1871,8 +1864,8 @@ input[name="tab_item"] {
 .topic {
   display: grid;
   grid-template-columns: 120px auto 1fr; /* 日付 / タグ / 本文 */
-  align-items: center;  /* ← 縦位置を中央寄せ */
-  column-gap: 8px;      /* ← 日付とタグの距離を短くする */
+  align-items: start;  /* ← 縦位置を中央寄せ */
+  column-gap: 4px;      /* ← 日付とタグの距離を短くする */
   padding-left: 20px;   /* ← 日付の前に余白を追加 */
 }
 
