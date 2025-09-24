@@ -1770,18 +1770,21 @@ input[name="tab_item"] {
   padding: 1rem;
   z-index: 2;
   background: rgba(255,255,255,0.2); /* 透明度をかなり下げる */
+  pointer-events: none; /* クリックを透過させる */
 }
 .hero__overlay h1 {
   margin: 0 0 .25rem 0;
   font-size: clamp(28px, 5vw, 56px);
   letter-spacing: 0.06em;
   color: #fff;
+  pointer-events: auto; /* 文字は選択・クリックできるようにする */
 }
 .hero__overlay h5 {
   margin: 0;
   font-size: clamp(14px, 2.2vw, 20px);
   font-weight: 500;
   color: rgba(255,255,255,.9);
+  pointer-events: auto; /* 文字は選択・クリックできるようにする */
 }
 
 /* ナビゲーション（任意） */
