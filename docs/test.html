@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en jp">
+<html lang="en">
   <head>
     <title>tyamazaki.com</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher at university"/>
     <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
       gtag('config', 'G-NYGV5L0T7N');
     </script>
     <script>
-    (() => {
+    window.addEventListener('DOMContentLoaded', () => {
       const hero = document.querySelector('.hero');
       if (!hero) return;
 
@@ -37,7 +37,6 @@
       let timer = null;
       const INTERVAL_MS = 5000;
 
-      // ドット生成
       slides.forEach((_, i) => {
         const b = document.createElement('button');
         b.type = 'button';
@@ -50,45 +49,25 @@
         slides[idx].classList.remove('is-active');
         idx = (i + slides.length) % slides.length;
         slides[idx].classList.add('is-active');
-
-        // dots
-        dotsWrap.querySelectorAll('button').forEach((b, j) => {
-          b.setAttribute('aria-current', j === idx ? 'true' : 'false');
-        });
-
-        if (user) restart();  // 手動操作時にタイマーリセット
+        dotsWrap.querySelectorAll('button').forEach((b, j) =>
+          b.setAttribute('aria-current', j === idx ? 'true' : 'false')
+        );
+        if (user) restart();
       }
-
       function next() { show(idx + 1); }
       function prev() { show(idx - 1); }
-
       function start() { timer = setInterval(next, INTERVAL_MS); }
       function stop()  { clearInterval(timer); timer = null; }
       function restart(){ stop(); start(); }
 
-      nextBtn?.addEventListener('click', () => next());
-      prevBtn?.addEventListener('click', () => prev());
-
-      // ホバーで一時停止
+      nextBtn?.addEventListener('click', next);
+      prevBtn?.addEventListener('click', prev);
       hero.addEventListener('mouseenter', stop);
       hero.addEventListener('mouseleave', start);
 
-      // キーボード操作
-      hero.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prev();
-        if (e.key === 'ArrowRight') next();
-      });
-      hero.tabIndex = 0; // キーボードフォーカス可
-
-      // ページ非表示時は自動再生停止（タブ節電）
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) stop(); else start();
-      });
-
-      // 初期化
       show(0);
       start();
-    })();
+    });
     </script>
   </head>
   <!-- body -->
@@ -134,9 +113,9 @@
       <div class="hero" aria-label="Portfolio hero">
         <div class="hero__slides">
           <!-- 画像パスを差し替えてください -->
-          <div class="hero__slide is-active" style="--bg:url('/img/top1.jpg')"></div>
-          <div class="hero__slide"           style="--bg:url('/img/top2.jpg')"></div>
-          <div class="hero__slide"           style="--bg:url('/img/top3.jpg')"></div>
+          <div class="hero__slide is-active" style="--bg:url('./img/top1.jpg')"></div>
+          <div class="hero__slide"           style="--bg:url('./img/top2.jpg')"></div>
+          <div class="hero__slide"           style="--bg:url('./img/top3.jpg')"></div>
         </div>
 
         <!-- テキストを上に重ねる -->
@@ -153,7 +132,7 @@
       
       <section id="activities" class="section1">
         <h3 class="section__title3">Recent activities</h3>
-        <section id="activities" class="section1 project2">
+        <section class="section1 project2">
           <div class="tabs"> 
             <!-- style.cssで#y2024:checked ~ #y2024_contentを追加必須 -->
             <input id="y2025" type="radio" name="tab_item" checked> 
@@ -814,7 +793,7 @@
     <!-- footer -->
     <footer class="footer">
       <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>
-      Copyright © 2022-2024 <a href="./">tyamazaki.com</a> | All rights reserved.
+      Copyright © 2022-2025 <a href="./">tyamazaki.com</a> | All rights reserved.
     </footer>
     
     <section>
@@ -831,7 +810,7 @@
         </div>
       </div>
     </section>
-    <script src="./script.js"></script>
+    <script src="./script_test.js"></script>
     <div id="bottom"></div>
   </body>
 </html>
