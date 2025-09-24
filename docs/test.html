@@ -23,6 +23,73 @@
       gtag('js', new Date());
       gtag('config', 'G-NYGV5L0T7N');
     </script>
+    <script>
+    (() => {
+      const hero = document.querySelector('.hero');
+      if (!hero) return;
+
+      const slides = Array.from(hero.querySelectorAll('.hero__slide'));
+      const prevBtn = hero.querySelector('.hero__nav.prev');
+      const nextBtn = hero.querySelector('.hero__nav.next');
+      const dotsWrap = hero.querySelector('.hero__dots');
+
+      let idx = 0;
+      let timer = null;
+      const INTERVAL_MS = 5000;
+
+      // ドット生成
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', `Go to slide ${i+1}`);
+        b.addEventListener('click', () => show(i, true));
+        dotsWrap.appendChild(b);
+      });
+
+      function show(i, user = false) {
+        slides[idx].classList.remove('is-active');
+        idx = (i + slides.length) % slides.length;
+        slides[idx].classList.add('is-active');
+
+        // dots
+        dotsWrap.querySelectorAll('button').forEach((b, j) => {
+          b.setAttribute('aria-current', j === idx ? 'true' : 'false');
+        });
+
+        if (user) restart();  // 手動操作時にタイマーリセット
+      }
+
+      function next() { show(idx + 1); }
+      function prev() { show(idx - 1); }
+
+      function start() { timer = setInterval(next, INTERVAL_MS); }
+      function stop()  { clearInterval(timer); timer = null; }
+      function restart(){ stop(); start(); }
+
+      nextBtn?.addEventListener('click', () => next());
+      prevBtn?.addEventListener('click', () => prev());
+
+      // ホバーで一時停止
+      hero.addEventListener('mouseenter', stop);
+      hero.addEventListener('mouseleave', start);
+
+      // キーボード操作
+      hero.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prev();
+        if (e.key === 'ArrowRight') next();
+      });
+      hero.tabIndex = 0; // キーボードフォーカス可
+
+      // ページ非表示時は自動再生停止（タブ節電）
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stop(); else start();
+      });
+
+      // 初期化
+      show(0);
+      start();
+    })();
+    </script>
   </head>
   <!-- body -->
   <body class="light" id="top">
@@ -59,9 +126,29 @@
     <!-- Main -->
     <main>
       <!-- Portfolio -->
-      <div class="about4 center">
+      <!-- <div class="about4 center">
         <h1>PORTFOLIO</h1>
         <h5>Follow your intuition</h5>
+      </div> -->
+      <!-- Hero / Portfolio -->
+      <div class="hero" aria-label="Portfolio hero">
+        <div class="hero__slides">
+          <!-- 画像パスを差し替えてください -->
+          <div class="hero__slide is-active" style="--bg:url('/assets/img/hero1.jpg')"></div>
+          <div class="hero__slide"              style="--bg:url('/assets/img/hero2.jpg')"></div>
+          <div class="hero__slide"              style="--bg:url('/assets/img/hero3.jpg')"></div>
+        </div>
+
+        <!-- テキストを上に重ねる -->
+        <div class="hero__overlay">
+          <h1>PORTFOLIO</h1>
+          <h5>Follow your intuition</h5>
+        </div>
+
+        <!-- 操作UI（省いても動作します） -->
+        <button class="hero__nav prev" aria-label="Previous slide">&#10094;</button>
+        <button class="hero__nav next" aria-label="Next slide">&#10095;</button>
+        <div class="hero__dots" aria-label="Slide indicators"></div>
       </div>
       
       <section id="activities" class="section1">

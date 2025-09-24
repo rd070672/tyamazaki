@@ -1714,3 +1714,113 @@ input[name="tab_item"] {
     height: 30%;
   }
 }
+
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(40vh, 56vh, 68vh);         /* 画面に応じた高さ */
+  overflow: hidden;
+  border-radius: 12px;                      /* お好みで */
+}
+
+/* スライド面 */
+.hero__slides, .hero__slide {
+  position: absolute;
+  inset: 0;
+}
+.hero__slide {
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
+  transform: scale(1.02);                   /* ほんのりズームで質感UP */
+  will-change: opacity, transform;
+}
+.hero__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 黒透過グラデ（読みやすさ向上） */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.35) 0%,
+    rgba(0,0,0,.35) 40%,
+    rgba(0,0,0,.45) 100%
+  );
+  pointer-events: none;
+}
+
+/* テキストのオーバーレイ */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  z-index: 2;
+}
+.hero__overlay h1 {
+  margin: 0 0 .25rem 0;
+  font-size: clamp(28px, 5vw, 56px);
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+.hero__overlay h5 {
+  margin: 0;
+  font-size: clamp(14px, 2.2vw, 20px);
+  font-weight: 500;
+  color: rgba(255,255,255,.9);
+}
+
+/* ナビゲーション（任意） */
+.hero__nav {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 3;
+  border: none;
+  background: rgba(0,0,0,.35);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background .2s ease;
+}
+.hero__nav:hover { background: rgba(0,0,0,.55); }
+.hero__nav.prev { left: 12px; }
+.hero__nav.next { right: 12px; }
+
+.hero__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  translate: -50% 0;
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+.hero__dots button {
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.6);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.hero__dots button[aria-current="true"] {
+  width: 18px;
+  background: #fff;
+}
