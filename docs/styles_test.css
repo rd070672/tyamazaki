@@ -1863,8 +1863,8 @@ input[name="tab_item"] {
 }
 
 .topic time {
-  font-weight: 700;
-  color: #666;
+  font-weight: 600;
+  color: #999;
   white-space: nowrap;       /* 改行させない */
 }
 
