@@ -1860,12 +1860,20 @@ input[name="tab_item"] {
   list-style: none;
 }
 
-.topic {
+/* .topic {
   display: grid;
   grid-template-columns: 140px auto 1fr; /* 日付 / タグ / 本文 */
   align-items: start;
   column-gap: 16px;
   line-height: 1.6;
+} */
+
+.topic {
+  display: grid;
+  grid-template-columns: 120px auto 1fr; /* 日付 / タグ / 本文 */
+  align-items: center;  /* ← 縦位置を中央寄せ */
+  column-gap: 8px;      /* ← 日付とタグの距離を短くする */
+  padding-left: 20px;   /* ← 日付の前に余白を追加 */
 }
 
 .topic time {
