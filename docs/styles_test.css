@@ -1862,7 +1862,7 @@ input[name="tab_item"] {
 
 /* .topic {
   display: grid;
-  grid-template-columns: 140px auto 1fr; /* 日付 / タグ / 本文 */
+  grid-template-columns: 140px auto 1fr;
   align-items: start;
   column-gap: 16px;
   line-height: 1.6;
