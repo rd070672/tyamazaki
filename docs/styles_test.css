@@ -1871,7 +1871,7 @@ input[name="tab_item"] {
   display: inline-flex;
   align-items: center;
   height: 28px;
-  padding: 0 8px;
+  padding: 0 10px;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -1879,7 +1879,7 @@ input[name="tab_item"] {
   background: #999;          /* デフォルト色 */
   white-space: nowrap;
   opacity: .9;               /* ちょい半透明 */
-  margin-right:6px;        /* ← タグ↔本文の距離を広げる */
+  margin-right:12px;        /* ← タグ↔本文の距離を広げる */
 }
 
 /* .topic__body a { text-decoration: underline; } */
