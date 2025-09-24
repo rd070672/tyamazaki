@@ -1831,6 +1831,6 @@ input[name="tab_item"] {
   background: rgba(255,255,255,0.8);
 }
 .hero__dots button[aria-current="true"] {
-  background: #ff5722;   /* アクティブ時はオレンジ */
-  border-color: #ff5722; /* 枠も同じ色 */
+  background: #2978b5;   /* アクティブ時はオレンジ */
+  border-color: #2978b5; /* 枠も同じ色 */
 }
