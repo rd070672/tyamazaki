@@ -1853,20 +1853,12 @@ input[name="tab_item"] {
   list-style: none;
 }
 
-/* .topic {
-  display: grid;
-  grid-template-columns: 140px auto 1fr;
-  align-items: start;
-  column-gap: 16px;
-  line-height: 1.6;
-} */
-
 .topic {
   display: grid;
-  grid-template-columns: 120px auto 1fr; /* 日付 / タグ / 本文 */
+  grid-template-columns: 112px auto 1fr; /* 日付 / タグ / 本文 */
   align-items: start;  /* ← 縦位置を中央寄せ */
   column-gap: 4px;      /* ← 日付とタグの距離を短くする */
-  padding-left: 20px;   /* ← 日付の前に余白を追加 */
+  padding:0 28px 0 20px;
 }
 
 .topic time {
@@ -1887,9 +1879,10 @@ input[name="tab_item"] {
   background: #999;          /* デフォルト色 */
   white-space: nowrap;
   opacity: .9;               /* ちょい半透明 */
+  margin-right:6px;        /* ← タグ↔本文の距離を広げる */
 }
 
-.topic__body a { text-decoration: underline; }
+/* .topic__body a { text-decoration: underline; } */
 
 /* カテゴリ別カラー */
 .tag--award { background:#caa66a; }   /* 受賞: 金寄り */
@@ -1898,11 +1891,11 @@ input[name="tab_item"] {
 .tag--news  { background:#6c757d; }   /* お知らせ: グレー */
 
 /* スマホで2段構成に（タグを日付の下へ回り込み） */
-@media (max-width: 720px) {
-  .topic {
-    grid-template-columns: 110px 1fr;
-    row-gap: 6px;
+@media (max-width:720px){
+  .topic{
+    grid-template-columns:100px 1fr;
+    row-gap:6px; padding-right:16px;
   }
-  .topic__tag { grid-column: 1 / 2; }
-  .topic__body { grid-column: 2 / 3; }
+  .topic__tag{ grid-column:1/2; margin-right:8px; }
+  .topic__body{ grid-column:2/3; }
 }
