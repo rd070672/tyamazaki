@@ -1856,9 +1856,9 @@ input[name="tab_item"] {
 
 .topic {
   display: grid;
-  grid-template-columns: 80px auto 1fr; /* 日付 / タグ / 本文 */
+  grid-template-columns: 100px auto 1fr; /* 日付 / タグ / 本文 */
   align-items: start;  /* ← 縦位置を中央寄せ */
-  column-gap: 2px;      /* ← 日付とタグの距離を短くする */
+  column-gap: 12px;      /* ← 日付とタグの距離を短くする */
   padding:0 28px 0 20px;
 }
 
@@ -1872,7 +1872,7 @@ input[name="tab_item"] {
   display: inline-flex;
   align-items: center;
   height: 28px;
-  padding: 0 10px;
+  padding: 0 20px;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -1880,7 +1880,7 @@ input[name="tab_item"] {
   background: #999;          /* デフォルト色 */
   white-space: nowrap;
   opacity: .9;               /* ちょい半透明 */
-  margin-right:16px;        /* ← タグ↔本文の距離を広げる */
+  /* margin-right:16px; */
 }
 
 /* .topic__body a { text-decoration: underline; } */
