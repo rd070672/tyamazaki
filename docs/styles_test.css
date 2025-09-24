@@ -1819,6 +1819,7 @@ input[name="tab_item"] {
   z-index: 3;
   /* 白背景を半透明にする */
   /* background: rgba(255, 255, 255, 0.2); 20%の白透明 */
+  background: transparent;
 }
 
 .hero__dots button {
