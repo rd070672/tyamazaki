@@ -1828,7 +1828,7 @@ input[name="tab_item"] {
   border-radius: 50%;
   /* background: rgba(255,255,255,0.5); */
   background: rgba(128,128,128,0.4); /* ← グレー */
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
   cursor: pointer;
   transition: transform 0.3s ease, background 0.3s ease;
 }
