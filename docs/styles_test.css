@@ -1848,3 +1848,60 @@ input[name="tab_item"] {
   background: rgba(41,120,181,0.7);   /* ブルー半透明 */
   border-color: rgba(41,120,181,0.9); /* 枠も濃いブルー半透明 */
 }
+
+
+/* ===== Topics (Recent activities) ===== */
+.topics {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic {
+  display: grid;
+  grid-template-columns: 140px auto 1fr; /* 日付 / タグ / 本文 */
+  align-items: start;
+  column-gap: 16px;
+  line-height: 1.6;
+}
+
+.topic time {
+  font-weight: 700;
+  color: #666;
+  white-space: nowrap;       /* 改行させない */
+}
+
+.topic__tag {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: #999;          /* デフォルト色 */
+  white-space: nowrap;
+  opacity: .9;               /* ちょい半透明 */
+}
+
+.topic__body a { text-decoration: underline; }
+
+/* カテゴリ別カラー */
+.tag--award { background:#caa66a; }   /* 受賞: 金寄り */
+.tag--talk  { background:#2978b5; }   /* 発表: ブルー */
+.tag--paper { background:#2f9e77; }   /* 論文: グリーン */
+.tag--news  { background:#6c757d; }   /* お知らせ: グレー */
+
+/* スマホで2段構成に（タグを日付の下へ回り込み） */
+@media (max-width: 720px) {
+  .topic {
+    grid-template-columns: 110px 1fr;
+    row-gap: 6px;
+  }
+  .topic__tag { grid-column: 1 / 2; }
+  .topic__body { grid-column: 2 / 3; }
+}
