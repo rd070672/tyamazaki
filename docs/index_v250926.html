@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="en">
   <head>
     <title>tyamazaki.com</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="私たちは、計測・計算・機械学習を融合させることで、物質の電子状態から微細構造、さらには機能発現に至るまでを統一的に理解し、新しい材料研究開発の道を切り拓いています。"/>
-    <meta name="keywords" content="山崎研究室, tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher at university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,77 +13,15 @@
       rel="stylesheet">
     <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="./styles_test.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./img/favicon.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
-    <script defer>
-    window.addEventListener('DOMContentLoaded', () => {
-      // テーマ切替
-      const themeBtn = document.getElementById('btn-theme')?.closest('button') || document.getElementById('btn-theme');
-      themeBtn?.addEventListener('click', () => {
-        document.body.classList.toggle('dark');     // あなたのCSSに合わせてクラス名は調整
-      });
-
-      // ハンバーガー：ナビ開閉
-      const hamBtn = document.querySelector('.nav__hamburger');
-      const navList = document.querySelector('.nav__list');
-      hamBtn?.addEventListener('click', () => {
-        navList?.classList.toggle('is-open');       // CSSで .nav__list.is-open を表示させる
-      });
-    });
-    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-NYGV5L0T7N');
-    </script>
-    <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const hero = document.querySelector('.hero');
-      if (!hero) return;
-
-      const slides = Array.from(hero.querySelectorAll('.hero__slide'));
-      const prevBtn = hero.querySelector('.hero__nav.prev');
-      const nextBtn = hero.querySelector('.hero__nav.next');
-      const dotsWrap = hero.querySelector('.hero__dots');
-
-      let idx = 0;
-      let timer = null;
-      const INTERVAL_MS = 5000;
-
-      slides.forEach((_, i) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('aria-label', `Go to slide ${i+1}`);
-        b.addEventListener('click', () => show(i, true));
-        dotsWrap.appendChild(b);
-      });
-
-      function show(i, user = false) {
-        slides[idx].classList.remove('is-active');
-        idx = (i + slides.length) % slides.length;
-        slides[idx].classList.add('is-active');
-        dotsWrap.querySelectorAll('button').forEach((b, j) =>
-          b.setAttribute('aria-current', j === idx ? 'true' : 'false')
-        );
-        if (user) restart();
-      }
-      function next() { show(idx + 1); }
-      function prev() { show(idx - 1); }
-      function start() { timer = setInterval(next, INTERVAL_MS); }
-      function stop()  { clearInterval(timer); timer = null; }
-      function restart(){ stop(); start(); }
-
-      nextBtn?.addEventListener('click', next);
-      prevBtn?.addEventListener('click', prev);
-      hero.addEventListener('mouseenter', stop);
-      hero.addEventListener('mouseleave', start);
-
-      show(0);
-      start();
-    });
     </script>
   </head>
   <!-- body -->
@@ -92,7 +30,7 @@
     <script src="bouncingBall.js"></script> -->
     <!-- header -->
     <header class="header center">
-      <h3><a href="./" class="link">山崎研究室-YNU Yamazaki lab-</a></h3>
+      <h3><a href="./" class="link">tyamazaki.com</a></h3>
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item">
@@ -120,32 +58,14 @@
 
     <!-- Main -->
     <main>
-      <!-- Hero / Portfolio -->
-      <div class="hero" aria-label="Portfolio hero">
-        <div class="hero__slides">
-          <!-- 画像パスを差し替えてください -->
-          <a href="https://tyamazaki.com/#" target="_self" class="hero__slide is-active" style="--bg:url('./img/top1.jpg')"></a>
-          <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top6.jpg')"></a>
-          <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top7.jpg')"></a>
-          <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top4.jpg')"></a>
-          <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top5.jpg')"></a>
-        </div>
-
-        <!-- テキストを上に重ねる -->
-        <div class="hero__overlay about4 center">
-          <h1>未踏材料から未来社会へ</h1>
-          <h5>計測・計算・機械学習を融合させ、電子状態から微細構造、機能発現に至るまでを統一的に理解し、未来社会を支える未踏材料の創出を目指します。</h5>
-        </div>
-        <!-- 私たちは、計測・計算・機械学習を融合させることで、物質の電子状態から微細構造、さらには機能発現に至るまでを統一的に理解します。この知見を基盤に、これまで存在しなかった未踏材料を創出し、未来社会を支える革新的機能の実現を目指しています。 -->
-
-        <!-- 操作UI（省いても動作します） -->
-        <button class="hero__nav prev" aria-label="Previous slide">&#10094;</button>
-        <button class="hero__nav next" aria-label="Next slide">&#10095;</button>
-        <div class="hero__dots" aria-label="Slide indicators"></div>
+      <!-- Portfolio -->
+      <div class="about4 center">
+        <h1>PORTFOLIO</h1>
+        <h5>Follow your intuition</h5>
       </div>
       
       <section id="activities" class="section1">
-        <h3 class="section__title3">NEWS</h3>
+        <h3 class="section__title3">Recent activities</h3>
         <section class="section1 project2">
           <div class="tabs"> 
             <!-- style.cssで#y2024:checked ~ #y2024_contentを追加必須 -->
@@ -163,57 +83,7 @@
             <label class="tab_item" for="past">2020~</label>
             
             <div id="y2025_content" class="flex2 tab_content">
-              <ul class="topics">
-
-                <li class="topic">
-                  <time datetime="2025-09-02">2025.9.2</time>
-                  <span class="topic__tag tag--paper">論文</span>
-                  <div class="topic__body">
-                    A new journal paper was published online, “R. Reika, A. Varadwaj*, and T. Yamazaki et al., Automated Elucidation of Crystal and Electronic Structures in Boron Nitride from X-ray Absorption Spectra Using Uniform Manifold Approximation and Projection,”
-                    <i>Scientific Reports</i>, in press.
-                  </div>
-                </li>
-
-                <li class="topic">
-                  <time datetime="2025-08-04">2025.8.4</time>
-                  <span class="topic__tag tag--talk">発表</span>
-                  <div class="topic__body">
-                    T. Yamazaki*, S. Tamaru and M. Kotsugi, “Analysis of Magnetic Barkhausen Noise to Reveal Domain Wall Dynamics in Amorphous/Nanocrystalline Ribbons,”
-                    <a href="https://ieeexplore.ieee.org/abstract/document/11119667" class="link footer__link"><i>IEEE Access</i>, vol. 13, pp. 140079–140086 (2025)</a>.
-                  </div>
-                </li>
-
-                <li class="topic">
-                  <time datetime="2025-07-25">2025.7.25</time>
-                  <span class="topic__tag tag--news">お知らせ</span>
-                  <div class="topic__body">
-                    K. Nakazawa*, K. Niitsu and T. Yamazaki, “Observation of Crystallization Process in Fe-base Amorphous via 5D-STEM,”
-                    <a href="https://doi.org/10.1093/mam/ozaf048.797" class="link footer__link"><i>Microscopy and Microanalysis</i>, vol. 31, no. 7, pp. 1551–1552 (2025)</a>.
-                  </div>
-                </li>
-
-                <!-- 例：受賞/発表/お知らせ -->
-                <!--
-                <li class="topic">
-                  <time datetime="2025-04-15">2025.04.15</time>
-                  <span class="topic__tag tag--award">受賞</span>
-                  <div class="topic__body">・・・本文・・・</div>
-                </li>
-                <li class="topic">
-                  <time datetime="2024-11-27">2024.11.27</time>
-                  <span class="topic__tag tag--talk">発表</span>
-                  <div class="topic__body">・・・本文・・・</div>
-                </li>
-                <li class="topic">
-                  <time datetime="2025-04-01">2025.04.01</time>
-                  <span class="topic__tag tag--news">お知らせ</span>
-                  <div class="topic__body">・・・本文・・・</div>
-                </li>
-                -->
-
-              </ul>
-              
-              <!-- <div class="tab_content_description">
+              <div class="tab_content_description">
 
                 <p class="description"><strong>2025.9.2 <i>NEW!!</i></strong><br>&ensp;
                   A new journal paper was published online, "R. Reika, A. Varadwaj*, and T. Yamazaki et al., Automated Elucidation of Crystal and Electronic Structures in Boron Nitride from X-ray Absorption Spectra Using Uniform Manifold Approximation and Projection, <a href="" class="link footer__link"><i>Scientific Report</i>, in press"</a>.<br>
@@ -287,14 +157,14 @@
                   大型放射光施設SPring-8 (Japan) にて、放射光実験を実施しました。本実験では、「ナノ結晶アモルファス合金のコンビ組成傾斜膜を利用した軟磁性起源の解明」（Proposal No. 2024B1320）を題目とし、ビームラインBL25SUの電磁石XMCD装置を用いた磁気円二色性（XMCD）測定を行いました。<br>
                 </p>
 
-                <p class="description"><strong>2025.1.2</strong><br>&ensp;
+                <!-- <p class="description"><strong>2025.1.2</strong><br>&ensp;
                   A new journal paper was accepted, "T. Yamazaki et al, Uncovering the origin of magnetic moment enhancement in Fe-Co-Ir alloys via high-throughput XMCD, <a href="" class="link footer__link"><i>Physical Review Materials, accepted (2025)"</i></a><br>
-                </p>
+                </p> -->
 
                 <p class="description"><strong>2025.1.1</strong><br>&ensp;
                   Happy new year 2025! Follow your intuition.<br>
                 </p>
-              </div> -->
+              </div>
             </div>
 
             <div id="y2024_content" class="flex2 tab_content">
@@ -857,7 +727,7 @@
     <!-- footer -->
     <footer class="footer">
       <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>
-      Copyright © 2022-2025 <a href="./">tyamazaki.com</a> | All rights reserved.
+      Copyright © 2022-2024 <a href="./">tyamazaki.com</a> | All rights reserved.
     </footer>
     
     <section>
@@ -874,7 +744,7 @@
         </div>
       </div>
     </section>
-    <script src="./script_test.js"></script>
+    <script src="./script.js"></script>
     <div id="bottom"></div>
   </body>
 </html>
