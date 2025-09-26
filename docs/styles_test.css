@@ -796,7 +796,7 @@ main {
   max-width: 960px; /*900px;*/
   margin: 0 auto;
   overflow: auto;
-  height: 350px;
+  height: 500px; /*350px;*/
   position: relative;
   z-index: 0;
 }
