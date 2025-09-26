@@ -946,8 +946,19 @@ input[name="tab_item"] {
 .lab-subtitle {
   margin: 0.3em 0 0;
   font-size: 0.9rem;
-  color: #777; /* グレー */
+  color: #777;
   line-height: 1.4;
+}
+
+.lab-link {
+  color: #777;          /* グレーで統一 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lab-link:hover {
+  color: var(--clr-primary); /* ホバー時にブルーに変化 */
+  text-decoration: underline;
 }
 
 /* ナビ全体を横並びに */
