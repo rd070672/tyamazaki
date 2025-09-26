@@ -1476,18 +1476,19 @@ input[name="tab_item"] {
 }
 
 /* スライド面 */
-.hero__slides, .hero__slide {
+.hero__slides,
+.hero__slide {
   position: absolute;
   inset: 0;
 }
 .hero__slide {
   background-image: var(--bg);
-  background-size: cover;       /* ←枠いっぱいに拡大縮小 */
-  background-position: center;  /* ←常に中央を表示 */
-  background-repeat: no-repeat; /* ←余白は埋めない */
+  background-size: cover;       /* 枠いっぱいに拡大縮小 */
+  background-position: center;  /* 常に中央を表示 */
+  background-repeat: no-repeat; /* 余白は埋めない */
   opacity: 0;
   transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
-  transform: scale(1.02);                   /* ほんのりズームで質感UP */
+  transform: scale(1.02);       /* ほんのりズームで質感UP */
   will-change: opacity, transform;
 }
 .hero__slide.is-active {
@@ -1522,35 +1523,34 @@ input[name="tab_item"] {
   pointer-events: none; /* クリックを透過させる */
 }
 
-.hero__overlay h3,
-.hero__overlay h6 {
-  pointer-events: auto; /* 文字は選択・クリックできるようにする */
-}
-
-/* テキストを載せる半透明パネル */
-.hero__panel{
+/* テキストを載せる半透明パネル（操作可能・白文字を強制） */
+.hero__panel {
   max-width: min(860px, 88%);
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255,255,255,0.35); /* 透過やや下げてコントラストUP */
   backdrop-filter: blur(2px);
   box-shadow: 0 10px 28px rgba(0,0,0,.2);
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;         /* パネルは選択/クリック可 */
+  color: #fff;                  /* 子要素は白を継承 */
+  mix-blend-mode: normal;
 }
 
-.hero__title{
+/* タイトルと本文 */
+.hero__title {
   margin: 0 0 .35em 0;
   font-size: clamp(20px, 4.0vw, 40px);
   font-weight: 600;
   letter-spacing: .02em;
-  color: #ffffff;
-  /* text-shadow: 0 3px 8px rgba(0,0,0,.55); */
+  color: #fff !important;       /* 他の全体ルールより必ず白に */
 }
-.hero__desc{
+.hero__desc {
   margin: 0;
-  color: #ffffff;
   font-size: clamp(15px, 2.2vw, 20px);
   line-height: 1.7;
-  /* text-shadow: 0 2px 6px rgba(0,0,0,.55); */
+  color: #fff !important;       /* 他の全体ルールより必ず白に */
 }
 
 /* 目立つCTAボタン（例：配属希望の学生さんへ） */
@@ -2125,28 +2125,3 @@ input[name="tab_item"] {
 /* ############################################################# */
 /* ############################################################# */
 /* ############################################################# */
-
-
-/* === Hero fix (put at the very end) === */
-
-/* オーバーレイ自体はクリック透過、パネルは操作可能に */
-.hero__overlay { pointer-events: none; }
-.hero__panel   { pointer-events: auto; }
-
-/* パネル上の文字を必ず真っ白に（上書き対策） */
-.hero__panel { 
-  position: relative; 
-  z-index: 3;
-  color: #fff;               /* 親で白を継承させる */
-  mix-blend-mode: normal;    /* まれに混色指定があるテーマ対策 */
-}
-.hero__panel .hero__title,
-.hero__panel .hero__desc {
-  color: #fff !important;    /* 後勝ち/特異性の高い全体ルールを確実に潰す */
-}
-
-/* （お好み）白パネルの透過を少し下げると白文字が見やすい */
-.hero__panel{
-  background: rgba(255,255,255,0.35); /* 元0.6→0.35 ＝ 白文字のコントラストUP */
-  backdrop-filter: blur(2px);
-}
