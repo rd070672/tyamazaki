@@ -31,7 +31,6 @@ body {
   --clr-bg-alt: #fff;
   --clr-fg: #555;
   --clr-fg-alt: #444;
-  /* --clr-primary: #2978b5; */
   --clr-primary: #0063ad;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -591,6 +590,15 @@ i.fas.fa-external-link-alt{
   color: var(--clr-fg);
   text-transform: uppercase;
   font-weight: 500;
+  padding: 0.5em 1em;      /* 背景色が分かりやすいように少し余白を追加 */
+  border-radius: 4px;      /* 角を丸める（任意） */
+  transition: all 0.3s ease;
+}
+
+.link--nav:hover,
+.link--nav:focus {
+  background-color: var(--clr-primary); /* 背景色を変える */
+  color: #fff;                          /* 文字色を白に */
 }
 
 .link--nav2 {
