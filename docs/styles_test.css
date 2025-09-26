@@ -259,14 +259,6 @@ button {
   bottom: 0.4rem;
   font-weight: bold;
 }
-/* 訪問カウンター用 */
-/* .description99 { 
-  margin: 0em;
-  padding: 0.3em;
-  position: absolute;
-  right: 7.5rem;
-  bottom: 0.4rem;
-} */
 
 .description10 {
   font-size: 1rem;
@@ -388,7 +380,7 @@ button {
 }
 
 .leftImg2 { /* review */
-  width: 100%; /* 親(leftImgContainer2)の幅に合わせる */
+  width: 100%;
   height: 100%;
   display: block;
 
@@ -400,9 +392,7 @@ button {
   margin: 0.5em 0.2em;
   border: 2px solid rgb(200, 200, 200);
 }
-/* .leftImg:hover {
-  opacity: 0.75;
-} */
+
 .leftImg400 {
   float: left;
   width: 400px;
@@ -914,12 +904,12 @@ input[name="tab_item"] {
 .lab-subtitle {
   margin: 0.3em 0 0;
   font-size: 0.8rem;
-  color: #999;
+  color: var(--clr-fg);
   line-height: 1.2;
 }
 
 .lab-link {
-  color: #777;          /* グレーで統一 */
+  color: var(--clr-fg);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -1006,9 +996,6 @@ input[name="tab_item"] {
 .name {
   color: var(--clr-primary);
 }
-/* .name:hover {
-  opacity: 0.75;
-} */
 
 .about__name {
   color: var(--clr-primary);
@@ -1075,9 +1062,6 @@ input[name="tab_item"] {
 .section2.project2 {
   position: relative; /* セクション要素を相対位置に設定 */
 }
-/* .section2.project2:hover {
-  opacity: 0.9;
-} */
 
 .section1.project2 {
   position: relative;
@@ -1540,28 +1524,17 @@ input[name="tab_item"] {
 
 .hero__overlay h3,
 .hero__overlay h6 {
-  color: #ffffff;
   pointer-events: auto; /* 文字は選択・クリックできるようにする */
 }
 
 /* テキストを載せる半透明パネル */
-/* .hero__panel{
+.hero__panel{
   max-width: min(860px, 88%);
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(2px);
   box-shadow: 0 10px 28px rgba(0,0,0,.2);
-} */
-
-/* 配置用ラッパー。背景ボックスは消す */
-.hero__panel{
-  max-width:min(860px, 88%);
-  padding: 0;               /* ← 余計な余白もいったん0 */
-  background: none;         /* ← 白半透明を削除 */
-  border-radius: 0;
-  box-shadow: none;
-  backdrop-filter: none;
 }
 
 .hero__title{
@@ -1570,14 +1543,14 @@ input[name="tab_item"] {
   font-weight: 600;
   letter-spacing: .02em;
   color: #ffffff;
-  text-shadow: 0 3px 8px rgba(0,0,0,.55);
+  /* text-shadow: 0 3px 8px rgba(0,0,0,.55); */
 }
 .hero__desc{
   margin: 0;
   color: #ffffff;
   font-size: clamp(15px, 2.2vw, 20px);
   line-height: 1.7;
-  text-shadow: 0 2px 6px rgba(0,0,0,.55); /* 輪郭を少し浮き立たせる */
+  /* text-shadow: 0 2px 6px rgba(0,0,0,.55); */
 }
 
 /* 目立つCTAボタン（例：配属希望の学生さんへ） */
@@ -2152,3 +2125,28 @@ input[name="tab_item"] {
 /* ############################################################# */
 /* ############################################################# */
 /* ############################################################# */
+
+
+/* === Hero fix (put at the very end) === */
+
+/* オーバーレイ自体はクリック透過、パネルは操作可能に */
+.hero__overlay { pointer-events: none; }
+.hero__panel   { pointer-events: auto; }
+
+/* パネル上の文字を必ず真っ白に（上書き対策） */
+.hero__panel { 
+  position: relative; 
+  z-index: 3;
+  color: #fff;               /* 親で白を継承させる */
+  mix-blend-mode: normal;    /* まれに混色指定があるテーマ対策 */
+}
+.hero__panel .hero__title,
+.hero__panel .hero__desc {
+  color: #fff !important;    /* 後勝ち/特異性の高い全体ルールを確実に潰す */
+}
+
+/* （お好み）白パネルの透過を少し下げると白文字が見やすい */
+.hero__panel{
+  background: rgba(255,255,255,0.35); /* 元0.6→0.35 ＝ 白文字のコントラストUP */
+  backdrop-filter: blur(2px);
+}
