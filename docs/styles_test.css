@@ -1414,7 +1414,7 @@ input[name="tab_item"] {
 
 .lab-title h3 {
   margin: 0;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.2;
   display: inline-block;
   color: var(--clr-primary);
@@ -1547,7 +1547,7 @@ input[name="tab_item"] {
   width: 42px;
   height: 42px;
   border-radius: 999px;
-  font-size: 20px;
+  font-size: 28px;
   color: #fff;
   cursor: pointer;
   display: grid;
