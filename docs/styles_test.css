@@ -772,14 +772,38 @@ i.fas.fa-external-link-alt{
   font-size: 0.7rem;
 }
 
-.header {
+/* .header {
   height: 6em;
-  max-width: 960px; /*900px;*/
+  max-width: 960px; 
   width: 95%;
   margin: 0 auto;
-  padding-top: 20px;   /* ← サイト全体の一番上に空間 */
-  margin-bottom: 20px; /* ← タイトルと画像の間に空間 */
+  padding-top: 20px;   
+  margin-bottom: 20px; 
   justify-content: space-between;
+} */
+
+/* Header を左右に配置＆縦中央。高さは可変に */
+.header{
+  display:flex;
+  align-items:center;              /* 縦中央 */
+  justify-content:space-between;   /* 左: ラボ名 / 右: ナビ */
+  gap: 16px;                       /* ラボ名とナビの間 */
+  max-width: 960px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px 0;                 /* 上余白=20px, 下余白=20px */
+  /* height は固定しない */
+}
+
+.header.center{
+  justify-content:space-between;   /* 上書き */
+  text-align:left;                 /* ラボ名のテキストは左寄せ */
+}
+
+/* ラボ名（h3）周りの余白調整 */
+.header h3{
+  margin:0;                        /* 余白リセット */
+  line-height:1;                   /* 行高を詰める */
 }
 
 main {
@@ -917,17 +941,46 @@ input[name="tab_item"] {
   margin-bottom: 0.2em;
 }
 
-.nav {
-  text-align: center;
+/* ラボ名と大学名 */
+.lab-title h3 {
+  margin: 0;
+  font-size: 1.8rem;
 }
 
-.nav__list {
+.lab-subtitle {
+  margin: 0.3em 0 0;
+  font-size: 0.9rem;
+  color: #777; /* グレー */
+  line-height: 1.4;
+}
+
+/* .nav {
+  text-align: center;
+} */
+
+/* ナビ全体を横並びに */
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 12px;                       /* アイコンとの間 */
+  text-align:left;                 /* 中央寄せを解除 */
+}
+
+/* .nav__list {
   margin-right: 1em;
   display: flex;
+} */
+
+/* メニューを横並びに＆余白は gap で */
+.nav__list{
+  display:flex;
+  gap: 28px;                       /* メニュー間隔 */
+  margin:0; padding:0;             /* 余白リセット */
+  list-style:none;
 }
 
 .nav__list-item {
-  margin-left: 1.5em;
+  margin-left: 0;
 }
 
 .nav__hamburger {
