@@ -863,7 +863,7 @@ input[name="tab_item"] {
 
 .section__subtitle {
   font-size: 0.8rem;    /* 小さめ文字 */
-  color: #999;          /* グレー */
+  color: var(--clr-fg);          /* グレー */
   margin-top: -0.4em;   /* NEWSとの間隔を微調整 */
   margin-bottom: 1em;   /* 下のタブとの余白 */
   margin-left: 0.3em;  /* ← 右に寄せる */
@@ -890,28 +890,6 @@ input[name="tab_item"] {
   text-align: left;
   margin-left: 0.7em;
   margin-bottom: 0.2em;
-}
-
-/* ラボ名と大学名 */
-.lab-title h3 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: var(--clr-primary);
-  padding: 0 0 0.3em 0;
-  position: relative;
-}
-
-.lab-subtitle {
-  margin: 0.3em 0 0;
-  font-size: 0.8rem;
-  color: var(--clr-fg);
-  line-height: 1.2;
-}
-
-.lab-link {
-  color: var(--clr-fg);
-  text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 /* ナビ全体を横並びに */
@@ -2014,24 +1992,52 @@ input[name="tab_item"] {
 
   /* ################################################################ */
   .lab-title {
-    padding: 12px 0 10px;   /* 上下余白を確保 */
+    padding: 12px 0 10px;
   }
   .lab-title h3 a,
   .lab-title h3 {
-    font-size: clamp(18px, 6.2vw, 24px);  /* 見出しを小さく */
+    margin: 0;
+    font-size: clamp(18px, 20px, 24px);
     line-height: 1.2;
     display: inline-block;
+    color: var(--clr-primary);
+    padding: 0 0 0.3em 0;
+    position: relative;
   }
   .lab-subtitle {
     margin-top: 6px;
-    font-size: clamp(11px, 3.6vw, 13px);  /* サブタイトルを小さく */
+    margin: 0.3em 0 0;
+    font-size: clamp(10px, 14px, 16px);
+    color: var(--clr-fg);
     line-height: 1.5;
   }
   .lab-subtitle .lab-link {
-    color: #777;
+    color: var(--clr-fg);
     text-decoration: none;
     margin-right: .4em;
+    transition: color 0.2s ease;
   }
+/* 
+.lab-title h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--clr-primary);
+  padding: 0 0 0.3em 0;
+  position: relative;
+} */
+
+/* .lab-subtitle {
+  margin: 0.3em 0 0;
+  font-size: 1rem;
+  color: var(--clr-fg);
+  line-height: 1.2;
+} */
+
+/* .lab-link {
+  color: var(--clr-fg);
+  text-decoration: none;
+  transition: color 0.2s ease;
+} */
 
   /* ハンバーガーを表示 */
   .nav__hamburger {
