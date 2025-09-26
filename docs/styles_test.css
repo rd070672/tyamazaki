@@ -1717,8 +1717,8 @@ input[name="tab_item"] {
   margin-bottom: 10px;
 }
 .section-head .eyebrow{
-  font-size: 32;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--clr-primary);
@@ -1726,7 +1726,7 @@ input[name="tab_item"] {
 }
 .section-head .title{
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   /* font-weight: 600; */
   letter-spacing: .01em;
 }
