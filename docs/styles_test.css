@@ -778,6 +778,7 @@ i.fas.fa-external-link-alt{
   width: 95%;
   margin: 0 auto;
   padding-top: 20px;   /* ← サイト全体の一番上に空間 */
+  margin-bottom: 20px; /* ← タイトルと画像の間に空間 */
   justify-content: space-between;
 }
 
@@ -890,6 +891,7 @@ input[name="tab_item"] {
   color: #999;          /* グレー */
   margin-top: -0.4em;   /* NEWSとの間隔を微調整 */
   margin-bottom: 1em;   /* 下のタブとの余白 */
+  margin-left: 1em;  /* ← 右に寄せる */
 }
 
 .section__title2 {
