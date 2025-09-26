@@ -808,9 +808,9 @@ main {
   width: 100px;
   height: 30px;
   border-bottom: 2px solid var(--clr-primary);
-  background-color: var(--clr-bg);
+  background-color: #999; /* var(--clr-bg);*/
   line-height: 30px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   color: var(--clr-primary);
   display: block;
