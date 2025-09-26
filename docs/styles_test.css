@@ -121,37 +121,6 @@ button {
   cursor: pointer;
 }
 
-/*スマートフォン用にカスタマイズ*/
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    /* text-align: center; */
-  }
-  h3 {
-    font-size: 1.2em;
-    /* text-align: left; */
-  }
-  h4 {
-    font-size: 0.9em;
-    /* text-align: left; */
-  }
-  h5 {
-    font-size: 0.9em;
-    text-align: center;
-  }
-  h6 {
-    font-size: 0.8em;
-  }
-}
-
-/*===================
-  customization
-===================*/
-
 .bold {
   font-weight: bold;
 }
@@ -967,7 +936,7 @@ input[name="tab_item"] {
 .nav__list{
   display:flex;
   align-items:center;
-  gap: 10px;                       /* メニュー間隔 */
+  gap: 12px;                       /* メニュー間隔 */
   margin:0; padding:0;             /* 余白リセット */
   list-style:none;
   font-size: 0.8rem;
@@ -1505,12 +1474,282 @@ input[name="tab_item"] {
   background-color: var(--clr-bg-alt);
 }
 
-/* canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-} */
+.year_title {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: -13px; /* 15px左に移動 */
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  /* height: 600px;  */
+  height: clamp(40vh, 56vh, 68vh);         /* 画面に応じた高さ */
+  overflow: hidden;
+  border-radius: 12px;                      /* お好みで */
+}
+
+/* スライド面 */
+.hero__slides, .hero__slide {
+  position: absolute;
+  inset: 0;
+}
+.hero__slide {
+  background-image: var(--bg);
+  background-size: cover;       /* ←枠いっぱいに拡大縮小 */
+  background-position: center;  /* ←常に中央を表示 */
+  background-repeat: no-repeat; /* ←余白は埋めない */
+  opacity: 0;
+  transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
+  transform: scale(1.02);                   /* ほんのりズームで質感UP */
+  will-change: opacity, transform;
+}
+.hero__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 黒透過グラデ（読みやすさ向上） */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.35) 0%,
+    rgba(0,0,0,.35) 40%,
+    rgba(0,0,0,.45) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* テキストのオーバーレイ */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  z-index: 2;
+  /* background: rgba(255,255,255,0.2);  */
+  pointer-events: none; /* クリックを透過させる */
+}
+
+.hero__overlay h3,
+.hero__overlay h6 {
+  color: #ffffff;
+  pointer-events: auto; /* 文字は選択・クリックできるようにする */
+}
+
+/* テキストを載せる半透明パネル */
+.hero__panel{
+  max-width: min(860px, 88%);
+  padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);        /* 文字の視認性UP（対応ブラウザ） */
+  box-shadow: 0 10px 28px rgba(0,0,0,.2);
+}
+
+.hero__title{
+  margin: 0 0 .35em 0;
+  font-size: clamp(24px, 4.4vw, 42px);
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: #ffffff;
+  text-shadow: 0 3px 8px rgba(0,0,0,.7);
+}
+.hero__desc{
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(14px, 2.1vw, 18px);
+  line-height: 1.7;
+  text-shadow: 0 2px 6px rgba(0,0,0,.65); /* 輪郭を少し浮き立たせる */
+}
+
+/* 目立つCTAボタン（例：配属希望の学生さんへ） */
+.hero__btn{
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  margin-left: .8em;
+  padding: .55em 1.1em;
+  border-radius: 999px;
+  background: #0063ad;    /* YNU系ブルー */
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+.hero__btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+  filter: brightness(1.1);
+}
+
+.hero__nav {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 3;
+  border: none;
+  background: rgba(0,0,0,.35);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background .3s ease;
+}
+
+.hero__nav:hover { background: rgba(0,0,0,.55); }
+.hero__nav.prev { left: 12px; }
+.hero__nav.next { right: 12px; }
+
+.hero__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  translate: -50% 0;
+  display: flex;
+  gap: 12px;
+  z-index: 3;
+  background: transparent;
+}
+
+.hero__dots button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(128,128,128,0.4); /* ← グレー */
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero__dots button:hover {
+  transform: scale(1.2);
+  background: rgba(255,255,255,0.3);
+}
+.hero__dots button[aria-current="true"] {
+  background: #2978b5;
+  border-color: #2978b5;
+}
+
+/* 右上に重ねるピル型ボタン */
+.hero__cta{
+  position: absolute;
+  top: 18px;               /* 位置は好みで調整 */
+  right: 18px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  padding: .55em 1.1em;
+  border-radius: 999px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* 見た目：グラデーション + ふわっと影 */
+  background: linear-gradient(135deg, #0063ad 0%, #18b41d 100%);
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+
+  /* なめらかホバー */
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+/* ホバー・フォーカス時 */
+.hero__cta:hover,
+.hero__cta:focus{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+  filter: brightness(1.05);
+  outline: none;
+}
+
+/* ダーク/ライトに合わせたい場合は単色版に切替も可 */
+.hero__cta.is-primary{
+  background: var(--clr-primary);
+}
+
+/* ===== Topics (Recent activities) ===== */
+.topics {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic {
+  display: grid;
+  grid-template-columns: 80px 80px 1fr; /* 日付 / タグ / 本文 */
+  align-items: start;  /* ← 縦位置を中央寄せ */
+  column-gap: 22px;      /* ← 日付とタグの距離を短くする */
+  padding:0 28px 0 20px;
+}
+
+.topic time {
+  font-weight: 600;
+  color: #999;
+  white-space: nowrap;       /* 改行させない */
+}
+
+.topic__tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: #999;          /* デフォルト色 */
+  white-space: nowrap;
+  opacity: .9;               /* ちょい半透明 */
+  /* margin-right:16px; */
+}
+
+.topic__body { 
+  text-decoration: none; 
+}
+
+.topic__body a {
+  font-size: 0.8em;   /* 親より10%小さい */
+  line-height: 1.4;   /* 読みやすくする */
+}
+
+/* カテゴリ別カラー */
+.tag--award { background:#caa66a; }   /* 受賞: 金寄り */
+.tag--talk  { background:#2a5caa; }   /* 発表: ネイビーブルー */
+.tag--paper { background:#2f9e77; }   /* 論文: グリーン */
+.tag--media { background:#5e35b1; }   /* メディア: パープル */
+.tag--news  { background:#b0b0b0; }   /* お知らせ: 銀 */
+.tag--event { background:#d81b60; }  /* イベント（ラズベリー） */
+.tag--other { background:#6c757d; }   /* その他: グレー */
+
+/* 追加候補 */
+.tag--press   { background:#b85c00; }  /* プレス（濃いオレンジ） */
+.tag--grant   { background:#00695c; }  /* 採択（深いティール） */
+.tag--patent  { background:#8d6e63; }  /* 特許（ブロンズ系） */
+.tag--collab  { background:#455a64; }  /* 受託/共同（青灰） */
+.tag--edu     { background:#9e9d24; }  /* 教育（オリーブ） */
+.tag--data    { background:#00838f; }  /* データ/コード（深シアン） */
+.tag--facility{ background:#4e342e; }  /* 設備（濃茶） */
+.tag--hire    { background:#6a1b9a; }  /* 募集（濃紫） */
+
 
 /* ############################################################# */
 /* ############################################################# */
@@ -1518,6 +1757,30 @@ input[name="tab_item"] {
 /* ############################################################# */
 /*スマートフォン用にカスタマイズ*/
 @media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    /* text-align: center; */
+  }
+  h3 {
+    font-size: 1.2em;
+    /* text-align: left; */
+  }
+  h4 {
+    font-size: 0.9em;
+    /* text-align: left; */
+  }
+  h5 {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  h6 {
+    font-size: 0.8em;
+  }
+
   .header {
     height: 4em;
   }
@@ -1665,17 +1928,7 @@ input[name="tab_item"] {
     margin: 0.3em;
     border: 1.5px solid var(--clr-fg);
   }
-}
 
-.year_title {
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-left: -13px; /* 15px左に移動 */
-}
-
-/*///////////////////////スマートフォン用にカスタマイズ////////////////////////////*/
-@media (max-width: 600px) {
   .container {
     flex-direction: column;
     order: 1;
@@ -1867,213 +2120,8 @@ input[name="tab_item"] {
     padding: 8px 6px;
     border-radius: 6px;
   }
-}
 
-
-/* ===== Hero ===== */
-.hero {
-  position: relative;
-  width: 100%;
-  /* height: 500px;  */
-  height: clamp(40vh, 56vh, 68vh);         /* 画面に応じた高さ */
-  overflow: hidden;
-  border-radius: 12px;                      /* お好みで */
-}
-
-/* スライド面 */
-.hero__slides, .hero__slide {
-  position: absolute;
-  inset: 0;
-}
-.hero__slide {
-  background-image: var(--bg);
-  background-size: cover;       /* ←枠いっぱいに拡大縮小 */
-  background-position: center;  /* ←常に中央を表示 */
-  background-repeat: no-repeat; /* ←余白は埋めない */
-  opacity: 0;
-  transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
-  transform: scale(1.02);                   /* ほんのりズームで質感UP */
-  will-change: opacity, transform;
-}
-.hero__slide.is-active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* 黒透過グラデ（読みやすさ向上） */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.35) 0%,
-    rgba(0,0,0,.35) 40%,
-    rgba(0,0,0,.45) 100%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* テキストのオーバーレイ */
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 1rem;
-  z-index: 2;
-  /* background: rgba(255,255,255,0.2);  */
-  pointer-events: none; /* クリックを透過させる */
-}
-
-.hero__overlay h3,
-.hero__overlay h6 {
-  color: #fff;
-  pointer-events: auto; /* 文字は選択・クリックできるようにする */
-}
-
-/* テキストを載せる半透明パネル */
-.hero__panel{
-  max-width: min(860px, 88%);
-  padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.6);     /* 黒ベースの半透明 */
-  backdrop-filter: blur(2px);        /* 文字の視認性UP（対応ブラウザ） */
-  box-shadow: 0 10px 28px rgba(0,0,0,.2);
-  pointer-events: auto;              /* ここはクリック可 */
-}
-
-/* タイトルと本文 */
-.hero__title{
-  margin: 0 0 .35em 0;
-  font-size: clamp(24px, 4.4vw, 42px);
-  font-weight: 600;
-  letter-spacing: .02em;
-  color: #ffffff;
-  text-shadow: 0 3px 8px rgba(0,0,0,.7);
-}
-.hero__desc{
-  margin: 0;
-  color: #ffffff;
-  font-size: clamp(14px, 2.1vw, 18px);
-  line-height: 1.7;
-  text-shadow: 0 2px 6px rgba(0,0,0,.65); /* 輪郭を少し浮き立たせる */
-}
-
-/* 目立つCTAボタン（例：配属希望の学生さんへ） */
-.hero__btn{
-  display: inline-flex;
-  align-items: center;
-  gap: .5em;
-  margin-left: .8em;
-  padding: .55em 1.1em;
-  border-radius: 999px;
-  background: #0063ad;    /* YNU系ブルー */
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 6px 14px rgba(0,0,0,.18);
-  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
-}
-.hero__btn:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.22);
-  filter: brightness(1.05);
-}
-
-.hero__nav {
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  z-index: 3;
-  border: none;
-  background: rgba(0,0,0,.35);
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: background .3s ease;
-}
-
-.hero__nav:hover { background: rgba(0,0,0,.55); }
-.hero__nav.prev { left: 12px; }
-.hero__nav.next { right: 12px; }
-
-.hero__dots {
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  translate: -50% 0;
-  display: flex;
-  gap: 12px;
-  z-index: 3;
-  background: transparent;
-}
-
-.hero__dots button {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: rgba(128,128,128,0.4); /* ← グレー */
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.hero__dots button:hover {
-  transform: scale(1.2);
-  background: rgba(255,255,255,0.3);
-}
-.hero__dots button[aria-current="true"] {
-  background: #2978b5;
-  border-color: #2978b5;
-}
-
-/* 右上に重ねるピル型ボタン */
-.hero__cta{
-  position: absolute;
-  top: 18px;               /* 位置は好みで調整 */
-  right: 18px;
-  z-index: 4;
-  display: inline-flex;
-  align-items: center;
-  gap: .5em;
-  padding: .55em 1.1em;
-  border-radius: 999px;
-  font-size: clamp(14px, 1.2vw, 16px);
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
-
-  /* 見た目：Kotsugi風のグラデーション + ふわっと影 */
-  background: linear-gradient(135deg, #0063ad 0%, #18b41d 100%);
-  box-shadow: 0 6px 14px rgba(0,0,0,.18);
-
-  /* なめらかホバー */
-  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
-}
-
-/* ホバー・フォーカス時 */
-.hero__cta:hover,
-.hero__cta:focus{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.22);
-  filter: brightness(1.05);
-  outline: none;
-}
-
-/* ダーク/ライトに合わせたい場合は単色版に切替も可 */
-.hero__cta.is-primary{
-  background: var(--clr-primary);
-}
-
-@media (max-width: 600px){
+  /* ################################################################## */
   .hero__panel{ padding: 12px 16px; border-radius: 10px; }
   .hero__dots{ bottom: 12px; gap: 10px; }
   .hero__nav{ width: 36px; height: 36px; font-size: 18px; }
@@ -2083,78 +2131,7 @@ input[name="tab_item"] {
     padding: .45em .9em;
     font-size: 13px;
   }
-}
 
-/* ===== Topics (Recent activities) ===== */
-.topics {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin: 14px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.topic {
-  display: grid;
-  grid-template-columns: 80px 80px 1fr; /* 日付 / タグ / 本文 */
-  align-items: start;  /* ← 縦位置を中央寄せ */
-  column-gap: 22px;      /* ← 日付とタグの距離を短くする */
-  padding:0 28px 0 20px;
-}
-
-.topic time {
-  font-weight: 600;
-  color: #999;
-  white-space: nowrap;       /* 改行させない */
-}
-
-.topic__tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 28px;
-  padding: 0 16px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #fff;
-  background: #999;          /* デフォルト色 */
-  white-space: nowrap;
-  opacity: .9;               /* ちょい半透明 */
-  /* margin-right:16px; */
-}
-
-.topic__body { 
-  text-decoration: none; 
-}
-
-.topic__body a {
-  font-size: 0.8em;   /* 親より10%小さい */
-  line-height: 1.4;   /* 読みやすくする */
-}
-
-/* カテゴリ別カラー */
-.tag--award { background:#caa66a; }   /* 受賞: 金寄り */
-.tag--talk  { background:#2a5caa; }   /* 発表: ネイビーブルー */
-.tag--paper { background:#2f9e77; }   /* 論文: グリーン */
-.tag--media { background:#5e35b1; }   /* メディア: パープル */
-.tag--news  { background:#b0b0b0; }   /* お知らせ: 銀 */
-.tag--event { background:#d81b60; }  /* イベント（ラズベリー） */
-.tag--other { background:#6c757d; }   /* その他: グレー */
-
-/* 追加候補 */
-.tag--press   { background:#b85c00; }  /* プレス（濃いオレンジ） */
-.tag--grant   { background:#00695c; }  /* 採択（深いティール） */
-.tag--patent  { background:#8d6e63; }  /* 特許（ブロンズ系） */
-.tag--collab  { background:#455a64; }  /* 受託/共同（青灰） */
-.tag--edu     { background:#9e9d24; }  /* 教育（オリーブ） */
-.tag--data    { background:#00838f; }  /* データ/コード（深シアン） */
-.tag--facility{ background:#4e342e; }  /* 設備（濃茶） */
-.tag--hire    { background:#6a1b9a; }  /* 募集（濃紫） */
-
-/* スマホで2段構成に（タグを日付の下へ回り込み） */
-@media (max-width:720px){
   .topic{
     grid-template-columns:100px 1fr;
     row-gap:6px; padding-right:16px;
@@ -2162,3 +2139,7 @@ input[name="tab_item"] {
   .topic__tag{ grid-column:1/2; margin-right:8px; }
   .topic__body{ grid-column:2/3; }
 }
+/* ############################################################# */
+/* ############################################################# */
+/* ############################################################# */
+/* ############################################################# */
