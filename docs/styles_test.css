@@ -1894,7 +1894,7 @@ input[name="tab_item"] {
 
 /* カテゴリ別カラー */
 .tag--award { background:#caa66a; }   /* 受賞: 金寄り */
-.tag--talk  { background:#1e88e5; }   /* 発表: ブルー */
+.tag--talk  { background:#3949ab; }   /* 発表: 藍 */
 .tag--paper { background:#2f9e77; }   /* 論文: グリーン */
 .tag--media { background:#5e35b1; }   /* メディア: パープル */
 .tag--news  { background:#6c757d; }   /* お知らせ: グレー */
@@ -1909,7 +1909,6 @@ input[name="tab_item"] {
 .tag--data    { background:#00838f; }  /* データ/コード（深シアン） */
 .tag--facility{ background:#4e342e; }  /* 設備（濃茶） */
 .tag--hire    { background:#6a1b9a; }  /* 募集（濃紫） */
-.tag--book    { background:#3949ab; }  /* 書籍（藍） */
 
 /* スマホで2段構成に（タグを日付の下へ回り込み） */
 @media (max-width:720px){
