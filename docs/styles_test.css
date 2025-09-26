@@ -854,14 +854,6 @@ input[name="tab_item"] {
   text-transform: uppercase;
 }
 
-/* .section__subtitle {
-  font-size: 16px; 
-  color: var(--clr-fg);      
-  margin-top: -0.4em;  
-  margin-bottom: 1em;
-  margin-left: 0.3em;
-} */
-
 .section__subtitle {
   font-size: 20px;
   color: var(--clr-primary);
@@ -1718,16 +1710,15 @@ input[name="tab_item"] {
 }
 .section-head .eyebrow{
   font-size: 32px;
-  font-weight: 800;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  font-weight: 600;
+  /* letter-spacing: .12em; */
+  /* text-transform: uppercase; */
   color: var(--clr-primary);
   margin: 0;
 }
 .section-head .title{
   margin: 0;
-  font-size: 14px;
-  /* font-weight: 600; */
+  font-size: 22px;
   letter-spacing: .01em;
 }
 
