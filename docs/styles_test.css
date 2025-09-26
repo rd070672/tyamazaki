@@ -1511,21 +1511,21 @@ input[name="tab_item"] {
 }
 
 /* テキストのオーバーレイ */
-/* .hero__overlay {
+.hero__overlay {
   position: absolute;
   inset: 0;
   display: grid;
   place-items: center;
   text-align: center;
   padding: 1rem;
-  z-index: 2;
+  z-index: 1;
   pointer-events: auto; /* クリックを透過させる */
-} */
+}
 
-/* .hero__overlay h3,
-.hero__overlay h6 {
+.hero__overlay h3,
+.hero__overlay p {
   pointer-events: auto; /* 文字は選択・クリックできるようにする */
-} */
+}
 
 /* テキストを載せる半透明パネル */
 .hero__panel{
@@ -1533,23 +1533,26 @@ input[name="tab_item"] {
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
-  /* backdrop-filter: blur(2px); */
-  /* box-shadow: 0 10px 28px rgba(0,0,0,.2); */
+  z-index: 2;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.2);
 }
 
 .hero__title{
   margin: 0 0 .35em 0;
   font-size: clamp(20px, 4.0vw, 40px);
-  /* font-weight: 600; */
+  font-weight: 600;
   letter-spacing: .02em;
   color: #ffffff;
-  /* text-shadow: 0 3px 8px rgba(0,0,0,.55); */
+  z-index: 3;
+  text-shadow: 0 3px 8px rgba(0,0,0,.55);
 }
 .hero__desc{
   margin: 0;
   color: #ffffff;
   font-size: clamp(15px, 2.2vw, 20px);
   line-height: 1.7;
+  z-index: 3;
   /* text-shadow: 0 2px 6px rgba(0,0,0,.55); */
 }
 
@@ -1571,7 +1574,7 @@ input[name="tab_item"] {
   transition: background .3s ease;
 }
 
-.hero__nav:hover { background: rgba(0,0,0,.55); }
+.hero__nav:hover { background: rgba(0,0,0,.75); }
 .hero__nav.prev { left: 12px; }
 .hero__nav.next { right: 12px; }
 
@@ -2101,28 +2104,3 @@ input[name="tab_item"] {
 /* ############################################################# */
 /* ############################################################# */
 /* ############################################################# */
-
-
-/* === Hero fix (put at the very end) === */
-
-/* オーバーレイ自体はクリック透過、パネルは操作可能に */
-.hero__overlay { pointer-events: none; }
-.hero__panel   { pointer-events: auto; }
-
-/* パネル上の文字を必ず真っ白に（上書き対策） */
-.hero__panel { 
-  position: relative; 
-  z-index: 3;
-  color: #fff;               /* 親で白を継承させる */
-  mix-blend-mode: normal;    /* まれに混色指定があるテーマ対策 */
-}
-.hero__panel .hero__title,
-.hero__panel .hero__desc {
-  color: #fff !important;    /* 後勝ち/特異性の高い全体ルールを確実に潰す */
-}
-
-/* （お好み）白パネルの透過を少し下げると白文字が見やすい */
-.hero__panel{
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(2px);
-}
