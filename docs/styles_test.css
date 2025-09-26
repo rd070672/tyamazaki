@@ -773,10 +773,11 @@ i.fas.fa-external-link-alt{
 }
 
 .header {
-  height: 4em;
+  height: 6em;
   max-width: 960px; /*900px;*/
   width: 95%;
   margin: 0 auto;
+  padding-top: 20px;   /* ← サイト全体の一番上に空間 */
   justify-content: space-between;
 }
 
