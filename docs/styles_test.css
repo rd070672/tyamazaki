@@ -1733,6 +1733,8 @@ input[name="tab_item"] {
 .section-card{
   /* background: var(--clr-bg-alt); */
   /* box-shadow: var(--shadow); */
+  background-color: rgba(255,255,255,0); /* 完全透明 */
+  background: rgba(255,255,255,0); /* 完全透明 */
   padding: 0px;
 }
 
