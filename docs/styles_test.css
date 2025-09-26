@@ -883,6 +883,14 @@ input[name="tab_item"] {
   margin-bottom: 0.4em;
   text-transform: uppercase;
 }
+
+.section__subtitle {
+  font-size: 0.8rem;    /* 小さめ文字 */
+  color: #999;          /* グレー */
+  margin-top: -0.4em;   /* NEWSとの間隔を微調整 */
+  margin-bottom: 1em;   /* 下のタブとの余白 */
+}
+
 .section__title2 {
   text-align: left;
   margin-bottom: 0.4em;
