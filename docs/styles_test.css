@@ -816,7 +816,6 @@ input[name="tab_item"] {
   color: #fff;
 }
 .section0 {
-  /* margin-top: 3em; */
   max-width: 100%;
 }
 .section {
@@ -1750,7 +1749,7 @@ input[name="tab_item"] {
 .section-card{
   background: var(--clr-bg-alt);
   border-radius: 12px;
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   padding: 16px 18px;
 }
 
