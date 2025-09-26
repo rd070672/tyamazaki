@@ -1510,7 +1510,7 @@ input[name="tab_item"] {
 
 /* テキストを載せる半透明パネル（黒を少し薄く） */
 .hero__panel {
-  max-width: min(860px, 92%);
+  max-width: 960px;
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
   border-radius: 12px;
   background: rgba(0,0,0,0.24);
@@ -1520,7 +1520,6 @@ input[name="tab_item"] {
   color: #fff;
 }
 
-/* 文字 */
 .hero__title {
   margin: 0 0 .35em 0;
   font-size: 28px;
