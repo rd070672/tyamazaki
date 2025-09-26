@@ -1894,10 +1894,11 @@ input[name="tab_item"] {
 
 /* カテゴリ別カラー */
 .tag--award { background:#caa66a; }   /* 受賞: 金寄り */
-.tag--talk  { background:#3949ab; }   /* 発表: 藍 */
+.tag--talk  { background:#2978b5; }   /* 発表: ブルー */
 .tag--paper { background:#2f9e77; }   /* 論文: グリーン */
 .tag--media { background:#5e35b1; }   /* メディア: パープル */
 .tag--news  { background:#b0b0b0; }   /* お知らせ: 銀 */
+.tag--event { background:#d81b60; }  /* イベント（ラズベリー） */
 .tag--other { background:#6c757d; }   /* その他: グレー */
 
 /* 追加候補 */
@@ -1905,7 +1906,6 @@ input[name="tab_item"] {
 .tag--grant   { background:#00695c; }  /* 採択（深いティール） */
 .tag--patent  { background:#8d6e63; }  /* 特許（ブロンズ系） */
 .tag--collab  { background:#455a64; }  /* 受託/共同（青灰） */
-.tag--event   { background:#d81b60; }  /* イベント（ラズベリー） */
 .tag--edu     { background:#9e9d24; }  /* 教育（オリーブ） */
 .tag--data    { background:#00838f; }  /* データ/コード（深シアン） */
 .tag--facility{ background:#4e342e; }  /* 設備（濃茶） */
