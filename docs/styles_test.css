@@ -1469,7 +1469,6 @@ input[name="tab_item"] {
 .hero {
   position: relative;
   width: 100%;
-  /* height: 600px;  */
   height: clamp(40vh, 56vh, 68vh);         /* 画面に応じた高さ */
   overflow: hidden;
   border-radius: 12px;                      /* お好みで */
@@ -1480,34 +1479,34 @@ input[name="tab_item"] {
   position: absolute;
   inset: 0;
 }
-.hero__slide {
-  background-image: var(--bg);
-  background-size: cover;       /* ←枠いっぱいに拡大縮小 */
-  background-position: center;  /* ←常に中央を表示 */
-  background-repeat: no-repeat; /* ←余白は埋めない */
-  opacity: 0;
+
+/* 背景は擬似要素に移す（ここだけをフェード/ズーム） */
+.hero__slide::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: var(--bg) center / cover no-repeat;
+  opacity: 0;                          /* ← 文字には効かない */
+  transform: scale(1.02);
   transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
-  transform: scale(1.02);                   /* ほんのりズームで質感UP */
   will-change: opacity, transform;
 }
-.hero__slide.is-active {
+.hero__slide.is-active::before{
   opacity: 1;
   transform: scale(1);
 }
 
 /* 黒透過グラデ（読みやすさ向上） */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom,
     rgba(0,0,0,.35) 0%,
     rgba(0,0,0,.35) 40%,
-    rgba(0,0,0,.45) 100%
-  );
-  pointer-events: none;
-  z-index: 0;
+    rgba(0,0,0,.45) 100%);
+  pointer-events:none;
+  z-index:0;
 }
 
 /* テキストのオーバーレイ */
@@ -1518,7 +1517,7 @@ input[name="tab_item"] {
   place-items: center;
   text-align: center;
   padding: 1rem;
-  z-index: 1;
+  z-index: 2;
   pointer-events: auto; /* クリックを透過させる */
 }
 
@@ -1532,10 +1531,13 @@ input[name="tab_item"] {
   max-width: min(860px, 88%);
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0 , 0.3);
   z-index: 2;
   backdrop-filter: blur(2px);
   box-shadow: 0 10px 28px rgba(0,0,0,.2);
+  pointer-events:auto;
+  position:relative;
+  color:#fff;
 }
 
 .hero__title{
@@ -1544,7 +1546,7 @@ input[name="tab_item"] {
   font-weight: 600;
   letter-spacing: .02em;
   color: #ffffff;
-  z-index: 3;
+  /* z-index: 3; */
   text-shadow: 0 3px 8px rgba(0,0,0,.55);
 }
 .hero__desc{
@@ -1553,7 +1555,7 @@ input[name="tab_item"] {
   font-size: clamp(15px, 2.2vw, 20px);
   line-height: 1.7;
   z-index: 3;
-  /* text-shadow: 0 2px 6px rgba(0,0,0,.55); */
+  text-shadow: 0 2px 6px rgba(0,0,0,.55);
 }
 
 .hero__nav {
