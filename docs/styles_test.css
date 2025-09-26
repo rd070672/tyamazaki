@@ -692,6 +692,9 @@ i.fas.fa-external-link-alt{
   transform: translateY(-5px);
 }
 
+
+
+
 /*========
   layout
 ========*/
@@ -898,7 +901,7 @@ input[name="tab_item"] {
   gap: 12px;                       /* メニュー間隔 */
   margin:0; padding:0;             /* 余白リセット */
   list-style:none;
-  font-size: 0.8rem;
+  font-size: 18px;
 }
 
 .nav__list-item {
@@ -1406,15 +1409,13 @@ input[name="tab_item"] {
     margin-left: -13px; /* 15px左に移動 */
 }
 
-
-
 .lab-title {
   padding: 12px 0 10px;
 }
 
 .lab-title h3 {
   margin: 0;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.2;
   display: inline-block;
   color: var(--clr-primary);
@@ -1522,7 +1523,7 @@ input[name="tab_item"] {
 /* 文字 */
 .hero__title {
   margin: 0 0 .35em 0;
-  font-size: clamp(20px, 4.0vw, 40px);
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: .02em;
   color: #fff;
@@ -1530,7 +1531,7 @@ input[name="tab_item"] {
 }
 .hero__desc {
   margin: 0;
-  font-size: clamp(15px, 2.2vw, 20px);
+  font-size: 18px;
   line-height: 1.7;
   color: #fff;
   text-shadow: 0 2px 6px rgba(0,0,0,.55);
@@ -1596,7 +1597,7 @@ input[name="tab_item"] {
   gap: .5em;
   padding: .55em 1.1em;
   border-radius: 999px;
-  font-size: clamp(14px, 1.2vw, 16px);
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
