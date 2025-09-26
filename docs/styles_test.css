@@ -985,15 +985,15 @@ input[name="tab_item"] {
 }
 
 .nav .link--nav{
-  display:inline-flex;
-  align-items:center;
-  height:36px;              /* ← 高さ固定（好みで） */
-  padding:0 14px;           /* ← 左右だけ・常に同じ */
-  border-radius:6px;
-  color:var(--clr-fg);
-  font-weight:500;
-  text-transform:uppercase;
-  text-decoration:none;
+  display: inline-flex;
+  align-items: center;
+  height: 54px;              /* ← 高さ固定（好みで） */
+  padding: 0 8px;           /* ← 左右だけ・常に同じ */
+  border-radius: 4px;
+  color: var(--clr-fg);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
   transition: background-color .2s ease, color .2s ease, transform .15s ease;
   will-change: background-color,color;
 }
