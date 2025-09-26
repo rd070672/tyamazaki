@@ -788,27 +788,26 @@ main {
 
 /* Recent news/updates */
 .tabs {
-  /* margin-top: 0.4em; */
-  margin: 1em auto 0 1em;   /* 上=1em, 右=auto, 下=0, 左=1em */
+  margin: 1em auto 1em 1em;   /* 上=1em, 右=auto, 下=1em, 左=1em */
   padding: 0.5em;           /* 内側の余白（必要なら） */
   padding-bottom: 0.2em;
   background-color: var(--clr-bg);
   /* opacity: 0.8; */
-  box-shadow: 0 0 10px var(--shadow);
+  box-shadow: 0 0 6px var(--shadow);
   max-width: 960px; /*900px;*/
   /* margin: 0 auto; */
   overflow: auto;
-  height: 500px; /*350px;*/
+  height: 600px; /*350px;*/
   position: relative;
   z-index: 0;
 }
 
 .tab_item {
   width: 100px;
-  height: 24px;
+  height: 30px;
   border-bottom: 2px solid var(--clr-primary);
   background-color: var(--clr-bg);
-  line-height: 24px;
+  line-height: 30px;
   font-size: 1rem;
   text-align: center;
   color: var(--clr-primary);
@@ -1792,6 +1791,7 @@ input[name="tab_item"] {
 .hero__overlay.about4 h3,
 .hero__overlay.about4 h6 {
   color: var(--clr-bg-alt);
+  pointer-events: auto; /* 文字は選択・クリックできるようにする */
 }
 
 .hero__nav {
