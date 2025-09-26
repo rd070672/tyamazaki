@@ -987,8 +987,8 @@ input[name="tab_item"] {
 .nav .link--nav{
   display: inline-flex;
   align-items: center;
-  height: 54px;              /* ← 高さ固定（好みで） */
-  padding: 0 8px;           /* ← 左右だけ・常に同じ */
+  height: 56px;              /* ← 高さ固定（好みで） */
+  padding: 0 4px;           /* ← 左右だけ・常に同じ */
   border-radius: 4px;
   color: var(--clr-fg);
   font-weight: 500;
@@ -1984,7 +1984,7 @@ input[name="tab_item"] {
 
 /* カテゴリ別カラー */
 .tag--award { background:#caa66a; }   /* 受賞: 金寄り */
-.tag--talk  { background:#2978b5; }   /* 発表: ブルー */
+.tag--talk  { background:#2a5caa; }   /* 発表: ネイビーブルー */
 .tag--paper { background:#2f9e77; }   /* 論文: グリーン */
 .tag--media { background:#5e35b1; }   /* メディア: パープル */
 .tag--news  { background:#b0b0b0; }   /* お知らせ: 銀 */
