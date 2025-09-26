@@ -832,9 +832,9 @@ main {
   width: 100px;
   height: 30px;
   border-bottom: 2px solid var(--clr-primary);
-  background-color: #999; /* var(--clr-bg);*/
+  background-color: var(--clr-bg);
   line-height: 30px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   color: var(--clr-primary);
   display: block;
@@ -945,11 +945,14 @@ input[name="tab_item"] {
 .lab-title h3 {
   margin: 0;
   font-size: 1.8rem;
+  color: var(--clr-primary);
+  padding: 0 0 0.3em 0;
+  position: relative;
 }
 
 .lab-subtitle {
   margin: 0.3em 0 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #777; /* グレー */
   line-height: 1.4;
 }
