@@ -967,6 +967,7 @@ input[name="tab_item"] {
 /* メニューを横並びに＆余白は gap で */
 .nav__list{
   display:flex;
+  align-items:center;
   gap: 20px;                       /* メニュー間隔 */
   margin:0; padding:0;             /* 余白リセット */
   list-style:none;
@@ -983,25 +984,28 @@ input[name="tab_item"] {
   z-index: 10;
 }
 
-/* ナビでは下線アニメを使わない */
-.nav .link--nav {
-  position: static;        /* 下線位置用の relative を打ち消し */
-  padding-bottom: 0;       /* 余白も不要なら0に */
-  text-decoration: none;   /* 念のため */
+.nav .link--nav{
+  display:inline-flex;
+  align-items:center;
+  height:36px;              /* ← 高さ固定（好みで） */
+  padding:0 14px;           /* ← 左右だけ・常に同じ */
+  border-radius:6px;
+  color:var(--clr-fg);
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition: background-color .2s ease, color .2s ease, transform .15s ease;
+  will-change: background-color,color;
 }
-
 .nav .link--nav::before {
   content: none;           /* ← 擬似要素を無効化 */
 }
 
-/* ついでにホバー時の背景/文字色変化（必要なら） */
 .nav .link--nav:hover,
-.nav .link--nav:focus {
-  background-color: var(--clr-primary);
-  color: #fff;
-  border-radius: 4px;
-  transition: all .2s ease;
-  padding: 0.3em 0.6em;    /* 背景色が分かるように少し余白 */
+.nav .link--nav:focus{
+  background-color:var(--clr-primary);
+  color:#fff;
+  /* padding は変えないので幅も変わらない */
 }
 
 .about {
