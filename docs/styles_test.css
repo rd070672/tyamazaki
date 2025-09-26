@@ -908,7 +908,7 @@ input[name="tab_item"] {
   color: #999;          /* グレー */
   margin-top: -0.4em;   /* NEWSとの間隔を微調整 */
   margin-bottom: 1em;   /* 下のタブとの余白 */
-  margin-left: 1em;  /* ← 右に寄せる */
+  margin-left: 0.3em;  /* ← 右に寄せる */
 }
 
 .section__title2 {
@@ -946,7 +946,7 @@ input[name="tab_item"] {
 .lab-subtitle {
   margin: 0.3em 0 0;
   font-size: 0.9rem;
-  color: #777;
+  color: #999;
   line-height: 1.4;
 }
 
