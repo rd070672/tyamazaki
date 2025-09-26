@@ -956,11 +956,6 @@ input[name="tab_item"] {
   transition: color 0.2s ease;
 }
 
-.lab-link:hover {
-  color: var(--clr-primary); /* ホバー時にブルーに変化 */
-  text-decoration: underline;
-}
-
 /* ナビ全体を横並びに */
 .nav{
   display:flex;
@@ -972,7 +967,7 @@ input[name="tab_item"] {
 /* メニューを横並びに＆余白は gap で */
 .nav__list{
   display:flex;
-  gap: 28px;                       /* メニュー間隔 */
+  gap: 20px;                       /* メニュー間隔 */
   margin:0; padding:0;             /* 余白リセット */
   list-style:none;
   font-size: 0.8rem;
