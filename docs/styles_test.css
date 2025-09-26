@@ -248,6 +248,11 @@ button {
   /* padding-right: 2em; */
 }
 
+.description7 {
+  font-size: 1rem;
+  margin: 0.8em 0.5em 0 0.5em; /* 上右下左 */
+  text-align: left;
+}
 .description9 {
   color: var(--clr-fg-alt);
   background-color: var(--clr-bg-alt);
@@ -1736,6 +1741,8 @@ input[name="tab_item"] {
   background-color: rgba(255,255,255,0); /* 完全透明 */
   background: rgba(255,255,255,0); /* 完全透明 */
   padding: 0px;
+  letter-spacing: 0.02em; 
+  margin: 2em 0; 
 }
 
 /* Map サイズは CSS で管理（500×300 基準） */
@@ -1836,7 +1843,7 @@ input[name="tab_item"] {
 .footer__copy{
   text-align: center;
   color: var(--footer-fg);
-  margin: 0;
+  margin: 0 0 30px 0;
 }
 
 /* SNS 行 */
