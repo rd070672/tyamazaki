@@ -127,29 +127,100 @@
     <!-- Main -->
     <main>
       <!-- Hero / Portfolio -->
-      <div class="hero" aria-label="Portfolio hero">
-        <div class="hero__slides">
-          <!-- 画像パスを差し替えてください -->
+      <section class="hero" aria-label="Portfolio hero">
+        <!-- <div class="hero__slides">
           <a href="https://tyamazaki.com/#" target="_self" class="hero__slide is-active" style="--bg:url('./img/top1.jpg')"></a>
           <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top6.jpg')"></a>
           <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top7.jpg')"></a>
           <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top4.jpg')"></a>
           <a href="https://tyamazaki.com/#" target="_self" class="hero__slide"           style="--bg:url('./img/top5.jpg')"></a>
         </div>
-
-        <!-- テキストを上に重ねる -->
         <div class="hero__overlay about4 center">
           <h3>未踏材料から未来社会へ</h3>
           <h6>計測・計算・機械学習を融合させ、電子状態から微細構造、機能発現に至るまでを<br>
             統一的に理解し、未来社会を支える未踏材料の創出を目指します。</h6>
+        </div> -->
+        <div class="hero__slides">
+
+          <!-- 1枚目 -->
+          <div class="hero__slide is-active" style="--bg:url('./img/top1.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">未踏材料から未来社会へ</h3>
+                <p class="hero__desc">
+                  計測・計算・機械学習を融合し、電子状態から微細構造、機能発現に至るまでを
+                  統一的に理解するデータ駆動型マテリアルズリサーチを推進します。
+                  <a href="./research" class="hero__link">研究紹介を見る</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2枚目 -->
+          <div class="hero__slide" style="--bg:url('./img/top6.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">電子状態の解明</h3>
+                <p class="hero__desc">
+                  放射光スペクトル解析と第一原理計算を連携させて、元素選択的に電子状態を同定し、
+                  物性の起源を紐づけます。
+                  <a href="./publications" class="hero__link">関連論文</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3枚目 -->
+          <div class="hero__slide" style="--bg:url('./img/top7.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">ナノ構造解析</h3>
+                <p class="hero__desc">
+                  5D-STEM などの多次元計測を機械学習で解析し、アモルファス／ナノ結晶材料の
+                  微細構造と機能の相関を抽出します。
+                  <a href="./review" class="hero__link">レビュー記事</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4枚目 -->
+          <div class="hero__slide" style="--bg:url('./img/top4.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">機能発現メカニズム</h3>
+                <p class="hero__desc">
+                  マイクロマグネティクスや多目的ベイズ最適化を活用し、磁気損失や異方性など
+                  材料機能の発現機構をモデル化します。
+                  <a href="./projects" class="hero__link">進行中プロジェクト</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5枚目 -->
+          <div class="hero__slide" style="--bg:url('./img/top5.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">未来社会を支える材料</h3>
+                <p class="hero__desc">
+                  次世代エネルギー・モビリティを見据え、低損失磁性材料や機能性薄膜の創製へ。
+                  学生・共同研究も歓迎します。
+                  <a href="./access" class="hero__btn">配属希望の学生さんへ</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
         </div>
-        <!-- 私たちは、計測・計算・機械学習を融合させることで、物質の電子状態から微細構造、さらには機能発現に至るまでを統一的に理解します。この知見を基盤に、これまで存在しなかった未踏材料を創出し、未来社会を支える革新的機能の実現を目指しています。 -->
+        
+        <a class="hero__cta" href="./for-students">配属希望の学生さんへ</a>
 
         <!-- 操作UI（省いても動作します） -->
         <button class="hero__nav prev" aria-label="Previous slide">&#10094;</button>
         <button class="hero__nav next" aria-label="Next slide">&#10095;</button>
         <div class="hero__dots" aria-label="Slide indicators"></div>
-      </div>
+      </section>
       
       <section id="activities" class="section1">
         <h3 class="section__title3">NEWS</h3>
