@@ -1905,6 +1905,11 @@ input[name="tab_item"] {
   text-decoration: none; 
 }
 
+.topic__body a {
+  font-size: 0.8em;   /* 親より10%小さい */
+  line-height: 1.4;   /* 読みやすくする */
+}
+
 /* カテゴリ別カラー */
 .tag--award { background:#caa66a; }   /* 受賞: 金寄り */
 .tag--talk  { background:#2978b5; }   /* 発表: ブルー */
