@@ -898,10 +898,10 @@ input[name="tab_item"] {
 .nav__list{
   display:flex;
   align-items:center;
-  gap: 12px;                       /* メニュー間隔 */
-  margin:0; padding:0;             /* 余白リセット */
+  gap: 12px;
+  margin:0; padding:0;
   list-style:none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .nav__list-item {
