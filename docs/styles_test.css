@@ -968,7 +968,7 @@ input[name="tab_item"] {
 .nav__list{
   display:flex;
   align-items:center;
-  gap: 20px;                       /* メニュー間隔 */
+  gap: 10px;                       /* メニュー間隔 */
   margin:0; padding:0;             /* 余白リセット */
   list-style:none;
   font-size: 0.8rem;
