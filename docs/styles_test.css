@@ -1955,6 +1955,26 @@ input[name="tab_item"] {
 /* 「ニュース→About/Access」の区切り線を維持したい場合 */
 .section-divider::before{ background: var(--clr-primary); }
 
+/* アクセスカウンター（中央寄せ＋ギャップ） */
+.footer__counter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 8px;
+}
+.footer__counter .counter-badge img{
+  height: 26px;         /* バッジの高さ（好みで） */
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.05));
+}
+
+/* テーマ連動：body に .dark が付く仕組みに合わせて切替 */
+.footer__counter [data-theme="dark"]{ display: none; }
+body.dark .footer__counter [data-theme="light"]{ display: none; }
+body.dark .footer__counter [data-theme="dark"]{ display: inline; }
+
 /* ############################################################# */
 /* ############################################################# */
 /* ############################################################# */
