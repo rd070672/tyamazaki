@@ -1795,6 +1795,78 @@ input[name="tab_item"] {
     opacity: 1;
     height: 30%;
   }
+
+  /* ################################################################ */
+  .lab-title {
+    padding: 12px 0 10px;   /* 上下余白を確保 */
+  }
+  .lab-title h3 a,
+  .lab-title h3 {
+    font-size: clamp(18px, 6.2vw, 24px);  /* 見出しを小さく */
+    line-height: 1.2;
+    display: inline-block;
+  }
+  .lab-subtitle {
+    margin-top: 6px;
+    font-size: clamp(11px, 3.6vw, 13px);  /* サブタイトルを小さく */
+    line-height: 1.5;
+  }
+  .lab-subtitle .lab-link {
+    color: #777;
+    text-decoration: none;
+    margin-right: .4em;
+  }
+
+  /* ハンバーガーを表示 */
+  .nav__hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+  }
+
+  /* ナビを重ねて出すための土台 */
+  .nav {
+    position: relative;
+  }
+
+  /* メニュー（閉じている状態） */
+  .nav__list {
+    position: absolute;
+    top: 110%;             /* ラボ名・ボタンの下に出す */
+    right: 0;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--clr-bg-alt, #fff);
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.18);
+
+    /* ここが「閉じる」挙動 */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height .25s ease, opacity .2s ease;
+    z-index: 20;
+  }
+
+  /* メニュー（開く状態） */
+  .nav__list.is-open {
+    max-height: 70vh;      /* 充分に広げる */
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* 各項目のフォントを小さく・タップしやすく */
+  .nav__list .link--nav {
+    font-size: 0.95rem;    /* 小さめ */
+    padding: 8px 6px;
+    border-radius: 6px;
+  }
 }
 
 
@@ -1867,7 +1939,7 @@ input[name="tab_item"] {
   max-width: min(860px, 88%);
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
   border-radius: 12px;
-  background: rgba(0,0,0, .25);     /* 黒ベースの半透明 */
+  background: rgba(255, 255, 255, 0.6);     /* 黒ベースの半透明 */
   backdrop-filter: blur(2px);        /* 文字の視認性UP（対応ブラウザ） */
   box-shadow: 0 10px 28px rgba(0,0,0,.2);
   pointer-events: auto;              /* ここはクリック可 */
@@ -1877,7 +1949,7 @@ input[name="tab_item"] {
 .hero__title{
   margin: 0 0 .35em 0;
   font-size: clamp(24px, 4.4vw, 42px);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: .02em;
   color: #ffffff;
   text-shadow: 0 3px 8px rgba(0,0,0,.7);
@@ -1889,17 +1961,6 @@ input[name="tab_item"] {
   line-height: 1.7;
   text-shadow: 0 2px 6px rgba(0,0,0,.65); /* 輪郭を少し浮き立たせる */
 }
-
-/* リンクの見た目（本文内リンク／小ボタン） */
-.hero__link{
-  display: inline-block;
-  margin-left: .6em;
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: opacity .2s ease;
-}
-.hero__link:hover{ opacity: .85; }
 
 /* 目立つCTAボタン（例：配属希望の学生さんへ） */
 .hero__btn{
