@@ -1897,7 +1897,8 @@ input[name="tab_item"] {
 .tag--talk  { background:#3949ab; }   /* 発表: 藍 */
 .tag--paper { background:#2f9e77; }   /* 論文: グリーン */
 .tag--media { background:#5e35b1; }   /* メディア: パープル */
-.tag--news  { background:#6c757d; }   /* お知らせ: グレー */
+.tag--news  { background:#b0b0b0; }   /* お知らせ: 銀 */
+.tag--other { background:#6c757d; }   /* その他: グレー */
 
 /* 追加候補 */
 .tag--press   { background:#b85c00; }  /* プレス（濃いオレンジ） */
