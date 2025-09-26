@@ -983,6 +983,27 @@ input[name="tab_item"] {
   z-index: 10;
 }
 
+/* ナビでは下線アニメを使わない */
+.nav .link--nav {
+  position: static;        /* 下線位置用の relative を打ち消し */
+  padding-bottom: 0;       /* 余白も不要なら0に */
+  text-decoration: none;   /* 念のため */
+}
+
+.nav .link--nav::before {
+  content: none;           /* ← 擬似要素を無効化 */
+}
+
+/* ついでにホバー時の背景/文字色変化（必要なら） */
+.nav .link--nav:hover,
+.nav .link--nav:focus {
+  background-color: var(--clr-primary);
+  color: #fff;
+  border-radius: 4px;
+  transition: all .2s ease;
+  padding: 0.3em 0.6em;    /* 背景色が分かるように少し余白 */
+}
+
 .about {
   flex-direction: column;
   margin-top: 1.4em;
