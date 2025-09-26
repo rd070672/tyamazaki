@@ -986,7 +986,7 @@ input[name="tab_item"] {
 .nav .link--nav{
   display: inline-flex;
   align-items: center;
-  height: 56px;              /* ← 高さ固定（好みで） */
+  height: 52px;              /* ← 高さ固定（好みで） */
   padding: 0 4px;           /* ← 左右だけ・常に同じ */
   border-radius: 4px;
   color: var(--clr-fg);
@@ -1880,13 +1880,14 @@ input[name="tab_item"] {
   font-weight: 800;
   letter-spacing: .02em;
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,.45);
+  text-shadow: 0 3px 6px rgba(0,0,0,.55);
 }
 .hero__desc{
   margin: 0;
-  color: rgba(255,255,255,.95);
+  color: #fff;
   font-size: clamp(14px, 2.1vw, 18px);
   line-height: 1.7;
+  text-shadow: 0 2px 4px rgba(0,0,0,.5); /* 輪郭を少し浮き立たせる */
 }
 
 /* リンクの見た目（本文内リンク／小ボタン） */
@@ -1990,7 +1991,7 @@ input[name="tab_item"] {
   white-space: nowrap;
 
   /* 見た目：Kotsugi風のグラデーション + ふわっと影 */
-  background: linear-gradient(135deg, #ff7a18 0%, #6a5acd 100%);
+  background: linear-gradient(135deg, #0063ad 0%, #18b41d 100%);
   box-shadow: 0 6px 14px rgba(0,0,0,.18);
 
   /* なめらかホバー */
