@@ -1694,19 +1694,6 @@ input[name="tab_item"] {
 .tag--facility{ background:#4e342e; }  /* 設備（濃茶） */
 .tag--hire    { background:#6a1b9a; }  /* 募集（濃紫） */
 
-
-/* Map embed: 700 を基本に、狭い画面では横幅にフィット */
-.map-embed {
-  width: 700px;
-  max-width: 100%;
-}
-.map-embed iframe {
-  width: 100%;
-  height: 600px;
-  border: 0;
-  display: block;
-}
-
 /* ===== セクションの境界ライン（primary） ===== */
 .section-divider{
   position: relative;
@@ -1761,7 +1748,7 @@ input[name="tab_item"] {
 
 /* Map サイズは CSS で管理（500×300 基準） */
 .map-embed{ width: 500px; max-width: 100%; }
-.map-embed iframe{ width: 100%; height: 300px; border:0; display:block; }
+.map-embed iframe{ width: 100%; height: 500px; border:0; display:block; }
 
 /* スマホ微調整 */
 @media (max-width: 600px){
@@ -1915,7 +1902,7 @@ input[name="tab_item"] {
 }
 
 /* 960px 以下は中央寄せ＆行間を広めに */
-@media (max-width: 960px){
+@media (max-width: 600px){
   .footer__nav{ justify-content: center; gap: 8px 18px; }
   .site-footer .sns{ justify-content: center; }
   .footer__copy{ text-align: center; }
