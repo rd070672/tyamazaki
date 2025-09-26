@@ -17,74 +17,85 @@
     <link rel="icon" href="./img/favicon.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    
     <script defer>
     window.addEventListener('DOMContentLoaded', () => {
-      // テーマ切替
+      /* --- テーマ切替 --- */
       const themeBtn = document.getElementById('btn-theme')?.closest('button') || document.getElementById('btn-theme');
       themeBtn?.addEventListener('click', () => {
-        document.body.classList.toggle('dark');     // あなたのCSSに合わせてクラス名は調整
+        document.body.classList.toggle('dark');
       });
 
-      // ハンバーガー：ナビ開閉
+      /* --- ハンバーガー --- */
       const hamBtn = document.querySelector('.nav__hamburger');
       const navList = document.querySelector('.nav__list');
       hamBtn?.addEventListener('click', () => {
-        navList?.classList.toggle('is-open');       // CSSで .nav__list.is-open を表示させる
+        navList?.classList.toggle('is-open');
       });
-    });
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NYGV5L0T7N');
-    </script>
-    <script>
-    window.addEventListener('DOMContentLoaded', () => {
+
+      /* --- ヒーロースライダー --- */
       const hero = document.querySelector('.hero');
-      if (!hero) return;
+      if (hero) {
+        const slides = Array.from(hero.querySelectorAll('.hero__slide'));
+        const prevBtn = hero.querySelector('.hero__nav.prev');
+        const nextBtn = hero.querySelector('.hero__nav.next');
+        const dotsWrap = hero.querySelector('.hero__dots');
 
-      const slides = Array.from(hero.querySelectorAll('.hero__slide'));
-      const prevBtn = hero.querySelector('.hero__nav.prev');
-      const nextBtn = hero.querySelector('.hero__nav.next');
-      const dotsWrap = hero.querySelector('.hero__dots');
+        let idx = 0;
+        let timer = null;
+        const INTERVAL_MS = 5000;
 
-      let idx = 0;
-      let timer = null;
-      const INTERVAL_MS = 5000;
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', `Go to slide ${i+1}`);
+          b.addEventListener('click', () => show(i, true));
+          dotsWrap.appendChild(b);
+        });
 
-      slides.forEach((_, i) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('aria-label', `Go to slide ${i+1}`);
-        b.addEventListener('click', () => show(i, true));
-        dotsWrap.appendChild(b);
-      });
+        function show(i, user = false) {
+          slides[idx].classList.remove('is-active');
+          idx = (i + slides.length) % slides.length;
+          slides[idx].classList.add('is-active');
+          dotsWrap.querySelectorAll('button').forEach((b, j) =>
+            b.setAttribute('aria-current', j === idx ? 'true' : 'false')
+          );
+          if (user) restart();
+        }
+        function next() { show(idx + 1); }
+        function prev() { show(idx - 1); }
+        function start() { timer = setInterval(next, INTERVAL_MS); }
+        function stop()  { clearInterval(timer); timer = null; }
+        function restart(){ stop(); start(); }
 
-      function show(i, user = false) {
-        slides[idx].classList.remove('is-active');
-        idx = (i + slides.length) % slides.length;
-        slides[idx].classList.add('is-active');
-        dotsWrap.querySelectorAll('button').forEach((b, j) =>
-          b.setAttribute('aria-current', j === idx ? 'true' : 'false')
-        );
-        if (user) restart();
+        nextBtn?.addEventListener('click', next);
+        prevBtn?.addEventListener('click', prev);
+        hero.addEventListener('mouseenter', stop);
+        hero.addEventListener('mouseleave', start);
+
+        show(0);
+        start();
       }
-      function next() { show(idx + 1); }
-      function prev() { show(idx - 1); }
-      function start() { timer = setInterval(next, INTERVAL_MS); }
-      function stop()  { clearInterval(timer); timer = null; }
-      function restart(){ stop(); start(); }
 
-      nextBtn?.addEventListener('click', next);
-      prevBtn?.addEventListener('click', prev);
-      hero.addEventListener('mouseenter', stop);
-      hero.addEventListener('mouseleave', start);
-
-      show(0);
-      start();
+      /* --- トップへ戻る --- */
+      const toTop = document.querySelector('[data-to-top]');
+      if (toTop) {
+        const THRESHOLD = 300;
+        const toggle = () => {
+          if (window.scrollY > THRESHOLD) toTop.classList.add('show');
+          else toTop.classList.remove('show');
+        };
+        toggle();
+        window.addEventListener('scroll', toggle, { passive: true });
+        toTop.addEventListener('click', (e) => {
+          e.preventDefault();
+          const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        });
+      }
     });
     </script>
+
   </head>
   <!-- body -->
   <body class="light" id="top">
@@ -206,7 +217,6 @@
               </div>
             </div>
           </div>
-
         </div>
         
         <a class="hero__cta" href="./for-students">配属希望の学生さんへ</a>
@@ -634,67 +644,78 @@
           </div>
         </section>
       
-      <section id="about" class="section1">
-        <h3 class="section__title3">About us</h3>
-        <p class="section__subtitle">山崎研究室について</p>
-          <p class="description">私たちは、機能性材料の構成元素・電子状態・微細構造が生み出す力学応答や磁気応答を、マルチスケールかつマルチフィジックスの視点でつなぎ、材料機能を因果関係として説明することを目指します。対象は、急冷や急速昇温などの非平衡プロセスで作られる合金やナノ複合体です。アモルファスや規則構造に特有の欠陥や短距離秩序が、変形挙動や損失・耐久性・感度といった工学的性能にどう効くのかを、材料力学・材料物性・電磁気学の基礎を土台に明快に記述します。</p> 
-          
-          <p>そのために、放射光の高輝度X線分光で元素ごとの電子状態を測定し、走査透過型電子顕微鏡（Scanning Transmission Electron Microscopy, STEM）でナノ構造と元素分布を可視化します。さらに、磁気バークハウゼンノイズ計測で磁壁ダイナミクスを高時間分解で観測し、第一原理計算（DFT）・分子動力学・マイクロマグネティクスで検証します。得られた知見は、ガウス過程やグラフニューラルネットワークなどの機械学習と多目的ベイズ最適化により、プロセス条件・組織・特性の関係をモデル化して設計指針へと結び付けます。これにより、低損失で高効率なエネルギー変換や、低消費電力の高感度センシング、実環境で機能する非破壊の状態監視に資する材料創出を実現します。</p>
-      </section>
-
-      <section id="access" class="section1">
-        <h3 class="section__title3">Access</h3>
-        <p class="section__subtitle">横浜国立大学常盤キャンパス</p>
-        <p class="description"></p>
-
-        <p class="section__subtitle">所在地</p>
-        <p class="description">〒240-8501 横浜市保土ケ谷区常盤台79-5 機械工学・材料棟</p>
-        <p class="description">79-5 Tokiwadai, Hodogaya, Yokohama 240-8501, Japan</p>
-
-        <p class="section__subtitle">Office</p>
-        <p class="description">山崎：301号室</p>
-        <p class="description">学生：301号室</p>
-        <p class="description">実験室：301号室</p>
-
-        <!-- Google Map -->
-        <div class="map-embed">
-          <iframe
-            src="https://www.google.com/maps?q=79-5%20Tokiwadai,%20Hodogaya%20Ward,%20Yokohama%20240-8501,%20Japan&z=15&output=embed"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Yokohama National University - 79-5 Tokiwadai">
-          </iframe>
+      <section id="about" class="section1 section-divider">
+        <div class="section-head">
+          <p class="eyebrow">About</p>
+          <h3 class="title">山崎研究室について</h3>
         </div>
-        <p class="description">
-          <a class="link" href="https://www.google.com/maps?q=79-5%20Tokiwadai,%20Hodogaya%20Ward,%20Yokohama%20240-8501,%20Japan&z=15" target="_blank" rel="noopener">
-            Googleマップで開く
-          </a>
-        </p>
+        <div class="section-card">
+          <p class="section-kicker">材料の「測る・解く・設計する」を一体化した研究をご紹介します。</p>
+          <p class="description">私たちは、機能性材料の構成元素・電子状態・微細構造が生み出す力学応答や磁気応答を、マルチスケールかつマルチフィジックスの視点でつなぎ、材料機能を因果関係として説明することを目指します。対象は、急冷や急速昇温などの非平衡プロセスで作られる合金やナノ複合体です。アモルファスや規則構造に特有の欠陥や短距離秩序が、変形挙動や損失・耐久性・感度といった工学的性能にどう効くのかを、材料力学・材料物性・電磁気学の基礎を土台に明快に記述します。</p>
+
+          <p>そのために、放射光の高輝度X線分光で元素ごとの電子状態を測定し、走査透過型電子顕微鏡（Scanning Transmission Electron Microscopy, STEM）でナノ構造と元素分布を可視化します。さらに、磁気バークハウゼンノイズ計測で磁壁ダイナミクスを高時間分解で観測し、第一原理計算（DFT）・分子動力学・マイクロマグネティクスで検証します。得られた知見は、ガウス過程やグラフニューラルネットワークなどの機械学習と多目的ベイズ最適化により、プロセス条件・組織・特性の関係をモデル化して設計指針へと結び付けます。これにより、低損失で高効率なエネルギー変換や、低消費電力の高感度センシング、実環境で機能する非破壊の状態監視に資する材料創出を実現します。</p>
+        </div>
+      </section>
+          
+      <section id="access" class="section1 section-divider">
+        <div class="section-head">
+          <p class="eyebrow">Access</p>
+          <h3 class="title">横浜国立大学 常盤キャンパス</h3>
+        </div>
+        <div class="section-card">
+          <p class="section-kicker">研究室所在地とマップのご案内です。</p>
+
+          <p class="section__subtitle">所在地</p>
+          <p class="description">〒240-8501 横浜市保土ケ谷区常盤台79-5 機械工学・材料棟</p>
+          <p class="description">79-5 Tokiwadai, Hodogaya, Yokohama 240-8501, Japan</p>
+
+          <p class="section__subtitle">Office</p>
+          <p class="description">山崎：301号室</p>
+          <p class="description">学生：301号室</p>
+          <p class="description">実験室：301号室</p>
+
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=79-5%20Tokiwadai,%20Hodogaya%20Ward,%20Yokohama%20240-8501,%20Japan&z=15&output=embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Yokohama National University - 79-5 Tokiwadai">
+            </iframe>
+          </div>
+          <p class="description">
+            <a class="link" href="https://www.google.com/maps?q=79-5%20Tokiwadai,%20Hodogaya%20Ward,%20Yokohama%20240-8501,%20Japan&z=15" target="_blank" rel="noopener">
+              Googleマップで開く
+            </a>
+          </p>
+        </div>
       </section>
 
     </main>
 
-    <!-- footer -->
-    <footer class="footer">
-      <!-- <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br> -->
-      Copyright © 2022-2025 <a href="./">tyamazaki.com</a> | All rights reserved.
+    <button type="button" class="to-top" aria-label="ページ先頭へ" data-to-top>
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+      <div class="footer__inner">
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="./" class="footer__link">Home</a>
+          <a href="./research" class="footer__link">Research</a>
+          <a href="./member" class="footer__link">Member</a>
+          <a href="./publications" class="footer__link">Publications</a>
+          <a href="./album" class="footer__link">Album</a>
+          <a href="./blog" class="footer__link">Blog</a>
+          <a href="./access" class="footer__link">Access</a>
+        </nav>
+
+        <p class="footer__copy">
+          Copyright © 2022–2025 <a href="./">tyamazaki.com</a> | All rights reserved.
+        </p>
+      </div>
     </footer>
     
-    <section>
-      <div class="scroll-container">
-        <div class="scroll-top">
-          <a aria-label="Scroll up" href="#top">
-            <i aria-hidden="true" class="fas fa-arrow-up"></i>
-          </a>
-        </div>
-        <div class="scroll-down">
-          <a aria-label="Scroll down" href="#bottom">
-              <i aria-hidden="true" class="fas fa-arrow-down"></i>
-          </a>
-        </div>
-      </div>
-    </section>
     <script src="./script_test.js"></script>
     <div id="bottom"></div>
   </body>
