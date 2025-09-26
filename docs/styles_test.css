@@ -1866,6 +1866,43 @@ input[name="tab_item"] {
   padding: 8px 0 22px;
 }
 
+/* SNS 行：中央にまとめて gap で間隔調整 */
+.site-footer .sns{
+  display: flex;
+  justify-content: center;   /* ← 中央に集める */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;            /* ← 行間/列間の間隔（お好みで） */
+  padding: 14px 0 10px;
+}
+
+/* アイコンの見た目（任意） */
+.site-footer .sns .link--icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;     /* タップしやすいサイズ */
+  border-radius: 50%;
+  text-decoration: none;
+}
+.site-footer .sns .link--icon i{
+  font-size: 22px;
+  opacity: .85;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.site-footer .sns .link--icon:hover i{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* クレジット：中央揃え */
+.site-footer .footer__copy{
+  text-align: center;        /* ← センタリング */
+  margin: 8px auto 22px;     /* コンテナ中央に */
+  font-size: .95rem;
+  opacity: .85;
+}
+
 /* 960px 以下は中央寄せ＆行間を広めに */
 @media (max-width: 960px){
   .footer__nav{ justify-content: center; gap: 8px 18px; }
