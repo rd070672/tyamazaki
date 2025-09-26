@@ -1790,6 +1790,11 @@ input[name="tab_item"] {
 }
 
 /* ナビゲーション（任意） */
+.hero__overlay.about4 h3,
+.hero__overlay.about4 h6 {
+  color: var(--clr-bg-alt);
+}
+
 .hero__nav {
   position: absolute;
   top: 50%;
