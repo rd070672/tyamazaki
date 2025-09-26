@@ -211,7 +211,7 @@ button {
   font-weight: bold;
 }
 .description2 { /* ブログの本文用 */
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0.3em 0.2em 0.3em 0.3em; /* 上右下左 */
   text-align: left;
 }
@@ -1740,10 +1740,9 @@ input[name="tab_item"] {
 
 /* カード風ラップ（ほんのり陰影） */
 .section-card{
-  background: var(--clr-bg-alt);
-  border-radius: 12px;
+  /* background: var(--clr-bg-alt); */
   /* box-shadow: var(--shadow); */
-  padding: 16px 18px;
+  padding: 0px;
 }
 
 /* Map サイズは CSS で管理（500×300 基準） */
