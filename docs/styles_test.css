@@ -1690,9 +1690,15 @@ input[name="tab_item"] {
 .tag--hire    { background:#6a1b9a; }  /* 募集（濃紫） */
 
 
-/* Map embed: 500x300 を基本に、狭い画面では横幅にフィット */
-.map-embed iframe {
+/* Map embed: 700 を基本に、狭い画面では横幅にフィット */
+.map-embed {
+  width: 700px;
   max-width: 100%;
+}
+.map-embed iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
   display: block;
 }
 
