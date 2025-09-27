@@ -697,12 +697,7 @@ i.fas.fa-external-link-alt{
   transform: translateY(-5px);
 }
 
-
-
-
-/*========
-  layout
-========*/
+/*========  layout  ========*/
 
 .flex{
   display: flex;
@@ -795,18 +790,18 @@ main {
 .tab_item:hover {
   opacity: 0.75;
 }
-/*ラジオボタンを全て消す*/
+
 input[name="tab_item"] {
   display: none;
 }
-/*タブ切り替えの中身のスタイル*/
+
 .tab_content {
   display: none;
   padding: 0.2em 0;
   clear: both;
   overflow: hidden;
 }
-/*選択されているタブのコンテンツのみを表示*/
+
 #y2025:checked ~ #y2025_content,
 #y2024:checked ~ #y2024_content,
 #y2023:checked ~ #y2023_content,
@@ -815,7 +810,7 @@ input[name="tab_item"] {
 #past:checked ~ #past_content {
   display: block;
 }
-/*選択されているタブのスタイルを変える*/
+
 .tabs input:checked + .tab_item {
   background-color: var(--clr-primary);
   color: #fff;
@@ -888,7 +883,8 @@ input[name="tab_item"] {
   margin-bottom: 0.2em;
 }
 
-/* ナビ全体を横並びに */
+/* ===== nav ===== */
+
 .nav{
   display:flex;
   align-items:center;
@@ -896,25 +892,20 @@ input[name="tab_item"] {
   text-align:left;                 /* 中央寄せを解除 */
 }
 
-/* メニューを横並びに＆余白は gap で */
 .nav__list{
   display:flex;
   flex-wrap: wrap;
   align-items:center;
-  gap: 6px 12px;
+  gap: 6px 10px;
   margin:0; padding:0;
   list-style:none;
   font-size: 14px;
 }
 
-.nav__list-item {
-  margin-left: 0;
-}
-
 .nav__hamburger {
   display: none;
-  width: 1em;
-  z-index: 10;
+  /* width: 1em;
+  z-index: 10; */
 }
 
 .nav .link--nav{
@@ -930,16 +921,18 @@ input[name="tab_item"] {
   transition: background-color .2s ease, color .2s ease, transform .15s ease;
   will-change: background-color,color;
 }
+
 .nav .link--nav::before {
-  content: none;           /* ← 擬似要素を無効化 */
+  content: none;
 }
 
 .nav .link--nav:hover,
 .nav .link--nav:focus{
   background-color:var(--clr-primary);
   color:#fff;
-  /* padding は変えないので幅も変わらない */
 }
+
+/* ===== about ===== */
 
 .about {
   flex-direction: column;
@@ -1190,10 +1183,7 @@ input[name="tab_item"] {
   font-size: 0.9em;  /* 日付のフォントサイズを調整 */
   color: var(--clr-fg-alt);       /* 日付の色を調整 */
 }
-/* .date_album {
-  margin: 0.2em;
-  font-size: 0.9em;
-} */
+
 .both {
   display: flex;
   justify-content: space-between;
@@ -1392,7 +1382,6 @@ input[name="tab_item"] {
   background: transparent;
 }
 
-/* 例：CSS変数の定義 */
 :root {
   --clr-fg-alt: #f5f5f5;
 }
@@ -1411,6 +1400,9 @@ input[name="tab_item"] {
     text-decoration: underline;
     margin-left: -13px; /* 15px左に移動 */
 }
+
+
+/* ===== Lab ===== */
 
 .lab-title {
   padding: 12px 0 10px;
@@ -1448,14 +1440,12 @@ input[name="tab_item"] {
   border-radius: 12px;
 }
 
-/* スライド面：重ねて配置（背景は擬似要素で切替） */
 .hero__slides,
 .hero__slide {
   position: absolute;
   inset: 0;
 }
 
-/* 背景は擬似要素に移す（ここだけフェード/ズーム） */
 .hero__slide::before {
   content: "";
   position: absolute;
@@ -1471,7 +1461,6 @@ input[name="tab_item"] {
   transform: scale(1);
 }
 
-/* 黒透過グラデ（読みやすさ向上） */
 .hero::after {
   content: "";
   position: absolute;
@@ -1486,7 +1475,6 @@ input[name="tab_item"] {
   z-index: 0;
 }
 
-/* テキストのオーバーレイ（中央寄せの土台） */
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -1497,21 +1485,19 @@ input[name="tab_item"] {
   z-index: 2;
 }
 
-/* ★ 非アクティブは文字を隠す＆操作不可に */
 .hero__slide .hero__overlay {
   opacity: 0;
   transform: translateY(6px);
   transition: opacity .45s ease, transform .45s ease;
   pointer-events: none;
 }
-/* ★ アクティブだけ表示＆操作可 */
+
 .hero__slide.is-active .hero__overlay {
   opacity: 1;
   transform: none;
   pointer-events: auto;
 }
 
-/* テキストを載せる半透明パネル（黒を少し薄く） */
 .hero__panel {
   max-width: 960px;
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
@@ -1539,7 +1525,6 @@ input[name="tab_item"] {
   text-shadow: 0 2px 6px rgba(0,0,0,.55);
 }
 
-/* ナビ/ドットはそのまま */
 .hero__nav {
   position: absolute;
   top: 50%;
@@ -1588,7 +1573,6 @@ input[name="tab_item"] {
   border-color: #2978b5;
 }
 
-/* 右上に重ねるピル型ボタン */
 .hero__cta{
   position: absolute;
   top: 18px;               /* 位置は好みで調整 */
@@ -1604,13 +1588,11 @@ input[name="tab_item"] {
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
-
   background: linear-gradient(135deg, #0063ad 0%, #18b41d 100%);
   box-shadow: 0 6px 14px rgba(0,0,0,.18);
   transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
 }
 
-/* ホバー・フォーカス時 */
 .hero__cta:hover,
 .hero__cta:focus{
   transform: translateY(-2px);
@@ -1618,11 +1600,6 @@ input[name="tab_item"] {
   filter: brightness(1.05);
   outline: none;
 }
-
-/* ダーク/ライトに合わせたい場合は単色版に切替も可 */
-/* .hero__cta.is-primary{
-  background: var(--clr-primary);
-} */
 
 /* ===== Topics (Recent activities) ===== */
 .topics {
@@ -2440,11 +2417,11 @@ input[name="tab_item"] {
 
   .header .nav__list{
     display: none !important;         /* ← 初期表示を確実に消す */
-    position: fixed;                  /* 画面基準で安全に配置 */
-    top: 64px;                        /* ヘッダーの下から表示（必要なら調整） */
-    right: 12px;                      /* 右寄せ */
-    left: auto;                       /* 左は使わない */
-    width: min(40vw, 400px);          /* 画面の約1/3（上限320pxほど） */
+    position: fixed;                 
+    top: 64px;                        
+    right: 12px;                      
+    left: auto;                      
+    width: min(40vw, 400px);        
     max-height: 80vh;
     overflow: auto;
     flex-direction: column;
@@ -2523,6 +2500,11 @@ input[name="tab_item"] {
     line-height: 1.4;
   }
 
+  .site-footer .nav .link--nav{
+    display: inline-flex;
+    align-items: center;
+    height: 30px; 
+  }
   
 }
 /* ############################################################# */
