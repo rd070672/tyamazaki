@@ -2388,12 +2388,12 @@ input[name="tab_item"] {
   /* ################################################################ */
   
   .lab-title {
-    padding: 12px 0 10px;
+    padding: 40px 0 20px;
   }
 
   .lab-title h3 {
     margin: 0;
-    font-size: clamp(18px, 20px, 24px);
+    font-size: 18px;
     line-height: 1.2;
     display: inline-block;
     color: var(--clr-primary);
@@ -2403,7 +2403,7 @@ input[name="tab_item"] {
 
   .lab-subtitle {
     margin: 6px 0;
-    font-size: clamp(10px, 12px, 16px);
+    font-size: 12px;
     color: var(--clr-fg);
     line-height: 1.5;
   }
@@ -2520,8 +2520,6 @@ input[name="tab_item"] {
     from { opacity: 0; transform: translateY(-6px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
-
 
   /* ################################################################## */
   .hero__panel{ padding: 12px 16px; border-radius: 10px; }
