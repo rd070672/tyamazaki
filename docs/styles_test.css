@@ -1793,7 +1793,7 @@ input[name="tab_item"] {
 .achievement-list {
   list-style: none;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .achievement-item {
@@ -1811,7 +1811,7 @@ input[name="tab_item"] {
 }
 
 .achievement-item .count {
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   color: var(--clr-fg);
 }
 
@@ -2428,16 +2428,16 @@ input[name="tab_item"] {
   }
 
   .achievement-item .label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
   }
 
   .achievement-item .count {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .achievement-item .count strong {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
   }
 
