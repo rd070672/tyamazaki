@@ -1635,7 +1635,7 @@ input[name="tab_item"] {
 
 .topic {
   display: grid;
-  grid-template-columns: 80px 80px 1fr; /* 日付 / タグ / 本文 */
+  grid-template-columns: 1fr 1fr 9fr; /* 日付 / タグ / 本文 */
   align-items: start;  /* ← 縦位置を中央寄せ */
   column-gap: 22px;      /* ← 日付とタグの距離を短くする */
   padding:0 28px 0 20px;
@@ -2383,6 +2383,13 @@ input[name="tab_item"] {
     right: 8px;
   }
 
+  .topic time,
+  .topic .topic__tag,
+  .topic .topic__body {
+    font-size: 0.8rem;   /* 通常より少し小さめ */
+    line-height: 1.2;    /* 行間を少し詰めると読みやすい */
+  }
+
   /* ################################################################## */
   .hero__panel{ padding: 12px 16px; border-radius: 10px; }
   .hero__dots{ bottom: 12px; gap: 10px; }
@@ -2416,6 +2423,15 @@ input[name="tab_item"] {
   }
   .topic__tag{ grid-column:1/2; margin-right:8px; }
   .topic__body{ grid-column:2/3; }
+
+  .achievement-list li,
+  .achievement-list span {
+    font-size: 0.8rem;
+  }
+
+  .achievement-list .count strong {
+    font-size: 0.9rem;
+  }
 
 
 
@@ -2463,7 +2479,7 @@ input[name="tab_item"] {
     top: 64px;               /* ヘッダー下から表示。必要なら調整 */
     right: 12px;
     left: auto !important;   /* 左固定を打ち消す */
-    width: min(25vw, 250px); /* 画面の約1/3（上限 320px） */
+    width: min(30vw, 300px); /* 画面の約1/3（上限 320px） */
     max-height: 88vh;
     overflow: auto;
     flex-direction: column;
@@ -2480,15 +2496,30 @@ input[name="tab_item"] {
     to  { opacity:1; transform: translateY(0)    scale(1); }
   }
 
-  /* lab-title 部分（左寄せ） */
-  .site-footer .lab-title h3 a{
-    text-align:center;
+  .site-footer .lab-title {
+    text-align: center;
+    margin: 16px 0;
   }
+  /* lab-title 部分（左寄せ） */
+  /* .site-footer .lab-title h3 a{
+    text-align:center;
+  } */
   .site-footer .lab-subtitle{
     text-align:center;
   }
   .site-footer .nav__list{
     display: none !important;
+  }
+
+  .site-footer .lab-title h3,
+  .site-footer .lab-title p {
+    display: block;
+    text-align: center;     /* h3 や subtitle も中央に */
+  }
+
+  .site-footer .lab-title a {
+    display: inline-block;  /* リンクが横並びのまま中央揃え */
+    margin: 0 4px;          /* リンク間の余白 */
   }
 }
 /* ############################################################# */
