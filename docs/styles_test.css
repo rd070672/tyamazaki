@@ -1729,7 +1729,7 @@ input[name="tab_item"] {
 
 /* サブタイトルの整え */
 .section-kicker{
-  margin: 2px 0 14px;
+  margin: 2px 0 10px;
   color: var(--clr-fg);
   font-size: .95rem;
 }
@@ -2545,12 +2545,12 @@ input[name="tab_item"] {
   } */
 
   .section-head .eyebrow {
-    font-size: 0.9rem;   /* 通常より少し小さめ */
+    font-size: 1.2rem;   /* 通常より少し小さめ */
     letter-spacing: 0.05em;
   }
 
   .section-head .title {
-    font-size: 1.3rem;   /* 見出しも少し小さめ */
+    font-size: 0.9rem;   /* 見出しも少し小さめ */
     line-height: 1.3;
   }
 
