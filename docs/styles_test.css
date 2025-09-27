@@ -2375,9 +2375,8 @@ input[name="tab_item"] {
    */
 
   .lab-title {
-    margin: 24px 0;   /* タイトル全体の上下余白 */
+    margin: 40px 0;   /* タイトル全体の上下余白 */
     padding: 0;       /* ここではpaddingは不要にする */
-    text-align: center; /* モバイルでは中央寄せが見やすい */
   }
 
   .lab-title h3 {
@@ -2388,8 +2387,7 @@ input[name="tab_item"] {
   }
 
   .lab-subtitle {
-    margin: 6px 0 0;   /* 上に少しスペース */
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.5;
   }
 
