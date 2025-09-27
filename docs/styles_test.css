@@ -249,7 +249,7 @@ button {
 }
 
 .description7 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0.8em 0.5em 0 0.5em; /* 上右下左 */
   text-align: left;
 }
@@ -860,7 +860,7 @@ input[name="tab_item"] {
 }
 
 .section__subtitle {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--clr-primary);
   margin: 0;
 }
