@@ -739,7 +739,7 @@ i.fas.fa-external-link-alt{
 
 .header{
   display: grid;
-  grid-template-columns: 35% 60%; /* 左: title 右: nav */
+  grid-template-columns: 35% 65%; /* 左: title 右: nav */
   align-items:center;              /* 縦中央 */
   gap: 10px;                       /* ラボ名とナビの間 */
   /* max-width: 960px;
