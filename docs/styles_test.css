@@ -1129,7 +1129,7 @@ input[name="tab_item"] {
 }
 
 .footer {
-  padding: 2em 0;
+  padding: 1em 0;
   margin-top: 1em;
   text-align: center;
   font-size: 0.9em;
@@ -1714,7 +1714,7 @@ input[name="tab_item"] {
   margin-bottom: 10px;
 }
 .section-head .eyebrow{
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--clr-primary);
   margin: 0;
@@ -1722,7 +1722,7 @@ input[name="tab_item"] {
 }
 .section-head .title{
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: .01em;
   line-height: 1;          /* 余白をなくす */
 }
@@ -1946,7 +1946,7 @@ input[name="tab_item"] {
   background: var(--footer-bg);
   color: var(--footer-fg);
   border-top: 3px solid var(--footer-border);
-  margin-top: 56px;
+  margin-top: 20px;
   box-shadow: var(--footer-shadow);
   padding: 0;
 }
@@ -2516,12 +2516,12 @@ input[name="tab_item"] {
   }
 
   .section-head .eyebrow {
-    font-size: 1.2rem;   /* 通常より少し小さめ */
+    font-size: 1.3rem;   /* 通常より少し小さめ */
     letter-spacing: 0.05em;
   }
 
   .section-head .title {
-    font-size: 0.9rem;   /* 見出しも少し小さめ */
+    font-size: 0.8rem;   /* 見出しも少し小さめ */
     line-height: 1.3;
   }
 
