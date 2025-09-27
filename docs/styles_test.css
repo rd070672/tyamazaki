@@ -1960,16 +1960,6 @@ input[name="tab_item"] {
   padding-inline: var(--footer-gutter);
 }
 
-/* フッターの中央寄せレイアウト */
-/* .site-footer .footer__inner{
-  max-width: 960px;            
-  margin-inline: auto;
-  padding: 28px 16px;
-  display: grid;              
-  place-items: center;
-  gap: 28px;
-} */
-
 /* inner を header と同じ flex レイアウトにする */
 .site-footer .footer__inner{
   max-width: 960px;
@@ -2480,8 +2470,8 @@ input[name="tab_item"] {
     top: 64px;               /* ヘッダー下から表示。必要なら調整 */
     right: 12px;
     left: auto !important;   /* 左固定を打ち消す */
-    width: min(33vw, 320px); /* 画面の約1/3（上限 320px） */
-    max-height: 80vh;
+    width: min(25vw, 250px); /* 画面の約1/3（上限 320px） */
+    max-height: 88vh;
     overflow: auto;
     flex-direction: column;
     gap: 8px;
@@ -2499,10 +2489,6 @@ input[name="tab_item"] {
 
   .site-footer .nav__list{
     display: none !important;
-    gap: 14px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 }
 /* ############################################################# */
