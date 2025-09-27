@@ -32,14 +32,14 @@ body {
   --clr-fg: #555;
   --clr-fg-alt: #444;
   --clr-primary: #0063ad;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
 }
 
 .dark {
-  --clr-bg: #23283e;
-  --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
-  --clr-fg-alt: #cdcdff;
+  --clr-bg: #0c143b;
+  --clr-bg-alt: #161c3d;
+  --clr-fg: #dbdbe8;
+  --clr-fg-alt: #e9e9ff;
   --clr-primary: #18b41d;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -1971,26 +1971,6 @@ input[name="tab_item"] {
   gap: 20px;
 }
 
-/* ナビ：中央寄せ＋等分ではなく“中央に集める” */
-/* .footer__nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;            
-  gap: clamp(16px, 3vw, 40px); 
-  width: 100%;
-  border-bottom: 1px solid color-mix(in oklab, var(--footer-fg) 15%, transparent);
-  padding-bottom: 16px;
-} */
-
-/* リンクの見た目（任意） */
-/* .footer__link{
-  color: var(--footer-link);
-  font-weight: 600;
-  text-decoration: none;
-}
-.footer__link:hover{ color: var(--footer-link-hover); } */
-
 /* lab-title 部分（左寄せ） */
 .site-footer .lab-title h3 a{
   font-weight: 700;
@@ -2108,8 +2088,8 @@ input[name="tab_item"] {
   }
 
   .footer {
-    padding: 2em;
-    margin-top: 1em;
+    /* padding: 2em;
+    margin-top: 1em; */
     font-size: 0.6em;
   }
 
