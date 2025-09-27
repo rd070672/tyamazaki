@@ -2028,8 +2028,7 @@ input[name="tab_item"] {
 /* コピーライトは下に中央寄せ */
 .site-footer .footer__copy{
   text-align: center;
-  margin-top: 12px;
-  padding-bottom: 24px;
+  padding-bottom: 30px;
   font-size: .85rem;
   color: var(--footer-fg);
 }
@@ -2525,7 +2524,7 @@ input[name="tab_item"] {
   }
 
   .section-head .eyebrow {
-    font-size: 1.35rem;   /* 通常より少し小さめ */
+    font-size: 1.4rem;   /* 通常より少し小さめ */
     letter-spacing: 0.05em;
   }
 
