@@ -1800,22 +1800,24 @@ input[name="tab_item"] {
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--clr-primary); /* 区切り線にテーマカラー */
 }
 
 .achievement-item .label {
   font-size: 1rem;
   font-weight: 600;
+  color: var(--clr-fg); /* テキスト基本色 */
 }
 
 .achievement-item .count {
   font-size: 0.95rem;
-  color: #444;
+  color: var(--clr-fg);
 }
 
 .achievement-item .count strong {
   font-size: 1.2rem;
   font-weight: 700;
+  color: var(--clr-primary); /* 数値をテーマカラーで強調 */
   margin-left: 6px;
 }
 
