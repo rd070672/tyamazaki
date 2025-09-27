@@ -2505,12 +2505,12 @@ input[name="tab_item"] {
   }
 
   .section-head .eyebrow {
-    font-size: 1.5rem;   /* 通常より少し小さめ */
+    font-size: 1.6rem;
     letter-spacing: 0.05em;
   }
 
   .section-head .title {
-    font-size: 0.9rem;   /* 見出しも少し小さめ */
+    font-size: 0.9rem;
     line-height: 1.3;
   }
 
