@@ -2426,7 +2426,7 @@ input[name="tab_item"] {
 
   .achievement-item .label {
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .achievement-item .count {
@@ -2435,7 +2435,7 @@ input[name="tab_item"] {
 
   .achievement-item .count strong {
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
 
