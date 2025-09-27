@@ -2004,7 +2004,7 @@ input[name="tab_item"] {
 /* lab-title 部分（左寄せ） */
 .site-footer .lab-title h3 a{
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--clr-primary);
   text-decoration: none;
 }
