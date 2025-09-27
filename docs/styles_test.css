@@ -1755,6 +1755,45 @@ input[name="tab_item"] {
   .section-kicker{ margin-bottom: 10px; }
 }
 
+/* About 2カラム */
+#about .about-split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 左=文章 / 右=画像 */
+  gap: clamp(16px, 3vw, 28px);
+  align-items: center;
+}
+
+/* 文章側の読みやすさ */
+#about .about-text p{
+  line-height: 1.9;
+  margin: .8em 0;
+  font-size: 1.1rem;
+}
+#about .about-text .lede{
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* 画像側：角丸＆トリミング */
+#about .about-figure{ margin: 0; }
+#about .about-figure img{
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/10;       /* お好みで 3/2 や 4/3 に */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+/* スマホでは縦積み（画像は下に） */
+@media (max-width: 600px){
+  #about .about-split{ grid-template-columns: 1fr; }
+  #about .about-figure{ order: 2; }
+  #about .about-text{ order: 1; }
+}
+
+
 /* デフォルト（light想定） */
 :root,
 .light {
