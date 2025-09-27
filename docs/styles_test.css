@@ -2446,7 +2446,7 @@ input[name="tab_item"] {
 
   .header .nav__list{
     display: none !important;         /* ← 初期表示を確実に消す */
-    /* position: fixed;                 
+    position: fixed;                 
     top: 64px;                        
     right: 12px;                      
     left: auto;                      
@@ -2458,7 +2458,7 @@ input[name="tab_item"] {
     padding: 12px;
     background: var(--clr-bg-alt, #fff);
     border-radius: 14px;
-    box-shadow: 0 14px 32px rgba(0,0,0,.18); */
+    box-shadow: 0 14px 32px rgba(0,0,0,.18);
   }
 
   /* .header .nav__list .link--nav{
