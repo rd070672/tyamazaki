@@ -2510,35 +2510,45 @@ input[name="tab_item"] {
     to  { opacity:1; transform: translateY(0)    scale(1); }
   }
 
-  .site-footer .lab-title {
+  /* .site-footer .lab-title {
     text-align: center;
     margin: 16px 0;
-  }
+  } */
   /* lab-title 部分（左寄せ） */
   /* .site-footer .lab-title h3 a{
     text-align:center;
   } */
-  .site-footer .lab-subtitle{
-    text-align:center;
+  /* .site-footer .lab-subtitle{
+    text-align:center; */
   }
   .site-footer .nav__list{
     display: none !important;
   }
 
-  .site-footer .lab-title h3,
+  /* .site-footer .lab-title h3,
   .site-footer .lab-title p {
     display: block;
-    text-align: center;     /* h3 や subtitle も中央に */
+    text-align: center;    
   }
 
   .site-footer .lab-title a {
-    display: inline-block;  /* リンクが横並びのまま中央揃え */
-    margin: 0 4px;          /* リンク間の余白 */
+    display: inline-block;  
+    margin: 0 4px;         
   }
   
   .site-footer .footer__inner{
   align-items: center;
   justify-content: space-between;
+  } */
+
+  .site-footer .lab-title {
+    text-align: center;   /* テキスト中央寄せ */
+  }
+
+  .site-footer .lab-title h3,
+  .site-footer .lab-title p {
+    justify-content: center;  /* flex対応要素があっても中央に */
+    text-align: center;
   }
 
   .section-head .eyebrow {
