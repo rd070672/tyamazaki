@@ -2552,12 +2552,12 @@ input[name="tab_item"] {
   }
 
   .section-head .eyebrow {
-    font-size: 0.8rem;   /* 通常より少し小さめ */
+    font-size: 0.9rem;   /* 通常より少し小さめ */
     letter-spacing: 0.05em;
   }
 
   .section-head .title {
-    font-size: 0.8rem;   /* 見出しも少し小さめ */
+    font-size: 1.3rem;   /* 見出しも少し小さめ */
     line-height: 1.3;
   }
 }
