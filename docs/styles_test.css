@@ -1921,15 +1921,30 @@ input[name="tab_item"] {
   padding-inline: var(--footer-gutter);
 }
 
+/* フッター本体：30% / 70% の分割 */
 .site-footer .footer__inner{
+  padding: 28px var(--footer-gutter);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  column-gap: 10px; /* 横方向の間隔 */
+}
+
+/* .site-footer .footer__inner{
   max-width: 960px;
   margin-inline: auto;
   padding: 28px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
+
+.site-footer .footer__inner {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+} */
 
 .site-footer .lab-title h3 a{
   font-weight: 700;
@@ -2486,6 +2501,11 @@ input[name="tab_item"] {
     /* padding: 2em;
     margin-top: 1em; */
     font-size: 0.6em;
+  }
+  
+  .site-footer .footer__inner {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
   }
 
   .site-footer .lab-title h3 a{
