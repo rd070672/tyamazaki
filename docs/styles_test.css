@@ -2378,13 +2378,13 @@ input[name="tab_item"] {
   }
 
   .about-text p {
-    font-size: 0.7rem;   /* 少し小さめ */
+    font-size: 0.6rem;   /* 少し小さめ */
     line-height: 1.4;    /* 行間は読みやすさを保つ */
   }
 
   .about-text .lede {
-    font-size: 0.8rem;     /* リード文だけ少し大きめに */
-    font-weight: 500;    /* 少し強調 */
+    font-size: 0.7rem;     /* リード文だけ少し大きめに */
+    font-weight: 400;    /* 少し強調 */
   }
 
   /* ################################################################## */
