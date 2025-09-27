@@ -1810,7 +1810,7 @@ input[name="tab_item"] {
 }
 
 .achievement-item .count {
-  font-size: 0.95rem;
+  font-size: 0.90rem;
   color: var(--clr-fg);
 }
 
@@ -2435,6 +2435,7 @@ input[name="tab_item"] {
     grid-template-columns:100px 1fr;
     row-gap:6px; padding-right:16px;
   }
+  
   .topic__tag{ grid-column:1/2; margin-right:8px; }
   .topic__body{ grid-column:2/3; }
 
@@ -2443,9 +2444,10 @@ input[name="tab_item"] {
     font-size: 0.8rem;
   }
 
-  .achievement-list .count strong {
+  /* .achievement-list .count strong {
     font-size: 0.9rem;
-  }
+  } */
+  
 
 
 
@@ -2567,7 +2569,7 @@ input[name="tab_item"] {
   }
 
 
-  
+
 }
 /* ############################################################# */
 /* ############################################################# */
