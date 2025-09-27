@@ -1994,12 +1994,12 @@ input[name="tab_item"] {
 /* lab-title 部分（左寄せ） */
 .site-footer .lab-title h3 a{
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--clr-primary);
   text-decoration: none;
 }
 .site-footer .lab-subtitle{
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.4;
 }
 
