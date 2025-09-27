@@ -2037,7 +2037,6 @@ input[name="tab_item"] {
 /* 960px 以下は中央寄せ＆行間を広めに */
 @media (max-width: 600px){
   .footer__nav{ justify-content: center; gap: 8px 18px; }
-  .site-footer .sns{ justify-content: center; }
   .footer__copy{ text-align: center; }
 }
 
@@ -2111,7 +2110,7 @@ input[name="tab_item"] {
 
   .footer {
     padding: 2em;
-    margin-top: 3em;
+    margin-top: 1em;
     font-size: 0.6em;
   }
 
@@ -2512,37 +2511,9 @@ input[name="tab_item"] {
     to  { opacity:1; transform: translateY(0)    scale(1); }
   }
 
-  /* .site-footer .lab-title {
-    text-align: center;
-    margin: 16px 0;
-  } */
-  /* lab-title 部分（左寄せ） */
-  /* .site-footer .lab-title h3 a{
-    text-align:center;
-  } */
-  /* .site-footer .lab-subtitle{
-    text-align:center; */
-  /* } */
-
   .site-footer .nav__list{
     display: none !important;
   }
-
-  /* .site-footer .lab-title h3,
-  .site-footer .lab-title p {
-    display: block;
-    text-align: center;    
-  } 
-  
-  .site-footer .lab-title a {
-    display: inline-block;  
-    margin: 0 4px;         
-  }
-  
-  .site-footer .footer__inner{
-  align-items: center;
-  justify-content: space-between;
-  } */
 
   .section-head .eyebrow {
     font-size: 1.2rem;   /* 通常より少し小さめ */
