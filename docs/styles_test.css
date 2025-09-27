@@ -2321,8 +2321,8 @@ input[name="tab_item"] {
   /* ################################################################ */
 
   .lab-title {
-    margin: 80px 0 40px 0;   /* 上0 / 右0 / 下40px / 左0 */
-    padding: 20px 0;      /* タイトル上下は少し抑える */
+    margin: 20px 0 10px 0;
+    /* padding: 20px 0; */
   }
 
   .lab-title h3 {
