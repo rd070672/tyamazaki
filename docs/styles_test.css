@@ -2342,14 +2342,14 @@ input[name="tab_item"] {
   /* ################################################################ */
 
   .lab-title {
-    margin: 80px 0 60px 0;   /* タイトル全体の上下余白 */
-    padding: 0;       /* ここではpaddingは不要にする */
+    margin: 80px 0 40px 0;   /* 上0 / 右0 / 下40px / 左0 */
+    padding: 20px 0;      /* タイトル上下は少し抑える */
   }
 
   .lab-title h3 {
     margin: 0;
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 24px;
+    line-height: 1.4;
     color: var(--clr-primary);
   }
 
@@ -2362,6 +2362,10 @@ input[name="tab_item"] {
     color: var(--clr-fg);
     text-decoration: none;
     transition: color 0.2s ease;
+  }
+
+  .hero {
+    margin-top: 40px;
   }
 
   .nav__hamburger{
