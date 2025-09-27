@@ -1991,6 +1991,7 @@ input[name="tab_item"] {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 0.8rem;
 }
 .site-footer .link--nav{
   text-decoration: none;
