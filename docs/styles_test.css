@@ -1994,12 +1994,12 @@ input[name="tab_item"] {
 /* lab-title 部分（左寄せ） */
 .site-footer .lab-title h3 a{
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--clr-primary);
   text-decoration: none;
 }
 .site-footer .lab-subtitle{
-  font-size: .8rem;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
@@ -2340,45 +2340,22 @@ input[name="tab_item"] {
   }
 
   /* ################################################################ */
-  
-  /* .lab-title {
-    margin: 20px 0;
-    padding: 40px 0;
+
+  .lab-title {
+    margin: 40px 0 40px 0;   /* タイトル全体の上下余白 */
+    padding: 0;       /* ここではpaddingは不要にする */
   }
 
   .lab-title h3 {
     margin: 0;
     font-size: 24px;
     line-height: 1.2;
-    display: inline-block;
     color: var(--clr-primary);
-    padding: 0;
-    position: relative;
   }
 
   .lab-subtitle {
-    margin: 6px 0;
     font-size: 14px;
-    color: var(--clr-fg);
-    line-height: 1.5;
-  }
-   */
-
-  .lab-title {
-    margin: 40px 0;   /* タイトル全体の上下余白 */
-    padding: 0;       /* ここではpaddingは不要にする */
-  }
-
-  .lab-title h3 {
-    margin: 0 0 8px;   /* 下だけ少しスペース */
-    font-size: 20px;
     line-height: 1.2;
-    color: var(--clr-primary);
-  }
-
-  .lab-subtitle {
-    font-size: 10px;
-    line-height: 1.5;
   }
 
   .lab-link {
@@ -2415,6 +2392,22 @@ input[name="tab_item"] {
     right: 12px;
     padding: .45em .9em;
     font-size: 13px;
+  }
+
+  .hero__title {
+    margin: 0 0 .35em 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: #fff;
+    text-shadow: 0 3px 8px rgba(0,0,0,.55);
+  }
+  .hero__desc {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,.55);
   }
 
   .topic{
@@ -2487,6 +2480,13 @@ input[name="tab_item"] {
     to  { opacity:1; transform: translateY(0)    scale(1); }
   }
 
+  /* lab-title 部分（左寄せ） */
+  .site-footer .lab-title h3 a{
+    text-align:center;
+  }
+  .site-footer .lab-subtitle{
+    text-align:center;
+  }
   .site-footer .nav__list{
     display: none !important;
   }
