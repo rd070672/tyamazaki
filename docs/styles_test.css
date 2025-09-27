@@ -1793,6 +1793,42 @@ input[name="tab_item"] {
   #about .about-text{ order: 1; }
 }
 
+/* ==== Access 2カラム ==== */
+#access .access-split{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;       /* 左をやや広め */
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+}
+
+/* 右テキストの読みやすさ */
+#access .access-text .section__subtitle{
+  margin: .4em 0 .2em;
+  font-weight: 700;
+}
+#access .access-text .description7{
+  line-height: 1.9;
+  margin: .2em 0;
+}
+#access .access-text .vspace{ height: .8rem; }
+
+/* 地図（比率固定でレスポンシブ） */
+#access .map-embed{ position: relative; width: 100%; }
+#access .map-embed::before{ content:""; display:block; padding-top:56.25%; } /* 16:9 */
+#access .map-embed iframe{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0; display: block;
+  border-radius: 12px; box-shadow: var(--shadow);
+}
+/* 地図下リンクの折り返し防止＆余白 */
+#access .map-embed .map-link{ margin-top: .6rem; }
+#access .map-embed .map-link a{ white-space: nowrap; display: inline-block; }
+
+/* スマホでは縦積み */
+@media (max-width: 600px){
+  #access .access-split{ grid-template-columns: 1fr; }
+}
 
 /* デフォルト（light想定） */
 :root,
