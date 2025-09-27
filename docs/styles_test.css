@@ -1812,21 +1812,21 @@ input[name="tab_item"] {
 /* ラッパー：横幅に合わせて1:1の高さを作る */
 .map-embed{
   position: relative;
-  width: 100%;
-  max-width: 600px;        /* 任意。親で管理するなら削ってOK */
+  width: 90%;
+  /* max-width: 600px; */
 }
 .map-embed::before{
   content: "";
   display: block;
-  padding-top: 100%;       /* ★ 1:1 正方形 */
+  padding-top: 90%;       /* ★ 1:1 正方形 */
 }
 
 /* クリック面（地図）を全面に広げる */
 .map-embed iframe{
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   border: 0;
   display: block;
   border-radius: 12px;     /* お好みで */
