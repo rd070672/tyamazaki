@@ -1789,6 +1789,37 @@ input[name="tab_item"] {
   #about .about-text{ order: 1; }
 }
 
+.achievement-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.achievement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.achievement-item .label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.achievement-item .count {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.achievement-item .count strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+
 /* ==== Access 2カラム ==== */
 #access .access-split{
   display: grid;
