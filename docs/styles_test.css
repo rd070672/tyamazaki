@@ -899,8 +899,9 @@ input[name="tab_item"] {
 /* メニューを横並びに＆余白は gap で */
 .nav__list{
   display:flex;
+  flex-wrap: wrap;
   align-items:center;
-  gap: 12px;
+  gap: 12px 24px;
   margin:0; padding:0;
   list-style:none;
   font-size: 14px;
@@ -1986,7 +1987,8 @@ input[name="tab_item"] {
 /* ナビ部分（右寄せ）を header と同じに */
 .site-footer .nav__list{
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 14px 24px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2499,9 +2501,9 @@ input[name="tab_item"] {
     to  { opacity:1; transform: translateY(0)    scale(1); }
   }
 
-  .site-footer .nav__list{
+  /* .site-footer .nav__list{
     display: none !important;
-  }
+  } */
 
   .section-head .eyebrow {
     font-size: 1.5rem;   /* 通常より少し小さめ */
