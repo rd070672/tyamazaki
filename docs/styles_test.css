@@ -1722,7 +1722,7 @@ input[name="tab_item"] {
 }
 .section-head .title{
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: .01em;
   line-height: 1;          /* 余白をなくす */
 }
@@ -2525,12 +2525,12 @@ input[name="tab_item"] {
   }
 
   .section-head .eyebrow {
-    font-size: 1.3rem;   /* 通常より少し小さめ */
+    font-size: 1.35rem;   /* 通常より少し小さめ */
     letter-spacing: 0.05em;
   }
 
   .section-head .title {
-    font-size: 0.8rem;   /* 見出しも少し小さめ */
+    font-size: 0.9rem;   /* 見出しも少し小さめ */
     line-height: 1.3;
   }
 
