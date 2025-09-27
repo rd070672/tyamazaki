@@ -126,6 +126,12 @@ button {
   font-weight: bold;
 }
 
+main {
+  max-width: 960px;
+  width: 95%;
+  margin: 0 auto;
+}
+
 .bar-left {
   border-left: solid 3px var(--clr-primary);
   padding-left: 0.5em;
@@ -732,9 +738,9 @@ i.fas.fa-external-link-alt{
 }
 
 .header{
-  display:flex;
+  display: grid;
+  grid-template-columns: 40% 60%; /* 左: title 右: nav */
   align-items:center;              /* 縦中央 */
-  justify-content:space-between;   /* 左: ラボ名 / 右: ナビ */
   gap: 16px;                       /* ラボ名とナビの間 */
   max-width: 960px;
   width: 95%;
@@ -742,22 +748,30 @@ i.fas.fa-external-link-alt{
   padding: 40px 0;
 }
 
+/* 左のタイトルブロックと右のナビの位置 */
+.header .lab-title { justify-self: start; text-align: left; }
+.header nav        { justify-self: end;  }
+
+/* ナビの中身を折り返し可能にする */
+.header nav .nav__list{
+  display: flex;
+  flex-wrap: wrap;            /* ← ここで折り返し */
+  gap: 14px 14px;             /* 行間 / カラム間 */
+  justify-content: center;    /* 右カラム内で中央配置（好みに応じて end に） */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .header.center{
   justify-content:space-between;   /* 上書き */
   text-align:left;                 /* ラボ名のテキストは左寄せ */
 }
 
-/* ラボ名（h3）周りの余白調整 */
-.header h3{
-  margin:0;                        /* 余白リセット */
-  line-height:1;                   /* 行高を詰める */
-}
-
-main {
-  max-width: 960px;
-  width: 95%;
-  margin: 0 auto;
-}
+/* .header h3{
+  margin:0;                       
+  line-height:1;                   
+} */
 
 .tabs {
   margin: 1em auto 1em 1em;   /* 上=1em, 右=auto, 下=1em, 左=1em */
@@ -2432,7 +2446,7 @@ input[name="tab_item"] {
 
   .header .nav__list{
     display: none !important;         /* ← 初期表示を確実に消す */
-    position: fixed;                 
+    /* position: fixed;                 
     top: 64px;                        
     right: 12px;                      
     left: auto;                      
@@ -2444,16 +2458,16 @@ input[name="tab_item"] {
     padding: 12px;
     background: var(--clr-bg-alt, #fff);
     border-radius: 14px;
-    box-shadow: 0 14px 32px rgba(0,0,0,.18);
+    box-shadow: 0 14px 32px rgba(0,0,0,.18); */
   }
 
-  .header .nav__list .link--nav{
+  /* .header .nav__list .link--nav{
     display: block;
     padding: 10px 8px;
     text-align: center;
     border-radius: 8px;
     font-size: 0.95rem;
-  }
+  } */
 
   .header .nav__list:not(.is-open){
     display: none !important;
@@ -2462,10 +2476,10 @@ input[name="tab_item"] {
   .header .nav__list.is-open{
     display: flex !important;
     position: fixed;
-    top: 64px;               /* ヘッダー下から表示。必要なら調整 */
+    top: 64px;
     right: 12px;
-    left: auto !important;   /* 左固定を打ち消す */
-    width: min(40vw, 400px); /* 画面の約1/3（上限 320px） */
+    left: auto !important;
+    width: min(40vw, 400px);
     max-height: 88vh;
     overflow: auto;
     flex-direction: column;
@@ -2498,8 +2512,6 @@ input[name="tab_item"] {
   .footer__copy{ text-align: center; }
 
   .footer {
-    /* padding: 2em;
-    margin-top: 1em; */
     font-size: 0.6em;
   }
 
