@@ -2004,7 +2004,7 @@ input[name="tab_item"] {
 /* lab-title 部分（左寄せ） */
 .site-footer .lab-title h3 a{
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--clr-primary);
   text-decoration: none;
 }
@@ -2118,42 +2118,6 @@ input[name="tab_item"] {
   .header {
     height: 4em;
   }
-
-  /* .nav {
-    text-align: center;
-    z-index: 10;
-  }
-
-  .nav__list {
-    flex-direction: column;
-    padding: 1em 0;
-    position: relative;
-    right: 0;
-    left: 0;
-    top: 7em;
-    background-color: var(--clr-bg-alt);
-    border-radius: 1px;
-    width: 0;
-    overflow: hidden;
-    transition: width 0.2s ease-in-out;
-    z-index: 10;
-  }
-
-  .display-nav-list {
-    width: 100%;
-    z-index: 10;
-  }
-
-  .nav__list-item {
-    margin: 0.5em auto;
-    text-transform: uppercase;
-  } */
-/* 
-  .nav__hamburger {
-    display: flex;
-    margin-left: 0.8em;
-    z-index: 10;
-  } */
 
   .footer {
     padding: 2em;
@@ -2442,85 +2406,6 @@ input[name="tab_item"] {
     right: 8px;
   }
 
-
-  /* .nav {
-    position: relative;
-  }
-
-  .nav__list {
-    position: absolute;
-    top: 110%;       
-    right: 0;
-    left: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 10px 12px;
-    background: var(--clr-bg-alt, #fff);
-    border-radius: 8px;
-    box-shadow: 0 8px 22px rgba(0,0,0,.18);
-
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: max-height .25s ease, opacity .2s ease;
-    z-index: 20;
-  }
-
-  .nav__list.is-open {
-    max-height: 70vh;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav__list .link--nav {
-    font-size: 0.95rem;
-    padding: 8px 6px;
-    border-radius: 6px;
-  } */
-
-  /* 念のため横スクロール抑止 */
-  html, body { overflow-x: hidden; }
-
-  /* ヘッダーを前面に（ヒーローなどより上） */
-  .header { position: relative; z-index: 2000; }
-  .nav     { position: relative; z-index: 2001; }
-  .nav__hamburger { z-index: 2002; } /* ボタンのクリックを優先 */
-
-  /* ▼ メニュー（閉：完全に非表示） */
-  .nav__list{
-    display: none;                 /* ← これが効きます（描画しない） */
-    position: fixed;               /* 画面基準で安全に表示 */
-    inset: 64px 12px auto 12px;    /* 上はヘッダー高に合わせ調整可 */
-    flex-direction: column;
-    gap: 8px;
-    padding: 10px 12px;
-    background: var(--clr-bg-alt, #fff);
-    border-radius: 10px;
-    box-shadow: 0 12px 28px rgba(0,0,0,.18);
-    max-height: 75vh;
-    overflow: auto;
-  }
-
-  /* ▼ メニュー（開） */
-  .nav__list.is-open{
-    display: flex;                 /* ← 開いたときだけ描画 */
-    animation: menuFade .18s ease-out;
-  }
-
-  /* 見た目とタップ領域 */
-  .nav__list .link--nav{
-    display: block;
-    padding: 10px 8px;
-    border-radius: 8px;
-  }
-
-  @keyframes menuFade{
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
   /* ################################################################## */
   .hero__panel{ padding: 12px 16px; border-radius: 10px; }
   .hero__dots{ bottom: 12px; gap: 10px; }
@@ -2540,7 +2425,7 @@ input[name="tab_item"] {
   .topic__body{ grid-column:2/3; }
 
 
-  
+
   /* ヘッダーとボタンを一番手前に */
   .header{ position:relative; z-index:2000; }
   .nav{ position:relative; z-index:2001; }
@@ -2565,11 +2450,11 @@ input[name="tab_item"] {
   }
 
   /* ▼ メニュー（開） */
-  .header .nav__list.is-open{
+  /* .header .nav__list.is-open{
     display: flex !important;
     animation: menuSlideIn .18s ease-out;
     transform-origin: top right;
-  }
+  } */
 
   /* 項目のタップ領域と字間 */
   .header .nav__list .link--nav{
@@ -2578,6 +2463,30 @@ input[name="tab_item"] {
     text-align: center;
     border-radius: 8px;
     font-size: 0.95rem;
+  }
+
+  /* 初期状態は完全に“非表示”にする */
+  .header .nav__list:not(.is-open){
+    display: none !important;
+  }
+
+  /* 開いたときだけ右寄せ・1/3幅で出す */
+  .header .nav__list.is-open{
+    display: flex !important;
+    position: fixed;
+    top: 64px;               /* ヘッダー下から表示。必要なら調整 */
+    right: 12px;
+    left: auto !important;   /* 左固定を打ち消す */
+    width: min(33vw, 320px); /* 画面の約1/3（上限 320px） */
+    max-height: 70vh;
+    overflow: auto;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background: var(--clr-bg-alt, #fff);
+    border-radius: 12px;
+    box-shadow: 0 14px 32px rgba(0,0,0,.18);
+    z-index: 2001;
   }
 
   @keyframes menuSlideIn{
