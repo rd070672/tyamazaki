@@ -1821,6 +1821,32 @@ input[name="tab_item"] {
   margin-left: 6px;
 }
 
+.achievement-cta {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--clr-primary);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--clr-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* hover / focus 時に反転 */
+.achievement-cta:hover,
+.achievement-cta:focus {
+  background: var(--clr-primary);
+  color: #fff; /* 背景と反転 */
+}
+
+/* active（押した瞬間）のフィードバック */
+.achievement-cta:active {
+  transform: scale(0.97);
+}
+
 
 /* ==== Access 2カラム ==== */
 #access .access-split{
