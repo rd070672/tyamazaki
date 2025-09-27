@@ -1,6 +1,4 @@
-/*===============
-  global styles
-===============*/
+/*===============  global styles  ===============*/
 
 * {
   padding: 0;
@@ -1923,7 +1921,7 @@ input[name="tab_item"] {
 
 /* フッター本体：30% / 70% の分割 */
 .site-footer .footer__inner{
-  padding: 28px var(--footer-gutter);
+  padding: 10px var(--footer-gutter);
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
@@ -2503,7 +2501,7 @@ input[name="tab_item"] {
 
   .site-footer .footer__inner {
     grid-template-columns: 1fr;
-    row-gap: 12px;
+    row-gap: 0px;
     text-align: center;   /* ← ここで中央寄せ */
     justify-items: center;/* ← Grid要素自体を中央寄せ */
   }
