@@ -2435,7 +2435,7 @@ input[name="tab_item"] {
     grid-template-columns:100px 1fr;
     row-gap:6px; padding-right:16px;
   }
-  
+
   .topic__tag{ grid-column:1/2; margin-right:8px; }
   .topic__body{ grid-column:2/3; }
 
@@ -2528,7 +2528,7 @@ input[name="tab_item"] {
     display: none !important;
   }
 
-  /* .site-footer .lab-title h3,
+  .site-footer .lab-title h3,
   .site-footer .lab-title p {
     display: block;
     text-align: center;    
@@ -2542,16 +2542,8 @@ input[name="tab_item"] {
   .site-footer .footer__inner{
   align-items: center;
   justify-content: space-between;
-  } */
-
-  .site-footer .lab-title {
-    text-align: center;   /* テキスト中央寄せ */
   }
 
-  .site-footer .lab-title h3,
-  .site-footer .lab-title p {
-    justify-content: center;  /* flex対応要素があっても中央に */
-    text-align: center;
   }
 
   .section-head .eyebrow {
