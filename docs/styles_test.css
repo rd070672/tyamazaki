@@ -1417,7 +1417,7 @@ input[name="tab_item"] {
 
 .lab-title h3 {
   margin: 0;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.2;
   display: inline-block;
   color: var(--clr-primary);
@@ -1427,7 +1427,7 @@ input[name="tab_item"] {
 
 .lab-subtitle {
   margin: 6px 0;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--clr-fg);
   line-height: 1.5;
 }
@@ -2009,7 +2009,7 @@ input[name="tab_item"] {
   text-decoration: none;
 }
 .site-footer .lab-subtitle{
-  font-size: .9rem;
+  font-size: .8rem;
   line-height: 1.4;
 }
 
@@ -2358,7 +2358,7 @@ input[name="tab_item"] {
 
   .lab-title h3 {
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.2;
     display: inline-block;
     color: var(--clr-primary);
@@ -2368,7 +2368,7 @@ input[name="tab_item"] {
 
   .lab-subtitle {
     margin: 6px 0;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--clr-fg);
     line-height: 1.5;
   }
