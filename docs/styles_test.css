@@ -1984,11 +1984,10 @@ input[name="tab_item"] {
   line-height: 1.4;
 }
 
-/* ナビ部分（右寄せ）を header と同じに */
 .site-footer .nav__list{
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 12px;
+  gap: 3px 6px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1999,7 +1998,7 @@ input[name="tab_item"] {
   font-weight: 500;
   text-transform: uppercase;
   transition: background-color .2s, color .2s;
-  padding: 3px 4px;
+  padding: 2px 2px;
   border-radius: 4px;
 }
 .site-footer .link--nav:hover{
