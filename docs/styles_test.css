@@ -2118,7 +2118,8 @@ input[name="tab_item"] {
   .header {
     height: 4em;
   }
-  .nav {
+
+  /* .nav {
     text-align: center;
     z-index: 10;
   }
@@ -2131,7 +2132,7 @@ input[name="tab_item"] {
     left: 0;
     top: 7em;
     background-color: var(--clr-bg-alt);
-    border-radius: 1px; /* 角を丸くする */
+    border-radius: 1px;
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
@@ -2146,7 +2147,7 @@ input[name="tab_item"] {
   .nav__list-item {
     margin: 0.5em auto;
     text-transform: uppercase;
-  }
+  } */
 /* 
   .nav__hamburger {
     display: flex;
@@ -2479,27 +2480,45 @@ input[name="tab_item"] {
     border-radius: 6px;
   } */
 
-  .nav { 
-    position: relative; 
-    z-index: 1000;              /* ヘッダー全体を前面に */
-  }
+  /* 念のため横スクロール抑止 */
+  html, body { overflow-x: hidden; }
 
+  /* ヘッダーを前面に（ヒーローなどより上） */
+  .header { position: relative; z-index: 2000; }
+  .nav     { position: relative; z-index: 2001; }
+  .nav__hamburger { z-index: 2002; } /* ボタンのクリックを優先 */
+
+  /* ▼ メニュー（閉：完全に非表示） */
   .nav__list{
-    right: 8px;                 /* 右端に少し余白 */
-    left: 8px;                  /* 左にも余白→画面外へ出ない */
-    width: auto;                /* 親幅にフィット */
-    max-width: calc(100vw - 16px);
-    transform-origin: top right;
-    z-index: 1001;              /* ハンバーガーより前面 */
+    display: none;                 /* ← これが効きます（描画しない） */
+    position: fixed;               /* 画面基準で安全に表示 */
+    inset: 64px 12px auto 12px;    /* 上はヘッダー高に合わせ調整可 */
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--clr-bg-alt, #fff);
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    max-height: 75vh;
+    overflow: auto;
   }
 
+  /* ▼ メニュー（開） */
   .nav__list.is-open{
-    max-height: 80vh;           /* 充分な開き量 */
+    display: flex;                 /* ← 開いたときだけ描画 */
+    animation: menuFade .18s ease-out;
   }
 
+  /* 見た目とタップ領域 */
   .nav__list .link--nav{
-    display: block;             /* 行全体をタップ領域に */
+    display: block;
     padding: 10px 8px;
+    border-radius: 8px;
+  }
+
+  @keyframes menuFade{
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
 
