@@ -1790,6 +1790,7 @@ input[name="tab_item"] {
   border-top: 3px solid var(--footer-border);
   margin-top: 56px;
   box-shadow: var(--footer-shadow);
+  padding-bottom: 32px;     /* フッター内の最下部に余白 */
 }
 
 .site-footer .footer__inner,
