@@ -739,11 +739,11 @@ i.fas.fa-external-link-alt{
 
 .header{
   display: grid;
-  grid-template-columns: 40% 60%; /* 左: title 右: nav */
+  grid-template-columns: 35% 60%; /* 左: title 右: nav */
   align-items:center;              /* 縦中央 */
-  gap: 16px;                       /* ラボ名とナビの間 */
-  max-width: 960px;
-  width: 95%;
+  gap: 10px;                       /* ラボ名とナビの間 */
+  /* max-width: 960px;
+  width: 95%; */
   margin: 0 auto;
   padding: 40px 0;
 }
@@ -756,7 +756,7 @@ i.fas.fa-external-link-alt{
 .header nav .nav__list{
   display: flex;
   flex-wrap: wrap;            /* ← ここで折り返し */
-  gap: 14px 14px;             /* 行間 / カラム間 */
+  gap: 14px 10px;             /* 行間 / カラム間 */
   justify-content: center;    /* 右カラム内で中央配置（好みに応じて end に） */
   margin: 0;
   padding: 0;
