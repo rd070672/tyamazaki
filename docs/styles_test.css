@@ -2390,6 +2390,16 @@ input[name="tab_item"] {
     line-height: 1.2;    /* 行間を少し詰めると読みやすい */
   }
 
+  .about-text p {
+    font-size: 0.9rem;   /* 少し小さめ */
+    line-height: 1.4;    /* 行間は読みやすさを保つ */
+  }
+
+  .about-text .lede {
+    font-size: 0.9rem;     /* リード文だけ少し大きめに */
+    font-weight: 500;    /* 少し強調 */
+  }
+
   /* ################################################################## */
   .hero__panel{ padding: 12px 16px; border-radius: 10px; }
   .hero__dots{ bottom: 12px; gap: 10px; }
