@@ -1772,7 +1772,7 @@ input[name="tab_item"] {
 }
 
 .achievement-item .label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--clr-fg); /* テキスト基本色 */
 }
@@ -2502,7 +2502,7 @@ input[name="tab_item"] {
     margin-top: 1em; */
     font-size: 0.6em;
   }
-  
+
   .site-footer .footer__inner {
     grid-template-columns: 1fr;
     row-gap: 12px;
