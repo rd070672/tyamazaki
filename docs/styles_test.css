@@ -2514,6 +2514,18 @@ input[name="tab_item"] {
     line-height: 1.3;
   }
 
+  /* lab-title 部分（左寄せ） */
+  .site-footer .lab-title h3 a{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+    text-decoration: none;
+  }
+  .site-footer .lab-subtitle{
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
 }
 /* ############################################################# */
 /* ############################################################# */
