@@ -2538,6 +2538,52 @@ input[name="tab_item"] {
   }
   .topic__tag{ grid-column:1/2; margin-right:8px; }
   .topic__body{ grid-column:2/3; }
+
+
+  
+  /* ヘッダーとボタンを一番手前に */
+  .header{ position:relative; z-index:2000; }
+  .nav{ position:relative; z-index:2001; }
+  .nav__hamburger{ z-index:2002; }
+
+  /* ▼ メニュー（閉：完全に非表示） */
+  .header .nav__list{
+    display: none !important;         /* ← 初期表示を確実に消す */
+    position: fixed;                  /* 画面基準で安全に配置 */
+    top: 64px;                        /* ヘッダーの下から表示（必要なら調整） */
+    right: 12px;                      /* 右寄せ */
+    left: auto;                       /* 左は使わない */
+    width: min(33vw, 320px);          /* 画面の約1/3（上限320pxほど） */
+    max-height: 70vh;
+    overflow: auto;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background: var(--clr-bg-alt, #fff);
+    border-radius: 12px;
+    box-shadow: 0 14px 32px rgba(0,0,0,.18);
+  }
+
+  /* ▼ メニュー（開） */
+  .header .nav__list.is-open{
+    display: flex !important;
+    animation: menuSlideIn .18s ease-out;
+    transform-origin: top right;
+  }
+
+  /* 項目のタップ領域と字間 */
+  .header .nav__list .link--nav{
+    display: block;
+    padding: 10px 8px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+
+  @keyframes menuSlideIn{
+    from{ opacity:0; transform: translateY(-6px) scale(.98); }
+    to  { opacity:1; transform: translateY(0)    scale(1); }
+  }
 }
 /* ############################################################# */
 /* ############################################################# */
