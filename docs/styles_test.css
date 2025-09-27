@@ -1,4 +1,6 @@
-/*===============  global styles  ===============*/
+/*===============
+  global styles  
+  ===============*/
 
 * {
   padding: 0;
@@ -101,7 +103,6 @@ h5 {
 h6 {
   font-size: 1.0em;
 }
-
 ul {
   list-style-type: none;
 }
@@ -119,10 +120,13 @@ a {
 button {
   cursor: pointer;
 }
-
 .bold {
   font-weight: bold;
 }
+
+/*===============
+  bar  
+  ===============*/
 
 .bar-left {
   border-left: solid 3px var(--clr-primary);
@@ -152,6 +156,9 @@ button {
   opacity: 0.9;
 }
 
+/*===============
+  under  
+  ===============*/
 .under {
   border-bottom: solid 2px var(--clr-primary);
   padding-left: 0.2em;
@@ -191,6 +198,9 @@ button {
   /* padding-bottom: 0.2em; */
 }
 
+/*===============
+  description  
+  ===============*/
 .description {
   font-size: 0.9rem;
   margin: 0.4em 0.8em;
@@ -290,6 +300,9 @@ button {
   1px 1px 0 var(--clr-bg);
 }
 
+/*===============
+  tag and img  
+  ===============*/
 .tag {
   color: var(--clr-fg-alt);
   font-size: 0.8rem;
@@ -360,6 +373,9 @@ button {
   margin-bottom: 0.8em;
 }
 
+/*===============
+  container  
+  ===============*/
 .leftImgContainer { /* blog */
   float: left;
   width: 280px;
@@ -417,7 +433,9 @@ button {
   text-align: left;
 }
 
-/* Timeline */
+/*===============
+  Timeline  
+  ===============*/
 .timeline {
 	width: 98%;
 	list-style: none;
@@ -521,7 +539,6 @@ i.fas.fa-external-link-alt{
 /*===================
   buttons and links
 ===================*/
-
 .link {
   color: var(--clr-primary);
   padding: 0 0 0.3em 0;
@@ -695,7 +712,9 @@ i.fas.fa-external-link-alt{
   transform: translateY(-5px);
 }
 
-/*========  layout  ========*/
+/*========
+  layout  
+  ========*/
 
 .flex{
   display: flex;
@@ -714,6 +733,7 @@ i.fas.fa-external-link-alt{
   margin-top: 0.8em;
   margin-bottom: 0.4em;
 } 
+
 .center {
   display: flex;
   align-items: center;
@@ -771,6 +791,9 @@ main {
   z-index: 0;
 }
 
+/*========
+  tab  
+  ========*/
 .tab_item {
   width: 100px;
   height: 30px;
@@ -813,6 +836,10 @@ input[name="tab_item"] {
   background-color: var(--clr-primary);
   color: #fff;
 }
+
+/*========
+  section  
+  ========*/
 .section0 {
   max-width: 100%;
 }
@@ -881,7 +908,9 @@ input[name="tab_item"] {
   margin-bottom: 0.2em;
 }
 
-/* ===== nav ===== */
+/* =====
+  nav 
+  ===== */
 
 .nav{
   display:flex;
@@ -930,8 +959,9 @@ input[name="tab_item"] {
   color:#fff;
 }
 
-/* ===== about ===== */
-
+/*========
+  about  
+  ========*/
 .about {
   flex-direction: column;
   margin-top: 1.4em;
