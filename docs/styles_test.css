@@ -2520,7 +2520,8 @@ input[name="tab_item"] {
   } */
   /* .site-footer .lab-subtitle{
     text-align:center; */
-  }
+  /* } */
+
   .site-footer .nav__list{
     display: none !important;
   }
@@ -2529,8 +2530,8 @@ input[name="tab_item"] {
   .site-footer .lab-title p {
     display: block;
     text-align: center;    
-  }
-
+  } 
+  
   .site-footer .lab-title a {
     display: inline-block;  
     margin: 0 4px;         
