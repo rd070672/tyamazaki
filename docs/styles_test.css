@@ -2544,8 +2544,6 @@ input[name="tab_item"] {
   justify-content: space-between;
   } */
 
-  }
-
   .section-head .eyebrow {
     font-size: 0.9rem;   /* 通常より少し小さめ */
     letter-spacing: 0.05em;
@@ -2559,9 +2557,6 @@ input[name="tab_item"] {
   .topic {
    grid-template-columns: 60px 60px 1fr; /* 日付 / タグ / 本文 */
   }
-
-
-
 }
 /* ############################################################# */
 /* ############################################################# */
