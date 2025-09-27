@@ -1822,27 +1822,29 @@ input[name="tab_item"] {
 }
 
 .achievement-cta {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid var(--clr-primary);
+  display: block;                 /* 横幅調整を効かせる */
+  margin: 20px auto;              /* 上下余白＋中央寄せ */
+  padding: 12px 40px;             /* 横長に（左右余白を広げる） */
+  border: 1px solid var(--clr-primary); /* 枠線を細く */
   border-radius: 4px;
   background: transparent;
   color: var(--clr-primary);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
+  max-width: 200px;               /* 横幅の最大値を制御 */
 }
 
-/* hover / focus 時に反転 */
+/* hover / focus */
 .achievement-cta:hover,
 .achievement-cta:focus {
   background: var(--clr-primary);
-  color: #fff; /* 背景と反転 */
+  color: #fff;
 }
 
-/* active（押した瞬間）のフィードバック */
+/* active */
 .achievement-cta:active {
   transform: scale(0.97);
 }
