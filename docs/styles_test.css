@@ -2506,24 +2506,29 @@ input[name="tab_item"] {
   .site-footer .footer__inner {
     grid-template-columns: 1fr;
     row-gap: 12px;
+    text-align: center;   /* ← ここで中央寄せ */
+    justify-items: center;/* ← Grid要素自体を中央寄せ */
+  }
+
+  .site-footer .lab-title {
+    margin-bottom: 8px;   /* ラボとナビの間に余白 */
   }
 
   .site-footer .lab-title h3 a{
-    font-weight: 700;
     font-size: 1.2rem;
+    font-weight: 700;
     color: var(--clr-primary);
     text-decoration: none;
-    /* line-height: 1; */
   }
   .site-footer .lab-subtitle{
-    font-size: 0.7rem;
-    line-height: 1.4;
+    font-size: 0.8rem;
+    line-height: 1.6;
   }
 
   .site-footer .nav .link--nav{
     display: inline-flex;
     align-items: center;
-    height: 30px; 
+    height: 40px; 
   }
   
 }
