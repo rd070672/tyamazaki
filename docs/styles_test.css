@@ -2004,12 +2004,12 @@ input[name="tab_item"] {
 /* lab-title 部分（左寄せ） */
 .site-footer .lab-title h3 a{
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--clr-primary);
   text-decoration: none;
 }
 .site-footer .lab-subtitle{
-  font-size: .8rem;
+  font-size: .9rem;
   line-height: 1.4;
 }
 
