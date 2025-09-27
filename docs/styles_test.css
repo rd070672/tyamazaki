@@ -1745,10 +1745,6 @@ input[name="tab_item"] {
   margin: 2em 1em; 
 }
 
-/* Map サイズは CSS で管理（500×300 基準） */
-.map-embed{ width: 500px; max-width: 100%; }
-.map-embed iframe{ width: 100%; height: 400px; border:0; display:block; }
-
 /* スマホ微調整 */
 @media (max-width: 600px){
   .section-card{ padding: 12px 14px; border-radius: 10px; }
@@ -1779,7 +1775,7 @@ input[name="tab_item"] {
 #about .about-figure img{
   width: 100%;
   height: 100%;
-  aspect-ratio: 16/10;       /* お好みで 3/2 や 4/3 に */
+  aspect-ratio: 1/1;       /* お好みで 3/2 や 4/3, 16/10に */
   object-fit: cover;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -1796,7 +1792,7 @@ input[name="tab_item"] {
 /* ==== Access 2カラム ==== */
 #access .access-split{
   display: grid;
-  grid-template-columns: 1.2fr 1fr;       /* 左をやや広め */
+  grid-template-columns: 1fr 1fr;       /* 左をやや広め */
   gap: clamp(16px, 3vw, 28px);
   align-items: start;
 }
@@ -1812,18 +1808,34 @@ input[name="tab_item"] {
 }
 #access .access-text .vspace{ height: .8rem; }
 
-/* 地図（比率固定でレスポンシブ） */
-#access .map-embed{ position: relative; width: 100%; }
-#access .map-embed::before{ content:""; display:block; padding-top:56.25%; } /* 16:9 */
-#access .map-embed iframe{
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  border: 0; display: block;
-  border-radius: 12px; box-shadow: var(--shadow);
+/* ==== Map（全ページ共通）==== */
+/* ラッパー：横幅に合わせて1:1の高さを作る */
+.map-embed{
+  position: relative;
+  width: 100%;
+  max-width: 600px;        /* 任意。親で管理するなら削ってOK */
 }
-/* 地図下リンクの折り返し防止＆余白 */
-#access .map-embed .map-link{ margin-top: .6rem; }
-#access .map-embed .map-link a{ white-space: nowrap; display: inline-block; }
+.map-embed::before{
+  content: "";
+  display: block;
+  padding-top: 100%;       /* ★ 1:1 正方形 */
+}
+
+/* クリック面（地図）を全面に広げる */
+.map-embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  border-radius: 12px;     /* お好みで */
+  box-shadow: var(--shadow);
+}
+
+/* 地図下リンク（map-embedの“外”に置く想定） */
+.map-link{ margin-top: .6rem; }
+.map-link a{ white-space: nowrap; display: inline-block; }
 
 /* スマホでは縦積み */
 @media (max-width: 600px){
