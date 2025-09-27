@@ -1427,7 +1427,7 @@ input[name="tab_item"] {
 
 .lab-subtitle {
   margin: 6px 0;
-  font-size: 18px;
+  font-size: 14px;
   color: var(--clr-fg);
   line-height: 1.5;
 }
