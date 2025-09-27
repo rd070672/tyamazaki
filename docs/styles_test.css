@@ -2487,7 +2487,7 @@ input[name="tab_item"] {
     top: 64px;               /* ヘッダー下から表示。必要なら調整 */
     right: 12px;
     left: auto !important;   /* 左固定を打ち消す */
-    width: min(30vw, 300px); /* 画面の約1/3（上限 320px） */
+    width: min(40vw, 400px); /* 画面の約1/3（上限 320px） */
     max-height: 88vh;
     overflow: auto;
     flex-direction: column;
