@@ -1765,9 +1765,9 @@ input[name="tab_item"] {
 
 /* 文章側の読みやすさ */
 #about .about-text p{
-  line-height: 1.9;
+  line-height: 1.4;
   margin: .8em 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 #about .about-text .lede{
   font-size: 1.15rem;
