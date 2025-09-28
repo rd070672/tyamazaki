@@ -557,8 +557,8 @@ i.fas.fa-external-link-alt{
   width: 0%;
   height: 0.1em; /*0.2em*/
   position: absolute;
-  bottom: 0.05em;
-  font-weight: 550;
+  /* bottom: 0.05em; */
+  font-weight: 600;
   background-color: var(--clr-primary);
   transition: width 0.2s ease-in;
 }
@@ -1990,6 +1990,15 @@ input[name="tab_item"] {
   border-top: 0.5px solid var(--footer-fg);
   border-bottom: 0.5px solid var(--footer-fg);
   line-height: 1.8;
+}
+
+.achievement-item2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-top: 0.5px solid var(--footer-fg);
+  border-bottom: 0.5px solid var(--footer-fg);
 }
 
 .paper-item + .paper-item { border-top: none; }
