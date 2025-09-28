@@ -1919,7 +1919,7 @@ input[name="tab_item"] {
 
 /* 氏名は少し太字 */
 .member-name {
-  /* font-weight: 600; */
+  font-weight: 400;
 }
 
 /* アドレスや就職先はやや小さめ */
