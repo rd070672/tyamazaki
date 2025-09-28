@@ -558,6 +558,7 @@ i.fas.fa-external-link-alt{
   height: 0.1em; /*0.2em*/
   position: absolute;
   bottom: 0.05em;
+  font-weight: 550;
   background-color: var(--clr-primary);
   transition: width 0.2s ease-in;
 }
@@ -1164,7 +1165,7 @@ input[name="tab_item"] {
 }
 
 .footer__link2 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--clr-primary);
 }
 
@@ -2042,8 +2043,8 @@ input[name="tab_item"] {
   font-weight: 700;
 }
 .pub-body{ line-height: 1.6; }
-.pub-authors{ margin: 0 0 4px; font-weight: 500;}
-.pub-title{ margin: 0 0 6px; font-style: italic; font-weight: 500;}
+.pub-authors{ margin: 0 0 4px; font-weight: 550;}
+.pub-title{ margin: 0 0 6px; font-style: italic; font-weight: 550;}
 .pub-journal{ margin: 0 0 6px; }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
 
