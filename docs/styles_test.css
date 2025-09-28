@@ -1164,9 +1164,28 @@ input[name="tab_item"] {
   color: var(--clr-fg);
 }
 
-.footer__link2 {
+.pub-link {
   font-size: 0.9rem;
   color: var(--clr-primary);
+  text-decoration: none;             /* 通常時は下線なし */
+  transition: color 0.2s ease;
+}
+
+.pub-link:hover,
+.pub-link:focus {
+  text-decoration: underline;        /* ホバー時に下線 */
+}
+
+.pub-link2 {
+  font-size: 1rem;
+  color: var(--footer-fg);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pub-link2:hover,
+.pub-link2:focus {
+  text-decoration: underline;
 }
 
 /* scroll-top/down */
