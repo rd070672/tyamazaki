@@ -2124,7 +2124,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 /* 丸番号（青背景・白文字） */
 .pub-item .number{
-  width: 30px; height: 30px; min-width: 30px;
+  width: 35px; height: 35px; min-width: 35px;
   border-radius: 50%;
   background: #818181; /* var(--clr-primary) */
   color: #fff;
