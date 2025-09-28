@@ -2052,30 +2052,52 @@ input[name="tab_item"] {
   /* 画面幅に応じて列数を可変 */
   column-count: 4;
   column-gap: 12px;
-  max-width: 1200px;
+  max-width: 960px;
   width: 94%;
-  margin: 24px auto 48px;
+  margin: 24px auto;
+  padding: 0 8px;
 }
-@media (max-width: 1100px){ .album{ column-count: 3; } }
-@media (max-width: 800px) { .album{ column-count: 2; } }
+
+@media (max-width: 960px){ .album{ column-count: 3; } }
+@media (max-width: 700px) { .album{ column-count: 2; } }
 @media (max-width: 520px) { .album{ column-count: 1; } }
 
+/* ホバー時に白く見せるためのラッパ */
 .card{
-  break-inside: avoid;      /* 段組で要素分断を防ぐ */
-  margin: 0 0 12px;
   position: relative;
+  overflow: hidden;
+  margin: 0 0 12px;
+  break-inside: avoid;
   cursor: zoom-in;
-}
-.card img{
-  width: 100%;
-  height: auto;             /* 元の縦横比を維持 */
-  display: block;
-  transition: filter .25s ease, transform .25s ease;
   border-radius: 6px;
 }
+
+/* 通常の画像 */
+.card img{
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .3s ease;
+}
+
+/* ホバー時にうっすらズーム */
 .card:hover img{
-  /* うっすら白く（=少し明るく） */
-  filter: brightness(1.08);
+  transform: scale(1.02);
+}
+
+/* ← ここで白いオーバーレイを重ねる */
+.card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.35); /* 白半透明 */
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+/* ホバーしたときだけ表示 */
+.card:hover::after{
+  opacity: 1;
 }
 
 /* ====== モーダル（全画面オーバーレイ） ====== */
@@ -2093,27 +2115,30 @@ input[name="tab_item"] {
 .modal__content{
   background: #fff;
   border-radius: 10px;
-  max-width: min(92vw, 1100px);
-  max-height: 88vh;
+  max-width: calc(100vw - 32px);   /* 画面よりはみ出さない保険 */
+  max-height: calc(100vh - 32px);  /* 画面よりはみ出さない保険 */
+  /* max-width: min(92vw, 1100px);
+  max-height: 88vh; */
   overflow: auto;
   box-shadow: 0 20px 60px rgba(0,0,0,.35);
   position: relative;
 }
 
-/* 画像は横幅フィット、高さは自動 */
 .modal__content img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px 10px 0 0;
+  width: auto;           /* 比率維持 */
+  height: auto;          /* 比率維持 */
+  max-width: 600px;      /* 横の上限 */
+  max-height: 400px;     /* 縦の上限 */
+  display: block; margin: 0 auto; border-radius: 10px 10px 0 0;
 }
 
 /* 画像の下にキャプションを表示 */
 .modal__content figcaption{
-  padding: 12px 16px 16px;
+  padding: 10px 14px 14px;
   font-size: 0.95rem;
   color: #333;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* 閉じるボタン */
