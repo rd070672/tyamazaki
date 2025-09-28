@@ -557,7 +557,7 @@ i.fas.fa-external-link-alt{
   width: 0%;
   height: 0.1em; /*0.2em*/
   position: absolute;
-  /* bottom: 0.05em; */
+  bottom: 0.02em;
   font-weight: 600;
   background-color: var(--clr-primary);
   transition: width 0.2s ease-in;
@@ -1164,21 +1164,21 @@ input[name="tab_item"] {
   color: var(--clr-fg);
 }
 
-.pub-link {
+/* .pub-link {
   font-size: 0.9rem;
   color: var(--clr-primary);
-  text-decoration: none;             /* 通常時は下線なし */
+  text-decoration: none;        
   transition: color 0.2s ease;
 }
 
 .pub-link:hover,
 .pub-link:focus {
-  text-decoration: underline;        /* ホバー時に下線 */
+  text-decoration: underline;     
 }
 
 .pub-link2 {
-  font-size: 1rem;
-  color: var(--footer-fg);
+  font-size: 0.9rem;
+  color: #caa66a;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -1186,6 +1186,45 @@ input[name="tab_item"] {
 .pub-link2:hover,
 .pub-link2:focus {
   text-decoration: underline;
+} */
+
+.pub-link,
+.pub-link2 {
+  position: relative; /* 擬似要素を配置するため */
+  font-size: 0.9rem;
+  text-decoration: none; /* デフォルトの下線は消す */
+  transition: color 0.2s ease;
+}
+
+.pub-link {
+  color: var(--clr-primary);
+}
+
+.pub-link2 {
+  color: #caa66a;
+}
+
+/* 下線用の疑似要素 */
+.pub-link::after,
+.pub-link2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* 文字の少し下 */
+  width: 100%;
+  height: 2px; /* 線の太さ */
+  background-color: currentColor; /* 文字色と同じ */
+  transform: scaleX(0);          /* 初期は幅ゼロ */
+  transform-origin: left center; /* 左から伸びる */
+  transition: transform 0.3s ease;
+}
+
+/* ホバー時に線を伸ばす */
+.pub-link:hover::after,
+.pub-link:focus::after,
+.pub-link2:hover::after,
+.pub-link2:focus::after {
+  transform: scaleX(1);
 }
 
 /* scroll-top/down */
@@ -2070,8 +2109,6 @@ input[name="tab_item"] {
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
 
 
-
-
 /* 外部リンク：↗︎マーク＋新規タブ */
 a.ext{ position: relative; text-decoration: underline; }
 a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; }
@@ -2140,18 +2177,6 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .pub-title{ margin: 0 0 6px; font-weight: 500; font-style: italic; }
 .pub-journal{ margin: 0 0 6px; color: var(--clr-fg); }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; color: var(--clr-fg); }
-
-/* 外部リンクのマーク（↗︎） */
-a.ext{
-  position: relative;
-  text-decoration: underline;
-}
-a.ext::after{
-  content: "↗";
-  margin-left: .25em;
-  font-size: .9em;
-  opacity: .8;
-}
 
 /* レスポンシブ：モバイルで余白調整 */
 @media (max-width: 640px){
