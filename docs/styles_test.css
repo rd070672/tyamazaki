@@ -2129,6 +2129,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   background: #818181; /* var(--clr-primary) */
   color: #fff;
   display: grid; place-items: center;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: .02em;
 }
