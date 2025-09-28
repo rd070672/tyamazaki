@@ -99,38 +99,25 @@
 
     <script>
       function openModal(imgEl){
-        const modal     = document.getElementById('albumModal');
-        const modalImg  = document.getElementById('modalImg');
-        const modalCap  = document.getElementById('modalCap');
+        const modal = document.getElementById('albumModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCap = document.getElementById('modalCap');
 
-        // 画像とキャプションを差し替え
         modalImg.src = imgEl.src;
-        modalCap.textContent =
-          imgEl.closest('.card')?.dataset?.caption || imgEl.alt || '';
+        const card = imgEl.closest('.card');
+        modalCap.textContent = card?.dataset?.caption || imgEl.alt || '';
 
-        // 表示
         modal.classList.add('is-open');
       }
 
       function closeModal(ev){
-        // 背景(overlay) または ×ボタンをクリックしたときだけ閉じる
+        // 画像やキャプションのクリックでは閉じない。外側/×ボタンで閉じる
         const modal = document.getElementById('albumModal');
-        if (
-          ev.target.id === 'albumModal' ||               // 背景クリック
-          ev.target.classList.contains('modal__close')   // ×クリック
-        ){
+        if (ev.target.id === 'albumModal' || ev.currentTarget.classList.contains('modal__close') || ev.target.classList.contains('modal__close')){
           modal.classList.remove('is-open');
         }
       }
-
-      // モーダル内のコンテンツをクリックしても閉じないように
-      document.addEventListener('DOMContentLoaded', () => {
-        const content = document.querySelector('#albumModal .modal__content');
-        if (content){
-          content.addEventListener('click', (e) => e.stopPropagation());
-        }
-      });
-    </script>
+      </script>
   </head>
 
   <body class="light" id="top">
@@ -276,7 +263,7 @@
             <li class="nav__list-item"><a class="link link--nav" href="./publications">publications</a></li>
             <li class="nav__list-item"><a class="link link--nav" href="./album">album</a></li>
             <li class="nav__list-item"><a class="link link--nav" href="./blog">blog</a></li>
-            <li class="nav__list-item"><a class="link link--nav" href="./access">access</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./access">access</a></li><br>
             <li class="nav__list-item"><a class="link link--nav" href="./facilities">facilities</a></li>
             <li class="nav__list-item"><a class="link link--nav" href="./lecture">lecture</a></li>
             <li class="nav__list-item"><a class="link link--nav" href="./link">link</a></li>
