@@ -1941,7 +1941,7 @@ input[name="tab_item"] {
 
 
 /* ==== Access 2カラム ==== */
-#access .access-split{
+.access-split{
   display: grid;
   grid-template-columns: 1fr 1fr;       /* 左をやや広め */
   gap: 12px;
@@ -1949,15 +1949,15 @@ input[name="tab_item"] {
 }
 
 /* 右テキストの読みやすさ */
-#access .access-text .section__subtitle{
+.access-text .section__subtitle{
   margin: .4em 0 .2em;
   font-weight: 700;
 }
-#access .access-text .description7{
+.access-text .description7{
   line-height: 1.9;
   margin: .2em 0;
 }
-#access .access-text .vspace{ height: .8rem; }
+.access-text .vspace{ height: .8rem; }
 
 /* ==== Map（全ページ共通）==== */
 /* ラッパー：横幅に合わせて1:1の高さを作る */
