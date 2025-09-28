@@ -1979,7 +1979,7 @@ input[name="tab_item"] {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr; /* 2:1:1 の比率 */
   align-items: center;
-  padding: 10px 40px;
+  margin: 16px 40px;
   border-top: 0.5px solid var(--clr-primary);
   border-bottom: 0.5px solid var(--clr-primary);
 }
@@ -1991,6 +1991,11 @@ input[name="tab_item"] {
 .paper-name {
   font-weight: bold;
   color: var(--clr-fg);
+  text-align: center;
+}
+
+.paper-url {
+  text-align: center; /* 各リンクを真ん中に */
 }
 
 .paper-url a.ext {
