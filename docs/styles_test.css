@@ -1201,7 +1201,7 @@ input[name="tab_item"] {
 }
 
 .pub-link2 {
-  color: #aaaaaa; /* 金 #caa66a */
+  color: #818181; /* 金 #caa66a */
 }
 
 /* 下線用の疑似要素 */
@@ -2150,7 +2150,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .pub-item .number{
   width: 40px; height: 40px; min-width: 40px;
   border-radius: 50%;
-  background: #aaaaaa; /* var(--clr-primary) */
+  background: #818181; /* var(--clr-primary) */
   color: #fff;
   display: grid; place-items: center;
   font-weight: 700;
