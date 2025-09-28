@@ -1165,8 +1165,8 @@ input[name="tab_item"] {
 
 .footer__link2 {
   font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--footer-fg);
+  font-weight: 500;
+  color: #c4c4c4;
 }
 
 /* scroll-top/down */
@@ -2036,8 +2036,8 @@ input[name="tab_item"] {
   font-weight: 700;
 }
 .pub-body{ line-height: 1.6; }
-.pub-authors{ margin: 0 0 4px }
-.pub-title{ margin: 0 0 6px; font-style: italic; }
+.pub-authors{ margin: 0 0 4px; font-weight: 500;}
+.pub-title{ margin: 0 0 6px; font-style: italic; font-weight: 500;}
 .pub-journal{ margin: 0 0 6px; }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
 
