@@ -1940,49 +1940,72 @@ input[name="tab_item"] {
   }
 }
 
-/* #########################  paper  ########################### */
+/* #########################  pub  ########################### */
 
-.paper-list {
-  list-style: none;
-  margin: 0;
-  padding: 0 20px;
-}
-
-.paper-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: center;
-  text-align: center;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--clr-primary);
-}
-
-.paper-item span {
-  font-size: 0.95rem;
+/* セクション見出し右側の件数 */
+.pub-count{
+  margin-left: auto;
+  font-size: .95rem;
   color: var(--clr-fg);
 }
+.pub-count strong{ color: var(--clr-primary); }
 
-/* 氏名は少し太字 */
-.paper-name {
-  font-weight: 400;
+/* プロフィールリンク */
+.paper-list{ list-style: none; margin: 0; padding: 0; }
+.paper-item{
+  display: flex; flex-wrap: wrap; gap: 8px 16px;
+  align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--clr-primary);
+}
+.paper-item .paper-name{ font-weight: 600; }
+
+/* 公開論文リスト（丸番号＋本文） */
+.pub-list{
+  counter-reset: pub; /* 使わない場合でも残してOK */
+  list-style: none; margin: 0; padding: 0;
+}
+.pub-item{
+  display: grid;
+  grid-template-columns: auto 1fr; /* 番号 / 本文 */
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
-/* アドレスや就職先はやや小さめ */
-.paper-url {
-  font-size: 0.8rem;
-  color: var(--clr-fg-alt);
+/* 丸番号（青背景・白文字） */
+.pub-item .number{
+  width: 40px; height: 40px; min-width: 40px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: #fff;
+  display: grid; place-items: center;
+  font-weight: 700;
+  letter-spacing: .02em;
 }
 
-/* レスポンシブ：モバイルでは縦積み */
-@media (max-width: 600px) {
-  .paper-item {
-    grid-template-columns: 1fr; /* 1列表示に切替 */
-    text-align: left;
-  }
-  .paper-item span {
-    padding: 2px 0;
-  }
+/* 本文 */
+.pub-body{ line-height: 1.6; }
+.pub-authors{ margin: 0 0 4px; font-weight: 600; }
+.pub-title{ margin: 0 0 6px; font-style: italic; }
+.pub-journal{ margin: 0 0 6px; color: var(--clr-fg); }
+.pub-notes{ margin: 4px 0 0; font-size: .92rem; color: var(--clr-fg); }
+
+/* 外部リンクのマーク（↗︎） */
+a.ext{
+  position: relative;
+  text-decoration: underline;
+}
+a.ext::after{
+  content: "↗";
+  margin-left: .25em;
+  font-size: .9em;
+  opacity: .8;
+}
+
+/* レスポンシブ：モバイルで余白調整 */
+@media (max-width: 640px){
+  .pub-item{ grid-template-columns: 36px 1fr; gap: 12px; }
+  .pub-item .number{ width: 36px; height: 36px; min-width: 36px; }
+  .pub-count{ margin-top: 8px; }
 }
 
 
