@@ -1710,6 +1710,21 @@ input[name="tab_item"] {
   border-radius: 3px;
 }
 
+/* ===== セクションの境界ライン（primary） ===== */
+.section-divider2{
+  position: relative;
+  margin-top: 52px;          /* 上 との余白 */
+  padding-top: 22px;         /* ラインから本文までの余白 */
+}
+.section-divider2::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:3px;
+  background: var(--clr-primary);
+  border-radius: 1px;
+}
+
 /* ===== “今風” 見出しパターン ===== */
 .section-head{
   display: flex;
@@ -1855,6 +1870,50 @@ input[name="tab_item"] {
 /* active */
 .achievement-cta:active {
   transform: scale(0.97);
+}
+
+  /* #########################  member  ########################### */
+
+.member-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.member-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr; /* 左:役職/学年/年度, 中央:氏名, 右:アドレスor就職先 */
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--clr-primary);
+}
+
+.member-item span {
+  font-size: 0.95rem;
+  color: var(--clr-fg);
+}
+
+/* 氏名は少し太字 */
+.member-name {
+  font-weight: 600;
+}
+
+/* アドレスや就職先はやや小さめ */
+.member-email, .member-job {
+  font-size: 0.85rem;
+  color: var(--clr-fg-alt);
+}
+
+/* レスポンシブ：モバイルでは縦積み */
+@media (max-width: 640px) {
+  .member-item {
+    grid-template-columns: 1fr; /* 1列表示に切替 */
+    text-align: left;
+  }
+  .member-item span {
+    padding: 2px 0;
+  }
 }
 
 
@@ -2145,6 +2204,8 @@ input[name="tab_item"] {
   background: rgba(0,0,0,.2);
   border-radius: 6px;
 }
+
+
 
 /* ############################################################# */
 /* ############################################################# */
