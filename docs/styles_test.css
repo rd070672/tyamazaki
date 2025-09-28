@@ -880,8 +880,8 @@ input[name="tab_item"] {
 }
 
 .section__subtitle {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   color: var(--clr-primary);
   margin: 0;
 }
