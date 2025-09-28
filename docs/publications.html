@@ -96,6 +96,78 @@
       }
     });
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filter   = document.getElementById('pubFilter');
+      const btn      = filter.querySelector('.pub-filter__btn');
+      const label    = filter.querySelector('.pub-filter__label');
+      const menu     = filter.querySelector('.pub-filter__menu');
+      const sections = Array.from(document.querySelectorAll('.pub-section'));
+
+      // メニュー開閉
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('show', !open);
+      });
+
+      // メニューの項目クリック → 表示切替
+      menu.addEventListener('click', (e) => {
+        const li = e.target.closest('[data-cat]');
+        if (!li) return;
+
+        const cat   = li.dataset.cat;
+        const title = li.dataset.title || '';
+        const sub   = li.dataset.sub   || '';
+
+        // ラベル更新
+        label.textContent = title || li.textContent.trim();
+
+        // すべて隠す → 選択カテゴリだけ表示
+        sections.forEach(sec => {
+          sec.classList.toggle('is-hidden', sec.dataset.cat !== cat);
+        });
+
+        // 選択セクションの見出しテキスト（title, countsなど）を動的に差し替えたい場合：
+        const target = sections.find(sec => sec.dataset.cat === cat);
+        if (target) {
+          const head = target.querySelector('.section-head');
+          if (head && sub) {
+            // 右肩のカウント表示を置き換え。存在しない場合は作成
+            let counter = head.querySelector('.pub-count');
+            if (!counter) {
+              counter = document.createElement('div');
+              counter.className = 'pub-count';
+              head.appendChild(counter);
+            }
+            counter.innerHTML = sub.replace('Number of', 'Number of'); // そのまま表示
+          }
+          // スクロール（お好みで）
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // メニューを閉じる
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('show');
+      });
+
+      // 外側クリックでメニューを閉じる
+      document.addEventListener('click', (e) => {
+        if (!filter.contains(e.target)) {
+          btn.setAttribute('aria-expanded', 'false');
+          menu.classList.remove('show');
+        }
+      });
+
+      // URLハッシュで初期表示を切替（例：?cat=reviews / #reviews も許容）
+      const initCat = new URL(location.href).searchParams.get('cat') || location.hash.replace('#','');
+      if (initCat) {
+        const li = menu.querySelector(`[data-cat="${initCat}"]`);
+        if (li) li.click();
+      }
+    });
+    </script>
+
   </head>
 
   <body class="light" id="top">
@@ -171,13 +243,33 @@
         </div>
       </section><br><br>
 
-      <section id="articles" class="section1 section-divider2">
+      <!-- カテゴリ選択（ヘッダーのすぐ下など好きな場所に） -->
+      <div class="pub-filter" id="pubFilter">
+        <button type="button" class="pub-filter__btn" aria-haspopup="true" aria-expanded="false">
+          <span class="pub-filter__label">原著論文</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <ul class="pub-filter__menu" role="menu" aria-label="Category list">
+          <li role="menuitem" data-cat="articles"   data-title="原著論文"         data-sub="Number of Articles : 036">原著論文</li>
+          <li role="menuitem" data-cat="proceedings" data-title="国際会議論文"     data-sub="Number of Proceedings : 013">国際会議論文</li>
+          <li role="menuitem" data-cat="books"       data-title="著書"             data-sub="Number of Books : 000">著書</li>
+          <li role="menuitem" data-cat="reviews"     data-title="総説・解説"       data-sub="Number of Reviews : 005">総説・解説</li>
+          <li role="menuitem" data-cat="invited"     data-title="招待講演"         data-sub="Number of Invited Talks : 010">招待講演</li>
+          <li role="menuitem" data-cat="intl-talks"  data-title="国際会議発表"     data-sub="">国際会議発表</li>
+          <li role="menuitem" data-cat="domestic"    data-title="国内学会発表"     data-sub="">国内学会発表</li>
+          <li role="menuitem" data-cat="awards"      data-title="受賞"             data-sub="">受賞</li>
+        </ul>
+      </div>
+
+      <!-- 各セクション：data-cat を付ける。最初は原著論文のみ表示、他は is-hidden を付与 -->
+      <!-- <section id="articles" class="section1 section-divider2"> -->
+      <section id="articles" class="section1 section-divider2 pub-section" data-cat="articles">
         <div class="section-head section-head--row">
           <div>
-            <p class="eyebrow">Proceedings</p>
-            <h3 class="title">国際会議論文（査読有り）</h3>
+            <p class="eyebrow">Journal Articles</p>
+            <h3 class="title">原著論文</h3>
           </div>
-          <div class="pub-count">Number of proceedings : <strong>36</strong></div>
+          <div class="pub-count">Number of publications : <strong>36</strong></div>
         </div><br>
         
         <!-- 業績リスト -->
@@ -594,6 +686,85 @@
           </li>
 
         </ol>
+      </section>
+
+      <section id="proceedings" class="section1 section-divider2 pub-section is-hidden" data-cat="proceedings">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Proceedings</p>
+            <h3 class="title">国際会議論文（査読有り）</h3>
+          </div>
+          <div class="pub-count">Number of proceedings : <strong>10</strong></div>
+        </div><br>
+        <ol class="pub-list">
+
+        </ol>
+      </section>
+
+      <section id="books" class="section1 section-divider2 pub-section is-hidden" data-cat="books">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Books</p>
+            <h3 class="title">著書</h3>
+          </div>
+          <div class="pub-count">Number of Books : <strong>0</strong></div>
+        </div>
+        <ol class="pub-list"></ol>
+      </section>
+
+      <section id="reviews" class="section1 section-divider2 pub-section is-hidden" data-cat="reviews">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Reviews</p>
+            <h3 class="title">総説・解説</h3>
+          </div>
+          <div class="pub-count">Number of Reviews : <strong>5</strong></div>
+        </div>
+        <ol class="pub-list"></ol>
+      </section>
+
+      <section id="invited" class="section1 section-divider2 pub-section is-hidden" data-cat="invited">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Invited Talks</p>
+            <h3 class="title">招待講演</h3>
+          </div>
+          <div class="pub-count">Number of Invited Talks : <strong>10</strong></div>
+        </div>
+        <ol class="pub-list"></ol>
+      </section>
+
+      <section id="intl-talks" class="section1 section-divider2 pub-section is-hidden" data-cat="intl-talks">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">International Conference Talks</p>
+            <h3 class="title">国際会議発表</h3>
+          </div>
+          <div class="pub-count">Number of International presentations : <strong>49</strong></div>
+        </div>
+        <ol class="pub-list"></ol>
+      </section>
+
+      <section id="domestic" class="section1 section-divider2 pub-section is-hidden" data-cat="domestic">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Domestic Conference Talks</p>
+            <h3 class="title">国内学会発表</h3>
+          </div>
+          <div class="pub-count">Number of Domestic presentations : <strong>95</strong></div>
+        </div>
+        <ol class="pub-list"></ol>
+      </section>
+
+      <section id="awards" class="section1 section-divider2 pub-section is-hidden" data-cat="awards">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Awards</p>
+            <h3 class="title">受賞</h3>
+          </div>
+          <div class="pub-count">Number of Awards : <strong>7</strong></div>
+        </div>
+        <ol class="pub-list"></ol>
       </section>
 
     </main>

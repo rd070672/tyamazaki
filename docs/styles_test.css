@@ -2475,6 +2475,70 @@ nav.footer-nav .nav__list {
   margin-bottom: 6px;
 }
 
+
+
+/* 非表示制御 */
+.is-hidden { display: none; }
+
+/* フィルターUI */
+.pub-filter{
+  position: relative;
+  display: inline-block;
+  margin: 8px 0 16px;
+}
+
+.pub-filter__btn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 12px;
+  background: var(--clr-bg, #fff);
+  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, .2);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pub-filter__label{ font-size: 1.05rem; }
+.pub-filter__btn[aria-expanded="true"] .fa-chevron-down{ transform: rotate(180deg); }
+
+.pub-filter__menu{
+  position: absolute;
+  inset: 48px auto auto 0;
+  min-width: 280px;
+  max-height: 70vh;
+  overflow: auto;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, .2);
+  padding: 8px 0;
+  display: none;
+  z-index: 20;
+}
+
+.pub-filter__menu.show{ display: block; }
+.pub-filter__menu li{
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  text-align: center;
+  cursor: pointer;
+}
+.pub-filter__menu li:last-child{ border-bottom: none; }
+.pub-filter__menu li:hover{ background: rgba(0,0,0,.04); }
+
+/* セクションの見出しの行内配置（既存と整合）*/
+.section-head--row{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+
+
+
+
 /* ############################################################# */
 /* ############################################################# */
 /* ############################################################# */
