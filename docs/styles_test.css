@@ -1256,9 +1256,9 @@ input[name="tab_item"] {
   margin-top: 0.1rem;
   margin-bottom: 0.2rem; /* 各節の間隔 */
 }
-.articles {
+/* .articles {
   display: none;
-}
+} */
 
 /* for review article */
 .main-content2 { 
@@ -1943,13 +1943,29 @@ input[name="tab_item"] {
 /* #########################  paper  ########################### */
 
 /* プロフィールリンク */
-.paper-list{ list-style: none; margin: 0; padding: 0; }
-.paper-item{
+.paper-list{ 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* .paper-item{
   display: flex; flex-wrap: wrap; gap: 8px 16px;
   align-items: baseline; padding: 8px 0;
   border-bottom: 1px solid rgba(0,0,0,.12);
+} */
+
+.paper-item {
+  display: flex;
+  justify-content: space-between; /* 左右に配置 */
+  align-items: center;
+  padding: 8px 20px;              /* 左右に20pxの余白 */
+  border-bottom: 1px solid rgba(0,0,0,.12);
 }
-.paper-item .paper-name{ font-weight: 600; }
+
+.paper-item .paper-name{ 
+  font-weight: 600; 
+}
 
 /* 論文リスト（丸番号＋本文） */
 .pub-list{ list-style: none; margin: 0; padding: 0; }
@@ -1972,6 +1988,9 @@ input[name="tab_item"] {
 .pub-title{ margin: 0 0 6px; font-style: italic; }
 .pub-journal{ margin: 0 0 6px; }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
+
+
+
 
 /* 外部リンク：↗︎マーク＋新規タブ */
 a.ext{ position: relative; text-decoration: underline; }
@@ -2384,7 +2403,9 @@ nav.footer-nav .nav__list {
   border-radius: 6px;
 }
 
-
+#articles .eyebrow {
+  margin-bottom: 6px;
+}
 
 /* ############################################################# */
 /* ############################################################# */
