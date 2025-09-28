@@ -1945,11 +1945,11 @@ input[name="tab_item"] {
 /* #########################  paper  ########################### */
 
 /* プロフィールリンク */
-.paper-list{ 
+/* .paper-list{ 
   list-style: none; 
   margin: 0; 
   padding: 0 40px; 
-}
+} */
 
 /* .paper-item{
   display: flex; flex-wrap: wrap; gap: 8px 16px;
@@ -1957,16 +1957,53 @@ input[name="tab_item"] {
   border-bottom: 1px solid rgba(0,0,0,.12);
 } */
 
-.paper-item {
+/* .paper-item {
   display: flex;
-  justify-content: space-between; /* 左右に配置 */
+  justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;              /* 左右に20pxの余白 */
+  padding: 8px 20px;             
   border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
 .paper-item .paper-name{ 
   font-weight: 500; 
+} */
+
+.paper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.paper-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* 2:1:1 の比率 */
+  align-items: center;
+  padding: 10px 40px;
+  border-top: 0.5px solid var(--clr-primary);
+  border-bottom: 0.5px solid var(--clr-primary);
+}
+
+.paper-item + .paper-item {
+  border-top: none; /* 重複線を消す */
+}
+
+.paper-name {
+  font-weight: bold;
+  color: var(--clr-fg);
+}
+
+.paper-url a.ext {
+  font-size: 0.95em;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+.paper-url a.ext::after {
+  content: "↗";
+  font-size: 0.8em;
+  margin-left: 4px;
+  color: #999;
 }
 
 /* 論文リスト（丸番号＋本文） */
@@ -1986,7 +2023,7 @@ input[name="tab_item"] {
   font-weight: 700;
 }
 .pub-body{ line-height: 1.6; }
-.pub-authors{ margin: 0 0 4px; font-weight: 600; }
+.pub-authors{ margin: 0 0 4px }
 .pub-title{ margin: 0 0 6px; font-style: italic; }
 .pub-journal{ margin: 0 0 6px; }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
