@@ -1790,7 +1790,7 @@ input[name="tab_item"] {
 .section-divider::before{ background: var(--clr-primary); }
 
 /* About 2カラム */
-#about .about-split{
+.about-split{
   display: grid;
   grid-template-columns: 1fr 1fr;   /* 左=文章 / 右=画像 */
   gap: clamp(16px, 3vw, 28px);
@@ -1798,19 +1798,19 @@ input[name="tab_item"] {
 }
 
 /* 文章側の読みやすさ */
-#about .about-text p{
+.about-text p{
   line-height: 1.4;
   margin: .8em 0;
   font-size: 0.9rem;
 }
-#about .about-text .lede{
+.about-text .lede{
   font-size: 1.05rem;
   font-weight: 600;
 }
 
 /* 画像側：角丸＆トリミング */
-#about .about-figure{ margin: 0; }
-#about .about-figure img{
+.about-figure{ margin: 0; }
+.about-figure img{
   width: 90%;
   height: 90%;
   aspect-ratio: 1/1;       /* お好みで 3/2 や 4/3, 16/10に */
@@ -2608,9 +2608,13 @@ input[name="tab_item"] {
 
   /* #########################  about  ########################### */
 
-  #about .about-split{ grid-template-columns: 1fr; }
+  /* #about .about-split{ grid-template-columns: 1fr; }
   #about .about-figure{ order: 2; }
-  #about .about-text{ order: 1; }
+  #about .about-text{ order: 1; } */
+
+  .about-split{ grid-template-columns: 1fr; }
+  .about-figure{ order: 2; }
+  .about-text{ order: 1; }
 
   .about-text p {
     font-size: 0.6rem;   /* 少し小さめ */
