@@ -1989,20 +1989,19 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   align-items: flex-end;
   gap: 16px;
 }
-.pub-count{ margin-left: auto; font-size: .95rem; }
-.pub-count strong{ color: var(--clr-primary); }
-
-
 
 /* #########################  pub  ########################### */
 
 /* セクション見出し右側の件数 */
 .pub-count{
   margin-left: auto;
-  font-size: .95rem;
+  font-size: 1.1rem;
   color: var(--clr-fg);
 }
-.pub-count strong{ color: var(--clr-primary); }
+.pub-count strong{ 
+  color: var(--clr-primary); 
+  font-size: 1.2rem;
+}
 
 /* プロフィールリンク */
 .paper-list{ list-style: none; margin: 0; padding: 0; }
