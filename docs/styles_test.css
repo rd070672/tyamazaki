@@ -2046,7 +2046,7 @@ input[name="tab_item"] {
 .site-footer .footer__inner{
   padding: 10px var(--footer-gutter);
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 30% 70%;
   align-items: center;
   column-gap: 10px;
 }
@@ -2092,6 +2092,26 @@ input[name="tab_item"] {
   padding-bottom: 30px;
   font-size: .85rem;
   color: var(--footer-fg);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column; /* 縦に2行 */
+  gap: 12px; /* 行間 */
+}
+
+.footer-nav .nav__list {
+  display: flex;
+  justify-content: flex-start; /* 左寄せ（必要なら center に変更可） */
+  gap: 12px; /* リンク間の余白 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav .nav__list li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ===== Back-to-top button ===== */
