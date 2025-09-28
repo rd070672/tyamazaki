@@ -2127,8 +2127,10 @@ input[name="tab_item"] {
 .modal__content img{
   width: auto;           /* 比率維持 */
   height: auto;          /* 比率維持 */
-  max-width: 800px;      /* 横の上限 */
-  max-height: 500px;     /* 縦の上限 */
+  /* max-width: 800px;      
+  max-height: 500px;      */
+  max-width: 80vw;
+  max-height: 80vh;
   display: block; margin: 0 auto; border-radius: 10px 10px 0 0;
 }
 
