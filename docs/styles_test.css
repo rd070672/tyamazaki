@@ -260,6 +260,7 @@ button {
   font-size: 0.9rem;
   margin: 0.8em 0.5em 0 0.5em; /* 上右下左 */
   text-align: left;
+  line-height: 1.2;
 }
 .description9 {
   color: var(--clr-fg-alt);
@@ -1947,7 +1948,7 @@ input[name="tab_item"] {
 .paper-list{ 
   list-style: none; 
   margin: 0; 
-  padding: 0; 
+  padding: 0 40px; 
 }
 
 /* .paper-item{
@@ -1965,7 +1966,7 @@ input[name="tab_item"] {
 }
 
 .paper-item .paper-name{ 
-  font-weight: 600; 
+  font-weight: 500; 
 }
 
 /* 論文リスト（丸番号＋本文） */
