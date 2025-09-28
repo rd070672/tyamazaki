@@ -2094,16 +2094,17 @@ input[name="tab_item"] {
   color: var(--footer-fg);
 }
 
-.footer-nav {
+nav.footer-nav {
   display: flex;
-  flex-direction: column; /* 縦に2行 */
-  gap: 12px; /* 行間 */
+  flex-direction: column;   /* 2段に積む */
+  gap: 12px;
 }
 
-.footer-nav .nav__list {
+/* 各段（ul）は横並び */
+nav.footer-nav .nav__list {
   display: flex;
-  justify-content: flex-start; /* 左寄せ（必要なら center に変更可） */
-  gap: 12px; /* リンク間の余白 */
+  gap: 16px;
+  justify-content: flex-start;  /* 中央寄せ（好みで変更） */
   margin: 0;
   padding: 0;
   list-style: none;
