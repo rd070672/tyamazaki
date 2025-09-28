@@ -1725,6 +1725,21 @@ input[name="tab_item"] {
   border-radius: 3px;
 }
 
+/* ===== セクションの境界ライン（primary） ===== */
+.section-divider3{
+  position: relative;
+  margin-top: 42px;          /* 上 との余白 */
+  padding-top: 22px;         /* ラインから本文までの余白 */
+}
+.section-divider3::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:0.5px;
+  background: var(--clr-primary);
+  border-radius: 3px;
+}
+
 /* ===== “今風” 見出しパターン ===== */
 .section-head{
   display: flex;
