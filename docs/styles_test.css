@@ -552,11 +552,11 @@ i.fas.fa-external-link-alt{
 
 .link::before {
   content: "";
-  display: inline;
+  display: block;
   width: 0%;
   height: 0.1em; /*0.2em*/
   position: absolute;
-  bottom: 0;
+  bottom: 0.05em;
   background-color: var(--clr-primary);
   transition: width 0.2s ease-in;
 }
