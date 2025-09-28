@@ -98,25 +98,38 @@
     </script>
 
     <script>
-    function openModal(imgEl){
-      const modal = document.getElementById('albumModal');
-      const modalImg = document.getElementById('modalImg');
-      const modalCap = document.getElementById('modalCap');
+      function openModal(imgEl){
+        const modal     = document.getElementById('albumModal');
+        const modalImg  = document.getElementById('modalImg');
+        const modalCap  = document.getElementById('modalCap');
 
-      modalImg.src = imgEl.src;
-      const card = imgEl.closest('.card');
-      modalCap.textContent = card?.dataset?.caption || imgEl.alt || '';
+        // 画像とキャプションを差し替え
+        modalImg.src = imgEl.src;
+        modalCap.textContent =
+          imgEl.closest('.card')?.dataset?.caption || imgEl.alt || '';
 
-      modal.classList.add('is-open');
-    }
-
-    function closeModal(ev){
-      // 画像やキャプションのクリックでは閉じない。外側/×ボタンで閉じる
-      const modal = document.getElementById('albumModal');
-      if (ev.target.id === 'albumModal' || ev.currentTarget.classList.contains('modal__close') || ev.target.classList.contains('modal__close')){
-        modal.classList.remove('is-open');
+        // 表示
+        modal.classList.add('is-open');
       }
-    }
+
+      function closeModal(ev){
+        // 背景(overlay) または ×ボタンをクリックしたときだけ閉じる
+        const modal = document.getElementById('albumModal');
+        if (
+          ev.target.id === 'albumModal' ||               // 背景クリック
+          ev.target.classList.contains('modal__close')   // ×クリック
+        ){
+          modal.classList.remove('is-open');
+        }
+      }
+
+      // モーダル内のコンテンツをクリックしても閉じないように
+      document.addEventListener('DOMContentLoaded', () => {
+        const content = document.querySelector('#albumModal .modal__content');
+        if (content){
+          content.addEventListener('click', (e) => e.stopPropagation());
+        }
+      });
     </script>
   </head>
 
