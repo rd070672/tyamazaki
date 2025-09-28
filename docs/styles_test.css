@@ -1983,37 +1983,36 @@ input[name="tab_item"] {
 
 .paper-item {
   display: grid;
-  grid-template-columns: 2fr 2fr;  /* 左:名前, 右:リンク */
-  align-items: center;             /* 縦方向の中央寄せ */
-  padding: 20px 20px;              /* 上下余白を広めに */
-  border-top: 1px solid var(--clr-primary);
-  border-bottom: 1px solid var(--clr-primary);
+  grid-template-columns: 2fr 1fr 1fr; /* 2:1:1 の比率 */
+  align-items: center;
+  margin: 30px 20px;
+  border-top: 0.5px solid var(--footer-fg);
+  border-bottom: 0.5px solid var(--footer-fg);
   line-height: 1.8;                /* 行間を広げる */
 }
 
 .paper-item + .paper-item {
-  border-top: none; /* 線の重複を消す */
+  border-top: none; /* 重複線を消す */
 }
 
 .paper-name {
   font-weight: bold;
   color: var(--clr-fg);
-  text-align: center; /* 左側を中央寄せ */
+  text-align: center;
 }
 
-.paper-links {
-  display: flex;
-  justify-content: flex-end; /* 右側に寄せる */
-  gap: 20px;                 /* リンク間の間隔 */
+.paper-url {
+  text-align: center; /* 各リンクを真ん中に */
+  justify-content: flex-end;
 }
 
-.paper-links a.ext {
+.paper-url a.ext {
   font-size: 0.95em;
   color: var(--clr-primary);
   text-decoration: none;
 }
 
-.paper-links a.ext::after {
+.paper-url a.ext::after {
   content: "↗";
   font-size: 0.8em;
   margin-left: 4px;
