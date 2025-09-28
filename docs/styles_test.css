@@ -1713,14 +1713,13 @@ input[name="tab_item"] {
 /* ===== セクションの境界ライン（primary） ===== */
 .section-divider2{
   position: relative;
-  margin-top: 62px;          /* 上 との余白 */
+  margin-top: 32px;          /* 上 との余白 */
   padding-top: 32px;         /* ラインから本文までの余白 */
 }
 .section-divider2::before{
   content:"";
   position:absolute;
   left:0; right:0; top:0;
-  /* height:1.5px; */
   background: var(--clr-primary);
   border-radius: 3px;
 }
