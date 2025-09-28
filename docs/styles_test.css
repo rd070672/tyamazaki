@@ -2019,6 +2019,13 @@ input[name="tab_item"] {
   color: #999;
 }
 
+.paper-desc {
+  font-size: 1.1rem;
+  margin: 0.8em 0.5em 0 0.5em; /* 上右下左 */
+  text-align: left;
+  line-height: 1.6;
+}
+
 /* 論文リスト（丸番号＋本文） */
 .pub-list{ list-style: none; margin: 0; padding: 0; }
 .pub-item{
