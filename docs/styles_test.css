@@ -1944,7 +1944,7 @@ input[name="tab_item"] {
 #access .access-split{
   display: grid;
   grid-template-columns: 1fr 1fr;       /* 左をやや広め */
-  gap: clamp(16px, 3vw, 28px);
+  gap: 12px;
   align-items: start;
 }
 
