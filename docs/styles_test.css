@@ -931,8 +931,6 @@ input[name="tab_item"] {
 
 .nav__hamburger {
   display: none;
-  /* width: 1em;
-  z-index: 10; */
 }
 
 .nav .link--nav{
@@ -1935,7 +1933,7 @@ input[name="tab_item"] {
   background: var(--footer-bg);
   color: var(--footer-fg);
   border-top: 3px solid var(--footer-border);
-  margin-top: 20px;
+  margin-top: 40px;
   box-shadow: var(--footer-shadow);
   padding: 0;
 }
@@ -1949,30 +1947,13 @@ input[name="tab_item"] {
   padding-inline: var(--footer-gutter);
 }
 
-/* フッター本体：30% / 70% の分割 */
 .site-footer .footer__inner{
   padding: 10px var(--footer-gutter);
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 35% 65%;
   align-items: center;
-  column-gap: 10px; /* 横方向の間隔 */
+  column-gap: 10px;
 }
-
-/* .site-footer .footer__inner{
-  max-width: 960px;
-  margin-inline: auto;
-  padding: 28px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.site-footer .footer__inner {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  align-items: center;
-} */
 
 .site-footer .lab-title h3 a{
   font-weight: 700;
@@ -1997,6 +1978,7 @@ input[name="tab_item"] {
 .site-footer .link--nav{
   text-decoration: none;
   color: var(--clr-fg);
+  height: 30px;
   font-weight: 500;
   text-transform: uppercase;
   transition: background-color .2s, color .2s;
