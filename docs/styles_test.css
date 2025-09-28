@@ -1166,7 +1166,7 @@ input[name="tab_item"] {
 .footer__link2 {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--footer-bg);
+  color: var(--clr-fg);
 }
 
 /* scroll-top/down */
