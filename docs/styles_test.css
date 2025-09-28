@@ -1682,7 +1682,8 @@ input[name="tab_item"] {
 
 .topic__body a {
   font-size: 0.8em;   /* 親より10%小さい */
-  line-height: 1.4;   /* 読みやすくする */
+  line-height: 1.2;   /* 読みやすくする */
+  color: var(--clr-primary);
 }
 
 /* カテゴリ別カラー */
@@ -2056,8 +2057,8 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 /* 本文 */
 .pub-body{ line-height: 1.6; }
-.pub-authors{ margin: 0 0 4px; font-weight: 600; }
-.pub-title{ margin: 0 0 6px; font-style: italic; }
+.pub-authors{ margin: 0 0 4px }
+.pub-title{ margin: 0 0 6px; font-weight: 500; font-style: italic; }
 .pub-journal{ margin: 0 0 6px; color: var(--clr-fg); }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; color: var(--clr-fg); }
 
