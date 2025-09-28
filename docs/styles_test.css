@@ -1895,7 +1895,7 @@ input[name="tab_item"] {
   transform: scale(0.97);
 }
 
-  /* #########################  member  ########################### */
+/* #########################  member  ########################### */
 
 .member-list {
   list-style: none;
@@ -1936,6 +1936,51 @@ input[name="tab_item"] {
     text-align: left;
   }
   .member-item span {
+    padding: 2px 0;
+  }
+}
+
+/* #########################  paper  ########################### */
+
+.paper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.paper-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--clr-primary);
+}
+
+.paper-item span {
+  font-size: 0.95rem;
+  color: var(--clr-fg);
+}
+
+/* 氏名は少し太字 */
+.paper-name {
+  font-weight: 400;
+}
+
+/* アドレスや就職先はやや小さめ */
+.paper-url {
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+}
+
+/* レスポンシブ：モバイルでは縦積み */
+@media (max-width: 600px) {
+  .paper-item {
+    grid-template-columns: 1fr; /* 1列表示に切替 */
+    text-align: left;
+  }
+  .paper-item span {
     padding: 2px 0;
   }
 }
