@@ -1940,6 +1940,60 @@ input[name="tab_item"] {
   }
 }
 
+/* #########################  paper  ########################### */
+
+/* プロフィールリンク */
+.paper-list{ list-style: none; margin: 0; padding: 0; }
+.paper-item{
+  display: flex; flex-wrap: wrap; gap: 8px 16px;
+  align-items: baseline; padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+.paper-item .paper-name{ font-weight: 600; }
+
+/* 論文リスト（丸番号＋本文） */
+.pub-list{ list-style: none; margin: 0; padding: 0; }
+.pub-item{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+.pub-item .number{
+  width: 40px; height: 40px; min-width: 40px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: #fff; display: grid; place-items: center;
+  font-weight: 700;
+}
+.pub-body{ line-height: 1.6; }
+.pub-authors{ margin: 0 0 4px; font-weight: 600; }
+.pub-title{ margin: 0 0 6px; font-style: italic; }
+.pub-journal{ margin: 0 0 6px; }
+.pub-notes{ margin: 4px 0 0; font-size: .92rem; }
+
+/* 外部リンク：↗︎マーク＋新規タブ */
+a.ext{ position: relative; text-decoration: underline; }
+a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; }
+
+/* スマホ微調整 */
+@media (max-width: 640px){
+  .pub-item{ grid-template-columns: 36px 1fr; gap: 12px; }
+  .pub-item .number{ width: 36px; height: 36px; }
+}
+
+/* 見出し右に件数を寄せる */
+.section-head--row{
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+.pub-count{ margin-left: auto; font-size: .95rem; }
+.pub-count strong{ color: var(--clr-primary); }
+
+
+
 /* #########################  pub  ########################### */
 
 /* セクション見出し右側の件数 */
@@ -2007,7 +2061,6 @@ a.ext::after{
   .pub-item .number{ width: 36px; height: 36px; min-width: 36px; }
   .pub-count{ margin-top: 8px; }
 }
-
 
 /* ==== Access 2カラム ==== */
 .access-split{
