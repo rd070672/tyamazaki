@@ -882,7 +882,7 @@ input[name="tab_item"] {
 }
 
 .section__subtitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--clr-primary);
   margin: 0;
@@ -2159,12 +2159,14 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 /* 右テキストの読みやすさ */
 .access-text .section__subtitle{
   margin: .4em 0 .2em;
-  font-weight: 700;
+  font-weight: 600;
 }
+
 .access-text .description7{
   line-height: 1.9;
   margin: .2em 0;
 }
+
 .access-text .vspace{ height: .8rem; }
 
 /* ==== Map（全ページ共通）==== */
@@ -2582,7 +2584,7 @@ nav.footer-nav .nav__list {
 .section-head .eyebrow{ margin: 0 0 10px; }
 
 .section__subtitle2 {
-  font-size: 1.2rem;
+  font-size: 24px;
   font-weight: 600;
   color: var(--clr-primary);
   margin: 12px 0 0 0;
