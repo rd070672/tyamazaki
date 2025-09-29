@@ -2143,7 +2143,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 /* 本文 */
 .pub-body{ line-height: 1.6; }
-.pub-authors{ margin: 0 0 4px; font-weight: 600; }
+.pub-authors{ margin: 0 0 6px; font-weight: 600; }
 .pub-title{ margin: 0 0 6px; font-style: italic; }
 .pub-journal{ margin: 0 0 6px; }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
