@@ -2475,7 +2475,13 @@ nav.footer-nav .nav__list {
   margin-bottom: 6px;
 }
 
+/* #topcis .eyebrow {
+  margin-bottom: 0px;
+} */
 
+.eyebrow {
+  margin-bottom: 6px;
+}
 
 /* 非表示制御 */
 .is-hidden { display: none; }
@@ -2487,15 +2493,16 @@ nav.footer-nav .nav__list {
   margin: 8px 0 16px;
 }
 
+
 .pub-filter__btn{
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px;
-  border: 1px solid rgba(0,0,0,.1);
+  padding: 10px 20px;
+  border: 1px solid var(--clr-primary);
   border-radius: 12px;
-  background: var(--clr-bg, #fff);
-  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, .2);
+  /* background: var(--clr-bg, #fff); */
+  box-shadow: none;
   font-weight: 700;
   cursor: pointer;
 }
@@ -2535,6 +2542,11 @@ nav.footer-nav .nav__list {
   gap: 16px;
 }
 
+/* hover/focus 時の見た目（任意）：枠色だけ少し濃くする */
+.pub-filter__btn:hover,
+.pub-filter__btn:focus{
+  border-color: color-mix(in oklab, var(--clr-primary) 85%, black);
+}
 
 
 
