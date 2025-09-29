@@ -98,72 +98,88 @@
     </script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const filter   = document.getElementById('pubFilter');
-      const btn      = filter.querySelector('.pub-filter__btn');
-      const label    = filter.querySelector('.pub-filter__label');
-      const menu     = filter.querySelector('.pub-filter__menu');
+      const filters  = Array.from(document.querySelectorAll('.pub-filter')); // ← 複数対応
       const sections = Array.from(document.querySelectorAll('.pub-section'));
 
-      // メニュー開閉
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        menu.classList.toggle('show', !open);
-      });
-
-      // メニューの項目クリック → 表示切替
-      menu.addEventListener('click', (e) => {
-        const li = e.target.closest('[data-cat]');
-        if (!li) return;
-
-        const cat   = li.dataset.cat;
-        const title = li.dataset.title || '';
-        const sub   = li.dataset.sub   || '';
-
-        // ラベル更新
-        label.textContent = title || li.textContent.trim();
-
-        // すべて隠す → 選択カテゴリだけ表示
+      // カテゴリ選択時の共通処理（表示切替＋ラベル同期）
+      function selectCategory(cat, title, sub) {
+        // すべて隠す → 選択のみ表示
         sections.forEach(sec => {
           sec.classList.toggle('is-hidden', sec.dataset.cat !== cat);
         });
 
-        // 選択セクションの見出しテキスト（title, countsなど）を動的に差し替えたい場合：
+        // 見出しのカウント等
         const target = sections.find(sec => sec.dataset.cat === cat);
         if (target) {
           const head = target.querySelector('.section-head');
           if (head && sub) {
-            // 右肩のカウント表示を置き換え。存在しない場合は作成
             let counter = head.querySelector('.pub-count');
             if (!counter) {
               counter = document.createElement('div');
               counter.className = 'pub-count';
               head.appendChild(counter);
             }
-            counter.innerHTML = sub.replace('Number of', 'Number of'); // そのまま表示
+            counter.textContent = sub.replace('Number of', 'Number of'); // そのまま表示
           }
-          // スクロール（お好みで）
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // メニューを閉じる
-        btn.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('show');
+        // 全フィルタのラベルを同期＆メニューを閉じる
+        filters.forEach(f => {
+          f.querySelector('.pub-filter__label').textContent = title;
+          f.querySelector('.pub-filter__btn').setAttribute('aria-expanded', 'false');
+          f.querySelector('.pub-filter__menu').classList.remove('show');
+        });
+      }
+
+      // 各フィルタを初期化
+      filters.forEach(filter => {
+        const btn   = filter.querySelector('.pub-filter__btn');
+        const menu  = filter.querySelector('.pub-filter__menu');
+
+        // メニュー開閉
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          // まず他を閉じる（任意）
+          filters.forEach(f => {
+            f.querySelector('.pub-filter__btn').setAttribute('aria-expanded', 'false');
+            f.querySelector('.pub-filter__menu').classList.remove('show');
+          });
+          btn.setAttribute('aria-expanded', String(!open));
+          menu.classList.toggle('show', !open);
+        });
+
+        // 項目クリック
+        menu.addEventListener('click', (e) => {
+          const li = e.target.closest('[data-cat]');
+          if (!li) return;
+          const cat   = li.dataset.cat;
+          const title = li.dataset.title || li.textContent.trim();
+          const sub   = li.dataset.sub   || '';
+          selectCategory(cat, title, sub);
+        });
       });
 
-      // 外側クリックでメニューを閉じる
+      // 外側クリックで全メニューを閉じる
       document.addEventListener('click', (e) => {
-        if (!filter.contains(e.target)) {
-          btn.setAttribute('aria-expanded', 'false');
-          menu.classList.remove('show');
+        if (!e.target.closest('.pub-filter')) {
+          filters.forEach(f => {
+            f.querySelector('.pub-filter__btn').setAttribute('aria-expanded', 'false');
+            f.querySelector('.pub-filter__menu').classList.remove('show');
+          });
         }
       });
 
-      // URLハッシュで初期表示を切替（例：?cat=reviews / #reviews も許容）
+      // URLで初期カテゴリ指定（?cat=reviews / #reviews）
       const initCat = new URL(location.href).searchParams.get('cat') || location.hash.replace('#','');
       if (initCat) {
-        const li = menu.querySelector(`[data-cat="${initCat}"]`);
-        if (li) li.click();
+        // どちらかのメニューから該当項目を探す
+        const li = document.querySelector(`.pub-filter__menu [data-cat="${initCat}"]`);
+        if (li) {
+          const title = li.dataset.title || li.textContent.trim();
+          const sub   = li.dataset.sub   || '';
+          selectCategory(initCat, title, sub);
+        }
       }
     });
     </script>
@@ -2564,7 +2580,7 @@
 
       <div class="pub-filter-row">
         <span class="pub-filter-caption">Category　</span>
-        <div class="pub-filter" id="pubFilter">
+        <div class="pub-filter">
           <button type="button" class="pub-filter__btn" aria-haspopup="true" aria-expanded="false">
             <span class="pub-filter__label">原著論文</span>
             <i class="fas fa-chevron-down" aria-hidden="true"></i>
