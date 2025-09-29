@@ -889,7 +889,7 @@ input[name="tab_item"] {
 }
 
 .section__subtitle2 {
-  font-size: 32px;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--clr-primary);
   margin: 0;
@@ -2520,26 +2520,13 @@ nav.footer-nav .nav__list {
   align-items: center;
   gap: 12px;
   padding: 12px 18px 12px 20px;
-  width: clamp(320px, 44vw, 560px);   /* ← 横幅を少し長めに可変 */
+  width: clamp(220px, 34vw, 360px);   /* ← 横幅を少し長めに可変 */
   border: 1px solid var(--clr-primary);
   background: var(--clr-bg, #fff);
   border-radius: 28px;                /* しっかり丸く（ピル型） */
   box-shadow: none;                   /* 影なし */
   cursor: pointer;
 }
-
-/* .pub-filter__btn{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  border: 1px solid var(--clr-primary);
-  border-radius: 12px;
-  background: var(--clr-bg, #fff);
-  box-shadow: none;
-  font-weight: 700;
-  cursor: pointer;
-} */
 
 .pub-filter__label{ font-size: 1.05rem; }
 .pub-filter__btn[aria-expanded="true"] .fa-chevron-down{ transform: rotate(180deg); }
