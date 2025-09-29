@@ -888,6 +888,13 @@ input[name="tab_item"] {
   margin: 0;
 }
 
+.section__subtitle2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--clr-primary);
+  margin: 0;
+}
+
 .section__title2 {
   text-align: left;
   margin-bottom: 0.4em;
