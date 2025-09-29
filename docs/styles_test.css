@@ -2534,8 +2534,8 @@ nav.footer-nav .nav__list {
 .pub-filter__menu{
   position: absolute;
   inset: 48px auto auto 0;
-  min-width: 280px;
-  max-height: 80vh;
+  min-width: 240px;
+  max-height: 88vh;
   overflow: auto;
   border-radius: 18px;
   background: #fff;
