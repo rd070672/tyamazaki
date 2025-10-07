@@ -2379,36 +2379,49 @@ nav.footer-nav .nav__list {
   box-shadow: 0 0 0 4px rgba(0,0,0,.25), var(--elev);
 }
 
-
-/* ====== Masonry基盤（段組みレイアウト） ====== */
-.album{
-  column-count: 4;
-  column-gap: 12px;
+/* ===== Album コンテナ ===== */
+.album {
   max-width: 960px;
   width: 94%;
   margin: 24px auto;
   padding: 0 8px;
 }
 
-/* 見出しとカードを “行全体” にする */
-.album .section__subtitle2,
-.album .section-card {
-  grid-column: 1 / -1;   /* すべての列を跨ぐ */
-  width: 100%;
+/* 見出し（年） */
+.album .section__subtitle2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--clr-primary, #0055a5);
+  margin: 2.5rem 0 1rem;
 }
 
-@media (max-width: 960px){ .album{ column-count: 3; } }
-@media (max-width: 700px) { .album{ column-count: 2; } }
-@media (max-width: 520px) { .album{ column-count: 1; } }
+/* 画像グリッド（年度ごとのブロック） */
+.album .section-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+  margin-bottom: 3rem;  /* 次の見出しとの間隔 */
+}
+
+/* レスポンシブ：列幅だけ調整（column-count は使わない） */
+@media (max-width: 960px) {
+  .album .section-card { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+}
+@media (max-width: 700px) {
+  .album .section-card { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+}
+@media (max-width: 520px) {
+  .album .section-card { grid-template-columns: 1fr; }
+}
+
+/* ===== カード（装飾） ===== */
 
 /* ホバー時に白く見せるためのラッパ */
 .card{
   position: relative;
   overflow: hidden;
-  margin: 0 0 3px;
-  break-inside: avoid;
+  margin: 0;                 /* グリッドの gap に任せる */
   cursor: zoom-in;
-  /* border-radius: 6px; */
 }
 
 /* 通常の画像 */
@@ -2425,15 +2438,15 @@ nav.footer-nav .nav__list {
   transform: scale(1.02);
 }
 
-/* ← ここで白いオーバーレイを重ねる */
+/* 白いオーバーレイ（クリックは透過させる） */
 .card::after{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.35); /* 白半透明 */
+  background: rgba(255,255,255,0.35);
   opacity: 0;
   transition: opacity .3s ease;
-  pointer-events: none;   /* 重要！ */
+  pointer-events: none;   /* 重要：クリックをブロックしない */
 }
 
 /* ホバーしたときだけ表示 */
