@@ -1581,7 +1581,7 @@ input[name="tab_item"] {
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
   z-index: 2;
 }
 
@@ -1600,7 +1600,7 @@ input[name="tab_item"] {
 
 .hero__panel {
   max-width: 960px;
-  padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
+  padding: 24px 60px;
   /* border-radius: 12px;
   background: rgba(0,0,0,0.24); */
   /* backdrop-filter: blur(2px); */
