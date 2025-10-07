@@ -2462,7 +2462,7 @@ nav.footer-nav .nav__list {
   position: relative;
   max-width: min(1000px, 95vw);
   max-height: 90vh;
-  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  padding-bottom: calc(6px + env(safe-area-inset-bottom));
 }
 
 /* 画像を画面内に収める */
