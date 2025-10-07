@@ -798,10 +798,10 @@ main {
   ========*/
 .tab_item {
   width: 100px;
-  height: 30px;
+  height: 40px;
   border-bottom: 2px solid var(--clr-primary);
   background-color: var(--clr-bg);
-  line-height: 30px;
+  line-height: 40px;
   font-size: 1rem;
   text-align: center;
   color: var(--clr-primary);
@@ -827,9 +827,9 @@ input[name="tab_item"] {
 
 #y2025:checked ~ #y2025_content,
 #y2024:checked ~ #y2024_content,
-#y2023:checked ~ #y2023_content,
+/* #y2023:checked ~ #y2023_content,
 #y2022:checked ~ #y2022_content,
-#y2021:checked ~ #y2021_content,
+#y2021:checked ~ #y2021_content, */
 #past:checked ~ #past_content {
   display: block;
 }
