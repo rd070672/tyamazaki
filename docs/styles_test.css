@@ -2404,7 +2404,7 @@ nav.footer-nav .nav__list {
 }
 
 /* 4列固定・隙間調整 */
-.album .section-card{
+.album .section-card2{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr)); /* ← 4列 */
   gap: 8px;  /* 隙間ゼロにしたいなら 0 に */
@@ -2442,9 +2442,9 @@ nav.footer-nav .nav__list {
 }
 .card:hover::after{ opacity:1; }
 
-@media (max-width: 900px){ .album .section-card{ grid-template-columns: repeat(3,1fr); } }
-@media (max-width: 640px){ .album .section-card{ grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 420px){ .album .section-card{ grid-template-columns: 1fr; } }
+@media (max-width: 900px){ .album .section-card2{ grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 640px){ .album .section-card2{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 420px){ .album .section-card2{ grid-template-columns: 1fr; } }
 
 /* モーダルの土台（デフォルトは非表示） */
 .modal {
