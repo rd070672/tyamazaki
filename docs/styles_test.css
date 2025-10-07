@@ -1861,7 +1861,7 @@ input[name="tab_item"] {
   display: grid;
   grid-template-columns: 1fr 1fr;   /* 左=文章 / 右=画像 */
   gap: clamp(16px, 3vw, 28px);
-  align-items: center;
+  align-items: start;
 }
 
 .about-text {
