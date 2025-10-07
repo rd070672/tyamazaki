@@ -2954,7 +2954,9 @@ nav.footer-nav .nav__list {
   /* #########################  hero  ########################### */
 
   .hero { margin-top: 40px; }
-  .hero__panel{ padding: 12px 16px; border-radius: 10px; }
+  .hero__panel{ 
+    padding: 12px 30px; border-radius: 10px; 
+  }
   .hero__dots{ bottom: 12px; gap: 10px; }
   .hero__nav{ width: 36px; height: 36px; font-size: 18px; }
   .hero__cta{
