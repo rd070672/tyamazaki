@@ -1859,7 +1859,6 @@ input[name="tab_item"] {
   margin: 3em 1em 1em; 
 }
 
-/* 「ニュース→About/Access」の区切り線を維持したい場合 */
 .section-divider::before{ background: var(--clr-primary); }
 
 /* About 2カラム */
@@ -3070,13 +3069,13 @@ nav.footer-nav .nav__list {
 
   /* 地図を中央＆横幅を抑えて見やすく */
   .map-embed{
-    width: min(520px, 92vw);
+    /* width: min(520px, 92vw); */
     margin-inline: auto;
   }
 
   /* テキスト領域も幅を揃えたい場合（任意） */
   .access-text{
-    width: min(720px, 92vw);
+    /* width: 10; */
     max-width: 100%;
     margin-inline: auto;
     line-height: 1.6;
