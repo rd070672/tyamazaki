@@ -2393,37 +2393,17 @@ nav.footer-nav .nav__list {
 .album {
   max-width: 960px;
   width: 98%;
-  margin: 24px auto;
-  padding: 0 8px;
+  margin: 0;
+  padding: 0;
 }
 
 /* 見出し（年） */
 .album .section__subtitle2 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--clr-primary);
   margin: 2.5rem 0 1rem;
 }
-
-
-/* レスポンシブ：列幅だけ調整（column-count は使わない） */
-/* @media (max-width: 960px) {
-  .album .section-card { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-}
-@media (max-width: 700px) {
-  .album .section-card { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
-}
-@media (max-width: 520px) {
-  .album .section-card { grid-template-columns: 1fr; }
-} */
-
-/* .card img{
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform .3s ease;
-  cursor: zoom-in;
-} */
 
 /* ===== アルバムの画像グリッド ===== */
 .album .section-card{
@@ -2436,9 +2416,11 @@ nav.footer-nav .nav__list {
 /* 各カードは正方形タイル化（中身はpositionで全面に） */
 .card{
   position: relative;
-  overflow: hidden;
+  aspect-ratio: 1 / 1;      /* 正方形に固定（ブラウザが対応していればこれでOK） */
+  border-radius: 12px;       /* 角丸 */
+  overflow: hidden;          /* 角丸に沿って画像をクリップ */
+  margin: 0;                 /* 行間の隙間要因を消す */
   cursor: zoom-in;
-  /* ホバー演出はお好みで（以前の指定があれば継続可） */
 }
 
 /* 正方形の内側ラッパ：幅に応じた高さを作る */
