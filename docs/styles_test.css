@@ -1908,7 +1908,7 @@ input[name="tab_item"] {
 .achievement-list {
   list-style: none;
   margin: 0;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .achievement-item {
@@ -2165,9 +2165,18 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 /* レスポンシブ：モバイルで余白調整 */
 @media (max-width: 600px){
-  .pub-item{ grid-template-columns: 36px 1fr; gap: 12px; }
-  .pub-item .number{ width: 36px; height: 36px; min-width: 36px; }
-  .pub-count{ margin-top: 8px; }
+  .pub-item{ 
+    grid-template-columns: 36px 1fr; gap: 12px; 
+  }
+  .pub-item .number{ 
+    width: 36px; height: 36px; min-width: 36px; 
+  }
+  .pub-count{ 
+    margin-top: 8px; font-size: 0.9rem;
+  }
+  .pub-count strong{ 
+    font-size: 1rem;
+  }
 }
 
 /* ==== Access 2カラム ==== */
