@@ -926,7 +926,7 @@ input[name="tab_item"] {
   display:flex;
   flex-wrap: wrap;
   align-items:center;
-  gap: 6px 10px;
+  gap: 6px 6px;
   margin:0; padding:0;
   list-style:none;
   font-size: 14px;
@@ -2301,7 +2301,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .site-footer .nav__list{
   display: flex;
   flex-wrap: wrap;
-  gap: 3px 6px;
+  gap: 3px 3px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2339,7 +2339,7 @@ nav.footer-nav {
 /* 各段（ul）は横並び */
 nav.footer-nav .nav__list {
   display: flex;
-  gap: 16px;
+  gap: 6px;
   justify-content: flex-start;  /* 中央寄せ（好みで変更） */
   margin: 0;
   padding: 0;
@@ -3171,13 +3171,13 @@ nav.footer-nav .nav__list {
     justify-content: center;/* 横方向センター */
     align-items: center;    /* 縦方向も揃える */
     margin: 0 auto;         /* 保険：親の中で中央 */
-    gap: 4px 4px;          /* お好みで */
+    gap: 2px 2px;          /* お好みで */
   }
 
   /* クリックしやすく（任意） */
   .site-footer .nav__list a{
     display: block;
-    padding: .4rem .8rem;
+    padding: .1rem .1rem;
     text-align: center;
   }
 
