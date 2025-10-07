@@ -2474,13 +2474,37 @@ nav.footer-nav .nav__list {
   object-fit: contain;
 }
 
-/* キャプションと閉じるボタン */
-.modal__content figcaption {
+/* .modal__content figcaption {
   margin-top: .5rem;
   color: #fff;
   text-align: center;
   font-size: .95rem;
+} */
+
+.modal__content figcaption{
+  margin-top: .75rem;
+  color: #fff;
+  text-align: center;
 }
+
+.cap-title{
+  font-weight: 700;
+  font-size: 1.125rem;   /* 題目：少し大きく */
+  line-height: 1.45;
+}
+
+.cap-note{
+  margin-top: .35rem;
+  font-size: .95rem;     /* 感想：一段小さく */
+  line-height: 1.5;
+  opacity: .95;
+}
+
+@media (max-width: 520px){
+  .cap-title{ font-size: 1rem; }
+  .cap-note { font-size: .9rem; }
+}
+
 .modal__close {
   position: absolute;
   top: .25rem;
@@ -2493,83 +2517,16 @@ nav.footer-nav .nav__list {
   cursor: pointer;
 }
 
-/* .card img {
-  cursor: zoom-in;
-} */
-
-/* 
-.modal{
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.6);
-  display: none;           
-  place-items: center;     
-  padding: 24px;
-  z-index: 1000;
-}
-.modal.is-open{ display: grid; }
-
-.modal__content{
-  background: #fff;
-  border-radius: 10px;
-  max-width: calc(100vw - 32px);  
-  max-height: calc(100vh - 32px);
-  overflow: auto;
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
-  position: relative;
-}
-
-.modal__content img{
-  width: auto; 
-  height: auto;
-  max-width: 80vw;
-  max-height: 80vh;
-  display: block; margin: 0 auto; border-radius: 10px 10px 0 0;
-}
-
-.modal__content figcaption{
-  padding: 10px 14px 14px;
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.modal__close{
-  position: absolute;
-  top: 6px; right: 10px;
-  width: 36px; height: 36px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(0,0,0,.6);
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-.modal__close:hover{ background: rgba(0,0,0,.75); }
-
-.modal__content::-webkit-scrollbar{ width: 10px; }
-.modal__content::-webkit-scrollbar-thumb{
-  background: rgba(0,0,0,.2);
-  border-radius: 6px;
-} */
-
 #articles .eyebrow {
   margin-bottom: 6px;
 }
-
-/* #topcis .eyebrow {
-  margin-bottom: 0px;
-} */
 
 .eyebrow {
   margin-bottom: 6px;
 }
 
-/* 非表示制御 */
 .is-hidden { display: none; }
 
-/* ラベル＋ドロップダウンを右端に寄せて横並び */
 .pub-filter-row{
   display: flex;
   justify-content: flex-end;   /* 右寄せ */
@@ -2578,7 +2535,6 @@ nav.footer-nav .nav__list {
   margin: 8px 0 18px;          /* 上下の余白 */
 }
 
-/* 左の “Category” ラベル */
 .pub-filter-caption{
   font-weight: 700;
   color: var(--clr-fg);
