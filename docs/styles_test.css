@@ -3076,6 +3076,32 @@ nav.footer-nav .nav__list {
     color: var(--clr-fg);
   }
 
+  /* Researchmap の行（.label 左 / .count 右） */
+  .achievement-list .achievement-item2{
+    display: grid;
+    grid-template-columns: 1fr auto;   /* 左:伸びる / 右:中身の幅 */
+    align-items: baseline;
+    gap: 12px;
+  }
+  .achievement-list .achievement-item2 .count{
+    justify-self: end;                  /* 右端へ */
+    text-align: right;
+    white-space: nowrap;                /* 1行に収めたい場合 */
+  }
+
+  /* Journal Articles 見出しと件数（左:見出し / 右:件数） */
+  .section-head--row{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .section-head--row .pub-count{
+    justify-self: end;
+    text-align: right;
+    white-space: nowrap;
+  }
+
   /* #########################  access  ########################### */
 
   /* 2カラム→1カラムにして中央寄せ */
