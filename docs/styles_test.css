@@ -1864,7 +1864,23 @@ input[name="tab_item"] {
   align-items: center;
 }
 
-/* 文章側の読みやすさ */
+.about-text {
+  font-size: 1rem; /* 全体のベース */
+}
+
+.about-text .section__subtitle2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.about-text .lede{
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.about-text .description7 {
+  font-size: 1.1rem;
+}
+/* 
 .about-text p{
   line-height: 1.4;
   margin: .8em 0;
@@ -1873,7 +1889,7 @@ input[name="tab_item"] {
 .about-text .lede{
   font-size: 1.05rem;
   font-weight: 600;
-}
+} */
 
 /* 画像側：角丸＆トリミング */
 .about-figure{ margin: 0; }
@@ -2955,22 +2971,18 @@ nav.footer-nav .nav__list {
 
   /* #########################  about  ########################### */
 
-  /* #about .about-split{ grid-template-columns: 1fr; }
-  #about .about-figure{ order: 2; }
-  #about .about-text{ order: 1; } */
-
   .about-split{ grid-template-columns: 1fr; }
   .about-figure{ order: 2; }
   .about-text{ order: 1; }
 
   .about-text p {
-    font-size: 0.6rem;   /* 少し小さめ */
+    font-size: 0.9rem;   /* 少し小さめ */
     line-height: 1.4;    /* 行間は読みやすさを保つ */
   }
 
   .about-text .lede {
-    font-size: 0.7rem;     /* リード文だけ少し大きめに */
-    font-weight: 400;    /* 少し強調 */
+    font-size: 1.1rem;     /* リード文だけ少し大きめに */
+    font-weight: 500;    /* 少し強調 */
   }
 
   /* #########################  achievement  ########################### */
