@@ -98,26 +98,46 @@
     </script>
 
     <script>
-      function openModal(imgEl){
-        const modal = document.getElementById('albumModal');
-        const modalImg = document.getElementById('modalImg');
-        const modalCap = document.getElementById('modalCap');
+    function openModal(imgEl){
+      const modal = document.getElementById('albumModal');
+      const modalImg = document.getElementById('modalImg');
+      const modalCap = document.getElementById('modalCap');
 
-        modalImg.src = imgEl.src;
-        const card = imgEl.closest('.card');
-        modalCap.textContent = card?.dataset?.caption || imgEl.alt || '';
+      // data-full があれば高解像度に差し替え、無ければそのまま
+      const largeSrc = imgEl.dataset.full || imgEl.src;
+      modalImg.src = largeSrc;
 
-        modal.classList.add('is-open');
+      const card = imgEl.closest('.card');
+      modalCap.textContent = card?.dataset?.caption || imgEl.alt || '';
+
+      modal.classList.add('is-open');
+      // 背景スクロールを止める（任意）
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(ev){
+      const modal = document.getElementById('albumModal');
+      if (
+        ev.target.id === 'albumModal' ||
+        ev.currentTarget.classList.contains('modal__close') ||
+        ev.target.classList.contains('modal__close')
+      ){
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
       }
+    }
 
-      function closeModal(ev){
-        // 画像やキャプションのクリックでは閉じない。外側/×ボタンで閉じる
+    // ESCキーで閉じる（任意）
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
         const modal = document.getElementById('albumModal');
-        if (ev.target.id === 'albumModal' || ev.currentTarget.classList.contains('modal__close') || ev.target.classList.contains('modal__close')){
+        if (modal.classList.contains('is-open')) {
           modal.classList.remove('is-open');
+          document.body.style.overflow = '';
         }
       }
-      </script>
+    });
+  </script>
   </head>
 
   <body class="light" id="top">
@@ -268,8 +288,16 @@
     </main>
 
     <!-- クリック時のフルスクリーン表示 -->
-    <div id="albumModal" class="modal" onclick="closeModal(event)">
+    <!-- <div id="albumModal" class="modal" onclick="closeModal(event)">
       <div class="modal__content">
+        <img id="modalImg" src="" alt="">
+        <figcaption id="modalCap"></figcaption>
+        <button class="modal__close" aria-label="Close" onclick="closeModal(event)">×</button>
+      </div>
+    </div> -->
+
+    <div id="albumModal" class="modal" onclick="closeModal(event)">
+      <div class="modal__content" onclick="event.stopPropagation()">
         <img id="modalImg" src="" alt="">
         <figcaption id="modalCap"></figcaption>
         <button class="modal__close" aria-label="Close" onclick="closeModal(event)">×</button>
