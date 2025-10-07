@@ -3056,7 +3056,7 @@ nav.footer-nav .nav__list {
     font-size: 0.85rem;
     font-weight: 600;
   }
-  
+
   .achievement-item2 .label {
     font-size: 0.9rem;
     color: var(--clr-fg);
@@ -3167,14 +3167,14 @@ nav.footer-nav .nav__list {
   }
 
   .site-footer .lab-title h3 a{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--clr-primary);
     text-decoration: none;
   }
   .site-footer .lab-subtitle{
-    font-size: 0.8rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 2;
   }
 
   /* .site-footer .nav__list{
