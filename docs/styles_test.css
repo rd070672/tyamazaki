@@ -3062,10 +3062,10 @@ nav.footer-nav .nav__list {
 
   /* 2カラム→1カラムにして中央寄せ */
   .access-split{
-    display: grid;                 /* すでにgridならそのままでOK */
+    display: grid;                
     grid-template-columns: 1fr;
     gap: 16px;
-    justify-items: center;         /* 子要素を中央に配置 */
+    justify-items: center;
   }
 
   /* 地図を中央＆横幅を抑えて見やすく */
@@ -3077,9 +3077,10 @@ nav.footer-nav .nav__list {
   /* テキスト領域も幅を揃えたい場合（任意） */
   .access-text{
     width: min(720px, 92vw);
+    max-width: 100%;
     margin-inline: auto;
+    line-height: 1.6;
   }
-
 
   /* #########################  header  ########################### */
 
@@ -3088,29 +3089,8 @@ nav.footer-nav .nav__list {
   .nav__hamburger{ z-index:2002; }
 
   .header .nav__list{
-    display: none !important;         /* ← 初期表示を確実に消す */
-    /* position: fixed;                 
-    top: 64px;                        
-    right: 12px;                      
-    left: auto;                      
-    width: min(40vw, 400px);        
-    max-height: 80vh;
-    overflow: auto;
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px;
-    background: var(--clr-bg-alt, #fff);
-    border-radius: 14px;
-    box-shadow: 0 14px 32px rgba(0,0,0,.18); */
+    display: none !important;  
   }
-
-  /* .header .nav__list .link--nav{
-    display: block;
-    padding: 10px 8px;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 0.95rem;
-  } */
 
   .header .nav__list:not(.is-open){
     display: none !important;
@@ -3211,10 +3191,6 @@ nav.footer-nav .nav__list {
     font-size: 0.8rem;
     color: var(--clr-fg);
   }
-/* 
-  .project2 {
-  text-align: center;
-} */
   
 }
 /* ############################################################# */
