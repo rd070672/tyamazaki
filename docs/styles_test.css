@@ -2175,7 +2175,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 /* ==== Access 2カラム ==== */
 .access-split{
   display: grid;
-  grid-template-columns: 1fr 1fr;       /* 左をやや広め */
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   align-items: start;
 }
@@ -2194,19 +2194,29 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .access-text .vspace{ height: .8rem; }
 
 /* ==== Map（全ページ共通）==== */
-/* ラッパー：横幅に合わせて1:1の高さを作る */
 .map-embed{
   position: relative;
   width: 100%;
-  /* max-width: 600px; */
+  aspect-ratio: 4 / 5;       /* ← 少し縦長（横:縦 = 4:5） */
+  /* fallback用の高さ確保（古いブラウザ向け） */
+  --fallback-ar: 125%;        /* 4:5 → 1/(4/5)=1.25 → 125% */
 }
+
+/* fallback: aspect-ratio未対応ブラウザ */
+@supports not (aspect-ratio: 1 / 1) {
+  .map-embed::before{
+    content: "";
+    display: block;
+    padding-top: var(--fallback-ar); /* 125%で縦長に */
+  }
+}
+
 .map-embed::before{
   content: "";
   display: block;
   padding-top: 100%;       /* ★ 1:1 正方形 */
 }
 
-/* クリック面（地図）を全面に広げる */
 .map-embed iframe{
   position: absolute;
   inset: 0;
@@ -2214,11 +2224,11 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   height: 90%;
   border: 0;
   display: block;
-  border-radius: 12px;     /* お好みで */
+  border-radius: 12px;
   box-shadow: var(--shadow);
 }
 
-/* Opening image block */
+
 .opening-img {
   flex: 1;
   padding: 8px;
@@ -3215,15 +3225,17 @@ nav.footer-nav .nav__list {
     height: 40px; 
   }
 
-.achievement-item2 .label {
-  font-size: 0.9rem;
-  color: var(--clr-fg);
-}
+  .achievement-item2 .label {
+    font-size: 0.9rem;
+    color: var(--clr-fg);
+  }
 
-.achievement-item2 .count {
-  font-size: 0.8rem;
-  color: var(--clr-fg);
-}
+  .achievement-item2 .count {
+    font-size: 0.8rem;
+    color: var(--clr-fg);
+  }
+  
+  .map-embed { aspect-ratio: 16 / 10; } /* PCではやや横長 */
   
 }
 /* ############################################################# */
