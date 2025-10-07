@@ -1885,6 +1885,12 @@ input[name="tab_item"] {
   margin-bottom: 1.2em;
 }
 
+.about-text .section__subtitle2 .num{
+  color: var(--clr-primary);
+  font-weight: 700;      /* お好みで */
+  margin-right: .25em;   /* 文字との間隔 */
+}
+
 .about-text .lede{
   font-size: 1.1rem;
   font-weight: 600;
@@ -2085,13 +2091,15 @@ input[name="tab_item"] {
 
 .paper-desc {
   font-size: 1.1rem;
-  margin: 0.8em 0.5em 0 0.5em; /* 上右下左 */
+  margin: 0.4em 0.2em 0; /* 上右下左 */
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 /* プロフィールリンク */
-.paper-list{ list-style: none; margin: 0; padding: 0; }
+.paper-list{ 
+  list-style: none; margin: 0; padding: 0; 
+}
 .paper-item{
   display: flex; 
   flex-wrap: wrap; 
