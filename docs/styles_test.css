@@ -3089,6 +3089,8 @@ nav.footer-nav .nav__list {
 
   .header .nav__list{
     display: none !important;         /* ← 初期表示を確実に消す */
+  }
+
     /* position: fixed;                 
     top: 64px;                        
     right: 12px;                      
@@ -3183,7 +3185,15 @@ nav.footer-nav .nav__list {
   .site-footer .nav .link--nav{
     display: inline-flex;
     align-items: center;
-    height: 40px; 
+    height: 20px; 
+  }
+
+  .site-footer .nav__list{
+    gap: 2px 2px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
   }
 
   .achievement-item2 .label {
