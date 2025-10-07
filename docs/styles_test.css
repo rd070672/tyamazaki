@@ -3056,6 +3056,16 @@ nav.footer-nav .nav__list {
     font-size: 0.85rem;
     font-weight: 600;
   }
+  
+  .achievement-item2 .label {
+    font-size: 0.9rem;
+    color: var(--clr-fg);
+  }
+
+  .achievement-item2 .count {
+    font-size: 0.8rem;
+    color: var(--clr-fg);
+  }
 
   /* #########################  access  ########################### */
 
@@ -3198,7 +3208,7 @@ nav.footer-nav .nav__list {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 8px 14px;  
+    gap: 6px 6px;  
     margin: 0 auto;
     padding: 0;
     list-style: none;
@@ -3214,20 +3224,9 @@ nav.footer-nav .nav__list {
   /* クリックしやすく＆文字中央 */
   .site-footer .footer-nav .link--nav{
     display: block;
-    padding: .35rem .6rem;
+    padding: .4rem .4rem;
     text-align: center;
-    line-height: 1.2;
-  }
-
-
-  .achievement-item2 .label {
-    font-size: 0.9rem;
-    color: var(--clr-fg);
-  }
-
-  .achievement-item2 .count {
-    font-size: 0.8rem;
-    color: var(--clr-fg);
+    /* line-height: 1.2; */
   }
   
 }
