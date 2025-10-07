@@ -939,8 +939,8 @@ input[name="tab_item"] {
 .nav .link--nav{
   display: inline-flex;
   align-items: center;
-  height: 52px;              /* ← 高さ固定（好みで） */
-  padding: 0 4px;           /* ← 左右だけ・常に同じ */
+  height: 52px; 
+  padding: 0 4px;
   border-radius: 4px;
   color: var(--clr-fg);
   font-weight: 500;
@@ -1159,7 +1159,7 @@ input[name="tab_item"] {
 }
 
 .footer__link {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--clr-fg);
 }
@@ -1866,20 +1866,24 @@ input[name="tab_item"] {
 
 .about-text {
   font-size: 1rem;
+  margin: 0 1rem; 
 }
 
 .about-text p{
-  line-height: 1.4;
+  line-height: 1.9;
+  margin-bottom: 1.2em;
 }
 
 .about-text .section__subtitle2 {
   font-size: 1.1rem;
   font-weight: 600;
+  margin-bottom: 1.2em;
 }
 
 .about-text .lede{
   font-size: 1.1rem;
   font-weight: 600;
+  margin-bottom: 1.2em;
 }
 .about-text .description7 {
   font-size: 1rem;
