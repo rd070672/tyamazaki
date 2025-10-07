@@ -2989,6 +2989,23 @@ nav.footer-nav .nav__list {
   .about-figure{ order: 2; }
   .about-text{ order: 1; }
 
+  .about-figure { 
+    margin: 0; 
+    justify-self: center;        /* 親がgridのとき */
+    align-self: start;           /* 縦は上寄せのまま（任意） */
+  }
+
+  .about-figure img{
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1/1;       /* お好みで 3/2 や 4/3, 16/10に */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 0 auto;
+  }
+
   .about-text {
     font-size: 1rem; /* 全体を少し縮小 */
     line-height: 1.5;  /* 行間を少し広く */
