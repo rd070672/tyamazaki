@@ -98,36 +98,41 @@
     </script>
 
     <script>
-    function openModal(imgEl){
-      const modal = document.getElementById('albumModal');
-      const modalImg = document.getElementById('modalImg');
-      const modalCap = document.getElementById('modalCap');
+      function openModal(imgEl){
+        const modal    = document.getElementById('albumModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCap = document.getElementById('modalCap');
 
-      modalImg.src = imgEl.dataset.full || imgEl.src;
+        modalImg.src = imgEl.dataset.full || imgEl.src;
 
-      const card = imgEl.closest('.card');
-      const title = card?.dataset?.title || card?.dataset?.caption || imgEl.alt || '';
-      const note  = card?.dataset?.note  || '';
+        const card  = imgEl.closest('.card');
+        const title = card?.dataset?.title || card?.dataset?.caption || imgEl.alt || '';
+        const note  = card?.dataset?.note  || '';
+        modalCap.innerHTML = '';
+        if (title){ const t=document.createElement('div'); t.className='cap-title'; t.textContent=title; modalCap.appendChild(t); }
+        if (note){  const n=document.createElement('div'); n.className='cap-note';  n.textContent=note;  modalCap.appendChild(n); }
 
-      // キャプションを2行で描画
-      modalCap.innerHTML = '';
-      if (title){
-        const t = document.createElement('div');
-        t.className = 'cap-title';
-        t.textContent = title;
-        modalCap.appendChild(t);
-      }
-      if (note){
-        const n = document.createElement('div');
-        n.className = 'cap-note';
-        n.textContent = note;
-        modalCap.appendChild(n);
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
       }
 
-      modal.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    }
-  </script>
+      function closeModal(){
+        const modal = document.getElementById('albumModal');
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      // 背景クリック / × / Esc で閉じる
+      document.addEventListener('DOMContentLoaded', () => {
+        const modal   = document.getElementById('albumModal');
+        const content = modal.querySelector('.modal__content');
+        const btn     = modal.querySelector('.modal__close');
+        modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
+        btn.addEventListener('click', closeModal);
+        content.addEventListener('click', (e)=> e.stopPropagation());
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.classList.contains('is-open')) closeModal(); });
+      });
+    </script>
 
   </head>
 

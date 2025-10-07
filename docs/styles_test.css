@@ -2495,14 +2495,14 @@ nav.footer-nav .nav__list {
 }
 
 .cap-title{
-  font-weight: 700;
-  font-size: 1.125rem;   /* 題目：少し大きく */
+  font-weight: 500;
+  font-size: 0.9rem;   /* 題目：少し大きく */
   line-height: 1.45;
 }
 
 .cap-note{
   margin-top: .35rem;
-  font-size: .95rem;     /* 感想：一段小さく */
+  font-size: .8rem;     /* 感想：一段小さく */
   line-height: 1.5;
   opacity: .95;
 }
