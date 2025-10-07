@@ -1842,15 +1842,21 @@ input[name="tab_item"] {
   font-size: .95rem;
 }
 
-/* カード風ラップ（ほんのり陰影） */
 .section-card{
-  /* background: var(--clr-bg-alt); */
-  /* box-shadow: var(--shadow); */
   background-color: rgba(255,255,255,0); /* 完全透明 */
   background: rgba(255,255,255,0); /* 完全透明 */
   padding: 0px;
   letter-spacing: 0.02em; 
   margin: 2em 1em; 
+}
+
+
+.section-card2{
+  background-color: rgba(255,255,255,0); /* 完全透明 */
+  background: rgba(255,255,255,0); /* 完全透明 */
+  padding: 0px;
+  letter-spacing: 0.02em; 
+  margin: 3em 1em 1em; 
 }
 
 /* 「ニュース→About/Access」の区切り線を維持したい場合 */
