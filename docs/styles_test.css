@@ -3073,13 +3073,13 @@ nav.footer-nav .nav__list {
   .access-split{
     display: grid;                
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
     justify-items: center;
   }
 
   /* 地図を中央＆横幅を抑えて見やすく */
   .map-embed{
-    /* width: min(520px, 92vw); */
+    max-width: 100%;
     margin-inline: auto;
   }
 
