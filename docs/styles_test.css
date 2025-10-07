@@ -3089,8 +3089,6 @@ nav.footer-nav .nav__list {
 
   .header .nav__list{
     display: none !important;         /* ← 初期表示を確実に消す */
-  }
-
     /* position: fixed;                 
     top: 64px;                        
     right: 12px;                      
@@ -3189,11 +3187,19 @@ nav.footer-nav .nav__list {
   }
 
   .site-footer .nav__list{
-    gap: 2px 2px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;        /* 折り返し可 */
+    justify-content: center;/* 横方向センター */
+    align-items: center;    /* 縦方向も揃える */
+    margin: 0 auto;         /* 保険：親の中で中央 */
+    gap: 4px 4px;          /* お好みで */
+  }
+
+  /* クリックしやすく（任意） */
+  .site-footer .nav__list a{
+    display: block;
+    padding: .4rem .8rem;
+    text-align: center;
   }
 
   .achievement-item2 .label {
