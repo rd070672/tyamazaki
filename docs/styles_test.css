@@ -3155,13 +3155,6 @@ nav.footer-nav .nav__list {
     justify-items: center;
   }
 
-  /* .site-footer .footer__inner {
-    grid-template-columns: 1fr;
-    row-gap: 0px;
-    text-align: center; 
-    justify-items: center;
-  } */
-
   .site-footer .lab-title {
     margin-bottom: 8px;   /* ラボとナビの間に余白 */
   }
@@ -3177,23 +3170,12 @@ nav.footer-nav .nav__list {
     line-height: 2;
   }
 
-  /* .site-footer .nav__list{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;   
-    gap: 4px 4px;          
-  } */
-
-  /* クリックしやすく（任意） */
   .site-footer .nav__list a{
     display: block;
     padding: .1rem .1rem;
     text-align: center;
   }
 
-  /* nav を縦積み（ULが2段でも中央に並ぶ） */
   .site-footer .footer-nav{
     display: flex;
     flex-direction: column;
@@ -3202,7 +3184,6 @@ nav.footer-nav .nav__list {
     width: 100%;
   }
 
-  /* 各ULの中身を中央寄せ＆折り返し */
   .site-footer .footer-nav .nav__list{
     display: flex !important;  
     flex-wrap: wrap;
@@ -3215,13 +3196,6 @@ nav.footer-nav .nav__list {
     width: 100%;
   }
 
-  /* .site-footer .nav .link--nav{
-    display: inline-flex;
-    align-items: center;
-    height: 20px; 
-  } */
-
-  /* クリックしやすく＆文字中央 */
   .site-footer .footer-nav .link--nav{
     display: block;
     padding: .4rem .4rem;
