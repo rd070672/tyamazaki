@@ -1601,10 +1601,10 @@ input[name="tab_item"] {
 .hero__panel {
   max-width: 960px;
   padding: clamp(12px, 2.8vw, 24px) clamp(16px, 3.4vw, 36px);
-  border-radius: 12px;
-  background: rgba(0,0,0,0.24);
+  /* border-radius: 12px;
+  background: rgba(0,0,0,0.24); */
   /* backdrop-filter: blur(2px); */
-  box-shadow: 0 10px 28px rgba(0,0,0,.2);
+  /* box-shadow: 0 10px 28px rgba(0,0,0,.2); */
   position: relative;
   color: #fff;
 }
@@ -2976,15 +2976,32 @@ nav.footer-nav .nav__list {
   .about-figure{ order: 2; }
   .about-text{ order: 1; }
 
-  .about-text p {
-    font-size: 0.9rem;   /* 少し小さめ */
-    line-height: 1.4;    /* 行間は読みやすさを保つ */
+  .about-text {
+    font-size: 1rem; /* 全体を少し縮小 */
+    line-height: 1.5;  /* 行間を少し広く */
+  }
+
+  .about-text .section__subtitle2 {
+    font-size: 1.05rem; /* 見出しも少しだけ小さく */
   }
 
   .about-text .lede {
-    font-size: 1.1rem;     /* リード文だけ少し大きめに */
-    font-weight: 500;    /* 少し強調 */
+    font-size: 0.95rem;
   }
+
+  .about-text .description7 {
+    font-size: 1rem;
+  }
+  
+  /* .about-text p {
+    font-size: 0.9rem;   
+    line-height: 1.4;    
+  }
+
+  .about-text .lede {
+    font-size: 1.1rem;    
+    font-weight: 500;  
+  } */
 
   /* #########################  achievement  ########################### */
   .achievement-list {
