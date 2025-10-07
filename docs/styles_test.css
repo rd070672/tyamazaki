@@ -2468,13 +2468,14 @@ nav.footer-nav .nav__list {
   position: relative;
   max-width: min(1000px, 95vw);
   max-height: 90vh;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
 
 /* 画像を画面内に収める */
 .modal__content img {
   display: block;
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 78vh;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -2488,7 +2489,7 @@ nav.footer-nav .nav__list {
 } */
 
 .modal__content figcaption{
-  margin-top: .75rem;
+  margin: 0.75rem 0 1.25rem;  /* ← 下を広げる */
   color: #fff;
   text-align: center;
 }
