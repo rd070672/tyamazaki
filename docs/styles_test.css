@@ -2217,12 +2217,6 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   }
 }
 
-/* .map-embed::before{
-  content: "";
-  display: block;
-  padding-top: 100%;
-} */
-
 .map-embed iframe{
   position: absolute;
   inset: 0;
@@ -2481,15 +2475,8 @@ nav.footer-nav .nav__list {
   object-fit: contain;
 }
 
-/* .modal__content figcaption {
-  margin-top: .5rem;
-  color: #fff;
-  text-align: center;
-  font-size: .95rem;
-} */
-
 .modal__content figcaption{
-  margin: 0.75rem 0 1.25rem;  /* ← 下を広げる */
+  margin: 0.75rem 0 0.25rem;  /* ← 下を広げる */
   color: #fff;
   text-align: center;
 }
@@ -3006,11 +2993,12 @@ nav.footer-nav .nav__list {
   .about-text {
     font-size: 1rem; /* 全体を少し縮小 */
     line-height: 1.5;  /* 行間を少し広く */
+    margin: 0; 
   }
-  
+/*   
   .about-text p {
     line-height: 2.0;  
-  }
+  } */
 
   .about-text .section__subtitle2 {
     font-size: 1.05rem; /* 見出しも少しだけ小さく */
@@ -3174,7 +3162,9 @@ nav.footer-nav .nav__list {
     color: var(--clr-fg);
   }
 
-  .map-embed { aspect-ratio: 16 / 10; } /* PCではやや横長 */
+  /* .map-embed { 
+    aspect-ratio: 4 / 5; 
+  } */
   
 }
 /* ############################################################# */
