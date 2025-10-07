@@ -3137,12 +3137,20 @@ nav.footer-nav .nav__list {
     font-size: 0.6em;
   }
 
-  .site-footer .footer__inner {
+  .site-footer .footer__inner{
+    display: grid;                 /* gridでもflexでもOK、ここで統一 */
+    grid-template-columns: 1fr;    /* 1カラム */
+    row-gap: 10px;
+    text-align: center;
+    justify-items: center;
+  }
+
+  /* .site-footer .footer__inner {
     grid-template-columns: 1fr;
     row-gap: 0px;
-    text-align: center;   /* ← ここで中央寄せ */
-    justify-items: center;/* ← Grid要素自体を中央寄せ */
-  }
+    text-align: center; 
+    justify-items: center;
+  } */
 
   .site-footer .lab-title {
     margin-bottom: 8px;   /* ラボとナビの間に余白 */
@@ -3159,20 +3167,14 @@ nav.footer-nav .nav__list {
     line-height: 1.6;
   }
 
-  .site-footer .nav .link--nav{
-    display: inline-flex;
-    align-items: center;
-    height: 20px; 
-  }
-
-  .site-footer .nav__list{
+  /* .site-footer .nav__list{
     display: flex;
-    flex-wrap: wrap;        /* 折り返し可 */
-    justify-content: center;/* 横方向センター */
-    align-items: center;    /* 縦方向も揃える */
-    margin: 0 auto;         /* 保険：親の中で中央 */
-    gap: 2px 2px;          /* お好みで */
-  }
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;   
+    gap: 4px 4px;          
+  } */
 
   /* クリックしやすく（任意） */
   .site-footer .nav__list a{
@@ -3180,6 +3182,43 @@ nav.footer-nav .nav__list {
     padding: .1rem .1rem;
     text-align: center;
   }
+
+  /* nav を縦積み（ULが2段でも中央に並ぶ） */
+  .site-footer .footer-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* 各ULの中身を中央寄せ＆折り返し */
+  .site-footer .footer-nav .nav__list{
+    display: flex !important;  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 14px;  
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  /* .site-footer .nav .link--nav{
+    display: inline-flex;
+    align-items: center;
+    height: 20px; 
+  } */
+
+  /* クリックしやすく＆文字中央 */
+  .site-footer .footer-nav .link--nav{
+    display: block;
+    padding: .35rem .6rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
 
   .achievement-item2 .label {
     font-size: 0.9rem;
