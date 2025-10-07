@@ -2983,6 +2983,10 @@ nav.footer-nav .nav__list {
     font-size: 1rem; /* 全体を少し縮小 */
     line-height: 1.5;  /* 行間を少し広く */
   }
+  
+  .about-text p {
+    line-height: 2.0;  
+  }
 
   .about-text .section__subtitle2 {
     font-size: 1.05rem; /* 見出しも少しだけ小さく */
@@ -2996,11 +3000,8 @@ nav.footer-nav .nav__list {
     font-size: 1rem;
   }
   
-  /* .about-text p {
-    font-size: 0.9rem;   
-    line-height: 1.4;    
-  }
-
+  
+  /* 
   .about-text .lede {
     font-size: 1.1rem;    
     font-weight: 500;  
