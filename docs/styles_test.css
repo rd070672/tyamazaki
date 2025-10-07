@@ -2390,6 +2390,13 @@ nav.footer-nav .nav__list {
   padding: 0 8px;
 }
 
+/* 見出しとカードを “行全体” にする */
+.album .section__subtitle2,
+.album .section-card {
+  grid-column: 1 / -1;   /* すべての列を跨ぐ */
+  width: 100%;
+}
+
 @media (max-width: 960px){ .album{ column-count: 3; } }
 @media (max-width: 700px) { .album{ column-count: 2; } }
 @media (max-width: 520px) { .album{ column-count: 1; } }
@@ -2398,10 +2405,10 @@ nav.footer-nav .nav__list {
 .card{
   position: relative;
   overflow: hidden;
-  margin: 0 0 12px;
+  margin: 0 0 3px;
   break-inside: avoid;
   cursor: zoom-in;
-  border-radius: 6px;
+  /* border-radius: 6px; */
 }
 
 /* 通常の画像 */
@@ -2410,6 +2417,7 @@ nav.footer-nav .nav__list {
   height: auto;
   display: block;
   transition: transform .3s ease;
+  cursor: zoom-in;
 }
 
 /* ホバー時にうっすらズーム */
@@ -2425,6 +2433,7 @@ nav.footer-nav .nav__list {
   background: rgba(255,255,255,0.35); /* 白半透明 */
   opacity: 0;
   transition: opacity .3s ease;
+  pointer-events: none;   /* 重要！ */
 }
 
 /* ホバーしたときだけ表示 */
@@ -2485,10 +2494,10 @@ nav.footer-nav .nav__list {
   cursor: pointer;
 }
 
-/* カード画像に「拡大できる」雰囲気を */
-.card img {
+/* .card img {
   cursor: zoom-in;
-}
+} */
+
 /* 
 .modal{
   position: fixed;
