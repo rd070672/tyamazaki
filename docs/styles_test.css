@@ -2391,88 +2391,72 @@ nav.footer-nav .nav__list {
 
 /* ===== Album コンテナ ===== */
 .album {
-  max-width: 1200px;          /* いっぱいにしたいなら 100% / none に */
+  max-width: 1200px;
   width: 98%;
   margin: 0 auto;
   padding: 0;
 }
 
-/* 年見出し */
+/* 見出し */
 .album .section__subtitle2 {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--clr-primary);
-  margin: 2.5rem 0 1rem;
+  margin: 2.5rem 0 0;
 }
 
-/* ===== 画像グリッド ===== */
+/* ===== グリッド：4×N 固定、隙間ゼロ ===== */
 .album .section-card{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);   /* 基本は12列 */
-  gap: 6px;                                  /* 隙間を詰めたいなら 0〜6px */
-  grid-auto-flow: dense;                      /* 穴埋め */
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* ← 4列固定 */
+  gap: 0;                                           /* 隙間ゼロ（必要なら 6px 等に） */
+  grid-auto-flow: dense;                            /* 後詰めでズレを最小化 */
 }
 
-/* ===== カード：正方形タイル ===== */
+/* ===== 正方形タイル ===== */
 .card{
   position: relative;
-  aspect-ratio: 1 / 1;        /* 正方形 */
-  border-radius: 12px;         /* 角丸 */
-  overflow: hidden;            /* 角丸でクリップ */
-  margin: 0;
+  aspect-ratio: 1 / 1;   /* 全カードを正方形に */
+  border-radius: 12px;   /* 角丸 */
+  overflow: hidden;      /* 角丸に沿ってクリップ */
   cursor: zoom-in;
+  margin: 0;
 }
-
-/* 画像はタイルいっぱいに（トリミングOK） */
 .card img{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
-  display: block;
   transition: transform .3s ease;
 }
-.card:hover img{ transform: scale(1.02); }
+.card:hover img { transform: scale(1.02); }
 
-/* ホワイトオーバーレイ（クリックを妨げない） */
-.card::after{
-  content:"";
-  position:absolute; inset:0;
-  background: rgba(255,255,255,.35);
-  opacity:0; transition:opacity .3s ease;
-  pointer-events:none;
-}
-.card:hover::after{ opacity:1; }
+/* ===== 3サイズ：4列でぴったり割り切れる組み合わせ ===== */
+/* 4列時：S=1列、M=2列、L=4列 */
+.card--s { grid-column: span 1; }
+.card--m { grid-column: span 2; }
+.card--l { grid-column: span 4; }
 
-/* ===== 3サイズ（12列基準） ===== */
-.card--s{ grid-column: span 2; }
-.card--m{ grid-column: span 3; }
-.card--l{ grid-column: span 4; }
-
-/* ===== レスポンシブ：列数とスパンを“割り切れる”形に変更 ===== */
+/* ===== レスポンシブ ===== */
+/* 3列に落とす時は“割り切り”優先でスパンを再定義（隙間を出さない） */
 @media (max-width: 1000px){
-  .album .section-card{ grid-template-columns: repeat(9, 1fr); }
-  /* 9列では S=3, M=3, L=6 が相性◎（MはSと同幅に揃える） */
-  .card--s{ grid-column: span 2; }
-  .card--m{ grid-column: span 3; }  /* ←ここがポイント */
-  .card--l{ grid-column: span 4; }
+  .album .section-card{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .card--s { grid-column: span 1; }  /* 1/3幅 */
+  .card--m { grid-column: span 1; }  /* 3列で2は穴が出やすい→1に揃える */
+  .card--l { grid-column: span 3; }  /* 全幅 */
 }
 
+/* 2列時：S=1列、M=2列、L=2列（全て割り切れる） */
 @media (max-width: 700px){
-  .album .section-card{ grid-template-columns: repeat(6, 1fr); }
-  /* 6列では S=2, M=3, L=6 で割り切り */
-  .card--s{ grid-column: span 2; }
-  .card--m{ grid-column: span 3; }
-  .card--l{ grid-column: span 4; }
+  .album .section-card{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card--s { grid-column: span 1; }
+  .card--m { grid-column: span 2; }
+  .card--l { grid-column: span 2; }
 }
 
+/* 1列時：すべて全幅 */
 @media (max-width: 480px){
-  .album .section-card{ grid-template-columns: repeat(4, 1fr); }
-  /* 4列では S=2, M=2, L=4（Lは全幅） */
-  .card--s{ grid-column: span 2; }
-  .card--m{ grid-column: span 2; }
-  .card--l{ grid-column: span 4; }
+  .album .section-card{ grid-template-columns: 1fr; }
+  .card--s, .card--m, .card--l { grid-column: span 1; }
 }
 
 /* モーダルの土台（デフォルトは非表示） */
