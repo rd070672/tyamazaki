@@ -3053,8 +3053,8 @@ nav.footer-nav .nav__list {
 
   /* 地図を中央＆横幅を抑えて見やすく */
   .map-embed{
-    width: min(520px, 92vw);       /* 中央寄せしやすい幅。お好みで微調整 */
-    margin-inline: auto;           /* 横中央 */
+    width: min(520px, 92vw);
+    margin-inline: auto;
   }
 
   /* テキスト領域も幅を揃えたい場合（任意） */
@@ -3178,10 +3178,10 @@ nav.footer-nav .nav__list {
     font-size: 0.8rem;
     color: var(--clr-fg);
   }
-
+/* 
   .project2 {
   text-align: center;
-}
+} */
   
 }
 /* ############################################################# */
