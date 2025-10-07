@@ -3043,7 +3043,25 @@ nav.footer-nav .nav__list {
 
   /* #########################  access  ########################### */
 
-  #access .access-split{ grid-template-columns: 1fr; }
+  /* 2カラム→1カラムにして中央寄せ */
+  .access-split{
+    display: grid;                 /* すでにgridならそのままでOK */
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-items: center;         /* 子要素を中央に配置 */
+  }
+
+  /* 地図を中央＆横幅を抑えて見やすく */
+  .map-embed{
+    width: min(520px, 92vw);       /* 中央寄せしやすい幅。お好みで微調整 */
+    margin-inline: auto;           /* 横中央 */
+  }
+
+  /* テキスト領域も幅を揃えたい場合（任意） */
+  .access-text{
+    width: min(720px, 92vw);
+    margin-inline: auto;
+  }
 
 
   /* #########################  header  ########################### */
