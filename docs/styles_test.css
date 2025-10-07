@@ -2392,16 +2392,16 @@ nav.footer-nav .nav__list {
 /* ===== Album コンテナ ===== */
 .album {
   max-width: 960px;
-  width: 94%;
+  width: 98%;
   margin: 24px auto;
   padding: 0 8px;
 }
 
 /* 見出し（年） */
 .album .section__subtitle2 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--clr-primary, #0055a5);
+  color: var(--clr-primary);
   margin: 2.5rem 0 1rem;
 }
 
@@ -2429,7 +2429,7 @@ nav.footer-nav .nav__list {
 .album .section-card{
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12分割の基準グリッド */
-  gap: 12px;
+  gap: 6px;
   grid-auto-flow: dense; /* ← 取りこぼしの穴埋め（なるべく隙間を埋める） */
 }
 
@@ -2474,28 +2474,28 @@ nav.footer-nav .nav__list {
 
 /* ====== サイズ指定（S/M/L の3種） ====== */
 /* 12列基準で何列ぶんを占めるかを決める。高さは正方形なので自動で一致 */
-.card--s{ grid-column: span 3; }  /* 12分の3 → 1/4幅 */
-.card--m{ grid-column: span 4; }  /* 12分の4 → 1/3幅 */
-.card--l{ grid-column: span 6; }  /* 12分の6 → 1/2幅 */
+.card--s{ grid-column: span 2; }  /* 12分の3 → 1/4幅 */
+.card--m{ grid-column: span 3; }  /* 12分の4 → 1/3幅 */
+.card--l{ grid-column: span 4; }  /* 12分の6 → 1/2幅 */
 
 /* ====== レスポンシブ：列数を減らして自然に詰める ====== */
-@media (max-width: 1000px){
+@media (max-width: 900px){
   .album .section-card{ grid-template-columns: repeat(9, 1fr); }
-  .card--s{ grid-column: span 3; } /* 1/3幅 */
-  .card--m{ grid-column: span 4; } /* 4/9幅 ≒ 44% */
-  .card--l{ grid-column: span 6; } /* 2/3幅 */
+  .card--s{ grid-column: span 2; } /* 1/3幅 */
+  .card--m{ grid-column: span 3; } /* 4/9幅 ≒ 44% */
+  .card--l{ grid-column: span 3; } /* 2/3幅 */
 }
 @media (max-width: 700px){
   .album .section-card{ grid-template-columns: repeat(6, 1fr); }
-  .card--s{ grid-column: span 3; } /* 半幅 */
-  .card--m{ grid-column: span 4; } /* 2/3幅 */
-  .card--l{ grid-column: span 6; } /* 全幅 */
+  .card--s{ grid-column: span 2; } /* 半幅 */
+  .card--m{ grid-column: span 3; } /* 2/3幅 */
+  .card--l{ grid-column: span 3; } /* 全幅 */
 }
 @media (max-width: 480px){
   .album .section-card{ grid-template-columns: repeat(4, 1fr); }
-  .card--s{ grid-column: span 4; } /* すべて全幅にして縦並びでもOK */
-  .card--m{ grid-column: span 4; }
-  .card--l{ grid-column: span 4; }
+  .card--s{ grid-column: span 2; } /* すべて全幅にして縦並びでもOK */
+  .card--m{ grid-column: span 2; }
+  .card--l{ grid-column: span 2; }
 }
 
 /* モーダルの土台（デフォルトは非表示） */
