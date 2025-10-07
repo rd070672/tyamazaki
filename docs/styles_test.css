@@ -1865,28 +1865,27 @@ input[name="tab_item"] {
 }
 
 .about-text {
-  font-size: 1rem; /* 全体のベース */
+  font-size: 1rem;
+}
+
+.about-text p{
   line-height: 1.4;
 }
 
 .about-text .section__subtitle2 {
+  font-size: 1.1rem;
   font-weight: 600;
-  font-size: 1.2rem;
 }
 
 .about-text .lede{
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 .about-text .description7 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
+
 /* 
-.about-text p{
-  line-height: 1.4;
-  margin: .8em 0;
-  font-size: 0.9rem;
-}
 .about-text .lede{
   font-size: 1.05rem;
   font-weight: 600;
