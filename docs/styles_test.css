@@ -2391,13 +2391,13 @@ nav.footer-nav .nav__list {
 
 /* ===== Album コンテナ ===== */
 .album {
-  max-width: 960px;
+  max-width: 1200px;          /* いっぱいにしたいなら 100% / none に */
   width: 98%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
-/* 見出し（年） */
+/* 年見出し */
 .album .section__subtitle2 {
   font-size: 1.4rem;
   font-weight: 700;
@@ -2405,34 +2405,25 @@ nav.footer-nav .nav__list {
   margin: 2.5rem 0 1rem;
 }
 
-/* ===== アルバムの画像グリッド ===== */
+/* ===== 画像グリッド ===== */
 .album .section-card{
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12分割の基準グリッド */
-  gap: 6px;
-  grid-auto-flow: dense; /* ← 取りこぼしの穴埋め（なるべく隙間を埋める） */
+  grid-template-columns: repeat(12, 1fr);   /* 基本は12列 */
+  gap: 6px;                                  /* 隙間を詰めたいなら 0〜6px */
+  grid-auto-flow: dense;                      /* 穴埋め */
 }
 
-/* 各カードは正方形タイル化（中身はpositionで全面に） */
+/* ===== カード：正方形タイル ===== */
 .card{
   position: relative;
-  aspect-ratio: 1 / 1;      /* 正方形に固定（ブラウザが対応していればこれでOK） */
-  border-radius: 12px;       /* 角丸 */
-  overflow: hidden;          /* 角丸に沿って画像をクリップ */
-  margin: 0;                 /* 行間の隙間要因を消す */
+  aspect-ratio: 1 / 1;        /* 正方形 */
+  border-radius: 12px;         /* 角丸 */
+  overflow: hidden;            /* 角丸でクリップ */
+  margin: 0;
   cursor: zoom-in;
 }
 
-/* 正方形の内側ラッパ：幅に応じた高さを作る */
-.card__square{
-  position: relative;
-  width: 100%;
-  padding-top: 100%;              /* ← これで正方形になる */
-  border-radius: 10px;
-  box-shadow: var(--shadow, 0 2px 8px rgba(0,0,0,.08));
-}
-
-/* 画像は正方形領域いっぱいにトリミング表示 */
+/* 画像はタイルいっぱいに（トリミングOK） */
 .card img{
   position: absolute;
   inset: 0;
@@ -2444,7 +2435,7 @@ nav.footer-nav .nav__list {
 }
 .card:hover img{ transform: scale(1.02); }
 
-/* 白オーバーレイ（クリックは透過） */
+/* ホワイトオーバーレイ（クリックを妨げない） */
 .card::after{
   content:"";
   position:absolute; inset:0;
@@ -2454,30 +2445,34 @@ nav.footer-nav .nav__list {
 }
 .card:hover::after{ opacity:1; }
 
-/* ====== サイズ指定（S/M/L の3種） ====== */
-/* 12列基準で何列ぶんを占めるかを決める。高さは正方形なので自動で一致 */
-.card--s{ grid-column: span 2; }  /* 12分の3 → 1/4幅 */
-.card--m{ grid-column: span 3; }  /* 12分の4 → 1/3幅 */
-.card--l{ grid-column: span 4; }  /* 12分の6 → 1/2幅 */
+/* ===== 3サイズ（12列基準） ===== */
+.card--s{ grid-column: span 2; }
+.card--m{ grid-column: span 3; }
+.card--l{ grid-column: span 4; }
 
-/* ====== レスポンシブ：列数を減らして自然に詰める ====== */
-@media (max-width: 900px){
+/* ===== レスポンシブ：列数とスパンを“割り切れる”形に変更 ===== */
+@media (max-width: 1000px){
   .album .section-card{ grid-template-columns: repeat(9, 1fr); }
-  .card--s{ grid-column: span 2; } /* 1/3幅 */
-  .card--m{ grid-column: span 3; } /* 4/9幅 ≒ 44% */
-  .card--l{ grid-column: span 3; } /* 2/3幅 */
+  /* 9列では S=3, M=3, L=6 が相性◎（MはSと同幅に揃える） */
+  .card--s{ grid-column: span 2; }
+  .card--m{ grid-column: span 3; }  /* ←ここがポイント */
+  .card--l{ grid-column: span 4; }
 }
+
 @media (max-width: 700px){
   .album .section-card{ grid-template-columns: repeat(6, 1fr); }
-  .card--s{ grid-column: span 2; } /* 半幅 */
-  .card--m{ grid-column: span 3; } /* 2/3幅 */
-  .card--l{ grid-column: span 3; } /* 全幅 */
+  /* 6列では S=2, M=3, L=6 で割り切り */
+  .card--s{ grid-column: span 2; }
+  .card--m{ grid-column: span 3; }
+  .card--l{ grid-column: span 4; }
 }
+
 @media (max-width: 480px){
   .album .section-card{ grid-template-columns: repeat(4, 1fr); }
-  .card--s{ grid-column: span 2; } /* すべて全幅にして縦並びでもOK */
+  /* 4列では S=2, M=2, L=4（Lは全幅） */
+  .card--s{ grid-column: span 2; }
   .card--m{ grid-column: span 2; }
-  .card--l{ grid-column: span 2; }
+  .card--l{ grid-column: span 4; }
 }
 
 /* モーダルの土台（デフォルトは非表示） */
