@@ -786,7 +786,7 @@ main {
   background-color: var(--clr-bg);
   /* opacity: 0.8; */
   box-shadow: 0 0 6px var(--shadow);
-  max-width: 960px; /*900px;*/
+  max-width: 960px;
   overflow: auto;
   height: 600px;
   position: relative;
@@ -2165,7 +2165,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
 
 /* レスポンシブ：モバイルで余白調整 */
-@media (max-width: 640px){
+@media (max-width: 600px){
   .pub-item{ grid-template-columns: 36px 1fr; gap: 12px; }
   .pub-item .number{ width: 36px; height: 36px; min-width: 36px; }
   .pub-count{ margin-top: 8px; }
@@ -2384,7 +2384,7 @@ nav.footer-nav .nav__list {
 
 /* コンテナ */
 .album {
-  max-width: 1200px;   /* 画面いっぱいにしたいなら none / 100% に */
+  max-width: 960px;   /* 画面いっぱいにしたいなら none / 100% に */
   width: 98%;
   margin: 0 auto;
   padding: 0;
@@ -2453,7 +2453,7 @@ nav.footer-nav .nav__list {
 /* 中身のレイアウト */
 .modal__content {
   position: relative;
-  max-width: min(1000px, 95vw);
+  max-width: min(960px, 95vw);
   max-height: 90vh;
   padding-bottom: calc(6px + env(safe-area-inset-bottom));
 }
