@@ -1939,6 +1939,24 @@ input[name="tab_item"] {
   margin-left: 6px;
 }
 
+.achievement-item2 .label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-fg); /* テキスト基本色 */
+}
+
+.achievement-item2 .count {
+  font-size: 0.9rem;
+  color: var(--clr-fg);
+}
+
+.achievement-item2 .count strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clr-primary); /* 数値をテーマカラーで強調 */
+  margin-left: 6px;
+}
+
 .achievement-cta {
   display: block;
   margin: 20px auto;
@@ -3176,13 +3194,13 @@ nav.footer-nav .nav__list {
     height: 40px; 
   }
 
-.achievement-item .label {
+.achievement-item2 .label {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--clr-fg); /* テキスト基本色 */
 }
 
-.achievement-item .count {
+.achievement-item2 .count {
   font-size: 0.8rem;
   color: var(--clr-fg);
 }
