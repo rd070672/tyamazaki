@@ -1939,6 +1939,15 @@ input[name="tab_item"] {
   margin-left: 6px;
 }
 
+.achievement-item2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 0.5px solid var(--footer-fg);
+  border-bottom: 0.5px solid var(--footer-fg);
+}
+
 .achievement-item2 .label {
   font-size: 1.1rem;
   font-weight: 600;
@@ -1947,15 +1956,15 @@ input[name="tab_item"] {
 
 .achievement-item2 .count {
   font-size: 0.9rem;
-  color: var(--clr-fg);
+  color: var(--clr-primary);
 }
 
-.achievement-item2 .count strong {
+/* .achievement-item2 .count strong {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--clr-primary); /* 数値をテーマカラーで強調 */
+  color: var(--clr-primary);
   margin-left: 6px;
-}
+} */
 
 .achievement-cta {
   display: block;
@@ -2054,15 +2063,6 @@ input[name="tab_item"] {
   border-top: 0.5px solid var(--footer-fg);
   border-bottom: 0.5px solid var(--footer-fg);
   line-height: 1.8;
-}
-
-.achievement-item2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 0;
-  border-top: 0.5px solid var(--footer-fg);
-  border-bottom: 0.5px solid var(--footer-fg);
 }
 
 .paper-item + .paper-item { border-top: none; }
@@ -3195,8 +3195,7 @@ nav.footer-nav .nav__list {
 
 .achievement-item2 .label {
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--clr-fg); /* テキスト基本色 */
+  color: var(--clr-fg);
 }
 
 .achievement-item2 .count {
