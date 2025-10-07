@@ -103,41 +103,32 @@
       const modalImg = document.getElementById('modalImg');
       const modalCap = document.getElementById('modalCap');
 
-      // data-full があれば高解像度に差し替え、無ければそのまま
-      const largeSrc = imgEl.dataset.full || imgEl.src;
-      modalImg.src = largeSrc;
+      modalImg.src = imgEl.dataset.full || imgEl.src;
 
       const card = imgEl.closest('.card');
-      modalCap.textContent = card?.dataset?.caption || imgEl.alt || '';
+      const title = card?.dataset?.title || card?.dataset?.caption || imgEl.alt || '';
+      const note  = card?.dataset?.note  || '';
+
+      // キャプションを2行で描画
+      modalCap.innerHTML = '';
+      if (title){
+        const t = document.createElement('div');
+        t.className = 'cap-title';
+        t.textContent = title;
+        modalCap.appendChild(t);
+      }
+      if (note){
+        const n = document.createElement('div');
+        n.className = 'cap-note';
+        n.textContent = note;
+        modalCap.appendChild(n);
+      }
 
       modal.classList.add('is-open');
-      // 背景スクロールを止める（任意）
       document.body.style.overflow = 'hidden';
     }
-
-    function closeModal(ev){
-      const modal = document.getElementById('albumModal');
-      if (
-        ev.target.id === 'albumModal' ||
-        ev.currentTarget.classList.contains('modal__close') ||
-        ev.target.classList.contains('modal__close')
-      ){
-        modal.classList.remove('is-open');
-        document.body.style.overflow = '';
-      }
-    }
-
-    // ESCキーで閉じる（任意）
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        const modal = document.getElementById('albumModal');
-        if (modal.classList.contains('is-open')) {
-          modal.classList.remove('is-open');
-          document.body.style.overflow = '';
-        }
-      }
-    });
   </script>
+
   </head>
 
   <body class="light" id="top">
