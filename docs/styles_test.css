@@ -1859,6 +1859,14 @@ input[name="tab_item"] {
   margin: 3em 1em 1em; 
 }
 
+.section-card3{
+  background-color: rgba(255,255,255,0); /* 完全透明 */
+  background: rgba(255,255,255,0); /* 完全透明 */
+  padding: 0px;
+  letter-spacing: 0.02em; 
+  margin: 0; 
+}
+
 .section-divider::before{ background: var(--clr-primary); }
 
 /* About 2カラム */
