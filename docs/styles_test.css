@@ -1872,7 +1872,7 @@ input[name="tab_item"] {
   background: rgba(255,255,255,0); /* 完全透明 */
   padding: 0px;
   letter-spacing: 0.02em; 
-  margin: 3em 1em 1em; 
+  margin: 1.5em 1em 1em; 
 }
 
 .section-card3{
@@ -2245,18 +2245,20 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;       /* ← 少し縦長（横:縦 = 4:5） */
+  display: grid;
+  place-items: center;
   /* fallback用の高さ確保（古いブラウザ向け） */
-  --fallback-ar: 125%;        /* 4:5 → 1/(4/5)=1.25 → 125% */
+  /* --fallback-ar: 125%; */
 }
 
 /* fallback: aspect-ratio未対応ブラウザ */
-@supports not (aspect-ratio: 1 / 1) {
+/* @supports not (aspect-ratio: 1 / 1) {
   .map-embed::before{
     content: "";
     display: block;
-    padding-top: var(--fallback-ar); /* 125%で縦長に */
+    padding-top: var(--fallback-ar);
   }
-}
+} */
 
 .map-embed iframe{
   position: absolute;
@@ -2442,7 +2444,7 @@ nav.footer-nav .nav__list {
 .album .section-card2{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr)); /* ← 4列 */
-  gap: 8px;  /* 隙間ゼロにしたいなら 0 に */
+  gap: 6px;  /* 隙間ゼロにしたいなら 0 に */
 }
 
 /* 全カード同じサイズ（正方形） */
@@ -2479,7 +2481,7 @@ nav.footer-nav .nav__list {
 
 @media (max-width: 900px){ .album .section-card2{ grid-template-columns: repeat(3,1fr); } }
 @media (max-width: 640px){ .album .section-card2{ grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 420px){ .album .section-card2{ grid-template-columns: 1fr; } }
+@media (max-width: 300px){ .album .section-card2{ grid-template-columns: 1fr; } }
 
 /* モーダルの土台（デフォルトは非表示） */
 .modal {
