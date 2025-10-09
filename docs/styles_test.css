@@ -1900,8 +1900,8 @@ input[name="tab_item"] {
 }
 
 .about-text p{
-  line-height: 1.9;
   margin-bottom: 1.2em;
+  line-height: 1.6;
 }
 
 .about-text .section__subtitle2 {
