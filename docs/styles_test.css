@@ -1895,7 +1895,7 @@ input[name="tab_item"] {
 
 .about-text {
   font-size: 1rem;
-  margin: 0 1rem; 
+  margin: 0 0.6rem; 
 }
 
 .about-text p{
@@ -2115,9 +2115,9 @@ input[name="tab_item"] {
 
 .paper-desc {
   font-size: 1.1rem;
-  margin: 0.4em 0.2em 0; /* 上右下左 */
+  margin: 0; /* 上右下左 */
   text-align: left;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 /* プロフィールリンク */
