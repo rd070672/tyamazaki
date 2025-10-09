@@ -1780,7 +1780,7 @@ input[name="tab_item"] {
   content:"";
   position:absolute;
   left:0; right:0; top:0;
-  height:3px;
+  height:1px;
   background: var(--clr-primary);
   border-radius: 3px;
 }
@@ -1795,6 +1795,7 @@ input[name="tab_item"] {
   content:"";
   position:absolute;
   left:0; right:0; top:0;
+  height:0.5px;
   background: var(--clr-primary);
   border-radius: 3px;
 }
