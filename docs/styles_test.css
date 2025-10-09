@@ -1905,7 +1905,7 @@ input[name="tab_item"] {
 }
 
 .about-text .section__subtitle2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1.2em;
 }
@@ -2972,7 +2972,7 @@ nav.footer-nav .nav__list {
 
   .lab-title h3 {
     margin: 0;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 1.4;
     color: var(--clr-primary);
   }
@@ -3234,8 +3234,8 @@ nav.footer-nav .nav__list {
   }
 
   .section-head .eyebrow {
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
+    font-size: 1.4rem;
+    /* letter-spacing: 0.05em; */
   }
 
   .section-head .title {
