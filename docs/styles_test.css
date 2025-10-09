@@ -1911,9 +1911,10 @@ input[name="tab_item"] {
 }
 
 .about-text .section__subtitle2 .num{
+  font-size: 1.2rem;
   color: var(--clr-primary);
-  font-weight: 700;      /* お好みで */
-  margin-right: .25em;   /* 文字との間隔 */
+  font-weight: 700;   
+  margin-bottom: .5em;
 }
 
 .about-text .lede{
@@ -1930,10 +1931,8 @@ input[name="tab_item"] {
   width: 100%;
   aspect-ratio: 1 / 1;     /* お好みの比率。例: 1/1, 4/3 など */
   margin: 0;
-  /* 枠いっぱいに置きたいなら角丸や影は子に。親に欲しければここに */
 }
 
-/* 中の画像を 90% サイズで “ど真ん中” に */
 .about-figure img{
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;  /* = inset: 0 */
@@ -1945,17 +1944,6 @@ input[name="tab_item"] {
   box-shadow: var(--shadow);
   display: block;
 }
-
-/* .about-figure img{
-  width: 90%;
-  height: 90%;
-  aspect-ratio: 1/1;      
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  display: block;
-  margin: 0 auto;
-} */
 
 .achievement-list {
   list-style: none;
@@ -2009,13 +1997,6 @@ input[name="tab_item"] {
   color: var(--clr-primary);
 }
 
-/* .achievement-item2 .count strong {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--clr-primary);
-  margin-left: 6px;
-} */
-
 .achievement-cta {
   display: block;
   margin: 20px auto;
@@ -2058,8 +2039,8 @@ input[name="tab_item"] {
   transform: scale(0.97);
 }
 
-/* #########################  member  ########################### */
 
+/* #########################  member  ########################### */
 .member-list {
   list-style: none;
   margin: 0;
@@ -2068,7 +2049,7 @@ input[name="tab_item"] {
 
 .member-item {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr; /* 左:役職/学年/年度, 中央:氏名, 右:アドレスor就職先 */
+  grid-template-columns: 1fr 2fr 2fr;
   gap: 12px;
   align-items: center;
   text-align: center;
@@ -2216,22 +2197,6 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .pub-title{ margin: 0 0 6px; font-style: italic; }
 .pub-journal{ margin: 0 0 6px; }
 .pub-notes{ margin: 4px 0 0; font-size: .92rem; }
-
-/* レスポンシブ：モバイルで余白調整 */
-@media (max-width: 600px){
-  .pub-item{ 
-    grid-template-columns: 36px 1fr; gap: 12px; 
-  }
-  .pub-item .number{ 
-    width: 36px; height: 36px; min-width: 36px; 
-  }
-  .pub-count{ 
-    margin-top: 8px; font-size: 0.9rem;
-  }
-  .pub-count strong{ 
-    font-size: 1rem;
-  }
-}
 
 /* ==== Access 2カラム ==== */
 .access-split{
@@ -2951,6 +2916,20 @@ nav.footer-nav .nav__list {
   .image-container2:hover .overlay {
     opacity: 1;
     height: 30%;
+  }
+
+  /* #########################  pub  ########################### */
+  .pub-item{ 
+    grid-template-columns: 36px 1fr; gap: 12px; 
+  }
+  .pub-item .number{ 
+    width: 36px; height: 36px; min-width: 36px; 
+  }
+  .pub-count{ 
+    margin-top: 8px; font-size: 0.9rem;
+  }
+  .pub-count strong{ 
+    font-size: 1rem;
   }
 
   /* #########################  section  ########################### */
