@@ -31,7 +31,7 @@ body {
   --clr-bg-alt: #fff;
   --clr-fg: #555;
   --clr-fg-alt: #444;
-  --clr-primary: #0063ad;
+  --clr-primary: #33B9BC; /* YNU blue #0063ad */
   --shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
 }
 
