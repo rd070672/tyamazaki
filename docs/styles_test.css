@@ -755,11 +755,11 @@ i.fas.fa-external-link-alt{
   display:flex;
   align-items:center;              /* 縦中央 */
   justify-content:space-between;   /* 左: ラボ名 / 右: ナビ */
-  gap: 16px;                       /* ラボ名とナビの間 */
+  gap: 12px;                       /* ラボ名とナビの間 */
   max-width: 960px;
   width: 95%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .header.center{
@@ -2968,12 +2968,11 @@ nav.footer-nav .nav__list {
 
   .lab-title {
     margin: 20px 0 10px 0;
-    /* padding: 20px 0; */
   }
 
   .lab-title h3 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.4;
     color: var(--clr-primary);
   }
@@ -3194,8 +3193,12 @@ nav.footer-nav .nav__list {
   }
 
   /* #########################  header  ########################### */
-
+  
   .header{ position:relative; z-index:2000; }
+
+  .header{
+    padding: 50px 0;
+  }
   .nav{ position:relative; z-index:2001; }
   .nav__hamburger{ z-index:2002; }
 
