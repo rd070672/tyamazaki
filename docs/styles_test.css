@@ -1771,6 +1771,21 @@ input[name="tab_item"] {
 .tag--hire    { background:#6a1b9a; }  /* 募集（濃紫） */
 
 /* ===== セクションの境界ライン（primary） ===== */
+.section-divider0{
+  position: relative;
+  margin-top: 32px;          /* 上 との余白 */
+  padding-top: 32px;         /* ラインから本文までの余白 */
+}
+.section-divider0::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:0px;
+  background: var(--clr-primary);
+  border-radius: 3px;
+}
+
+
 .section-divider{
   position: relative;
   margin-top: 62px;          /* 上 との余白 */
