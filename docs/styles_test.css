@@ -1838,12 +1838,13 @@ input[name="tab_item"] {
   margin-bottom: 10px;
 }
 .section-head .eyebrow{
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--clr-primary);
-  margin: 0;
+  margin: 0 0 10px;
   line-height: 1;          /* 余白をなくす */
 }
+
 .section-head .title{
   margin: 0;
   font-size: 16px;
@@ -2249,7 +2250,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 /* 右テキストの読みやすさ */
 .access-text .section__subtitle2{
   margin: 0 0 .6em;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--clr-fg);
   font-weight: 600;
 }
@@ -2677,7 +2678,7 @@ nav.footer-nav .nav__list {
   border-color: color-mix(in oklab, var(--clr-primary) 85%, black);
 }
 
-.section-head .eyebrow{ margin: 0 0 10px; }
+
 
 .album .section__subtitle2 {
   font-size: 1.3em;
