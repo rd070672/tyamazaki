@@ -583,6 +583,12 @@ i.fas.fa-external-link-alt{
   color: #fff;                          /* 文字色を白に */
 }
 
+.link--nav.active {
+  background-color: var(--clr-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
 .link--nav2 {
   color: var(--clr-fg-alt);
   font-weight: 400;
