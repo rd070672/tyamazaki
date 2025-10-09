@@ -2227,7 +2227,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 /* 右テキストの読みやすさ */
 .access-text .section__subtitle2{
-  margin: .4em 0 .2em;
+  margin: 0 0 .6em;
   font-size: 1.4rem;
   color: var(--clr-fg);
   font-weight: 600;
