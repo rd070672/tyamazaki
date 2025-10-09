@@ -2041,7 +2041,7 @@ input[name="tab_item"] {
 
 
 /* #########################  member  ########################### */
-.member-list {
+/* .member-list {
   list-style: none;
   margin: 0;
   padding: 0 20px;
@@ -2062,26 +2062,88 @@ input[name="tab_item"] {
   color: var(--clr-fg);
 }
 
-/* 氏名は少し太字 */
 .member-name {
   font-weight: 400;
 }
 
-/* アドレスや就職先はやや小さめ */
 .member-email, .member-job {
   font-size: 0.8rem;
   color: var(--clr-fg-alt);
 }
 
-/* レスポンシブ：モバイルでは縦積み */
 @media (max-width: 600px) {
   .member-item {
-    grid-template-columns: 1fr; /* 1列表示に切替 */
+    grid-template-columns: 1fr; 
     text-align: left;
   }
   .member-item span {
     padding: 2px 0;
   }
+} */
+
+/* ===== 共通：カードの見た目 ===== */
+.member-grid{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  display: grid;
+}
+
+.member-card{
+  display: flex;
+  flex-direction: column;   /* 縦に「写真→役職→氏名→アドレス」 */
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 14px 10px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* 正方形の画像を揃える */
+.member-img{
+  width: 140px;             /* 統一サイズ（お好みで） */
+  aspect-ratio: 1 / 1;      /* 正方形 */
+  overflow: hidden;
+  border-radius: 10px;      /* 角丸（不要なら0） */
+  box-shadow: var(--shadow, 0 2px 6px rgba(0,0,0,.08));
+}
+.member-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* トリミングして正方形にフィット */
+  display: block;
+}
+
+/* 文字サイズ */
+.member-position{ font-size: .95rem; color: var(--clr-fg); }
+.member-name    { font-weight: 600;  font-size: 1rem; }
+.member-email   { font-size: .85rem; color: var(--clr-fg-alt); }
+
+/* ===== 列数：Staff=2列 / Students=3列 ===== */
+.member-grid.staff{
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+}
+.member-grid.students{
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+/* ===== レスポンシブ ===== */
+/* 900px未満で Students を 2列に */
+@media (max-width: 600px){
+  .member-grid.students{
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+/* 600px未満で両方とも 1列に */
+@media (max-width: 400px){
+  .member-grid.staff,
+  .member-grid.students{
+    grid-template-columns: 1fr;
+  }
+  .member-img{ width: 120px; } /* モバイルは少し小さめに */
 }
 
 /* #########################  paper  ########################### */
