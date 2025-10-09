@@ -1932,7 +1932,8 @@ input[name="tab_item"] {
   object-fit: cover;
   border-radius: 12px;
   box-shadow: var(--shadow);
-  display: block;
+  /* display: block; */
+  margin: 0, auto;
 }
 
 .achievement-list {
