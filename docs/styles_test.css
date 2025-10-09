@@ -1933,7 +1933,7 @@ input[name="tab_item"] {
   border-radius: 12px;
   box-shadow: var(--shadow);
   /* display: block; */
-  margin: 0, auto;
+  margin: 0 auto;
 }
 
 .achievement-list {
