@@ -2093,15 +2093,15 @@ input[name="tab_item"] {
 }
 
 .member-desc2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.15em; /* 上右下左 */
+  margin-top: 0.15em; /* 上右下左 */
   text-align: left;
   line-height: 1.2;
 }
 
 .member-bar{
-  padding: 14px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
