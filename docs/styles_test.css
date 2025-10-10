@@ -2036,6 +2036,16 @@ input[name="tab_item"] {
   align-items: start;
 }
 
+.member-text {
+  font-size: 1rem;
+  margin: 0 0.3rem; 
+}
+
+.member-text p{
+  margin-bottom: 0.3em;
+  line-height: 1.6;
+}
+
 .member-grid{
   list-style: none;
   margin: 0;
