@@ -2214,7 +2214,6 @@ input[name="tab_item"] {
   z-index: 0;
 }
 
-
 .blog_item {
   width: 100px;
   height: 40px;
@@ -2281,14 +2280,15 @@ input[name="blog_item"] {
 /* サムネイル：横長で統一（お好みで 4/3, 16/9） */
 .post__thumb{
   margin: 0;
-  border-radius: 10px;
+  border-radius: 30px;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   background: var(--shadow);
 }
 .post__thumb img{
   width: 100%;
   height: 100%;
+  border-radius: 30px;
   object-fit: cover;
   display: block;
   transition: transform .35s ease;
@@ -2318,19 +2318,19 @@ input[name="blog_item"] {
 /* タイトル（強調色） */
 .post__title{
   margin: 0;
-  font-size: clamp(1.02rem, 1.2vw + .6rem, 1.25rem);
+  font-size: 1rem;
   line-height: 1.4;
   color: var(--brand);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .post__excerpt {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin: 0;
   color: var(--bg);
   opacity: .9;
-  line-height: 1.7;
-  max-height: calc(1.7em * 3);
+  line-height: 1.3;
+  max-height: calc(1.4em * 3);
   overflow: hidden;
   position: relative;
 }
@@ -2339,7 +2339,7 @@ input[name="blog_item"] {
   content: "";
   position: absolute;
   bottom: 0; right: 0; left: 0;
-  height: 1.2em;
+  height: 1.4em;
   background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
 }
 
