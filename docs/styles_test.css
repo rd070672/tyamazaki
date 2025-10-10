@@ -1889,7 +1889,7 @@ input[name="tab_item"] {
 }
 
 .about-text .section__subtitle2 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1.2em;
 }
@@ -2087,13 +2087,21 @@ input[name="tab_item"] {
 
 .member-desc {
   font-size: 1rem;
-  margin-bottom: 0.3em; /* 上右下左 */
+  margin-bottom: 0.15em; /* 上右下左 */
+  text-align: left;
+  line-height: 1.2;
+}
+
+.member-desc2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.15em; /* 上右下左 */
   text-align: left;
   line-height: 1.2;
 }
 
 .member-bar{
-  padding: 18px 0;
+  padding: 14px 0;
   border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
