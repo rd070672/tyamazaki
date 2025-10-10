@@ -124,6 +124,10 @@ button {
   font-weight: bold;
 }
 
+.primary {
+  color: var(--clr-primary);
+}
+
 /*===============
   bar  
   ===============*/
@@ -2121,7 +2125,7 @@ input[name="tab_item"] {
 
 .member-desc {
   font-size: 1rem;
-  margin-top: 0.3em; /* 上右下左 */
+  margin-top: 0.1em; /* 上右下左 */
   text-align: left;
   /* line-height: 0.5; */
 }
@@ -2129,7 +2133,7 @@ input[name="tab_item"] {
 .member-desc2 {
   font-size: 1rem;
   font-weight: 600;
-  margin-top: 0.5em; /* 上右下左 */
+  margin-top: 0.3em; /* 上右下左 */
   text-align: left;
   /* line-height: 1.2; */
 }
