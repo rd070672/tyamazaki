@@ -2133,7 +2133,7 @@ input[name="tab_item"] {
 
 /* ===== 列数：Staff=2列 / Students=3列 ===== */
 .member-grid.staff{
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
 }
 .member-grid.students{
   grid-template-columns: repeat(3, minmax(200px, 1fr));
