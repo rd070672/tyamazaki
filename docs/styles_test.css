@@ -2046,6 +2046,12 @@ input[name="tab_item"] {
   line-height: 1.6;
 }
 
+.member-text .section__subtitle2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
 .member-grid{
   list-style: none;
   margin: 0;
