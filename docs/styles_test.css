@@ -2107,7 +2107,7 @@ input[name="tab_item"] {
 }
 
 /* 文字サイズ */
-.member-position{ font-size: .95rem; color: var(--clr-fg); }
+.member-position{ font-size: .95rem; color: var(--clr-primary); }
 .member-name    { font-weight: 600;  font-size: 1rem; }
 .member-email   { font-size: .85rem; color: var(--clr-fg-alt); }
 
