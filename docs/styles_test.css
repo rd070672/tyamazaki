@@ -2270,16 +2270,22 @@ input[name="tab_item"] {
   font-weight: 700;
 }
 
-/* 抜粋文（3行で省略） */
-.post__excerpt{
+.post__excerpt {
   margin: 0;
-  color: var(--fg);
+  color: var(--bg);
   opacity: .9;
   line-height: 1.7;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  max-height: calc(1.7em * 3);
   overflow: hidden;
+  position: relative;
+}
+
+.post__excerpt::after {
+  content: "";
+  position: absolute;
+  bottom: 0; right: 0; left: 0;
+  height: 1.2em;  /* フェードの高さ */
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
 }
 
 /* ------- レスポンシブ ------- */
@@ -2298,6 +2304,42 @@ input[name="tab_item"] {
     aspect-ratio: 16 / 9;   /* スマホはよりワイドに */
   }
 }
+
+/* 汎用バッジ */
+.post__category {
+  --cat-color: var(--clr-primary);           /* 既定色（サイトの基調色） */
+  display: inline-block;
+  padding: .28rem .6rem;
+  border-radius: 9999px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: #fff;
+  background: var(--cat-color);
+  line-height: 1;
+  user-select: none;
+  text-decoration: none;
+  transition: filter .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.post__category:hover { filter: brightness(.95); }
+.post__category:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(51,185,188,.35);
+}
+
+/* クラス指定で選ぶ場合 */
+.cat-research   { --cat-color: #33B9BC; } /* Research / Teal */
+.cat-award      { --cat-color: #10B981; } /* Award / Emerald */
+.cat-event      { --cat-color: #F59E0B; } /* Event / Amber */
+.cat-publication{ --cat-color: #5468FF; } /* Publication / Indigo */
+.cat-media      { --cat-color: #EF436B; } /* Media / Rose */
+
+/* data-cat="…" でも選べます（クラス不要の書き方が好きな方向け） */
+.post__category[data-cat="research"]    { --cat-color:#33B9BC; }
+.post__category[data-cat="award"]       { --cat-color:#10B981; }
+.post__category[data-cat="event"]       { --cat-color:#F59E0B; }
+.post__category[data-cat="publication"] { --cat-color:#5468FF; }
+.post__category[data-cat="media"]       { --cat-color:#EF436B; }
 
 /* #########################  paper  ########################### */
 .paper-item {
