@@ -2085,11 +2085,16 @@ input[name="tab_item"] {
   grid-template-columns: repeat(3, minmax(200px, 1fr));
 }
 
-.member-desp {
-  font-size: 0.9rem;
+.member-desc {
+  font-size: 1rem;
   margin-bottom: 0.3em; /* 上右下左 */
   text-align: left;
   line-height: 1.2;
+}
+
+.member-bar{
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
 /* ===== レスポンシブ ===== */
