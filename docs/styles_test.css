@@ -2024,6 +2024,14 @@ input[name="tab_item"] {
 }
 
 /* ===== 共通：カードの見た目 ===== */
+
+.member-split{
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;   /* 左=文章 / 右=画像 */
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+}
+
 .member-grid{
   list-style: none;
   margin: 0;
