@@ -2038,11 +2038,11 @@ input[name="tab_item"] {
 
 /* 正方形の画像を揃える */
 .member-img{
-  width: 140px;             /* 統一サイズ（お好みで） */
+  width: 200px;             /* 統一サイズ（お好みで） */
   aspect-ratio: 1 / 1;      /* 正方形 */
   overflow: hidden;
   border-radius: 10px;      /* 角丸（不要なら0） */
-  box-shadow: var(--shadow, 0 2px 6px rgba(0,0,0,.08));
+  /* box-shadow: var(--shadow, 0 2px 6px rgba(0,0,0,.08)); */
 }
 .member-img img{
   width: 100%;
@@ -2058,7 +2058,7 @@ input[name="tab_item"] {
 
 /* ===== 列数：Staff=2列 / Students=3列 ===== */
 .member-grid.staff{
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
 }
 .member-grid.students{
   grid-template-columns: repeat(3, minmax(200px, 1fr));
