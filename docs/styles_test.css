@@ -33,6 +33,7 @@ body {
   --clr-fg-alt: #444;
   --clr-primary: #33B9BC; /* YNU blue #0063ad */
   --shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
+  --shadow-dark: rgba(100, 100, 100, 0.8) 0px 7px 29px 0px;
 }
 
 .dark {
@@ -41,8 +42,9 @@ body {
   --clr-fg: #dbdbe8;
   --clr-fg-alt: #e9e9ff;
   --clr-primary: #18b41d;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  --shadow-dark: rgba(100, 100, 100, 0.8) 0px 7px 29px 0px;
+    /* rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
 }
 
 ::-moz-selection {
@@ -122,6 +124,10 @@ button {
 }
 .bold {
   font-weight: bold;
+}
+
+.primary {
+  color: var(--clr-);
 }
 
 .primary {
@@ -1603,7 +1609,7 @@ input[name="tab_item"] {
   font-weight: 600;
   letter-spacing: .02em;
   color: #fff;
-  text-shadow: 0 3px 8px rgba(0,0,0,.55);
+  text-shadow: 0 3px 8px var(--shadow);
 }
 .hero__desc {
   margin: 0;
@@ -1677,14 +1683,14 @@ input[name="tab_item"] {
   text-decoration: none;
   white-space: nowrap;
   background: linear-gradient(135deg, #2070B6 0%, #33B9BC 100%); /* #33B9BC, #18b41d */
-  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+  box-shadow: 0 6px 14px var(--shadow);
   transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
 }
 
 .hero__cta:hover,
 .hero__cta:focus{
   transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+  box-shadow: 0 10px 22px var(--shadow);
   filter: brightness(1.05);
   outline: none;
 }
@@ -2173,6 +2179,124 @@ input[name="tab_item"] {
     grid-template-columns: 1fr;
   }
   .member-img{ width: 120px; } /* モバイルは少し小さめに */
+}
+
+.blog-grid{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+}
+
+.blog-split{
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;   /* 左=文章 / 右=画像 */
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+}
+
+/* ------- リスト全体 ------- */
+.post-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+/* ------- 各カード ------- */
+.post{
+  display: grid;
+  grid-template-columns: 260px 1fr;  /* 左サムネ / 右本文 */
+  gap: 18px;
+  align-items: start;
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-fg);
+  border-radius: 12px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+.post:hover{
+  border-color: var(--clr-fg);
+  box-shadow: 0 8px 24px var(--shadow);
+  transform: translateY(-1px);
+}
+
+/* サムネイル：横長で統一（お好みで 4/3, 16/9） */
+.post__thumb{
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--shadow);
+}
+.post__thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+.post:hover .post__thumb img{ transform: scale(1.03); }
+
+/* 本文側 */
+.post__body{ display: grid; gap: 8px; }
+
+/* メタ行：サイト名 + 日付 */
+.post__meta{
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  font-size: .92rem;
+}
+.post__source{
+  color: var(--shadow-dark);
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.post__date{ color: var(--shadow); }
+
+/* タイトル（強調色） */
+.post__title{
+  margin: 0;
+  font-size: clamp(1.02rem, 1.2vw + .6rem, 1.25rem);
+  line-height: 1.4;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* 抜粋文（3行で省略） */
+.post__excerpt{
+  margin: 0;
+  color: var(--fg);
+  opacity: .9;
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ------- レスポンシブ ------- */
+@media (max-width: 960px){
+  .post{ grid-template-columns: 220px 1fr; }
+}
+@media (max-width: 720px){
+  .post{ grid-template-columns: 160px 1fr; }
+}
+@media (max-width: 560px){
+  .post{
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+  .post__thumb{
+    aspect-ratio: 16 / 9;   /* スマホはよりワイドに */
+  }
 }
 
 /* #########################  paper  ########################### */
