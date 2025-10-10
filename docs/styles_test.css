@@ -2327,12 +2327,13 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .site-footer .nav__list{
   display: flex;
   flex-wrap: wrap;
-  gap: 3px 3px;
+  gap: 4px 4px;
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
+
 .site-footer .link--nav{
   text-decoration: none;
   color: var(--clr-fg);
@@ -3252,6 +3253,9 @@ nav.footer-nav .nav__list {
     line-height: 2;
   }
 
+  .site-footer .nav__list{
+    font-size: 0.9rem;
+  }
   .site-footer .nav__list a{
     display: block;
     padding: .1rem .1rem;
