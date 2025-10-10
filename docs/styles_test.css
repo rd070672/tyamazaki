@@ -2059,6 +2059,19 @@ input[name="tab_item"] {
   display: block;
 }
 
+/* 画像ホバー：薄く白く（フォーカス時も） */
+.member-img::after{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(255,255,255,0);
+  transition: background .3s ease;
+}
+.member-img:hover::after,
+.member-img a:focus-visible::after{
+  background: rgba(255,255,255,.30);
+}
+.member-img:hover img{ transform: scale(1.03); }
+
 /* 文字サイズ */
 .member-position{ font-size: .95rem; color: var(--clr-fg); }
 .member-name    { font-weight: 600;  font-size: 1rem; }
