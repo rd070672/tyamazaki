@@ -2239,7 +2239,7 @@ input[name="blog_item"] {
 
 .blog_content {
   display: none;
-  padding: 0.2em 0;
+  padding: 0.5em 0;
   clear: both;
   overflow: hidden;
 }
@@ -2261,13 +2261,13 @@ input[name="blog_item"] {
 /* ------- 各カード ------- */
 .post{
   display: grid;
-  grid-template-columns: 260px 1fr;  /* 左サムネ / 右本文 */
-  gap: 18px;
+  grid-template-columns: 160px 1fr;  /* 左サムネ / 右本文 */
+  gap: 10px;
   align-items: start;
-  background: var(--clr-bg);
+  background: var(--clr-bg-alt);
   border: 1px solid var(--clr-fg);
-  border-radius: 12px;
-  padding: 14px;
+  border-radius: 0px;
+  padding: 4px;
   text-decoration: none;
   color: inherit;
   transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
@@ -2305,12 +2305,14 @@ input[name="blog_item"] {
   align-items: baseline;
   font-size: .92rem;
 }
-.post__source{
-  color: var(--shadow-dark);
+/* .post__source{
+  color: var(--clr-primary);
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: .02em;
   text-transform: uppercase;
-}
+} */
+
 .post__date{ color: var(--shadow); }
 
 /* タイトル（強調色） */
@@ -2323,6 +2325,7 @@ input[name="blog_item"] {
 }
 
 .post__excerpt {
+  font-size: 1.1rem;
   margin: 0;
   color: var(--bg);
   opacity: .9;
@@ -2336,7 +2339,7 @@ input[name="blog_item"] {
   content: "";
   position: absolute;
   bottom: 0; right: 0; left: 0;
-  height: 1.2em;  /* フェードの高さ */
+  height: 1.2em;
   background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
 }
 
@@ -2363,7 +2366,7 @@ input[name="blog_item"] {
   display: inline-block;
   padding: .28rem .6rem;
   border-radius: 9999px;
-  font-size: .78rem;
+  font-size: .82rem;
   font-weight: 700;
   letter-spacing: .01em;
   color: #fff;
