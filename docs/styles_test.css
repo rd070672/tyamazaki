@@ -805,6 +805,11 @@ main {
   margin: 0 auto;
 }
 
+
+/*========
+  tab  
+  ========*/
+
 .tabs {
   margin: 1em auto 1em 1em;   /* 上=1em, 右=auto, 下=1em, 左=1em */
   padding: 0.5em;           /* 内側の余白 */
@@ -819,9 +824,6 @@ main {
   z-index: 0;
 }
 
-/*========
-  tab  
-  ========*/
 .tab_item {
   width: 100px;
   height: 40px;
@@ -2195,6 +2197,56 @@ input[name="tab_item"] {
   grid-template-columns: 0.4fr 0.6fr;   /* 左=文章 / 右=画像 */
   gap: clamp(16px, 3vw, 28px);
   align-items: start;
+}
+
+
+.blog-tabs {
+  margin: 1em auto 1em 1em;   /* 上=1em, 右=auto, 下=1em, 左=1em */
+  padding: 0.5em;           /* 内側の余白 */
+  padding-bottom: 0.2em;
+  background-color: var(--clr-bg);
+  /* opacity: 0.8; */
+  box-shadow: 0 0 6px var(--shadow);
+  max-width: 960px;
+  overflow: auto;
+  height: 900px;
+  position: relative;
+  z-index: 0;
+}
+
+
+.blog_item {
+  width: 100px;
+  height: 40px;
+  border-bottom: 2px solid var(--clr-primary);
+  background-color: var(--clr-bg);
+  line-height: 40px;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--clr-primary);
+  display: block;
+  float: left;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.blog_item:hover {
+  opacity: 0.75;
+}
+
+input[name="blog_item"] {
+  display: none;
+}
+
+.blog_content {
+  display: none;
+  padding: 0.2em 0;
+  clear: both;
+  overflow: hidden;
+}
+
+.blog-tabs input:checked + .blog_item {
+  background-color: var(--clr-primary);
+  color: #fff;
 }
 
 /* ------- リスト全体 ------- */
