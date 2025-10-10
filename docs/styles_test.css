@@ -589,14 +589,7 @@ i.fas.fa-external-link-alt{
 .nav .link.link--nav.active:visited {
   background-color: var(--clr-primary);
   color: #fff;
-  font-weight: 600;
 }
-/* 
-.link--nav.active {
-  background-color: var(--clr-primary);
-  color: #fff;
-  font-weight: 600;
-} */
 
 .link--nav2 {
   color: var(--clr-fg-alt);
