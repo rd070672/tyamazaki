@@ -2392,13 +2392,14 @@ input[name="blog_item"] {
 }
 
 .blog-title{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1;
   margin: 6px 0;
 }
 
 .blog-bar{
+  margin: 10px 0;
   padding: 10px 0;
   border-top: 1px solid var(--clr-primary);
 }
@@ -2406,6 +2407,7 @@ input[name="blog_item"] {
 .blog-text {
   font-size: 1rem;
 }
+
 /* 
 .post-text p{
   margin-bottom: 1.2em;
@@ -2414,13 +2416,13 @@ input[name="blog_item"] {
 
 
 .blog-text .section__subtitle2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1.2em;
 }
 
 .blog-text .blog-desc {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 0.3rem;   
 }
 
