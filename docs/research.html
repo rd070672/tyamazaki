@@ -284,6 +284,17 @@
       <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
+    <!-- footerを読み込む場所 -->
+    <div id="footer"></div>
+
+    <script>
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
     <!-- Footer -->
     <footer class="site-footer" id="footer">
       <section class="footer__inner">
