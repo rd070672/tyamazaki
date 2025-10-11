@@ -2302,7 +2302,6 @@ input[name="blog_item"] {
   align-items:center;              /* 縦中央 */
   gap: 12px;                       /* ラボ名とナビの間 */
   max-width: 800px;
-  width: 95%;
   margin: 0 auto;
 }
 
