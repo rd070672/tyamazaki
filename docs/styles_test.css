@@ -2354,6 +2354,13 @@ input[name="blog_item"] {
   font-weight: 600;
 }
 
+.post__desc {
+  font-size: 1rem;
+  margin-top: 0.1em; /* 上右下左 */
+  text-align: left;
+  line-height: 1.4;
+}
+
 .post__excerpt {
   font-size: 0.95rem;
   margin: 0;
