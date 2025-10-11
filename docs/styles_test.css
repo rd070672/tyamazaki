@@ -2924,7 +2924,7 @@ nav.footer-nav .nav__list {
   opacity: .95;
 }
 
-@media (max-width: 520px){
+@media (max-width: 600px){
   .cap-title{ font-size: 1rem; }
   .cap-note { font-size: .9rem; }
 }
@@ -3613,12 +3613,11 @@ nav.footer-nav .nav__list {
   }
 
   .section-head .eyebrow {
-    font-size: 1.8rem;
-    /* letter-spacing: 0.05em; */
+    font-size: 1.4rem;
   }
 
   .section-head .title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.3;
   }
 
