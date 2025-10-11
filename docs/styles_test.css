@@ -1502,7 +1502,7 @@ input[name="tab_item"] {
 
 .lab-title h3 {
   margin: 0;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 1.2;
   display: inline-block;
   color: var(--clr-primary);
@@ -2625,12 +2625,12 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 .site-footer .lab-title h3 a{
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--clr-primary);
   text-decoration: none;
 }
 .site-footer .lab-subtitle{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
@@ -3568,18 +3568,18 @@ nav.footer-nav .nav__list {
   }
 
   .site-footer .lab-title h3 a{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--clr-primary);
     text-decoration: none;
   }
   .site-footer .lab-subtitle{
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 2;
   }
 
   .site-footer .nav__list{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .site-footer .nav__list a{
     display: block;
@@ -3609,9 +3609,8 @@ nav.footer-nav .nav__list {
 
   .site-footer .footer-nav .link--nav{
     display: block;
-    padding: .4rem .4rem;
+    padding: .4rem .2rem;
     text-align: center;
-    /* line-height: 1.2; */
   }
   
 }
