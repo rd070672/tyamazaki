@@ -2477,6 +2477,12 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   counter-reset: pub; /* 使わない場合でも残してOK */
   list-style: none; margin: 0; padding: 0;
 }
+
+.pub-list .section__subtitle2{
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
 .pub-item{
   display: grid;
   grid-template-columns: auto 1fr; /* 番号 / 本文 */
