@@ -2768,12 +2768,12 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .site-footer .link--nav{
   text-decoration: none;
   color: var(--clr-fg);
-  height: 30px;
+  height: 45px;
   font-weight: 500;
   text-transform: uppercase;
   transition: background-color .2s, color .2s;
   padding: 2px 2px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .site-footer .link--nav:hover{
   background-color: var(--clr-primary);
