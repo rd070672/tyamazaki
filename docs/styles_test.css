@@ -2307,53 +2307,6 @@ input[name="blog_item"] {
   font-size: .92rem;
 }
 
-.post__date{ color: var(--shadow); }
-
-/* タイトル（強調色） */
-.post__title{
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1;
-  color: var(--brand);
-  font-weight: 600;
-}
-
-.post__excerpt {
-  font-size: 0.9rem;
-  margin: 0;
-  color: var(--bg);
-  opacity: .9;
-  line-height: 1.6;
-  max-height: calc(1.6em * 3);
-  overflow: hidden;
-  position: relative;
-}
-
-.post__excerpt::after {
-  content: "";
-  position: absolute;
-  bottom: 0; right: 0; left: 0;
-  height: 1.4em;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
-}
-
-/* ------- レスポンシブ ------- */
-@media (max-width: 960px){
-  .post{ grid-template-columns: 220px 1fr; }
-}
-@media (max-width: 720px){
-  .post{ grid-template-columns: 160px 1fr; }
-}
-@media (max-width: 560px){
-  .post{
-    grid-template-columns: 1fr;
-    padding: 12px;
-  }
-  .post__thumb{
-    aspect-ratio: 16 / 9;   /* スマホはよりワイドに */
-  }
-}
-
 /* 汎用バッジ */
 .post__category {
   --cat-color: var(--clr-primary);           /* 既定色（サイトの基調色） */
@@ -2389,6 +2342,53 @@ input[name="blog_item"] {
 .post__category[data-cat="event"]       { --cat-color:#F59E0B; }
 .post__category[data-cat="publication"] { --cat-color:#5468FF; }
 .post__category[data-cat="media"]       { --cat-color:#EF436B; }
+
+.post__date{ color: var(--shadow); }
+
+/* タイトル（強調色） */
+.post__title{
+  margin: 6px 0;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.post__excerpt {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--bg);
+  opacity: .9;
+  line-height: 1.7;
+  max-height: calc(1.7em * 3);
+  overflow: hidden;
+  position: relative;
+}
+
+.post__excerpt::after {
+  content: "";
+  position: absolute;
+  bottom: 0; right: 0; left: 0;
+  height: 1.4em;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
+}
+
+/* ------- レスポンシブ ------- */
+@media (max-width: 960px){
+  .post{ grid-template-columns: 220px 1fr; }
+}
+@media (max-width: 720px){
+  .post{ grid-template-columns: 160px 1fr; }
+}
+@media (max-width: 560px){
+  .post{
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+  .post__thumb{
+    aspect-ratio: 16 / 9;   /* スマホはよりワイドに */
+  }
+}
 
 /* #########################  paper  ########################### */
 .paper-item {
