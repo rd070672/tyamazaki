@@ -2344,27 +2344,27 @@ input[name="blog_item"] {
 
 .post__date{ color: var(--shadow); }
 
+.post__title{
+  margin: 6px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--clr-fg);
+}
+
 .post__text {
-  font-size: 1rem;
   margin: 0 0.3rem; 
 }
 
 .post__text p{
   margin-bottom: 0.3em;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 .post__text .section__subtitle2 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.6em;
-}
-
-.post__title{
-  margin: 6px 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--clr-fg);
 }
 
 .post__desc {
