@@ -2584,7 +2584,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   --footer-link: var(--clr-fg);
   --footer-link-hover: var(--clr-primary);
   --footer-border: color-mix(in srgb, var(--clr-primary) 65%, #000 0%); /* primaryをそのまま */
-  --footer-shadow: 0 12px 28px rgba(0,0,0,.60);
+  --footer-shadow: 0 12px 28px rgba(0,0,0,.06);
   --footer-container: 960px;      /* ここだけ変えれば幅調整OK */
   --footer-gutter: 16px;
 }
