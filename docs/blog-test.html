@@ -15,120 +15,12 @@
     </script>
     <link rel="stylesheet" href="./styles_test.css">
     <link rel="icon" href="./img/ynu.png">
-    
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
-    
-    <script defer>
-    window.addEventListener('DOMContentLoaded', () => {
-      /* --- テーマ切替 --- */
-      const themeBtn = document.getElementById('btn-theme')?.closest('button') || document.getElementById('btn-theme');
-      themeBtn?.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-      });
-
-      /* --- ハンバーガー --- */
-      const hamBtn = document.querySelector('.nav__hamburger');
-      const navList = document.querySelector('.nav__list');
-      hamBtn?.addEventListener('click', () => {
-        navList?.classList.toggle('is-open');
-      });
-
-      /* --- ヒーロースライダー --- */
-      const hero = document.querySelector('.hero');
-      if (hero) {
-        const slides = Array.from(hero.querySelectorAll('.hero__slide'));
-        const prevBtn = hero.querySelector('.hero__nav.prev');
-        const nextBtn = hero.querySelector('.hero__nav.next');
-        const dotsWrap = hero.querySelector('.hero__dots');
-
-        let idx = 0;
-        let timer = null;
-        const INTERVAL_MS = 5000;
-
-        slides.forEach((_, i) => {
-          const b = document.createElement('button');
-          b.type = 'button';
-          b.setAttribute('aria-label', `Go to slide ${i+1}`);
-          b.addEventListener('click', () => show(i, true));
-          dotsWrap.appendChild(b);
-        });
-
-        function show(i, user = false) {
-          slides[idx].classList.remove('is-active');
-          idx = (i + slides.length) % slides.length;
-          slides[idx].classList.add('is-active');
-          dotsWrap.querySelectorAll('button').forEach((b, j) =>
-            b.setAttribute('aria-current', j === idx ? 'true' : 'false')
-          );
-          if (user) restart();
-        }
-        function next() { show(idx + 1); }
-        function prev() { show(idx - 1); }
-        function start() { timer = setInterval(next, INTERVAL_MS); }
-        function stop()  { clearInterval(timer); timer = null; }
-        function restart(){ stop(); start(); }
-
-        nextBtn?.addEventListener('click', next);
-        prevBtn?.addEventListener('click', prev);
-        hero.addEventListener('mouseenter', stop);
-        hero.addEventListener('mouseleave', start);
-
-        show(0);
-        start();
-      }
-
-      /* --- トップへ戻る --- */
-      const toTop = document.querySelector('[data-to-top]');
-      if (toTop) {
-        const THRESHOLD = 300;
-        const toggle = () => {
-          if (window.scrollY > THRESHOLD) toTop.classList.add('show');
-          else toTop.classList.remove('show');
-        };
-        toggle();
-        window.addEventListener('scroll', toggle, { passive: true });
-        toTop.addEventListener('click', (e) => {
-          e.preventDefault();
-          const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-        });
-      }
-    });
-    </script>
   </head>
 
   <body class="light" id="top">
-    <header class="header center">
-      <div class="lab-title">
-        <h3><a href="./">Yamazaki Laboratory</a></h3>
-        <p class="lab-subtitle">
-          <a href="https://www.ynu.ac.jp/" target="_blank" class="lab-link">横浜国立大学</a>
-          <a href="https://www.fse.ynu.ac.jp/" target="_blank" class="lab-link">大学院工学研究院</a><br>
-          <a href="http://www.materep.ynu.ac.jp/" target="_blank" class="lab-link">システムの創生部門</a>
-          <a href="./" class="lab-link">材料情報工学研究室</a>
-        </p>
-      </div>
-
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item"><a class="link link--nav" href="./">home</a></li>
-          <li class="nav__list-item"><a class="link link--nav" href="./research">research</a></li>
-          <li class="nav__list-item"><a class="link link--nav" href="./members">members</a></li>
-          <li class="nav__list-item"><a class="link link--nav" href="./publications">publications</a></li>
-          <li class="nav__list-item"><a class="link link--nav" href="./album">album</a></li>
-          <li class="nav__list-item"><a class="link link--nav active" href="./blog">blog</a></li>
-          <li class="nav__list-item"><a class="link link--nav" href="./access">access</a></li>
-        </ul>
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
-        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
-          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
-        </button>
-      </nav>
-
-    </header>
+    <!-- Header -->
+    <div id="header"></div>
 
     <!-- =================================================================================================== -->
 
@@ -168,7 +60,7 @@
               <ul class="post-list">
                 <!-- 1件目 -->
                 <li>
-                  <a href="/blog/post-1" class="post">
+                  <a href="/blog/post-251007.html" class="post">
                     <figure class="post__thumb">
                       <img src="../blog/img/top5.jpg" alt="top5" loading="lazy" decoding="async">
                     </figure>
