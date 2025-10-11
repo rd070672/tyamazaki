@@ -2399,7 +2399,7 @@ input[name="blog_item"] {
 }
 
 .blog-bar{
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 10px 0;
   border-top: 1px solid var(--clr-primary);
 }
@@ -2429,14 +2429,14 @@ input[name="blog_item"] {
 }
 
 .blog-figure{
-  margin: 0;               /* 余白はお好みで */
+  margin: 1rem;               /* 余白はお好みで */
   text-align: center;      /* 画像を中央寄せ */
 }
 
 .blog-figure img{
   display: block;
   width: 100%;             /* 親幅にフィット */
-  max-width: 600px;        /* ← 横幅上限を600pxに制限 */
+  max-width: 500px;        /* ← 横幅上限を600pxに制限 */
   height: auto;            /* ← アスペクト比を維持 */
   margin: 0 auto;
   border-radius: 12px;
