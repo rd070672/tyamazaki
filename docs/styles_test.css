@@ -1546,6 +1546,7 @@ input[name="tab_item"] {
   height: 400px; /* 画面に応じた高さ */
   overflow: hidden;
   border-radius: 4px;
+  margin: 0 auto;
 }
 
 .hero__slides,
@@ -2396,9 +2397,15 @@ input[name="blog_item"] {
   margin: 1rem 0;
 }
 
-.blog-meta .post__date{
-  font-size: 1rem;
+.blog-meta .post__category{
+  font-size: 1.3rem;
 }
+
+.blog-meta .post__date{
+  font-size: 1.2rem;
+}
+
+
 
 .blog-card{
   background-color: rgba(255,255,255,0); /* 完全透明 */
