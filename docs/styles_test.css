@@ -877,6 +877,12 @@ input[name="tab_item"] {
   margin-top: 5em;
   max-width: 100%;
 }
+
+.section0 {
+  margin-top: 1em;
+  max-width: 100%;
+}
+
 .section1 {
   margin-top: 3em;
   max-width: 100%;
@@ -2713,10 +2719,10 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 .site-footer{
   width: 100%;
-  background: var(--clr-bg);
+  background: var(--clr-bg-alt);
   color: var(--clr-fg);
   border-top: 3px solid var(--footer-border);
-  margin-top: 40px;
+  margin-top: 60px;
   box-shadow: var(--footer-shadow);
   padding: 0;
 }
