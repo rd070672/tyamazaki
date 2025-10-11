@@ -2386,9 +2386,12 @@ input[name="blog_item"] {
   gap: 14px;
   align-items: baseline;
   font-size: 1.2rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
+.blog-meta .post__date{
+  font-size: 1rem;
+}
 
 .blog-card{
   background-color: rgba(255,255,255,0); /* 完全透明 */
@@ -2402,7 +2405,7 @@ input[name="blog_item"] {
 .blog-title{
   font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.8;
   margin: 6px 0;
 }
 
