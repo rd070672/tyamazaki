@@ -2260,7 +2260,7 @@ input[name="blog_item"] {
 /* ------- 各カード ------- */
 .post{
   display: grid;
-  grid-template-columns: 180px 1fr;  /* 左サムネ / 右本文 */
+  grid-template-columns: 200px 1fr;  /* 左サムネ / 右本文 */
   gap: 10px;
   align-items: start;
   background: var(--clr-bg-alt);
@@ -2355,7 +2355,7 @@ input[name="blog_item"] {
 }
 
 .post__excerpt {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 0;
   color: var(--bg);
   opacity: .9;
