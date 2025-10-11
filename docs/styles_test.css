@@ -1540,6 +1540,14 @@ input[name="tab_item"] {
   border-radius: 12px;
 }
 
+.hero3 {
+  position: relative;
+  max-width: 650px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
 .hero__slides,
 .hero__slide {
   position: absolute;
