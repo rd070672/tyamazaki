@@ -2145,7 +2145,13 @@ input[name="tab_item"] {
 }
 
 @media (max-width: 600px){
-  .member-photo{ width: 160px; }
+  .member-photo{ width: 100px; }
+  .member-grid.staff{
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+  .member-grid.students{
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
 }
 
 /* 文字サイズ */
