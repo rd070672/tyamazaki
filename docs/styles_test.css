@@ -2425,28 +2425,25 @@ input[name="blog_item"] {
 }
 
 .blog-figure{
-  position: relative;      /* 子をabsoluteで中央に置くため */
-  width: 100%;
-  aspect-ratio: 1 / 1;     /* お好みの比率。例: 1/1, 4/3 など */
-  margin: 0;
+  margin: 0;               /* 余白はお好みで */
+  text-align: center;      /* 画像を中央寄せ */
 }
 
 .blog-figure img{
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;  /* = inset: 0 */
-  width: 60%;
-  height: auto;
-  margin: 0 auto;                           /* ← 中央寄せの決め手 */
-  object-fit: cover;
-  border-radius: 12px;
-  /* box-shadow: var(--shadow); */
   display: block;
+  width: 100%;             /* 親幅にフィット */
+  max-width: 600px;        /* ← 横幅上限を600pxに制限 */
+  height: auto;            /* ← アスペクト比を維持 */
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  object-fit: contain;     /*（任意）余白が出ても歪ませない */
 }
 
 .blog-text .fig-caption {
   font-size: 0.9rem;
   text-align: center;
-  margin: 0.3rem;   
+  margin: 0.3em 0 1em;   
 }
 
 /* ------- レスポンシブ ------- */
