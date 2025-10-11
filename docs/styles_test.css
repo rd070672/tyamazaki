@@ -3665,6 +3665,42 @@ nav.footer-nav .nav__list {
     z-index: 0;
   }
 
+  
+.blog-text .section__subtitle2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  line-height: 1.4; 
+}
+
+.blog-text .blog-desc {
+  font-size: 1rem;
+  margin: 0.5rem 0 2.5rem;  
+  line-height: 1.4; 
+}
+
+.blog-figure{
+  margin: 1rem 0 2rem;               /* 余白はお好みで */
+  text-align: center;      /* 画像を中央寄せ */
+}
+
+.blog-figure img{
+  display: block;
+  width: 100%;             /* 親幅にフィット */
+  max-width: 300px;        /* ← 横幅上限を600pxに制限 */
+  height: auto;            /* ← アスペクト比を維持 */
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  object-fit: contain;     /*（任意）余白が出ても歪ませない */
+}
+
+.blog-text .fig-caption {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0.3rem 0 1rem;   
+}
+
 
   /* #########################  footer  ########################### */
 
