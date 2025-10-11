@@ -1543,7 +1543,7 @@ input[name="tab_item"] {
 .hero3 {
   position: relative;
   width: 650px;
-  height: 400px; /* 画面に応じた高さ */
+  height: 250px; /* 画面に応じた高さ */
   overflow: hidden;
   border-radius: 4px;
   margin: 0 auto;
