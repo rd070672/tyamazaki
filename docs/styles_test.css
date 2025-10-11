@@ -2264,6 +2264,7 @@ input[name="blog_item"] {
   gap: 10px;
   align-items: start;
   background: var(--clr-bg-alt);
+  box-shadow: 0 10px 22px var(--shadow);
   /* border: 1px solid var(--clr-fg); */
   border-radius: 0px;
   padding: 10px;
@@ -2274,7 +2275,7 @@ input[name="blog_item"] {
 .post:hover{
   /* border-color: var(--clr-fg); */
   box-shadow: 0 8px 24px var(--shadow);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* サムネイル：横長で統一（お好みで 4/3, 16/9） */
