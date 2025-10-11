@@ -2373,6 +2373,38 @@ input[name="blog_item"] {
   background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
 }
 
+.blog-title{
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 6px 0;
+}
+
+.blog-bar{
+  padding: 10px 0;
+  border-top: 1px solid var(--clr-primary);
+}
+
+.blog-text {
+  font-size: 1rem;
+}
+/* 
+.post-text p{
+  margin-bottom: 1.2em;
+  line-height: 1.6;
+} */
+
+.blog-text .section__subtitle2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2em;
+}
+
+.blog-text .blog-desc {
+  font-size: 1.1rem;
+  margin: 0.3rem;   
+}
+
 /* ------- レスポンシブ ------- */
 @media (max-width: 960px){
   .post{ grid-template-columns: 220px 1fr; }
