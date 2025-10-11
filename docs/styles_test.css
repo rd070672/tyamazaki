@@ -1542,10 +1542,10 @@ input[name="tab_item"] {
 
 .hero3 {
   position: relative;
-  width: 100%;
+  width: 650px;
   height: 400px; /* 画面に応じた高さ */
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 .hero__slides,
