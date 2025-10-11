@@ -1863,7 +1863,6 @@ input[name="tab_item"] {
   margin: 1em 1em; 
 }
 
-
 .section-card2{
   background-color: rgba(255,255,255,0); /* 完全透明 */
   background: rgba(255,255,255,0); /* 完全透明 */
@@ -2373,8 +2372,27 @@ input[name="blog_item"] {
   background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
 }
 
+/* メタ行：サイト名 + 日付 */
+.blog-meta{
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+
+.blog-card{
+  background-color: rgba(255,255,255,0); /* 完全透明 */
+  background: rgba(255,255,255,0); /* 完全透明 */
+  padding: 0px;
+  letter-spacing: 0.02em; 
+  max-width: 700px;
+  margin: 0em auto;
+}
+
 .blog-title{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   line-height: 1;
   margin: 6px 0;
@@ -2393,6 +2411,7 @@ input[name="blog_item"] {
   margin-bottom: 1.2em;
   line-height: 1.6;
 } */
+
 
 .blog-text .section__subtitle2 {
   font-size: 1.3rem;
