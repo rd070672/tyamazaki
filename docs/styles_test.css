@@ -1542,8 +1542,8 @@ input[name="tab_item"] {
 
 .hero3 {
   position: relative;
-  max-width: 650px;
-  height: 350px;
+  width: 100%;
+  height: 400px; /* 画面に応じた高さ */
   overflow: hidden;
   border-radius: 12px;
 }
@@ -2413,6 +2413,13 @@ input[name="blog_item"] {
   margin: 30px 0 10px;
   padding: 30px 0 10px;
   border-top: 1px solid var(--clr-primary);
+}
+
+.blog-bar2{
+  margin: 30px 0 10px;
+  padding: 30px 0 10px;
+  border-top: 1px solid var(--clr-fg);
+  border-bottom: 1px solid var(--clr-fg);
 }
 
 .blog-text {
