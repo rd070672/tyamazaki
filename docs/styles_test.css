@@ -2369,7 +2369,7 @@ input[name="blog_item"] {
   content: "";
   position: absolute;
   bottom: 0; right: 0; left: 0;
-  height: 1.4em;
+  height: 2em;
   background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
 }
 
