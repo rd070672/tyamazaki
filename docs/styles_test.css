@@ -2387,7 +2387,7 @@ input[name="blog_item"] {
   background: rgba(255,255,255,0); /* 完全透明 */
   padding: 0px;
   letter-spacing: 0.02em; 
-  max-width: 700px;
+  max-width: 650px;
   margin: 0em auto;
 }
 
