@@ -2418,12 +2418,14 @@ input[name="blog_item"] {
 .blog-text .section__subtitle2 {
   font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 1.2em;
+  margin-bottom: 0.4em;
+  line-height: 1.6; 
 }
 
 .blog-text .blog-desc {
   font-size: 1.2rem;
-  margin: 0.3rem;   
+  margin: 0.5rem;  
+  line-height: 1.6; 
 }
 
 .blog-figure{
