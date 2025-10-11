@@ -2713,8 +2713,8 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 .site-footer{
   width: 100%;
-  background: var(--footer-bg);
-  color: var(--footer-fg);
+  background: var(--clr-bg);
+  color: var(--clr-fg);
   border-top: 3px solid var(--footer-border);
   margin-top: 40px;
   box-shadow: var(--footer-shadow);
