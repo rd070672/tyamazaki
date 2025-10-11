@@ -3234,8 +3234,8 @@ nav.footer-nav .nav__list {
 
   .section-card{ 
     margin: 0;
-    padding: 8px 2px; 
-    border-radius: 10px; 
+    padding: 8px 2px 2px; 
+    /* border-radius: 10px;  */
   }
 
   .section-kicker{ 
@@ -3512,12 +3512,12 @@ nav.footer-nav .nav__list {
   }
 
   .section-head .eyebrow {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     /* letter-spacing: 0.05em; */
   }
 
   .section-head .title {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.3;
   }
 
