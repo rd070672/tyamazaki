@@ -1791,24 +1791,24 @@ input[name="tab_item"] {
   color: var(--clr-primary);
 }
 
-/* カテゴリ別カラー */
-.tag--award { background:#caa66a; }   /* 受賞: 金寄り */
-.tag--talk  { background:#2a5caa; }   /* 発表: ネイビーブルー */
-.tag--paper { background:#2f9e77; }   /* 論文: グリーン */
-.tag--media { background:#5e35b1; }   /* メディア: パープル */
-.tag--news  { background:#b0b0b0; }   /* お知らせ: 銀 */
-.tag--event { background:#d81b60; }  /* イベント（ラズベリー） */
-.tag--other { background:#6c757d; }   /* その他: グレー */
+/* カテゴリ別カラー（#33B9BCと調和したトーン） */
+.tag--award { background:#bfa26a; }   /* 受賞: 上品なゴールドベージュ */
+.tag--talk  { background:#2a6fb0; }   /* 発表: 落ち着いたサイエンスブルー */
+.tag--paper { background:#33b9bc; }   /* 論文: メインテーマ色（ティール） */
+.tag--media { background:#6e58b7; }   /* メディア: 柔らかいブルーバイオレット */
+.tag--news  { background:#9aa0a6; }   /* お知らせ: ニュートラルグレー */
+.tag--event { background:#d64d73; }   /* イベント: 柔らかいラズベリーピンク */
+.tag--other { background:#7a8b92; }   /* その他: クールグレー */
 
-/* 追加候補 */
-.tag--press   { background:#b85c00; }  /* プレス（濃いオレンジ） */
-.tag--grant   { background:#00695c; }  /* 採択（深いティール） */
-.tag--patent  { background:#8d6e63; }  /* 特許（ブロンズ系） */
-.tag--collab  { background:#455a64; }  /* 受託/共同（青灰） */
-.tag--edu     { background:#9e9d24; }  /* 教育（オリーブ） */
-.tag--data    { background:#00838f; }  /* データ/コード（深シアン） */
-.tag--facility{ background:#4e342e; }  /* 設備（濃茶） */
-.tag--hire    { background:#6a1b9a; }  /* 募集（濃紫） */
+/* 追加候補（同系統トーンで統一） */
+.tag--press   { background:#cc7a29; }  /* プレス: 銅寄りオレンジで存在感 */
+.tag--grant   { background:#007d77; }  /* 採択: 深いティールグリーン（信頼） */
+.tag--patent  { background:#a47550; }  /* 特許: ブロンズ寄りブラウン */
+.tag--collab  { background:#51727a; }  /* 受託/共同: 青灰＋信頼感 */
+.tag--edu     { background:#9aa92f; }  /* 教育: オリーブ＋明るめトーン */
+.tag--data    { background:#2ca5a8; }  /* データ/コード: メインより深いシアン */
+.tag--facility{ background:#5b4032; }  /* 設備: 深みのあるブラウン */
+.tag--hire    { background:#7c3fb5; }  /* 募集: 知的なパープル */
 
 .section-divider{
   position: relative;
@@ -2446,12 +2446,13 @@ input[name="blog_item"] {
   box-shadow: 0 0 0 3px rgba(51,185,188,.35);
 }
 
-/* クラス指定で選ぶ場合 */
-.cat-research   { --cat-color: #33B9BC; } /* Research / Teal */
-.cat-award      { --cat-color: #10B981; } /* Award / Emerald */
-.cat-event      { --cat-color: #F59E0B; } /* Event / Amber */
-.cat-publication{ --cat-color: #5468FF; } /* Publication / Indigo */
-.cat-media      { --cat-color: #EF436B; } /* Media / Rose */
+/* カテゴリ別カラー：#33B9BC に調和したトーン */
+.cat-research    { --cat-color: #33B9BC; } /* Research / メインティール：清潔・知的・中核色 */
+.cat-award       { --cat-color: #BFA26A; } /* Award / 上品なゴールドベージュ（栄誉・温かみ） */
+.cat-event       { --cat-color: #D64D73; } /* Event / 柔らかいラズベリーピンク（活動・交流） */
+.cat-publication { --cat-color: #2A6FB0; } /* Publication / サイエンスブルー（信頼・発表） */
+.cat-media       { --cat-color: #6E58B7; } /* Media / ブルーバイオレット（創造・発信） */
+
 
 /* data-cat="…" でも選べます（クラス不要の書き方が好きな方向け） */
 /* .post__category[data-cat="research"]    { --cat-color:#33B9BC; }
