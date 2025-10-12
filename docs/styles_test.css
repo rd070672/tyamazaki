@@ -2187,23 +2187,24 @@ input[name="tab_item"] {
 
 /* ===== 列数：Staff=2列 / Students=3列 ===== */
 .member-grid.staff{
-  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
 }
 .member-grid.students{
-  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
 }
 
 @media (max-width: 600px){
   .member-photo{ width: 100px; }
+  .member-position{ font-size: 0.9rem; }
+  .member-name    { font-size: 0.8rem; }
+  .member-email   { font-size: 0.75rem; }
+  
   .member-grid.staff{
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
   .member-grid.students{
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
-  /* .member-split{
-    grid-template-columns: 1fr;
-  } */
 }
 
 .member-desc {
