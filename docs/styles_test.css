@@ -3615,14 +3615,15 @@ nav.footer-nav .nav__list {
   /* Journal Articles 見出しと件数（左:見出し / 右:件数） */
   .section-head--row{
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     align-items: baseline;
     gap: 12px;
+    white-space: nowrap;
   }
   .section-head--row .pub-count{
     justify-self: end;
     text-align: right;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 
   /* #########################  access  ########################### */
