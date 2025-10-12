@@ -1550,10 +1550,32 @@ input[name="tab_item"] {
 .hero3 {
   position: relative;
   width: 650px;
-  height: 250px; /* 画面に応じた高さ */
+  height: 300px; /* 画面に応じた高さ */
   overflow: hidden;
   border-radius: 4px;
   margin: 0 auto;
+}
+
+/* 内側のラッパー */
+.hero3__wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* 画像コンテナ */
+.hero3__image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 実際の画像をカバー表示 */
+.hero3__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 画像を縦横比を保って埋める */
+  object-position: center; /* 中央表示 */
+  display: block;
 }
 
 .hero__slides,
@@ -2510,7 +2532,7 @@ input[name="blog_item"] {
 .blog-figure img{
   display: block;
   width: 100%;             /* 親幅にフィット */
-  max-width: 500px;        /* ← 横幅上限を600pxに制限 */
+  /* max-width: 500px; */
   height: auto;            /* ← アスペクト比を維持 */
   margin: 0 auto;
   border-radius: 12px;
