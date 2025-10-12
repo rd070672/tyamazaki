@@ -3164,9 +3164,9 @@ nav.footer-nav .nav__list {
     font-size: 0.8em;
   }
 
-  .header {
+  /* .header {
     height: 4em;
-  }
+  } */
 
   .scroll-container {
     /* display: none; */
@@ -3662,12 +3662,14 @@ nav.footer-nav .nav__list {
 
   /* #########################  header  ########################### */
   
-  .header{ position:relative; z-index:2000; }
-
-  .header{
+  .header{ 
+    height: 4em;
+    position:relative; 
+    z-index:2000; 
     padding: 50px 0;
     margin: 30px 0 10px;
   }
+
   .nav{ position:relative; z-index:2001; }
   .nav__hamburger{ z-index:2002; }
 
