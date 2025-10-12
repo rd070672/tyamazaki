@@ -2797,8 +2797,9 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .site-footer .footer__inner{
   padding: 10px var(--footer-gutter);
   display: grid;
-  grid-template-columns: 30% 70%;
+  /* grid-template-columns: 30% 70%; */
   /* align-items: center; */
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   column-gap: 10px;
 }
 
@@ -2811,16 +2812,6 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .site-footer .lab-subtitle{
   font-size: 0.9rem;
   line-height: 1.4;
-}
-
-.site-footer .nav__list{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 4px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.9rem;
 }
 
 .site-footer .link--nav{
@@ -2852,11 +2843,21 @@ nav.footer-nav {
   gap: 2px;
 }
 
-/* 各段（ul）は横並び */
+.site-footer .nav__list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 nav.footer-nav .nav__list {
   display: flex;
   gap: 6px;
-  justify-content: flex-start;  /* 中央寄せ（好みで変更） */
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
