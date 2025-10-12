@@ -2244,15 +2244,43 @@ input[name="tab_item"] {
   .member-grid.students{
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
+  .member-text {
+    margin: 0 0.3rem;
+    margin-bottom: 0.3em;
+    line-height: 1.6;
+  }
+
+  /* .member-text p{
+    font-size: 0.9rem;
+  } */
+
+  .member-text .section__subtitle2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+  }
+  .member-desc {
+    font-size: 0.8rem;
+    margin-top: 0.1em;
+    text-align: left;
+    line-height: 1;
+  }
+
+  .member-desc2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.8em;
+    text-align: left;
+  }
 }
-/* 600px未満で両方とも 1列に */
-@media (max-width: 400px){
+
+/* @media (max-width: 400px){
   .member-grid.staff,
   .member-grid.students{
     grid-template-columns: 1fr;
   }
-  .member-img{ width: 120px; } /* モバイルは少し小さめに */
-}
+  .member-img{ width: 120px; } 
+} */
 
 .blog-grid{
   list-style: none;
