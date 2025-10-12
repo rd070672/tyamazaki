@@ -21,6 +21,7 @@ html {
 
 body {
   font-family: "Ubuntu", sans-serif;
+  /* "メイリオ", "Meiryo", "Helvetica", "Arial", sans-serif; */
   line-height: 1.5;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
@@ -2355,11 +2356,11 @@ input[name="blog_item"] {
   font-size: .92rem;
 }
 
-.blog-meta .post__category{
+.post-meta .post__category{
   font-size: 1.1rem;
 }
 
-.blog-meta .post__date{
+.post-meta .post__date{
   font-size: 1rem;
 }
 
@@ -2439,11 +2440,11 @@ input[name="blog_item"] {
 }
 
 .blog-meta .post__category{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .blog-meta .post__date{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 
