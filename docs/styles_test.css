@@ -2355,6 +2355,14 @@ input[name="blog_item"] {
   font-size: .92rem;
 }
 
+.blog-meta .post__category{
+  font-size: 1.1rem;
+}
+
+.blog-meta .post__date{
+  font-size: 1rem;
+}
+
 /* 汎用バッジ */
 .post__category {
   --cat-color: var(--clr-primary);           /* 既定色（サイトの基調色） */
