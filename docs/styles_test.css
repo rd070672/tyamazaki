@@ -2130,7 +2130,7 @@ input[name="tab_item"] {
 .member-photo{
   position: relative;            /* ← ::after の基準 */
   display: block;                /* a をブロックに */
-  width: 200px;                  /* お好みで変えてOK */
+  width: auto;         
   aspect-ratio: 1 / 1;           /* 正方形 */
   overflow: hidden;
   border-radius: 10px;
@@ -2168,19 +2168,6 @@ input[name="tab_item"] {
   border-radius: 10px;
 }
 
-@media (max-width: 600px){
-  .member-photo{ width: 100px; }
-  .member-grid.staff{
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-  }
-  .member-grid.students{
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-  }
-  /* .member-split{
-    grid-template-columns: 1fr;
-  } */
-}
-
 /* 文字サイズ */
 .member-position{ font-size: .95rem; color: var(--clr-primary); }
 .member-name    { font-weight: 600;  font-size: 1rem; }
@@ -2188,10 +2175,23 @@ input[name="tab_item"] {
 
 /* ===== 列数：Staff=2列 / Students=3列 ===== */
 .member-grid.staff{
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
 }
 .member-grid.students{
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+}
+
+@media (max-width: 600px){
+  .member-photo{ width: 100px; }
+  .member-grid.staff{
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+  .member-grid.students{
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+  /* .member-split{
+    grid-template-columns: 1fr;
+  } */
 }
 
 .member-desc {
