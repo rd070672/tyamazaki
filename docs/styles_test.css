@@ -2752,21 +2752,17 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .map-embed{
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;       /* ← 少し縦長（横:縦 = 4:5） */
+  aspect-ratio: 4 / 4.8;
   display: grid;
-  /* place-items: center; */
-  /* fallback用の高さ確保（古いブラウザ向け） */
-  /* --fallback-ar: 125%; */
 }
 
 .map-embed iframe{
   position: absolute;
   inset: 0;
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   border: 0;
   margin: 0 auto; 
-  /* display: block; */
   border-radius: 12px;
   box-shadow: var(--shadow);
 }
