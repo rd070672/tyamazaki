@@ -2848,8 +2848,8 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 
 nav.footer-nav {
   display: flex;
-  flex-direction: column;   /* 2段に積む */
-  gap: 12px;
+  flex-direction: column;
+  gap: 2px;
 }
 
 /* 各段（ul）は横並び */
@@ -3802,7 +3802,41 @@ nav.footer-nav .nav__list {
     line-height: 2;
   }
 
-  .site-footer .nav__list{
+  .site-footer .nav__list {
+    font-size: 0.8rem;
+  }
+
+  .site-footer .nav__list a {
+    display: inline-flex;       /* ← block → inline-flex に変更 */
+    align-items: center;        /* 垂直中央揃え */
+    justify-content: center;    /* 水平方向も中央 */
+    padding: 0.3rem 0.6rem;     /* 全アイテムで共通の余白に */
+    text-align: center;
+    line-height: 1;             /* 行高を一定に */
+    border-radius: 6px;         /* 背景付きリンク用 */
+  }
+
+  .site-footer .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .site-footer .footer-nav .nav__list {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  /* .site-footer .nav__list{
     font-size: 0.8rem;
   }
   .site-footer .nav__list a{
@@ -3815,7 +3849,7 @@ nav.footer-nav .nav__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 2px;
     width: 100%;
   }
 
@@ -3835,7 +3869,7 @@ nav.footer-nav .nav__list {
     display: block;
     padding: .4rem .2rem;
     text-align: center;
-  }
+  } */
   
 }
 /* ############################################################# */
