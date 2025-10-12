@@ -3420,12 +3420,12 @@ nav.footer-nav .nav__list {
   /* #########################  lab  ########################### */
 
   .lab-title {
-    margin: 30px 0 10px 0;
+    margin: 30px 0 20px 3px;
   }
 
   .lab-title h3 {
     margin: 0;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.4;
     color: var(--clr-primary);
   }
@@ -3661,8 +3661,8 @@ nav.footer-nav .nav__list {
   .header{ 
     /* height: 4em; */
     position:relative; 
-    z-index:2000; 
-    padding: 30px 0;
+    z-index: 2000; 
+    /* padding: 20px 0; */
     /* margin: 30px 0 10px; */
   }
 
