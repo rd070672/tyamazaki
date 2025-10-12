@@ -2114,7 +2114,7 @@ input[name="tab_item"] {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 16px;
+  gap: 12px;
   display: grid;
 }
 
@@ -2198,7 +2198,7 @@ input[name="tab_item"] {
   .member-position{ font-size: 0.9rem; }
   .member-name    { font-size: 0.8rem; }
   .member-email   { font-size: 0.75rem; }
-  
+  .member-grid {gap: 4px; }
   .member-grid.staff{
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
