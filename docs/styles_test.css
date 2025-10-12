@@ -2176,9 +2176,9 @@ input[name="tab_item"] {
   .member-grid.students{
     grid-template-columns: repeat(4, minmax(100px, 1fr));
   }
-  .member-split{
+  /* .member-split{
     grid-template-columns: 1fr;
-  }
+  } */
 }
 
 /* 文字サイズ */
@@ -3703,11 +3703,9 @@ nav.footer-nav .nav__list {
   /* #########################  header  ########################### */
   
   .header{ 
-    /* height: 4em; */
-    position:relative; 
+    /* position:relative;  */
     z-index: 2000; 
     padding: 20px 0 20px;
-    /* margin: 30px 0 10px; */
   }
 
   .nav{ position:relative; z-index:2001; }
