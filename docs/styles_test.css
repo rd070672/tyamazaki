@@ -2798,7 +2798,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   padding: 10px var(--footer-gutter);
   display: grid;
   grid-template-columns: 30% 70%;
-  align-items: center;
+  /* align-items: center; */
   column-gap: 10px;
 }
 
