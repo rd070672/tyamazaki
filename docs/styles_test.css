@@ -2076,6 +2076,7 @@ input[name="tab_item"] {
 
 .member-split{
   display: grid;
+  grid-auto-flow: row; 
   grid-template-columns: 0.4fr 0.6fr;   /* 左=文章 / 右=画像 */
   gap: clamp(16px, 3vw, 28px);
   align-items: start;
@@ -2175,6 +2176,9 @@ input[name="tab_item"] {
   .member-grid.students{
     grid-template-columns: repeat(4, minmax(100px, 1fr));
   }
+  .member-split{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 文字サイズ */
@@ -2242,7 +2246,7 @@ input[name="tab_item"] {
 /* 900px未満で Students を 2列に */
 @media (max-width: 600px){
   .member-grid.students{
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
   }
   .member-text {
     margin: 0 0.3rem;
