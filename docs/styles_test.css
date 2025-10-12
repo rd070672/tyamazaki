@@ -589,7 +589,7 @@ i.fas.fa-external-link-alt{
 
 .link--nav {
   color: var(--clr-fg);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 500;
   padding: 1em 1em;
   border-radius: 4px;
@@ -646,7 +646,7 @@ i.fas.fa-external-link-alt{
 
 .link2--nav {
   color: var(--clr-fg);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 500;
 }
 
@@ -913,7 +913,7 @@ input[name="tab_item"] {
 .section__title {
   text-align: center;
   margin-bottom: 0.4em;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .section__subtitle {
@@ -979,7 +979,7 @@ input[name="tab_item"] {
   border-radius: 4px;
   color: var(--clr-fg);
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none;
   transition: background-color .2s ease, color .2s ease, transform .15s ease;
   will-change: background-color,color;
@@ -2855,7 +2855,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   color: var(--clr-fg);
   height: 45px;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: background-color .2s, color .2s;
   padding: 2px 2px;
   border-radius: 6px;
