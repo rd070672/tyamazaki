@@ -3483,7 +3483,7 @@ nav.footer-nav .nav__list {
   /* #########################  lab  ########################### */
 
   .lab-title {
-    margin: 30px 0 20px 3px;
+    margin: 10px 0 8px 3px;
   }
 
   .lab-title h3 {
@@ -3859,12 +3859,12 @@ nav.footer-nav .nav__list {
     text-decoration: none;
   }
   .site-footer .lab-subtitle{
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 2;
   }
 
   .site-footer .nav__list {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .site-footer .nav__list a {
