@@ -1794,7 +1794,7 @@ input[name="tab_item"] {
 /* カテゴリ別カラー（#33B9BCと調和したトーン） */
 .tag--award { background:#bfa26a; }   /* 受賞: 上品なゴールドベージュ */
 .tag--talk  { background:#2a6fb0; }   /* 発表: 落ち着いたサイエンスブルー */
-.tag--paper { background:#33b9bc; }   /* 論文: メインテーマ色（ティール） */
+.tag--paper { background:#cc7a29; }   /* 論文: 銅寄りオレンジで存在感 */
 .tag--media { background:#6e58b7; }   /* メディア: 柔らかいブルーバイオレット */
 .tag--news  { background:#9aa0a6; }   /* お知らせ: ニュートラルグレー */
 .tag--event { background:#d64d73; }   /* イベント: 柔らかいラズベリーピンク */
@@ -2447,11 +2447,12 @@ input[name="blog_item"] {
 }
 
 /* カテゴリ別カラー：#33B9BC に調和したトーン */
-.cat-research    { --cat-color: #33B9BC; } /* Research / メインティール：清潔・知的・中核色 */
+.cat-research    { --cat-color: #007d77; } /* Research / 深いティールグリーン（信頼） */
 .cat-award       { --cat-color: #BFA26A; } /* Award / 上品なゴールドベージュ（栄誉・温かみ） */
 .cat-event       { --cat-color: #D64D73; } /* Event / 柔らかいラズベリーピンク（活動・交流） */
 .cat-publication { --cat-color: #2A6FB0; } /* Publication / サイエンスブルー（信頼・発表） */
 .cat-media       { --cat-color: #6E58B7; } /* Media / ブルーバイオレット（創造・発信） */
+.cat-others      { --cat-color: #9aa0a6; } /* Others / ニュートラルグレー */
 
 
 /* data-cat="…" でも選べます（クラス不要の書き方が好きな方向け） */
