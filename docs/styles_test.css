@@ -1834,7 +1834,6 @@ input[name="tab_item"] {
   border-radius: 3px;
 }
 
-/* ===== セクションの境界ライン（primary） ===== */
 .section-divider2{
   position: relative;
   margin-top: 32px;          /* 上 との余白 */
@@ -3476,6 +3475,7 @@ nav.footer-nav .nav__list {
     border-radius: 4px;
     margin: 0 auto;
   }
+
   .hero__panel{ 
     padding: 12px 30px; border-radius: 10px; 
   }
@@ -3735,16 +3735,16 @@ nav.footer-nav .nav__list {
 
   
 .blog-text .section__subtitle2 {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 0.4rem;
-  line-height: 1.4; 
+  line-height: 1.8; 
 }
 
 .blog-text .blog-desc {
   font-size: 1rem;
   margin: 0.5rem 0 2.5rem;  
-  line-height: 1.4; 
+  line-height: 1.8; 
 }
 
 .blog-figure{
