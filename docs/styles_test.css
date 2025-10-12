@@ -3470,13 +3470,13 @@ nav.footer-nav .nav__list {
 
   .lab-title h3 {
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 1.4;
     color: var(--clr-primary);
   }
 
   .lab-subtitle {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.4;
   }
 
@@ -3846,7 +3846,7 @@ nav.footer-nav .nav__list {
   }
 
   .site-footer .nav__list {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .site-footer .nav__list a {
