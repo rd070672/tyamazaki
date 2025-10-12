@@ -2421,6 +2421,7 @@ input[name="blog_item"] {
 
 .post-meta .post__date{
   font-size: 1rem;
+  color: #999;
 }
 
 /* 汎用バッジ */
@@ -2458,8 +2459,6 @@ input[name="blog_item"] {
 .post__category[data-cat="event"]       { --cat-color:#F59E0B; }
 .post__category[data-cat="publication"] { --cat-color:#5468FF; }
 .post__category[data-cat="media"]       { --cat-color:#EF436B; } */
-
-.post__date{ color: var(--shadow); }
 
 /* タイトル（強調色） */
 .post__title{
