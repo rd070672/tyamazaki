@@ -1646,7 +1646,7 @@ input[name="tab_item"] {
 
 .hero__title {
   margin: 0 0 .35em 0;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: .02em;
   color: #fff;
@@ -1704,8 +1704,8 @@ input[name="tab_item"] {
   background: rgba(255,255,255,0.3);
 }
 .hero__dots button[aria-current="true"] {
-  background: #2978b5;
-  border-color: #2978b5;
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
 }
 
 .hero__cta{
@@ -3532,7 +3532,7 @@ nav.footer-nav .nav__list {
 
   .hero__title {
     margin: 0 0 .35em 0;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: .02em;
     color: #fff;
