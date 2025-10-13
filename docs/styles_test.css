@@ -2084,6 +2084,49 @@ input[name="tab_item"] {
   transform: scale(0.97);
 }
 
+
+.link-cta {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--clr-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  max-width: 280px;
+  position: relative;
+}
+
+/* 矢印を右に追加 */
+.link-cta::after {
+  content: "→";                   /* 矢印 */
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* hover 時に矢印を少し右へ */
+.link-cta:hover::after {
+  transform: translateX(4px);
+}
+
+/* hover / focus 時に背景反転 */
+.link-cta:hover,
+.link-cta:focus {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+/* active */
+.link-cta:active {
+  transform: scale(0.97);
+}
+
 /* ===== 共通：カードの見た目 ===== */
 
 .member-split{
@@ -2568,9 +2611,9 @@ input[name="blog_item"] {
 }
 
 .blog-text .blog-desc {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0.5rem 0 2.5rem;  
-  line-height: 1.8; 
+  line-height: 1.6; 
 }
 
 .blog-figure{
