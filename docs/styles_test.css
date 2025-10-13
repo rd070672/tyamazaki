@@ -2477,7 +2477,7 @@ input[name="blog_item"] {
 .post__title{
   margin: 6px 0;
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.7;
   color: var(--brand);
   font-weight: 600;
 }
