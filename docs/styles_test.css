@@ -917,7 +917,7 @@ input[name="tab_item"] {
 }
 
 .section__subtitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--clr-primary);
   margin: 0;
@@ -3550,7 +3550,7 @@ nav.footer-nav .nav__list {
   /* #########################  hero  ########################### */
 
   /* .hero { margin-top: 40px; } */
-  
+
   .hero {
     height: 250px;
   }
