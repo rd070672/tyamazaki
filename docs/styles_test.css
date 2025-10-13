@@ -2223,6 +2223,24 @@ input[name="tab_item"] {
   border-radius: 10px;
 }
 
+/* クリック可能な正方形サムネ（ホバー白オーバーレイ付き） */
+.member-photo2{
+  position: relative;            /* ← ::after の基準 */
+  display: block;                /* a をブロックに */
+  width: auto;         
+  aspect-ratio: 1 / 1;           /* 正方形 */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.member-photo2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* 正方形にトリミング */
+  display: block;
+  transition: transform .3s ease;/* ← スムーズに拡大 */
+}
+
 /* 文字サイズ */
 .member-position{ font-size: .95rem; color: var(--clr-primary); }
 .member-name    { font-weight: 600;  font-size: 1rem; }
