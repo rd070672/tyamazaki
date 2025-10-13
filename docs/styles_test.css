@@ -2237,7 +2237,7 @@ input[name="tab_item"] {
 }
 
 @media (max-width: 600px){
-  .member-photo{ width: 100px; }
+  /* .member-photo{ width: 100px; } */
   .member-position{ font-size: 0.9rem; }
   .member-name    { font-size: 0.8rem; }
   .member-email   { font-size: 0.75rem; }
