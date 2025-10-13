@@ -2303,7 +2303,7 @@ input[name="tab_item"] {
 /* 900px未満で Students を 2列に */
 @media (max-width: 600px){
   .member-grid.students{
-    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
   }
   .member-text {
     margin: 0 0.3rem;
@@ -2334,16 +2334,6 @@ input[name="tab_item"] {
     text-align: left;
   }
 }
-
-/* @media (max-width: 400px){
-  .member-grid.staff,
-  .member-grid.students{
-    grid-template-columns: 1fr;
-  }
-  .member-img{ width: 120px; } 
-} */
-
-
 
 .blog-grid{
   list-style: none;
