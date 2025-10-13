@@ -1535,7 +1535,7 @@ input[name="tab_item"] {
 .hero {
   position: relative;
   width: 100%;
-  height: clamp(40vh, 56vh, 68vh); /* 画面に応じた高さ */
+  height: 300px; /* 画面に応じた高さ */
   overflow: hidden;
   border-radius: 12px;
 }
@@ -1555,34 +1555,6 @@ input[name="tab_item"] {
   overflow: hidden;
   border-radius: 12px;
 }
-
-/* .hero3 {
-  position: relative;
-  width: 650px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 4px;
-  margin: 0 auto;
-}
-
-.hero3__wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.hero3__image {
-  width: 100%;
-  height: 100%;
-}
-
-.hero3__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-} */
 
 .hero__slides,
 .hero__slide {
@@ -3577,7 +3549,11 @@ nav.footer-nav .nav__list {
 
   /* #########################  hero  ########################### */
 
-  .hero { margin-top: 40px; }
+  /* .hero { margin-top: 40px; } */
+  
+  .hero {
+    height: 250px;
+  }
 
   .hero3 {
     position: relative;
