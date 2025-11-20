@@ -2237,7 +2237,7 @@ input[name="tab_item"] {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
   .member-grid.students{
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, minmax(40px, 0.6fr));
   }
 }
 
