@@ -2214,9 +2214,9 @@ input[name="tab_item"] {
 }
 
 /* 文字サイズ */
-.member-position{ font-size: .95rem; color: var(--clr-primary); }
-.member-name    { font-weight: 600;  font-size: 1rem; }
-.member-email   { font-size: .85rem; color: var(--clr-fg-alt); }
+.member-position{ font-size: .9rem; color: var(--clr-primary); }
+.member-name    { font-weight: 600;  font-size: 0.9rem; }
+.member-email   { font-size: .8rem; color: var(--clr-fg-alt); }
 
 /* ===== 列数：Staff=2列 / Students=3列 ===== */
 .member-grid.staff{
@@ -2224,7 +2224,7 @@ input[name="tab_item"] {
 }
 .member-grid.students{
   /* grid-template-columns: repeat(3, minmax(80px, 1fr)); */
-  grid-template-columns: repeat(4, minmax(40px, 1fr));
+  grid-template-columns: repeat(4, minmax(40px, 0.6fr));
 }
 
 @media (max-width: 600px){
