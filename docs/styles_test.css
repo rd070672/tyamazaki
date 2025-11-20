@@ -2223,7 +2223,8 @@ input[name="tab_item"] {
   grid-template-columns: repeat(3, minmax(80px, 1fr));
 }
 .member-grid.students{
-  grid-template-columns: repeat(3, minmax(80px, 1fr));
+  /* grid-template-columns: repeat(3, minmax(80px, 1fr)); */
+  grid-template-columns: repeat(4, minmax(40px, 1fr));
 }
 
 @media (max-width: 600px){
