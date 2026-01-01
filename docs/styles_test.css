@@ -3726,6 +3726,38 @@ nav.footer-nav .nav__list {
     /* white-space: nowrap; */
   }
 
+  .research-split-left{
+    display: grid;
+    grid-template-columns: 1fr 2fr;   /* 左=画像 / 右=文章 */
+    gap: clamp(16px, 3vw, 28px);
+    align-items: start;
+  }
+
+  .research-split-right{
+    display: grid;
+    grid-template-columns: 2fr 1fr;   /* 左=文章 / 右=画像 */
+    gap: clamp(16px, 3vw, 28px);
+    align-items: start;
+  }
+
+  /* .research-figure{
+    position: relative; 
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    margin: 0;
+  }
+
+  .research-figure img{
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;                      
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  } */
+
   /* #########################  access  ########################### */
 
   /* 2カラム→1カラムにして中央寄せ */
