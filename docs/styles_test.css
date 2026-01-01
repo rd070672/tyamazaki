@@ -1949,6 +1949,11 @@ input[name="tab_item"] {
   margin-bottom: .5em;
 }
 
+.about-text .section__subtitle2 .subline{
+  display: block;
+  margin-top: 0.2em;   /* ← 0.2行ぶん */
+}
+
 .about-text .lede{
   font-size: 1.1rem;
   font-weight: 600;
@@ -1975,6 +1980,22 @@ input[name="tab_item"] {
   border-radius: 12px;
   /* box-shadow: var(--shadow); */
   display: block;
+}
+
+.research-figure{
+  margin: 0;
+  width: 100%;
+  /* aspect-ratio は削除 */
+  /* position: relative も不要 */
+}
+
+.research-figure img{
+  display: block;
+  width: 90%;     /* 横幅だけ90% */
+  height: auto;   /* 高さは元画像比率で自動 */
+  margin: 0 auto; /* 中央寄せ */
+  border-radius: 12px;
+  /* object-fit は不要（height:autoなので） */
 }
 
 .achievement-list {
