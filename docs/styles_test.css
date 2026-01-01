@@ -1912,6 +1912,20 @@ input[name="tab_item"] {
   align-items: start;
 }
 
+.research-split-left{
+  display: grid;
+  grid-template-columns: 1fr 2fr;   /* 左=画像 / 右=文章 */
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+}
+
+.research-split-right{
+  display: grid;
+  grid-template-columns: 2fr 1fr;   /* 左=文章 / 右=画像 */
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+}
+
 .about-text {
   font-size: 1rem;
   margin: 0 0.3rem; 
@@ -3724,20 +3738,6 @@ nav.footer-nav .nav__list {
     justify-self: end;
     text-align: right;
     /* white-space: nowrap; */
-  }
-
-  .research-split-left{
-    display: grid;
-    grid-template-columns: 1fr 2fr;   /* 左=画像 / 右=文章 */
-    gap: clamp(16px, 3vw, 28px);
-    align-items: start;
-  }
-
-  .research-split-right{
-    display: grid;
-    grid-template-columns: 2fr 1fr;   /* 左=文章 / 右=画像 */
-    gap: clamp(16px, 3vw, 28px);
-    align-items: start;
   }
 
   /* .research-figure{
