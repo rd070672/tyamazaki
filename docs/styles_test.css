@@ -854,6 +854,7 @@ input[name="tab_item"] {
   overflow: hidden;
 }
 
+#y2026:checked ~ #y2026_content,
 #y2025:checked ~ #y2025_content,
 #y2024:checked ~ #y2024_content,
 /* #y2023:checked ~ #y2023_content,
