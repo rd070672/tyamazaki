@@ -1983,10 +1983,10 @@ input[name="tab_item"] {
 }
 
 .research-figure{
-  margin: 0;
+  position: relative;      /* 子をabsoluteで中央に置くため */
   width: 100%;
-  /* aspect-ratio は削除 */
-  /* position: relative も不要 */
+  /* aspect-ratio: 1 / 1;  */
+  margin: 0;
 }
 
 .research-figure img{
