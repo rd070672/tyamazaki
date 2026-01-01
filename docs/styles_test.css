@@ -2712,6 +2712,11 @@ input[name="blog_item"] {
   line-height: 1;
 }
 
+.paper-desc p{
+  margin-bottom: 1.2em; /* ← 約0.2行分だけ余裕を持たせる */
+  line-height: 1.6;
+}
+
 /* プロフィールリンク */
 .paper-list{ 
   list-style: none; margin: 0; padding: 0; 
