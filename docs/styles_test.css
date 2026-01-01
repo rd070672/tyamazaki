@@ -2713,7 +2713,7 @@ input[name="blog_item"] {
 }
 
 .paper-desc p{
-  margin-bottom: 1.2em; /* ← 約0.2行分だけ余裕を持たせる */
+  margin-bottom: 0.4em; /* ← 約0.2行分だけ余裕を持たせる */
   line-height: 1.6;
 }
 
