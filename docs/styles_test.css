@@ -2972,7 +2972,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 .site-footer .lab-title h3 a{
   font-weight: 700;
   font-size: 1.6rem;
-  color: var(--clr-primary);
+  color: var(--clr-primary-grad);
   text-decoration: none;
 }
 .site-footer .lab-subtitle{
@@ -4019,7 +4019,7 @@ nav.footer-nav .nav__list {
   .site-footer .lab-title h3 a{
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--clr-primary);
+    color: var(--clr-primary-grad);
     text-decoration: none;
   }
   .site-footer .lab-subtitle{
