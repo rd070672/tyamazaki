@@ -1732,7 +1732,7 @@ input[name="tab_item"] {
   display: grid;
   grid-template-columns: 85px 75px 1fr; /* 日付 / タグ / 本文 */
   align-items: start;  /* ← 縦位置を中央寄せ */
-  column-gap: 22px;      /* ← 日付とタグの距離を短くする */
+  column-gap: 26px;      /* ← 日付とタグの距離を短くする */
   padding:0 28px 0 20px;
 }
 
@@ -1993,13 +1993,24 @@ input[name="tab_item"] {
   margin: 0;
 }
 
+/* 
 .research-figure img{
   display: block;
-  width: 90%;     /* 横幅だけ90% */
-  height: auto;   /* 高さは元画像比率で自動 */
-  margin: 0 auto; /* 中央寄せ */
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
   border-radius: 12px;
-  /* object-fit は不要（height:autoなので） */
+} */
+
+.research-figure img{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;  /* = inset: 0 */
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;   
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 .achievement-list {
