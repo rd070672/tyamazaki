@@ -1985,7 +1985,7 @@ input[name="tab_item"] {
 .research-figure{
   position: relative;      /* 子をabsoluteで中央に置くため */
   width: 100%;
-  /* aspect-ratio: 1 / 1;  */
+  aspect-ratio: 1 / 1; 
   margin: 0;
 }
 
