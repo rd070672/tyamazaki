@@ -967,10 +967,10 @@ input[name="tab_item"] {
   list-style:none;
   font-size: 16px;
 }
-
+/* 
 .nav__list-item {
   margin-left: 1.5em;
-}
+} */
 
 .nav__hamburger {
   display: none;
@@ -1730,7 +1730,7 @@ input[name="tab_item"] {
 
 .topic {
   display: grid;
-  grid-template-columns: 80px 75px 1fr; /* 日付 / タグ / 本文 */
+  grid-template-columns: 85px 75px 1fr; /* 日付 / タグ / 本文 */
   align-items: start;  /* ← 縦位置を中央寄せ */
   column-gap: 22px;      /* ← 日付とタグの距離を短くする */
   padding:0 28px 0 20px;
