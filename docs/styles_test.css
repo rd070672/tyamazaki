@@ -1733,7 +1733,8 @@ input[name="tab_item"] {
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
-  background: linear-gradient(135deg, #2070B6 0%, #33B9BC 100%); /* #33B9BC, #18b41d */
+  /* background: linear-gradient(135deg, #2070B6 0%, #33B9BC 100%); */
+  background: var(--clr-primary-grad);
   box-shadow: 0 6px 14px var(--shadow);
   transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
 }
