@@ -597,7 +597,7 @@ i.fas.fa-external-link-alt{
   position: absolute;
   bottom: 0.02em;
   font-weight: 600;
-  background-color: var(--clr-primary-grad);
+  background: var(--clr-primary-grad);
   transition: width 0.2s ease-in;
 }
 
@@ -617,7 +617,7 @@ i.fas.fa-external-link-alt{
 
 .link--nav:hover,
 .link--nav:focus {
-  background-color: var(--clr-primary-grad);
+  background: var(--clr-primary-grad);
   color: #fff;
 }
 
@@ -625,7 +625,7 @@ i.fas.fa-external-link-alt{
 .nav .link.link--nav.active,
 .nav .link.link--nav.active:link,
 .nav .link.link--nav.active:visited {
-  background-color: var(--clr-primary-grad);
+  background: var(--clr-primary-grad);
   color: #fff;
 }
 
@@ -713,7 +713,7 @@ i.fas.fa-external-link-alt{
 .btn--outline:before {
   content: "";
   position: absolute;
-  background-color: var(--clr-primary-grad);
+  background: var(--clr-primary-grad);
   right: 100%;
   bottom: 0;
   left: 0;
@@ -884,7 +884,7 @@ input[name="tab_item"] {
 }
 
 .tabs input:checked + .tab_item {
-  background-color: var(--clr-primary-grad);
+  background: var(--clr-primary-grad);
   color: #fff;
 }
 
@@ -2458,7 +2458,7 @@ input[name="blog_item"] {
 }
 
 .blog-tabs input:checked + .blog_item {
-  background-color: var(--clr-primary-grad);
+  background: var(--clr-primary-grad);
   color: #fff;
 }
 
@@ -2982,7 +2982,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
   border-radius: 6px;
 }
 .site-footer .link--nav:hover{
-  background-color: var(--clr-primary-grad);
+  background: var(--clr-primary-grad);
   color: #fff;
 }
 
@@ -3401,7 +3401,7 @@ nav.footer-nav .nav__list {
   
   /*選択されているタブのスタイルを変える*/
   .tabs input:checked + .tab_item {
-    background-color: var(--clr-primary-grad);
+    background: var(--clr-primary-grad);
     color: #fff;
   }
 
