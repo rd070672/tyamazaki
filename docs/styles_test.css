@@ -1730,7 +1730,7 @@ input[name="tab_item"] {
 
 .topic {
   display: grid;
-  grid-template-columns: 75px 75px 1fr; /* 日付 / タグ / 本文 */
+  grid-template-columns: 80px 75px 1fr; /* 日付 / タグ / 本文 */
   align-items: start;  /* ← 縦位置を中央寄せ */
   column-gap: 22px;      /* ← 日付とタグの距離を短くする */
   padding:0 28px 0 20px;
@@ -1746,10 +1746,10 @@ input[name="tab_item"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
-  padding: 0 16px;
+  height: 24px;
+  padding: 0 14px;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #fff;
   background: #999;          /* デフォルト色 */
