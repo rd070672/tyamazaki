@@ -68,13 +68,13 @@ body {
 }
 
 ::-moz-selection {
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   color: var(--clr-bg);
 }
 
 ::-webkit-selection,
 ::selection {
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   color: var(--clr-bg);
 }
 
@@ -507,7 +507,7 @@ button {
   content: '';
   width: 10px;
   height: 10px;
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   position: absolute;
   left: 20%;
   top: 10px;
@@ -517,7 +517,7 @@ button {
 
 .sb-slidebar {
 	display: block;
-	background: var(--clr-primary) !important;
+	background: var(--clr-primary-grad); !important;
 }
 
 #sb-site {
@@ -1705,7 +1705,7 @@ input[name="tab_item"] {
   background: rgba(255,255,255,0.3);
 }
 .hero__dots button[aria-current="true"] {
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   border-color: var(--clr-primary);
 }
 
@@ -1816,7 +1816,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:1px;
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   border-radius: 3px;
 }
 
@@ -1831,7 +1831,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:0.5px;
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   border-radius: 3px;
 }
 
@@ -1845,7 +1845,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:0px;
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   border-radius: 3px;
 }
 
@@ -1860,7 +1860,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:0.5px;
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   border-radius: 3px;
 }
 
@@ -1925,7 +1925,7 @@ input[name="tab_item"] {
   margin: 0; 
 }
 
-.section-divider::before{ background: var(--clr-primary); }
+.section-divider::before{ background: var(--clr-primary-grad);; }
 
 /* About 2カラム */
 .about-split{
@@ -2117,7 +2117,7 @@ input[name="tab_item"] {
 /* hover / focus 時に背景反転 */
 .achievement-cta:hover,
 .achievement-cta:focus {
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   color: #fff;
 }
 
@@ -2160,7 +2160,7 @@ input[name="tab_item"] {
 /* hover / focus 時に背景反転 */
 .link-cta:hover,
 .link-cta:focus {
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);;
   color: #fff;
 }
 
@@ -3044,7 +3044,7 @@ nav.footer-nav .nav__list {
   width: 46px; height: 46px;
   display: grid; place-items: center;
   border: 0; border-radius: 999px;
-  background: var(--clr-primary);
+  background: var(--clr-primary-grad);
   color: #fff; cursor: pointer;
   box-shadow: var(--elev);
   opacity: 0; transform: translateY(10px);
@@ -3052,7 +3052,7 @@ nav.footer-nav .nav__list {
   transition: opacity .25s ease, transform .25s ease, background .2s ease;
   z-index: 50;
 }
-.to-top:hover{ background: color-mix(in srgb, var(--clr-primary) 88%, #000); }
+.to-top:hover{ background: color-mix(in srgb, var(--clr-primary-grad) 88%, #000); }
 .to-top.show{
   opacity: 1; transform: translateY(0);
   pointer-events: auto;
