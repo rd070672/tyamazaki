@@ -517,7 +517,7 @@ button {
 
 .sb-slidebar {
 	display: block;
-	background: var(--clr-primary-grad); !important;
+	background: var(--clr-primary-grad) !important;
 }
 
 #sb-site {
