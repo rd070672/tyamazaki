@@ -42,16 +42,6 @@ body {
   --shadow-dark: rgba(100, 100, 100, 0.8) 0px 7px 29px 0px;
 }
 
-/* .dark {
-  --clr-bg: #0c143b;
-  --clr-bg-alt: #161c3d;
-  --clr-fg: #dbdbe8;
-  --clr-fg-alt: #e9e9ff;
-  --clr-primary: #18b41d;
-  --shadow: rgba(0, 0, 0, 0.8) 0px 7px 29px 0px;
-  --shadow-dark: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
-} */
-
 .dark {
   --clr-bg: #0f1115;      /* ほぼ黒 */
   --clr-bg-alt: #171a21;  /* 濃いグレー */
@@ -59,7 +49,7 @@ body {
   --clr-fg-alt: #f1f4f8;
   --clr-primary: #6bb6ff;
   --clr-primary-grad: linear-gradient(135deg,
-    #1b2432 0%,
+    #6f747a 0%,
     #223a5c 45%,
     #2f7dd1 100%
   );
