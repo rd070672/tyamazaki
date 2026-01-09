@@ -1806,6 +1806,16 @@ input[name="tab_item"] {
 .tag--facility{ background:#5b4032; }  /* 設備: 深みのあるブラウン */
 .tag--hire    { background:#7c3fb5; }  /* 募集: 知的なパープル */
 
+.new-label {
+  color: #d60000;
+  font-weight: bold;
+  font-style: italic;
+  background: #ffeaea;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  margin-right: 0.4em;
+}
+
 .section-divider{
   position: relative;
   margin-top: 62px;          /* 上 との余白 */
