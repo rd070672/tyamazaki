@@ -617,8 +617,7 @@ i.fas.fa-external-link-alt{
 .link--nav:hover,
 .link--nav:focus {
   background: var(--clr-primary-grad);
-  color: var(--clr-fg);          /* もとの文字色に戻す */
-  /* color: #fff; */
+  color: #fff;
 }
 
 /* ベースより後ろに置く・擬似クラスも含める */
@@ -2997,8 +2996,7 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 }
 .site-footer .link--nav:hover{
   background: var(--clr-primary-grad);
-  color: var(--clr-fg);          /* もとの文字色に戻す */
-  /* color: #fff; */
+  color: #fff;
 }
 
 /* コピーライトは下に中央寄せ */
