@@ -1810,7 +1810,7 @@ input[name="tab_item"] {
   color: #d60000;
   font-weight: bold;
   font-style: italic;
-  background: #f7ea62;
+  /* background: #f7ea62; */
   padding: 0.1em 0.4em;
   border-radius: 4px;
   margin-right: 0.4em;
