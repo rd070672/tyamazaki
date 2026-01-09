@@ -617,7 +617,8 @@ i.fas.fa-external-link-alt{
 .link--nav:hover,
 .link--nav:focus {
   background: var(--clr-primary-grad);
-  color: #fff;
+  color: var(--clr-fg);          /* もとの文字色に戻す */
+  /* color: #fff; */
 }
 
 /* ベースより後ろに置く・擬似クラスも含める */
@@ -1015,7 +1016,8 @@ input[name="tab_item"] {
 .nav .link--nav:hover,
 .nav .link--nav:focus{
   background-color:var(--clr-primary);
-  color:#fff;
+  color: var(--clr-fg);          /* もとの文字色に戻す */
+  /* color:#fff; */
 }
 
 /*========
@@ -2993,7 +2995,8 @@ a.ext::after{ content: "↗"; margin-left: .25em; font-size: .9em; opacity: .8; 
 }
 .site-footer .link--nav:hover{
   background: var(--clr-primary-grad);
-  color: #fff;
+  color: var(--clr-fg);          /* もとの文字色に戻す */
+  /* color: #fff; */
 }
 
 /* コピーライトは下に中央寄せ */
