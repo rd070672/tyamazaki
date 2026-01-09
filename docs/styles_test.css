@@ -584,9 +584,9 @@ i.fas.fa-external-link-alt{
   /* z-index: 100; */
 }
 
-.link:hover {
+/* .link:hover {
   color: var(--clr-primary);
-}
+} */
 
 .link::before {
   content: "";
@@ -644,9 +644,9 @@ i.fas.fa-external-link-alt{
   position: relative;
 }
 
-.link2:hover {
+/* .link2:hover {
   color: var(--clr-primary);
-}
+} */
 
 .link2::before {
   content: "";
@@ -1015,8 +1015,7 @@ input[name="tab_item"] {
 .nav .link--nav:hover,
 .nav .link--nav:focus{
   background-color:var(--clr-primary);
-  color: var(--clr-fg);          /* もとの文字色に戻す */
-  /* color:#fff; */
+  color:#fff;
 }
 
 /*========
