@@ -58,13 +58,13 @@ body {
 }
 
 ::-moz-selection {
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary);
   color: var(--clr-bg);
 }
 
 ::-webkit-selection,
 ::selection {
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary);
   color: var(--clr-bg);
 }
 
@@ -506,7 +506,7 @@ button {
   content: '';
   width: 10px;
   height: 10px;
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary-grad);
   position: absolute;
   left: 20%;
   top: 10px;
@@ -1706,7 +1706,7 @@ input[name="tab_item"] {
   background: rgba(255,255,255,0.3);
 }
 .hero__dots button[aria-current="true"] {
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary-grad);
   border-color: var(--clr-primary);
 }
 
@@ -1828,7 +1828,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:1px;
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary-grad);
   border-radius: 3px;
 }
 
@@ -1843,7 +1843,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:0.5px;
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary-grad);
   border-radius: 3px;
 }
 
@@ -1857,7 +1857,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:0px;
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary-grad);
   border-radius: 3px;
 }
 
@@ -1872,7 +1872,7 @@ input[name="tab_item"] {
   position:absolute;
   left:0; right:0; top:0;
   height:0.5px;
-  background: var(--clr-primary-grad);;
+  background: var(--clr-primary-grad);
   border-radius: 3px;
 }
 
@@ -1937,7 +1937,7 @@ input[name="tab_item"] {
   margin: 0; 
 }
 
-.section-divider::before{ background: var(--clr-primary-grad);; }
+.section-divider::before{ background: var(--clr-primary-grad); }
 
 /* About 2カラム */
 .about-split{
