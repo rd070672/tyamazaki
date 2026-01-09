@@ -2129,8 +2129,9 @@ input[name="tab_item"] {
 /* hover / focus 時に背景反転 */
 .achievement-cta:hover,
 .achievement-cta:focus {
-  background: var(--clr-primary-grad);;
-  color: #fff;
+  background: var(--clr-primary-grad);
+  color: var(--clr-primary) ;
+  /* color: #fff; */
 }
 
 /* active */
@@ -2172,8 +2173,9 @@ input[name="tab_item"] {
 /* hover / focus 時に背景反転 */
 .link-cta:hover,
 .link-cta:focus {
-  background: var(--clr-primary-grad);;
-  color: #fff;
+  background: var(--clr-primary-grad);
+  /* color: #fff;*/
+  color: var(--clr-primary) ;
 }
 
 /* active */
