@@ -2130,8 +2130,8 @@ input[name="tab_item"] {
 .achievement-cta:hover,
 .achievement-cta:focus {
   background: var(--clr-primary-grad);
-  color: var(--clr-primary) ;
-  /* color: #fff; */
+  /* color: var(--clr-primary) ; */
+  color: #fff;
 }
 
 /* active */
@@ -2174,8 +2174,8 @@ input[name="tab_item"] {
 .link-cta:hover,
 .link-cta:focus {
   background: var(--clr-primary-grad);
-  /* color: #fff;*/
-  color: var(--clr-primary) ;
+  color: #fff;
+  /* color: var(--clr-primary) ; */
 }
 
 /* active */
