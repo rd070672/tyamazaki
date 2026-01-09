@@ -43,7 +43,7 @@ body {
 }
 
 .dark {
-  --clr-bg: #0f1115;      /* ほぼ黒 */
+  --clr-bg: #282e37;      /* ほぼ黒 */
   --clr-bg-alt: #171a21;  /* 濃いグレー */
   --clr-fg: #909092;
   --clr-fg-alt: #f1f4f8;
